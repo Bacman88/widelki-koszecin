@@ -13,6 +13,10 @@ registerFontFamily('I',normal='I',bold='IB',italic='I',boldItalic='IB')
 W,H=landscape(A3);M=40
 G=colors.HexColor('#00463c');LIME=colors.HexColor('#e6f5c8');INK=colors.HexColor('#10201c');MUT=colors.HexColor('#5b6b66');RULE=colors.HexColor('#dfe7e3')
 LC={'1':'#00704f','2':'#1f6fd1','3':'#c98a00','4':'#d4473a'}
+import os as _o0
+if _o0.environ.get('SKROT')=='1':   # wersja do druku: teksty i wyróżnienia czarno-białe (oszczędność kolorowego tuszu)
+    G=colors.black;INK=colors.black;MUT=colors.HexColor('#444444');LIME=colors.HexColor('#ebebeb');RULE=colors.HexColor('#cfcfcf')
+    LC={k:'#111111' for k in LC}
 LN={'1':'Piasek – Płaszczymąka – Bukowiec – Strzebiń Lubliniecka – Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP','2':'Boronów – Boronów PKP – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','3':'Lisów PKP – Chwostek – Doły – Cieszowa – Koszęcin Rynek – Koszęcin PKP','4':'Łazy – Strzebiń Szkoła – Strzebiń Lubliniecka – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka'}
 P=ParagraphStyle('p',fontName='I',fontSize=12.5,leading=18,textColor=INK,spaceAfter=7)
 PS=ParagraphStyle('ps',parent=P,fontSize=10.5,leading=14.5,textColor=MUT)
@@ -33,7 +37,9 @@ def foot(n):
 def flow(items,x,y,w,h):
     f=Frame(x,y,w,h,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0,showBoundary=0);f.addFromList(items,c)
 def B(t): return Paragraph(t,BL,bulletText='•')
-page=[4]
+import os as _o
+SKROT=_o.environ.get('SKROT')=='1'   # wersja skrócona do druku: bez dwóch map (schemat + raport)
+page=[4-(2 if SKROT else 0)]
 def newpage():
     foot(page[0]);c.showPage();page[0]+=1
 # ---------- Page 1: summary
@@ -57,10 +63,10 @@ B('<b>4 linie, 6 autobusów (w szczytach 7).</b> Linia 1 przelotowa Piasek – S
 B('<b>Węzły na styku z sąsiadami:</b> Lubliniec PKP, Lisów PKP (przesiadka na Częstochowę), Boronów, Piasek, Kalety PKP i Brusiek (dla gminy Tworóg). Sąsiedzi dowożą do nas, my do nich, nikt nie dubluje kursów.'),
 B('<b>Przystanki przy stacjach:</b> Koszęcin PKP, Boronów PKP, Kalety PKP, Lisów PKP; w Strzebiniu przystanek Strzebiń Lubliniecka obsługuje stację, a po przeniesieniu peronu pod wiadukt przystanek będzie przy nim.'),
 B('<b>Psary i LO w Psarach:</b> linia 1 jedzie z Piasku najkrótszą drogą przez Płaszczymąkę (przystanek Psary Skrzyżowanie). Samo Psary obsługuje gmina Woźniki (busy GTV z Piasku do Psar i Woźnik, linia powiatowa 69 Psary – Bukowiec). Propozycje poza siatką podstawową: kursy szkolne 4S Łazy – Strzebiń – Bukowiec – Psary (19 min, zgrane z linią 1) i pętla 4P przez Łazy i Psary po utwardzeniu 1,4 km drogi w gminie Woźniki.')]
-right=[Paragraph('Spis treści',H3)]+[Paragraph(t,P) for t in ['1. Schemat linii z kierunkami dalszej jazdy','2. Mapa całej siatki (trasy po drogach z OpenStreetMap)','3. Przybliżenie Koszęcin – Strzebiń','4. Podsumowanie (ta strona)','5. Dlaczego takie trasy, czy czasy są realne','6–9. Rozkład jazdy linii 1–4 (dni robocze, soboty, niedziele)','10. Przykładowe dojazdy z różnych stron gminy','11. Każda miejscowość: do Lublińca i z powrotem','12. Przesiadki na kolej','13. Zakres przewozów i porównanie z dzisiejszą siatką']]+[Spacer(1,14),Paragraph('Najważniejsze liczby',H3)]+[Paragraph(t,P) for t in ['Dziś gmina wydaje na komunikację <b>1,35 mln zł</b> rocznie (wykonanie 2024), czyli ok. 114 zł na mieszkańca.','Wariant oszczędny to ok. <b>390 tys. km</b> rocznie, niewiele więcej niż co dzisiejsze linie gminne (szacunek 300–350 tys. km), więc przy tej samej cenie za kilometr kosztowałby podobnie jak dziś. Wariant pełny to ok. <b>575 tys. km</b>. Część kilometrów leży poza gminą i może być współfinansowana przez sąsiadów.','Uwagi do planu transportowego „Jedźmy razem!” można składać <b>do 7.12.2026</b>.']]
+right=[Paragraph('Spis treści',H3)]+[Paragraph(t,P) for t in (['1. Schemat linii z kierunkami dalszej jazdy','2. Podsumowanie (ta strona)','3. Dlaczego takie trasy, czy czasy są realne','4–7. Rozkład jazdy linii 1–4 (dni robocze, soboty, niedziele)','8. Przykładowe dojazdy z różnych stron gminy','9. Każda miejscowość: do Lublińca i z powrotem','10. Przesiadki na kolej','11. Zakres przewozów i porównanie z dzisiejszą siatką','Mapy linii i wspólna mapa: busy-koszecin.smart-ant.pl'] if SKROT else ['1. Schemat linii z kierunkami dalszej jazdy','2. Mapa całej siatki (trasy po drogach z OpenStreetMap)','3. Przybliżenie Koszęcin – Strzebiń','4. Podsumowanie (ta strona)','5. Dlaczego takie trasy, czy czasy są realne','6–9. Rozkład jazdy linii 1–4 (dni robocze, soboty, niedziele)','10. Przykładowe dojazdy z różnych stron gminy','11. Każda miejscowość: do Lublińca i z powrotem','12. Przesiadki na kolej','13. Zakres przewozów i porównanie z dzisiejszą siatką'])]+[Spacer(1,14),Paragraph('Najważniejsze liczby',H3)]+[Paragraph(t,P) for t in ['Dziś gmina wydaje na komunikację <b>1,35 mln zł</b> rocznie (wykonanie 2024), czyli ok. 114 zł na mieszkańca.','Wariant oszczędny to ok. <b>390 tys. km</b> rocznie, niewiele więcej niż co dzisiejsze linie gminne (szacunek 300–350 tys. km), więc przy tej samej cenie za kilometr kosztowałby podobnie jak dziś. Wariant pełny to ok. <b>575 tys. km</b>. Część kilometrów leży poza gminą i może być współfinansowana przez sąsiadów.','Uwagi do planu transportowego „Jedźmy razem!” można składać <b>do 7.12.2026</b>.']]
 flow(left,M,50,(W-2*M)*0.6,H-340)
 flow(right,M+(W-2*M)*0.64,50,(W-2*M)*0.36,H-340)
 newpage()
-page[0]=5
+page[0]=5-(2 if SKROT else 0)
 exec(open('skrypty/raport2.py').read())
 c.save()

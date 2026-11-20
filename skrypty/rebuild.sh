@@ -10,5 +10,6 @@ python3 skrypty/plan.py           # rozkład w takcie, warianty pełny/oszczędn
 python3 skrypty/planer.py > out/dojazdy.txt   # przykładowe dojazdy do / z Lublińca
 python3 skrypty/mapa_pdf.py       # mapy → out/mapy.pdf
 python3 skrypty/raport.py         # rozkłady, przykłady, zakres → out/raport.pdf
+SKROT=1 python3 skrypty/raport.py && mv out/raport.pdf out/raport_skrot.pdf && python3 skrypty/raport.py   # wersja do druku (numeracja bez map)
 python3 skrypty/zloz_pdf.py       # PDF publiczny (+ prywatny, jeśli są skrypty prywatne)
 cp out/data.json strona/mapa/data.json
