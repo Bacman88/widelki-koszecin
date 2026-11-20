@@ -47,10 +47,29 @@ footer a{color:var(--mut)}
 .sister .ico{font-size:30px}
 .sister b{display:block}
 .sister span{color:var(--mut);font-size:14px}
+td.how{white-space:normal;color:var(--mut);font-size:14px}
+.m{display:none}
+.hint{display:none;text-align:center;color:var(--mut);font-size:13px;margin:6px 0 0}
+@media (max-width:640px){
+ .warnbar{position:sticky;font-size:14px;padding:8px 10px}
+ .warnbar span{display:none}
+ header{padding-top:24px}
+ .sch{padding:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+ .sch-in{width:900px;padding:6px}
+ .hint{display:block}
+ table{font-size:14px}
+ th,td{padding:7px 6px}
+ .how{display:none}
+ .m{display:block;font-weight:400;color:var(--mut);font-size:12px;white-space:normal}
+ .tpm th{white-space:normal}
+ .line{grid-template-columns:36px 1fr;padding:12px}
+ .sw{width:36px;height:28px;font-size:16px}
+ .line b{font-size:15px}
+}
 </style>
 </head>
 <body>
-<div class="warnbar">⚠️ To NIE jest aktualny rozkład jazdy busów GTV! <span>To propozycja nowej siatki do dyskusji. Aktualne kursy sprawdzaj na przystankach i u przewoźnika.</span></div>
+<div class="warnbar">⚠️ To NIE jest aktualny rozkład jazdy – tylko propozycja! <span>To propozycja nowej siatki do dyskusji. Aktualne kursy sprawdzaj na przystankach i u przewoźnika.</span></div>
 <header>
 <div class="tag">Propozycja do dyskusji – nie obowiązuje</div>
 <h1>Busy gminy Koszęcin: jeden węzeł, dojazd z każdej wsi</h1>
@@ -66,7 +85,8 @@ footer a{color:var(--mut)}
 <section>
 <h2>Schemat linii</h2>
 <div class="warn-inline">Proponowany – nie obowiązuje</div>
-<div class="sch"><a href="dokumenty/schemat-linii.pdf"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek"></a></div>
+<div class="sch"><div class="sch-in"><a href="dokumenty/schemat-linii.pdf"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek"></a></div></div>
+<p class="hint">← przesuń schemat palcem →</p>
 <p class="note">Schemat, nie mapa w skali. Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Strzałki: dokąd można jechać dalej z końców linii. Kliknij, aby pobrać schemat w PDF.</p>
 </section>
 
@@ -95,35 +115,41 @@ footer a{color:var(--mut)}
 <div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
 <p class="note">Dzień roboczy, wariant pełny. Przyjazd do Lublińca PKP o 6:20 (praca na 7:00) i 7:20 (szkoła na 8:00).</p>
 <div class="scroll"><table>
-<tr><th>Skąd</th><th>Jak jechać</th><th>Praca na 7:00</th><th>Szkoła na 8:00</th></tr>
-<tr><td>Sadów</td><td>linia 1</td><td>6:10</td><td>7:10</td></tr>
-<tr><td>Wierzbie</td><td>linia 1</td><td>6:05</td><td>7:05</td></tr>
-<tr><td>Rzyce Irki</td><td>linia 1</td><td>6:00</td><td>7:00</td></tr>
-<tr><td>Koszęcin Rynek</td><td>linia 1</td><td>6:03</td><td>7:03</td></tr>
-<tr><td>Strzebiń Lubliniecka</td><td>linia 1</td><td>5:45</td><td>6:45</td></tr>
-<tr><td>Bukowiec</td><td>linia 1</td><td>5:40</td><td>6:40</td></tr>
-<tr><td>Strzebiń Szkoła</td><td>linia 4 → w Strzebiniu linia 1</td><td>5:42</td><td>6:42</td></tr>
-<tr><td>Łazy</td><td>linia 4 → w Strzebiniu linia 1</td><td>5:36</td><td>6:36</td></tr>
-<tr><td>Cieszowa</td><td>linia 3 → na Rynku linia 1</td><td>5:42</td><td>6:42</td></tr>
-<tr><td>Doły</td><td>linia 3 → na Rynku linia 1</td><td>5:37</td><td>6:37</td></tr>
-<tr><td>Brusiek</td><td>linia 2 → na Rynku linia 1</td><td>5:36</td><td>6:36</td></tr>
-<tr><td>Rusinowice</td><td>linia 4 → w Irkach linia 1</td><td>5:33</td><td>6:33</td></tr>
-<tr><td>Piłka</td><td>linia 4 → w Irkach linia 1</td><td>5:29</td><td>6:29</td></tr>
+<tr><th>Skąd</th><th class="how">Jak jechać</th><th>Praca na 7:00</th><th>Szkoła na 8:00</th></tr>
+<tr><td>Sadów<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:10</td><td>7:10</td></tr>
+<tr><td>Wierzbie<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:05</td><td>7:05</td></tr>
+<tr><td>Rzyce Irki<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:00</td><td>7:00</td></tr>
+<tr><td>Koszęcin Rynek<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:03</td><td>7:03</td></tr>
+<tr><td>Strzebiń Lubliniecka<span class="m">linia 1</span></td><td class="how">linia 1</td><td>5:45</td><td>6:45</td></tr>
+<tr><td>Bukowiec<span class="m">linia 1</span></td><td class="how">linia 1</td><td>5:40</td><td>6:40</td></tr>
+<tr><td>Strzebiń Szkoła<span class="m">linia 4 → w Strzebiniu linia 1</span></td><td class="how">linia 4 → w Strzebiniu linia 1</td><td>5:42</td><td>6:42</td></tr>
+<tr><td>Łazy<span class="m">linia 4 → w Strzebiniu linia 1</span></td><td class="how">linia 4 → w Strzebiniu linia 1</td><td>5:36</td><td>6:36</td></tr>
+<tr><td>Cieszowa<span class="m">linia 3 → na Rynku linia 1</span></td><td class="how">linia 3 → na Rynku linia 1</td><td>5:42</td><td>6:42</td></tr>
+<tr><td>Doły<span class="m">linia 3 → na Rynku linia 1</span></td><td class="how">linia 3 → na Rynku linia 1</td><td>5:37</td><td>6:37</td></tr>
+<tr><td>Brusiek<span class="m">linia 2 → na Rynku linia 1</span></td><td class="how">linia 2 → na Rynku linia 1</td><td>5:36</td><td>6:36</td></tr>
+<tr><td>Rusinowice<span class="m">linia 4 → w Irkach linia 1</span></td><td class="how">linia 4 → w Irkach linia 1</td><td>5:33</td><td>6:33</td></tr>
+<tr><td>Piłka<span class="m">linia 4 → w Irkach linia 1</span></td><td class="how">linia 4 → w Irkach linia 1</td><td>5:29</td><td>6:29</td></tr>
 </table></div>
 </section>
 
 <section>
 <h2>Po południu z Lublińca – o której w domu</h2>
 <div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
-<div class="scroll"><table>
+<div class="scroll"><table class="tpm">
 <tr><th>Dokąd</th><th>Odjazd 14:35</th><th>Odjazd 15:35</th><th>Odjazd 16:35</th></tr>
-<tr><td>Sadów / Wierzbie / Irki</td><td>14:45 / 14:50 / 14:55</td><td>15:45 / 15:50 / 15:55</td><td>16:45 / 16:50 / 16:55</td></tr>
+<tr><td>Sadów</td><td>14:45</td><td>15:45</td><td>16:45</td></tr>
+<tr><td>Wierzbie</td><td>14:50</td><td>15:50</td><td>16:50</td></tr>
+<tr><td>Rzyce Irki</td><td>14:55</td><td>15:55</td><td>16:55</td></tr>
 <tr><td>Koszęcin Rynek</td><td>15:00</td><td>16:00</td><td>17:00</td></tr>
-<tr><td>Strzebiń Lubliniecka / Bukowiec</td><td>15:10 / 15:16</td><td>16:10 / 16:16</td><td>17:10 / 17:16</td></tr>
-<tr><td>Strzebiń Szkoła / Łazy</td><td>15:20 / 15:26</td><td>16:20 / 16:26</td><td>17:20 / 17:26</td></tr>
-<tr><td>Cieszowa / Doły</td><td>15:10 / 15:15</td><td>16:10 / 16:15</td><td>18:10 / 18:15</td></tr>
+<tr><td>Strzebiń Lubliniecka</td><td>15:10</td><td>16:10</td><td>17:10</td></tr>
+<tr><td>Bukowiec</td><td>15:16</td><td>16:16</td><td>17:16</td></tr>
+<tr><td>Strzebiń Szkoła</td><td>15:20</td><td>16:20</td><td>17:20</td></tr>
+<tr><td>Łazy</td><td>15:26</td><td>16:26</td><td>17:26</td></tr>
+<tr><td>Cieszowa</td><td>15:10</td><td>16:10</td><td>18:10</td></tr>
+<tr><td>Doły</td><td>15:15</td><td>16:15</td><td>18:15</td></tr>
 <tr><td>Brusiek</td><td>15:16</td><td>16:16</td><td>17:16</td></tr>
-<tr><td>Rusinowice / Piłka</td><td>15:19 / 15:23</td><td>16:19 / 16:23</td><td>18:19 / 18:23</td></tr>
+<tr><td>Rusinowice</td><td>15:19</td><td>16:19</td><td>18:19</td></tr>
+<tr><td>Piłka</td><td>15:23</td><td>16:23</td><td>18:23</td></tr>
 </table></div>
 <p class="note">Po lekcjach każda miejscowość jest w domu w niecałą godzinę. Do Rusinowic można też wrócić pociągiem z Lublińca.</p>
 </section>
