@@ -103,7 +103,6 @@ AM=[['Skąd','Jak jechać','Praca na 7:00\nwyjazd → Lubliniec','Szkoła na 8:0
 ['Strzebiń Szkoła','linia 4 → w Strzebiniu linia 1','5:42 → 6:20','6:42 → 7:20'],
 ['Łazy','linia 4 → w Strzebiniu linia 1','5:36 → 6:20','6:36 → 7:20'],
 ['Cieszowa','linia 3 → na Rynku linia 1','5:42 → 6:20','6:42 → 7:20'],
-['Doły','linia 3 → na Rynku linia 1','5:37 → 6:20','6:37 → 7:20'],
 ['Brusiek','linia 2 → na Rynku linia 1','5:36 → 6:20','6:36 → 7:20'],
 ['Rusinowice','linia 4 → w Irkach linia 1','5:33 → 6:20','6:33 → 7:20'],
 ['Piłka','linia 4 → w Irkach linia 1','5:29 → 6:20','6:29 → 7:20']]
@@ -112,7 +111,7 @@ PM=[['Dokąd','Odjazd 14:35\npo lekcjach','Odjazd 15:35\nlekcje, praca','Odjazd 
 ['Koszęcin Rynek','15:00','16:00','17:00'],
 ['Strzebiń Lubliniecka / Bukowiec','15:10 / 15:16','16:10 / 16:16','17:10 / 17:16'],
 ['Strzebiń Szkoła / Łazy','15:20 / 15:26','16:20 / 16:26','17:20 / 17:26'],
-['Cieszowa / Doły','15:10 / 15:15','16:10 / 16:15','18:10 / 18:15'],
+['Cieszowa','15:10','16:10','18:10'],
 ['Brusiek','15:16','16:16','17:16'],
 ['Rusinowice / Piłka','15:19 / 15:23','16:19 / 16:23','18:19 / 18:23']]
 def _tab(rows,cw,bold_from,fs=11):
@@ -122,7 +121,7 @@ def _tab(rows,cw,bold_from,fs=11):
     t.setStyle(TableStyle(st));return t
 tl=_tab(AM,[120,200,120,120],2);tr_=_tab(PM,[187,111,111,111],1,10)
 flow([Paragraph('Rano do Lublińca',H3),tl,Spacer(1,10),Paragraph('Z każdej miejscowości gminy jest dojazd na 7:00 do pracy i na 8:00 do szkoły w Lublińcu. Linia 1 dojeżdża bez przesiadki, z pozostałych wsi jedzie się dojazdówką z przesiadką bez czekania. W szczytach linia 4 jeździ w obie strony, a linia 2 ma dodatkowy kurs z Bruśka.',PS)],M,50,570,H-150)
-flow([Paragraph('Po południu z Lublińca – o której w domu',H3),tr_,Spacer(1,10),Paragraph('Po lekcjach (kursy 14:35 i 15:35) każda miejscowość jest w domu w niecałą godzinę. Po kursie 16:35 do Cieszowej, Dołów, Rusinowic i Piłki jest dalej co 2 godziny, bo linie 3 i 4 jadą wtedy w drugą stronę. Do Rusinowic można też wrócić pociągiem z Lublińca.',PS),
+flow([Paragraph('Po południu z Lublińca – o której w domu',H3),tr_,Spacer(1,10),Paragraph('Po lekcjach (kursy 14:35 i 15:35) każda miejscowość jest w domu w niecałą godzinę. Po kursie 16:35 do Cieszowej, Rusinowic i Piłki jest dalej co 2 godziny, bo linie 3 i 4 jadą wtedy w drugą stronę. Do Rusinowic można też wrócić pociągiem z Lublińca.',PS),
 Spacer(1,8),Paragraph('Przyjazd do Lublińca o 6:20 i 7:20 daje zapas na dojście do zakładu lub szkoły. Linia 1 jeździ co godzinę przez cały dzień, więc pozostałe godziny pracy i lekcji mają dojazd o tej samej minucie.',PS)],M+590,50,W-2*M-590,H-150)
 newpage()
 # ---------- Rail
