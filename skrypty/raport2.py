@@ -23,14 +23,17 @@ newpage()
 # ---------- Timetables
 DAYN={'wd':'Poniedziałek – piątek','sat':'Sobota','sun':'Niedziela i święta'}
 fm=lambda m:f"{(m%1440)//60}:{m%60:02d}"
-def ttable(dd,colw=34):
+def ttable(dd,maxw=640):
     tr=sorted(dd['trips'],key=lambda t:min(x for x in t[0] if x is not None))
     rows=[]
     for i,stp in enumerate(dd['stops']):
         rows.append([stp.replace(' – nowa lokalizacja',' (nowa)').replace(' (Płaszczymąka)','')]+[('–' if t[0][i] is None else fm(t[0][i])) for t in tr])
-    t=Table(rows,colWidths=[150]+[colw]*len(tr))
-    st=[('FONT',(0,0),(-1,-1),'I',9),('ALIGN',(1,0),(-1,-1),'RIGHT'),('LINEBELOW',(0,0),(-1,-1),0.4,RULE),('TOPPADDING',(0,0),(-1,-1),2.5),('BOTTOMPADDING',(0,0),(-1,-1),2.5),('LEFTPADDING',(0,0),(-1,-1),3),('RIGHTPADDING',(0,0),(-1,-1),3)]
-    ri=dd['stops'].index('Koszęcin Rynek');st+=[('BACKGROUND',(0,ri),(-1,ri),LIME),('FONT',(0,ri),(-1,ri),'IB',9)]
+    n=len(tr);sw=150;colw=min(34,(maxw-sw-4)/max(n,1))
+    if colw<32: sw=140;colw=min(34,(maxw-sw-4)/max(n,1))
+    fs=9 if colw>=31 else 8.3;pd=3 if colw>=31 else 1.5
+    t=Table(rows,colWidths=[sw]+[colw]*n,hAlign='LEFT')
+    st=[('FONT',(0,0),(-1,-1),'I',fs),('ALIGN',(1,0),(-1,-1),'RIGHT'),('LINEBELOW',(0,0),(-1,-1),0.4,RULE),('TOPPADDING',(0,0),(-1,-1),2.5),('BOTTOMPADDING',(0,0),(-1,-1),2.5),('LEFTPADDING',(0,0),(-1,-1),pd),('RIGHTPADDING',(0,0),(-1,-1),pd)]
+    ri=dd['stops'].index('Koszęcin Rynek');st+=[('BACKGROUND',(0,ri),(-1,ri),LIME),('FONT',(0,ri),(-1,ri),'IB',fs)]
     for j,t_ in enumerate(tr):
         if t_[1]: st+=[('TEXTCOLOR',(j+1,0),(j+1,-1),MUT)]
     t.setStyle(TableStyle(st));return t,all(t_[1] for t_ in tr)
@@ -51,7 +54,7 @@ for k in ['1','2','3','4']:
                         del G_[nm];break
         for n_i,(nm,dd) in enumerate(G_.items()):
             if k=='4' and d=='sun': target=L if n_i==0 else R
-            t,alld=ttable(dd)
+            t,alld=ttable(dd,640 if target is L else W-2*M-660)
             target.append(Paragraph(f'<b>{DAYN[d]}</b> · {nm}'+(' · <font color="#5b6b66">na zamówienie</font>' if alld else ''),ParagraphStyle('t',parent=P,fontSize=11.5,spaceBefore=8,spaceAfter=4)))
             target.append(t)
     L.append(Spacer(1,10));L.append(Paragraph('Wiersz zielony: Koszęcin Rynek, węzeł. Linia 1 przejeżdża bez czekania (:53/:55 w stronę Lublińca, :00/:02 w stronę Strzebinia), linie 2–4 przyjeżdżają o :49, odjeżdżają o :03. Szare godziny: kurs na zamówienie (telefon lub aplikacja). Czasy przejazdu: 40 km/h plus 45 s na przystanek.',PS))
