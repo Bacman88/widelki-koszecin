@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mapa siatki busów Koszęcin</title>
+<link rel="stylesheet" href="leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a real map of a proposed bus network for a gmina, to show residents and the office
+   IDEA a transit authority network map printed over a topographic base
+   PICTURE the map itself, full height, lines routed on real OSM roads, stations as the hubs
+   COLOUR warm paper #f7f4ec base, forest green, line colours shared with the proposal page, coral for "new"
+   TYPE Inter Tight + Inter
+   LAYOUT map fills the screen; light legend panel top-left (collapsible on phones); stop popups with what changes */
+:root{--paper:#f7f4ec;--ink:#1c2420;--mut:#5d665f;--rule:#d9d3c5;--l1:#00704f;--l2:#1f6fd1;--l3:#c98a00;--l4:#7a4cc2;--l5:#d4473a;--new:#ff6f59}
+*{box-sizing:border-box;min-width:0}
+html,body{height:100%;margin:0}
+body{font:15px/1.45 Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+#map{position:absolute;inset:0;background:var(--paper)}
+.panel{position:absolute;z-index:1000;top:12px;left:12px;width:min(340px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.12);padding:14px 16px}
+.panel h1{font:800 22px/1.1 "Inter Tight",sans-serif;letter-spacing:-.02em;margin:0 0 6px}
+.panel p{margin:6px 0;font-size:14px;color:var(--mut)}
+.ln{display:flex;align-items:center;gap:10px;min-height:40px;cursor:pointer;border-top:1px solid var(--rule);padding:4px 0}
+.ln input{width:18px;height:18px;accent-color:var(--ink);flex:none}
+.sw{flex:none;display:inline-grid;place-items:center;width:30px;height:22px;border-radius:5px;color:#fff;font:800 14px "Inter Tight",sans-serif}
+.ln span.t{font-size:14px}
+.ln small{display:block;color:var(--mut);font-size:13px}
+.key{display:grid;grid-template-columns:28px 1fr;gap:6px 10px;align-items:center;margin-top:10px;font-size:13px;color:var(--mut)}
+.dot{width:18px;height:18px;border-radius:50%;border:3px solid var(--ink);background:#fff;justify-self:center}
+.dot.n{border-color:var(--new);border-style:solid;box-shadow:0 0 0 3px #fff inset}
+.dot.z{width:20px;height:20px;background:#e6f5c8;border:4px solid #1c2420}
+.dot.h{width:22px;height:22px;background:#00463c;border:3px solid #e6f5c8}
+.rl{width:26px;height:6px;background:repeating-linear-gradient(90deg,#222 0 7px,#fff 7px 12px);border:1px solid #222}
+.fr{width:22px;height:14px;background:#cfe3c2;border:1px solid #b5cfa6}
+.gm{width:24px;height:0;border-top:2px dashed #9a6b3c}
+.tog{display:none;font:600 14px Inter;background:var(--paper);border:1px solid var(--rule);border-radius:8px;min-height:44px;padding:0 14px;cursor:pointer}
+.box{margin-top:10px;padding:10px 12px;background:#fff;border:1px solid var(--rule);border-radius:8px;font-size:13px;color:var(--ink)}
+.leaflet-container{font:14px Inter,sans-serif;background:var(--paper)}
+.lbl{background:none;border:0;box-shadow:none;padding:0;font:600 12px Inter,sans-serif;color:var(--ink);text-shadow:0 0 3px var(--paper),0 0 3px var(--paper),0 0 4px var(--paper)}
+.lbl.big{font:800 15px "Inter Tight",sans-serif}
+.lbl.new{color:#b8321f}
+.lbl::before{display:none}
+.pl{font:500 12px Inter,sans-serif;color:#6f6a5e;background:none;border:0;box-shadow:none;text-shadow:0 0 3px var(--paper),0 0 3px var(--paper)}
+.pl.t1{font:700 15px "Inter Tight",sans-serif;color:#3d3a33}
+.pl::before{display:none}
+.leaflet-popup-content{margin:12px 14px;font-size:14px;line-height:1.45}
+.leaflet-popup-content b{font-family:"Inter Tight",sans-serif}
+.pp .sw{width:26px;height:20px;font-size:13px;margin-right:4px}
+@media(max-width:600px){.panel{padding:10px 12px}.panel .more{display:none}.panel.open .more{display:block}.tog{display:inline-block;margin-top:6px}.panel h1{font-size:18px}}
+</style>
+</head>
+<body>
+<div id="map" aria-label="Mapa proponowanej siatki busów gminy Koszęcin"></div>
+<div class="panel" id="panel">
+<h1>Propozycja siatki: Koszęcin Rynek jako główny węzeł</h1>
+<p>Linie poprowadzone po prawdziwych drogach z OpenStreetMap. Wszystkie spotykają się na Rynku, linie 2 i 3 dojeżdżają też do stacji Koszęcin PKP. Na obrzeżach są węzły zewnętrzne: Lubliniec, Piasek, Boronów i Kalety. Kliknij linię albo przystanek, żeby zobaczyć szczegóły.</p>
+<button class="tog" id="tog" type="button" aria-expanded="false">Linie i legenda</button>
+<div class="more">
+<div id="lines"></div>
+<div class="key">
+<span class="dot h"></span><span>główny węzeł Koszęcin Rynek</span>
+<span class="dot z"></span><span>węzeł na styku z sąsiadami: Lubliniec, Lisów, Boronów, Piasek, Kalety, Brusiek (dla Tworoga)</span>
+<span class="dot n"></span><span>proponowany przystanek przy stacji</span>
+<span class="dot"></span><span>istniejący przystanek GTV</span>
+<span class="rl"></span><span>kolej</span>
+<span class="fr"></span><span>las</span>
+<span class="gm"></span><span>granica gminy Koszęcin</span>
+</div>
+<div class="box"><b>Ta wersja:</b> 4 linie. Linia 1 przelotowa Piasek – Strzebiń – Koszęcin – Lubliniec (2 busy, co godzinę, bez czekania na Rynku), linia 2 Boronów – Kalety, linia 3 Lisów PKP – Koszęcin, linia 4 Łazy – Piłka; linie 2, 3 i 4 to dojazdówki co 2 godziny (linia 3 w szczytach szkolnych co godzinę). Razem 6 autobusów.<br><b>Gruba linia</b> – co godzinę, <b>cienka</b> – co 2 godziny, <b>przerywana</b> – propozycje.</div>
+<p style="margin-top:10px">Dane mapy © współtwórcy OpenStreetMap (ODbL). Propozycja do dyskusji, nie wyliczenie przewoźnika.</p>
+</div>
+</div>
+<script src="leaflet.js"></script>
+<script src="leaflet.polylineoffset.js"></script>
+<script>
+{
+const LN={
+'1':{c:'#00704f',n:'Piasek – Płaszczymąka – Bukowiec – Strzebiń – Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP',f:'co godzinę, 2 busy; przejeżdża przez Rynek bez czekania; Strzebiń → Lubliniec 35 min',o:0},
+'2':{c:'#1f6fd1',n:'Boronów – Boronów PKP – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP',f:'co 2 h w każdą stronę, 2 busy',o:0},
+'3':{c:'#c98a00',n:'Lisów PKP – Chwostek – Doły – Cieszowa – Koszęcin Rynek – Koszęcin PKP',f:'co 2 godziny, w szczytach szkolnych (rano 5–8, po południu 13–16) co godzinę; 1 bus',o:-6},
+'4':{c:'#d4473a',n:'Łazy – Strzebiń – Koszęcin PKP – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka',f:'co 2 h w każdą stronę, 1 bus',o:6}};
+LN['4S']={c:'#d4473a',n:'Propozycja 4S (poza siatką podstawową): kursy szkolne Łazy – Strzebiń Szkoła – Bukowiec – Płaszczymąka – Psary',f:'z Łazów przez Strzebiń Szkoła do Strzebinia Lublinieckiej po trasie linii 4, dalej (przerywana) przez Bukowiec i Płaszczymąkę do Psar; Łazy → Psary 19 min, w dni nauki',o:0,d:'7 7'};
+LN['4P']={c:'#8e3b8a',n:'Propozycja 4P (poza siatką podstawową): pętla Strzebiń Szkoła – Łazy – Psary – Płaszczymąka – Bukowiec – Strzebiń',f:'po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki); kółko 25 min, Łazy → Psary 6 min',o:0,d:'2 7'};
+LN['4k']={c:'#d4473a',n:'Linia 4 – zjazd do Koszęcina PKP w czasie postoju na Rynku',f:'',o:6,hide:1};
+LN['1L']={c:'#00704f',n:'Propozycja 1L (wzmocnienie w szczycie): Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP',f:'w pół taktu, dni nauki 5:30–8:30 i 12:30–16:30; w Wierzbiu czeka na linię 4 z Piłki i Rusinowic',o:-6,d:'7 7'};
+LN['4e']=Object.assign({},LN['4'],{hide:1});LN['4r']=Object.assign({},LN['4'],{hide:1,o:-LN['4'].o});LN['3r']=Object.assign({},LN['3'],{hide:1,o:-LN['3'].o});
+const INFO={
+kosr:'<b>Koszęcin Rynek – główny węzeł</b><br>Linia 1 Piasek – Lubliniec przejeżdża bez czekania (w stronę Lublińca :53/:55, w stronę Strzebinia :00/:02). Linie 2, 3 i 4 dowożą do niej na :49 i odjeżdżają o :03.',
+kosp:'<b>Koszęcin PKP</b><br>Proponowany przystanek przy stacji. Pętla linii 3, linia 2 jedzie dalej do Bruśka i Kalet. Pociągi Kolei Śląskich do Lublińca i Tarnowskich Gór/Bytomia.',
+str:'<b>Strzebiń Lubliniecka</b><br>Linia 1 jedzie ul. Lubliniecką, przystanek w miejscu obecnego; na razie obsługuje też stację Strzebiń. Do Rynku 9 min, do Lublińca PKP 35 min.',
+strs:'<b>Strzebiń Szkoła</b><br>Linia 4 Łazy – Koszęcin jedzie przez szkołę, tak jak dziś, a potem przez Strzebiń Lubliniecka na Rynek.',
+psy:'<b>Psary (szkoła)</b><br>Propozycja (poza siatką podstawową): kursy szkolne 4S z Łazów przez Strzebiń, Bukowiec i Płaszczymąkę, rano na lekcje i po południu z powrotem. Psary leżą w gminie Woźniki, więc kursy do dogadania z Woźnikami.',
+lisp:'<b>Lisów PKP – przesiadka na Częstochowę</b><br>Pętla linii 3 przy stacji w Lisowie (do centrum wsi ok. 10 min pieszo, busy gminy Herby). Pociągi Kolei Śląskich do Częstochowy (26 min) – te same, które jadą z Lublińca, tylko bliżej. Z Rynku 20 min.',
+borp:'<b>Boronów PKP</b><br>Proponowany przystanek przy stacji. Linia 2.',
+kalp:'<b>Kalety PKP – węzeł zewnętrzny</b><br>Stacja, na której spotykają się obie linie kolejowe. Pociągi do Tarnowskich Gór i Bytomia, komunikacja Kalet. Pętla linii 2.',
+pia:'<b>Piasek – węzeł na styku z gminą Woźniki</b><br>Przesiadka na busy GTV do Psar, Woźnik i Tarnowskich Gór. Pętla linii 1.',
+bor:'<b>Boronów – węzeł zewnętrzny</b><br>Przesiadka na kierunek Konopiska – Częstochowa. Początek linii 2.',
+lubpkp:'<b>Lubliniec PKP – węzeł zewnętrzny</b><br>Pętla linii 1 (ze Strzebinia 35 min bez przesiadki). Dalej kolej i komunikacja Lublińca („Jedźmy razem!”).',
+psk:'<b>Płaszczymąka (Psary Skrzyżowanie)</b><br>Linia 1 jedzie z Piasku najkrótszą drogą. Do Psar (LO) busy gminy Woźniki i linia powiatowa 69 Psary – Bukowiec.',
+rus:'<b>Rusinowice PKP</b><br>Przystanek GTV „Rusinowice Dworzec PKP” już istnieje. Linia 4.',
+pil:'<b>Piłka</b><br>Pętla linii 4. Z Piłki do Koszęcina prosto prowadzi tylko leśny dojazd pożarowy, więc bus jedzie przez Rusinowice i Wierzbie.',
+
+bru:'<b>Brusiek – węzeł na styku z Tworogiem</b><br>Tu gmina Tworóg może dowęzłować swoje linie do linii 2 (Koszęcin, Kalety, Boronów).',
+laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 przez cały rok, przez Koszęcin do Rusinowic i Piłki.'};
+const map=L.map('map',{zoomControl:true,attributionControl:true,minZoom:10,maxZoom:16,zoomSnap:.25});
+map.attributionControl.setPrefix(false).addAttribution('© OpenStreetMap');
+const lineLayers={};
+Promise.all([fetch('baza.json').then(r=>r.json()),fetch('data.json').then(r=>r.json())]).then(([B,D])=>{
+ const pane=(n,z)=>{map.createPane(n).style.zIndex=z};
+ pane('base',200);pane('roads',300);pane('rail',350);pane('lines',420);pane('stops',600);
+ L.polygon(B.zab,{pane:'base',stroke:false,fillColor:'#e9dfcf',fillOpacity:1}).addTo(map);
+ L.polygon(B.las,{pane:'base',stroke:false,fillColor:'#cfe3c2',fillOpacity:1}).addTo(map);
+ L.polygon(B.woda,{pane:'base',stroke:false,fillColor:'#a9d0ef',fillOpacity:1}).addTo(map);
+ L.polyline(B.rzeki,{pane:'base',color:'#8fc0e6',weight:1.5}).addTo(map);
+ L.polygon(D.gmina,{pane:'base',color:'#9a6b3c',weight:2,dashArray:'6 6',fill:false}).addTo(map);
+ L.polyline(D.roads.minor,{pane:'roads',color:'#d8d1c3',weight:1.2}).addTo(map);
+ L.polyline(D.roads.major,{pane:'roads',color:'#b9b0a0',weight:4.5}).addTo(map);
+ L.polyline(D.roads.major,{pane:'roads',color:'#ffffff',weight:2.5}).addTo(map);
+ L.polyline(D.rails,{pane:'rail',color:'#222',weight:4}).addTo(map);
+ L.polyline(D.rails,{pane:'rail',color:'#fff',weight:2,dashArray:'7 7'}).addTo(map);
+ const stopNames=Object.values(D.stops).map(x=>x[2]);
+ for(const [la,lo,t0] of D.stations){if(['Koszęcin','Lubliniec','Boronów','Kalety','Rusinowice','Lisów'].includes(t0))continue;const t=t0==='Strzebiń'?'Strzebiń – obecny przystanek kolejowy':t0;L.circleMarker([la,lo],{pane:'stops',radius:5,color:'#222',weight:3,fillColor:'#fff',fillOpacity:1}).addTo(map).bindTooltip(t0==='Strzebiń'?t:t+' (stacja)',{permanent:true,direction:'right',offset:[6,0],className:'lbl'});}
+ const nm=L.layerGroup().addTo(map);
+ const used=new Set(Object.values(D.stops).map(s=>s[2].split(' ')[0]));
+ for(const [la,lo,t,r] of B.nazwy){if(r>3||used.has(t))continue;nm.addLayer(L.marker([la,lo],{icon:L.divIcon({className:'',html:'',iconSize:[0,0]}),interactive:false}).bindTooltip(t,{permanent:true,direction:'center',className:'pl'+(r===1?' t1':'')}));}
+ if(D.busstops){const bs=L.layerGroup().addTo(map);for(const [la,lo,n] of D.busstops){bs.addLayer(L.circleMarker([la,lo],{pane:'lines',radius:2.6,color:'#555',weight:1,fillColor:'#fff',fillOpacity:1}).bindTooltip(n||'przystanek',{direction:'top'}));}}
+ for(const [k,l] of Object.entries(D.lines)){
+  const m=LN[k];
+  const g=L.layerGroup();
+  const casing=L.polyline(l.geom,{pane:'lines',color:'#fff',weight:m.d?6:(k==='1'?11:6.5),offset:m.o,opacity:m.d?.6:.9});
+  const pl=L.polyline(l.geom,{pane:'lines',color:m.c,weight:m.d?4:(k==='1'||k==='4k'&&0?8:4),offset:m.o,lineJoin:'round',dashArray:m.d||null});
+  pl.bindPopup(`<div class="pp"><span class="sw" style="background:${m.c}">${k}</span><b>Linia ${k}</b><br>${m.n}<br>${l.km} km · ${m.f}</div>`);
+  g.addLayer(casing).addLayer(pl).addTo(map);lineLayers[k]=g;
+ }
+ const lines=Object.keys(LN).filter(k=>!LN[k].hide).map(k=>{const st=(D.lines[k].stops||[]).length;return `<label class="ln"><input type="checkbox" checked data-k="${k}"><span class="sw" style="background:${LN[k].c}">${k}</span><span class="t">${LN[k].n}<small>${D.lines[k].km} km · ${LN[k].f}</small></span></label>`}).join('');
+ document.getElementById('lines').innerHTML=lines;
+ document.querySelectorAll('.ln input').forEach(i=>i.addEventListener('change',e=>{const g=lineLayers[e.target.dataset.k];e.target.checked?g.addTo(map):map.removeLayer(g)}));
+ const servedBy={};for(const [k,l] of Object.entries(D.lines))for(const s of l.stops)(servedBy[s]=servedBy[s]||[]).push(k);
+ for(const [id,[la,lo,t,kind]] of Object.entries(D.stops)){
+  const hub=kind==='hub',hz=kind==='hubz',nw=kind==='nowy';
+  const mk=L.circleMarker([la,lo],{pane:'stops',radius:hub?13:(hz?9:(nw?8:5.5)),color:hub?'#e6f5c8':(hz?'#1c2420':(nw?'#ff6f59':'#1c2420')),weight:hub?4:(hz?5:(nw?4:2.5)),fillColor:hub?'#00463c':(hz?'#e6f5c8':'#fff'),fillOpacity:1}).addTo(map);
+  const ls=[...new Set((servedBy[id]||[]).map(k=>(k==='4k'||k==='4e'||k==='4r')?'4':(k==='3r'?'3':k)))].map(k=>`<span class="sw" style="background:${LN[k].c}">${k}</span>`).join('');
+  mk.bindPopup(`<div class="pp">${INFO[id]||'<b>'+t+'</b>'}<br><span style="display:inline-block;margin-top:6px">${ls}</span></div>`);
+  mk.bindTooltip(t+(nw?' (proponowany)':''),{permanent:true,direction:hub?'top':'right',offset:hub?[0,-12]:[8,0],className:'lbl'+(hub||hz?' big':'')+(nw?' new':'')});
+ }
+ const all=L.featureGroup(Object.values(lineLayers).flatMap(g=>g.getLayers()));
+ map.setMaxBounds([[50.50,18.55],[50.80,19.15]]);map.fitBounds(all.getBounds(),{paddingTopLeft:[innerWidth>700?360:10,20],paddingBottomRight:[20,20]});
+}).catch(e=>{document.getElementById('map').innerHTML='<p style="padding:20px">Nie udało się wczytać danych mapy.</p>'});
+const p=document.getElementById('panel'),t=document.getElementById('tog');
+t.addEventListener('click',()=>{p.classList.toggle('open');t.setAttribute('aria-expanded',p.classList.contains('open'))});
+}
+</script>
+</body>
+</html>

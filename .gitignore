@@ -1,0 +1,5 @@
+out/
+dane/osm/
+skrypty/prywatne/
+__pycache__/
+*.pyc
