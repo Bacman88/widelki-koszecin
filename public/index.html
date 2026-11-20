@@ -36,22 +36,43 @@ img.map{width:100%;border-radius:12px;border:1px solid var(--rule);display:block
 .note{color:var(--mut);font-size:14px}
 footer{max-width:980px;margin:auto;padding:24px 20px 40px;color:var(--mut);font-size:13px;border-top:1px solid var(--rule)}
 footer a{color:var(--mut)}
+.warnbar{position:sticky;top:0;z-index:10;background:#b3261e;color:#fff;text-align:center;font-weight:700;padding:10px 14px;font-size:15px;line-height:1.35}
+.warnbar span{font-weight:400;opacity:.92}
+.warnbox{border:2px solid #b3261e;background:#fdecea;color:#5c1410;border-radius:12px;padding:16px 18px;margin:18px 0}
+.warnbox b{color:#b3261e}
+.warn-inline{display:inline-block;background:#fdecea;color:#b3261e;border:1px solid #f1b8b3;font-weight:700;font-size:13px;padding:3px 10px;border-radius:99px;margin-bottom:8px}
+.sch{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:10px}
+.sch img{width:100%;display:block}
+.sister{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:16px;text-decoration:none;color:var(--ink)}
+.sister .ico{font-size:30px}
+.sister b{display:block}
+.sister span{color:var(--mut);font-size:14px}
 </style>
 </head>
 <body>
+<div class="warnbar">⚠️ To NIE jest aktualny rozkład jazdy busów GTV! <span>To propozycja nowej siatki do dyskusji. Aktualne kursy sprawdzaj na przystankach i u przewoźnika.</span></div>
 <header>
-<div class="tag">Propozycja do dyskusji</div>
+<div class="tag">Propozycja do dyskusji – nie obowiązuje</div>
 <h1>Busy gminy Koszęcin: jeden węzeł, dojazd z każdej wsi</h1>
 <p class="lead">Wszystkie linie spotykają się na <b>Koszęcin Rynek</b> o stałej minucie co godzinę. Linia 1 jeździ do Lublińca co godzinę przez cały dzień, a dojazdówki dowożą do szkół, pracy i pociągów.</p>
 <div class="btns">
 <a class="btn" href="mapa/">Zobacz mapę linii</a>
 <a class="btn sec" href="dokumenty/siatka-busow-koszecin.pdf">Pobierz propozycję (PDF)</a>
 </div>
+<div class="warnbox"><b>Uwaga: to nie jest obowiązujący rozkład jazdy.</b> Wszystkie linie, trasy i godziny na tej stronie to <b>propozycja</b> mieszkańca, przygotowana do dyskusji z gminą Koszęcin. Busy GTV jeżdżą dziś według dotychczasowego rozkładu – nie planuj podróży na podstawie tej strony.</div>
 </header>
 <main>
 
 <section>
+<h2>Schemat linii</h2>
+<div class="warn-inline">Proponowany – nie obowiązuje</div>
+<div class="sch"><a href="dokumenty/schemat-linii.pdf"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek"></a></div>
+<p class="note">Schemat, nie mapa w skali. Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Strzałki: dokąd można jechać dalej z końców linii. Kliknij, aby pobrać schemat w PDF.</p>
+</section>
+
+<section>
 <h2>Linie</h2>
+<div class="warn-inline">Proponowane – nie obowiązują</div>
 <div class="lines">
 <div class="line"><div class="sw" style="background:var(--g)">1</div><div><b>Piasek – Płaszczymąka – Bukowiec – Strzebiń Lubliniecka – Koszęcin Rynek – Rzyce Irki – Wierzbie – Sadów – Lubliniec PKP</b><span>co godzinę przez cały dzień · szkoły i praca w Lublińcu bez przesiadki</span></div></div>
 <div class="line"><div class="sw" style="background:var(--b)">2</div><div><b>Boronów – Koszęcin Rynek – Koszęcin Szkoła – Koszęcin PKP – Brusiek – Kalety PKP</b><span>co 2 godziny · w szczytach dodatkowe kursy Kalety – Brusiek – Rynek</span></div></div>
@@ -71,6 +92,7 @@ footer a{color:var(--mut)}
 
 <section>
 <h2>Każda miejscowość: rano do Lublińca</h2>
+<div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
 <p class="note">Dzień roboczy, wariant pełny. Przyjazd do Lublińca PKP o 6:20 (praca na 7:00) i 7:20 (szkoła na 8:00).</p>
 <div class="scroll"><table>
 <tr><th>Skąd</th><th>Jak jechać</th><th>Praca na 7:00</th><th>Szkoła na 8:00</th></tr>
@@ -92,6 +114,7 @@ footer a{color:var(--mut)}
 
 <section>
 <h2>Po południu z Lublińca – o której w domu</h2>
+<div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
 <div class="scroll"><table>
 <tr><th>Dokąd</th><th>Odjazd 14:35</th><th>Odjazd 15:35</th><th>Odjazd 16:35</th></tr>
 <tr><td>Sadów / Wierzbie / Irki</td><td>14:45 / 14:50 / 14:55</td><td>15:45 / 15:50 / 15:55</td><td>16:45 / 16:50 / 16:55</td></tr>
@@ -116,10 +139,16 @@ footer a{color:var(--mut)}
 <p>Aplikacja na telefon z busami gminnymi i pociągami Kolei Śląskich, PolRegio i PKP Intercity. Wpisujesz skąd, dokąd i na którą – dostajesz gotowe połączenie z przesiadkami.</p>
 </section>
 
+<section>
+<h2>Drugi projekt: Rowerowy Strzebiń</h2>
+<a class="sister" href="https://rowerowy-strzebin.smart-ant.pl"><div class="ico">🚲</div><div><b>Rowerowy Strzebiń – HUB rowerowy</b><span>Propozycja oznakowania rowerowego Sołectwa Strzebiń: tabliczki kierunkowe, sieć węzłów, trasy pokazowe i mapa stanu dróg. Rower + bus + pociąg to razem dobry sposób na poruszanie się po gminie.</span></div></a>
+</section>
+
+<div class="warnbox"><b>Jeszcze raz: to nie jest aktualny rozkład jazdy.</b> Strona pokazuje proponowaną siatkę busów. Do czasu decyzji gminy obowiązuje dotychczasowy rozkład GTV.</div>
 </main>
 <footer>
-Oddolna propozycja mieszkańca Strzebinia, do dyskusji z gminą. Czasy przejazdów są policzone, nie zmierzone – przed wdrożeniem wymagają sprawdzenia w terenie.<br>
-Kod i dane: <a href="https://github.com/Bacman88/widelki-koszecin">github.com/Bacman88/widelki-koszecin</a> · Dane mapy © współtwórcy OpenStreetMap (ODbL)
+<b>To nie jest aktualny rozkład jazdy</b> – oddolna propozycja mieszkańca Strzebinia, do dyskusji z gminą. Czasy przejazdów są policzone, nie zmierzone – przed wdrożeniem wymagają sprawdzenia w terenie.<br>
+Kod i dane: <a href="https://github.com/Bacman88/widelki-koszecin">github.com/Bacman88/widelki-koszecin</a> · Zobacz też: <a href="https://rowerowy-strzebin.smart-ant.pl">Rowerowy Strzebiń</a> · Dane mapy © współtwórcy OpenStreetMap (ODbL)
 </footer>
 </body>
 </html>
