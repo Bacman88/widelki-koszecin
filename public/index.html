@@ -8,6 +8,7 @@
 <style>
 :root{--ink:#10201c;--mut:#5d665f;--paper:#f7f4ec;--rule:#e2ddd0;--g:#00704f;--b:#1f6fd6;--o:#cc8a00;--r:#d4473a;--lime:#eef5d8}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
 header{padding:40px 20px 24px;max-width:980px;margin:auto}
 h1{font-size:clamp(26px,5vw,40px);line-height:1.15;margin:0 0 10px}
@@ -66,6 +67,20 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
  .sw{width:36px;height:28px;font-size:16px}
  .line b{font-size:15px}
 }
+.sch,.mapwrap{position:relative}
+.zoombtn{position:absolute;right:10px;top:10px;z-index:5;background:#fff;border:1px solid var(--rule);border-radius:8px;padding:7px 11px;font:600 14px system-ui;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.15);color:var(--ink)}
+.mapwrap{border-radius:12px;overflow:hidden;border:1px solid var(--rule);background:#fff}
+.mapwrap iframe{display:block;width:100%;height:560px;border:0}
+.mapwrap.full{position:fixed;inset:0;z-index:3000;border-radius:0}
+.mapwrap.full iframe{height:100vh}
+#lb{position:fixed;inset:0;z-index:4000;background:rgba(16,32,28,.92);display:none}
+#lb.on{display:block}
+#lb .sc{position:absolute;inset:52px 0 0 0;overflow:auto;-webkit-overflow-scrolling:touch;background:#fff;touch-action:pan-x pan-y pinch-zoom}
+#lb img{display:block;width:var(--z,100%);max-width:none}
+#lb .bar{position:absolute;top:0;left:0;right:0;height:52px;display:flex;gap:8px;align-items:center;justify-content:flex-end;padding:0 10px}
+#lb .bar span{margin-right:auto;color:#fff;font-weight:700;font-size:14px}
+#lb button{font:700 16px system-ui;min-width:44px;height:38px;border-radius:8px;border:0;background:#fff;color:var(--ink);cursor:pointer}
+@media (max-width:640px){.mapwrap iframe{height:70vh}}
 </style>
 </head>
 <body>
@@ -77,6 +92,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <div class="btns">
 <a class="btn" href="mapa/">Zobacz mapę linii</a>
 <a class="btn sec" href="dokumenty/siatka-busow-koszecin.pdf">Pobierz propozycję (PDF)</a>
+<a class="btn sec" href="wspolna/">💬 Wspólna mapa – czego potrzebujesz?</a>
 </div>
 <div class="warnbox"><b>Uwaga: to nie jest obowiązujący rozkład jazdy.</b> Wszystkie linie, trasy i godziny na tej stronie to <b>propozycja</b> mieszkańca, przygotowana do dyskusji z gminą Koszęcin. Busy GTV jeżdżą dziś według dotychczasowego rozkładu – nie planuj podróży na podstawie tej strony.</div>
 </header>
@@ -85,9 +101,9 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <section>
 <h2>Schemat linii</h2>
 <div class="warn-inline">Proponowany – nie obowiązuje</div>
-<div class="sch"><div class="sch-in"><a href="dokumenty/schemat-linii.pdf"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek"></a></div></div>
+<div class="sch" id="schwrap"><div class="sch-in"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek" onclick="lupa()" style="cursor:zoom-in"></div><button class="zoombtn" type="button" onclick="lupa()">🔍 Powiększ schemat</button></div>
 <p class="hint">← przesuń schemat palcem →</p>
-<p class="note">Schemat, nie mapa w skali. Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Strzałki: dokąd można jechać dalej z końców linii. Kliknij, aby pobrać schemat w PDF.</p>
+<p class="note">Schemat, nie mapa w skali. Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Strzałki: dokąd można jechać dalej z końców linii. Kliknij schemat, żeby go powiększyć, albo <a href="dokumenty/schemat-linii.pdf">pobierz w PDF</a>.</p>
 </section>
 
 <section>
@@ -156,8 +172,15 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 
 <section>
 <h2>Mapa</h2>
-<a href="mapa/"><img class="map" src="mapa-ogolna.png" alt="Mapa proponowanej siatki busów gminy Koszęcin"></a>
-<p class="note">Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Kliknij, aby otworzyć mapę interaktywną.</p>
+<div class="warn-inline">Proponowane trasy – nie obowiązują</div>
+<div class="mapwrap" id="mapwrap"><iframe src="mapa/" title="Interaktywna mapa proponowanych linii" loading="lazy"></iframe>
+<button class="zoombtn" type="button" onclick="pelny('mapwrap',this)">⛶ Powiększ mapę</button></div>
+<p class="note">Mapę można przybliżać i przesuwać (dwoma palcami na telefonie). Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje. <a href="mapa/">Otwórz mapę na całą stronę</a>.</p>
+</section>
+
+<section>
+<h2>Twoje zdanie: wspólna mapa</h2>
+<a class="sister" href="wspolna/"><div class="ico">💬</div><div><b>Napisz, czego potrzebujesz</b><span>Skąd i dokąd chcesz dojechać i na którą, gdzie brakuje przystanku, co zmienić w liniach i godzinach. Propozycje są sprawdzane i pokazywane na wspólnej mapie – można też zagłosować „też tego potrzebuję”.</span></div></a>
 </section>
 
 <section>
@@ -176,5 +199,13 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <b>To nie jest aktualny rozkład jazdy</b> – oddolna propozycja mieszkańca Strzebinia, do dyskusji z gminą. Czasy przejazdów są policzone, nie zmierzone – przed wdrożeniem wymagają sprawdzenia w terenie.<br>
 Kod i dane: <a href="https://github.com/Bacman88/widelki-koszecin">github.com/Bacman88/widelki-koszecin</a> · Zobacz też: <a href="https://rowerowy-strzebin.smart-ant.pl">Rowerowy Strzebiń</a> · Dane mapy © współtwórcy OpenStreetMap (ODbL)
 </footer>
+<div id="lb" role="dialog" aria-label="Powiększony schemat linii"><div class="bar"><span>Schemat – propozycja, nie obowiązuje</span><button type="button" onclick="zoom(-1)" aria-label="Pomniejsz">−</button><button type="button" onclick="zoom(1)" aria-label="Powiększ">+</button><button type="button" onclick="lupa(0)" aria-label="Zamknij">✕</button></div><div class="sc"><img src="schemat.svg" alt="Schemat proponowanych linii"></div></div>
+<script>
+let Z=1;
+function zoom(d){Z=Math.min(4,Math.max(1,Z+(d>0?.5:d<0?-.5:0)));document.querySelector('#lb img').style.setProperty('--z',(Z*100)+'%');}
+function lupa(on=1){const lb=document.getElementById('lb');lb.classList.toggle('on',!!on);document.body.style.overflow=on?'hidden':'';if(on){Z=window.innerWidth<700?2.5:1.5;zoom(0);}}
+function pelny(id,b){const w=document.getElementById(id),on=!w.classList.contains('full');w.classList.toggle('full',on);b.textContent=on?'✕ Zamknij':'⛶ Powiększ mapę';document.body.style.overflow=on?'hidden':'';}
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;lupa(0);const w=document.getElementById('mapwrap');if(w.classList.contains('full'))w.querySelector('.zoombtn').click();});
+</script>
 </body>
 </html>

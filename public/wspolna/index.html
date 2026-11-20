@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wspólna mapa – czego potrzebujesz? · Busy gminy Koszęcin (propozycja)</title>
+<meta name="description" content="Napisz, skąd i dokąd potrzebujesz dojechać, zaproponuj przystanek, linię albo godziny kursów. Propozycje mieszkańców do nowej siatki busów gminy Koszęcin.">
+<link rel="stylesheet" href="../mapa/leaflet.css">
+<style>
+:root{--ink:#10201c;--mut:#5d665f;--paper:#f7f4ec;--rule:#e2ddd0;--g:#00704f;--red:#b3261e}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
+a{color:var(--g)}
+.warnbar{position:sticky;top:0;z-index:2000;background:var(--red);color:#fff;text-align:center;font-weight:700;padding:8px 12px;font-size:14px}
+.warnbar a{color:#fff}
+.wrap{max-width:1100px;margin:auto;padding:20px 16px 40px}
+h1{font-size:clamp(24px,4.5vw,34px);line-height:1.15;margin:6px 0 8px}
+.lead{margin:0 0 6px;max-width:760px;color:#2a322d}
+.back{font-size:14px}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px;align-items:start}
+.card{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:16px}
+.mapbox{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--rule);background:#fff}
+#map{height:520px}
+.mapbox.full{position:fixed;inset:0;z-index:3000;border-radius:0}
+.mapbox.full #map{height:100vh}
+.fsbtn{position:absolute;z-index:1000;right:10px;top:10px;background:#fff;border:1px solid var(--rule);border-radius:8px;padding:7px 11px;font:600 14px system-ui;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.maphint{font-size:13px;color:var(--mut);margin:6px 2px 0}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tabs button{font:600 14px system-ui;padding:8px 11px;border-radius:9px;border:1px solid var(--rule);background:#fff;color:var(--ink);cursor:pointer}
+.tabs button.on{background:var(--g);border-color:var(--g);color:#fff}
+label{display:block;font-size:14px;color:var(--mut);margin-top:10px}
+input,select,textarea{display:block;width:100%;font:inherit;font-size:16px;color:var(--ink);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;margin-top:4px;background:#fff}
+textarea{min-height:84px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chk{display:flex;gap:8px;align-items:flex-start;color:var(--mut);font-size:13.5px;margin-top:10px}
+.chk input{width:auto;margin-top:3px}
+.send{margin-top:14px;width:100%;font:700 16px system-ui;padding:12px;border-radius:10px;border:0;background:var(--g);color:#fff;cursor:pointer}
+.send:disabled{opacity:.6}
+.msg{margin-top:10px;font-size:14.5px}
+.msg.ok{color:var(--g)}.msg.err{color:var(--red)}
+.pin{font-size:13.5px;margin-top:8px;padding:6px 9px;border-radius:8px;background:#eef5d8;color:var(--g)}
+.pin.no{background:#fdecea;color:var(--red)}
+.hp{position:absolute;left:-9999px}
+h2{font-size:21px;margin:30px 0 10px}
+.filt{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.filt button{font:13.5px system-ui;padding:5px 10px;border-radius:99px;border:1px solid var(--rule);background:#fff;cursor:pointer}
+.filt button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.p{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.p .chip{align-self:flex-start;font:700 12px system-ui;color:#fff;padding:2px 9px;border-radius:6px}
+.p b{font-size:15.5px}
+.p .m{font-size:13px;color:var(--mut)}
+.p .v{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:4px}
+.p .v button{font:600 13.5px system-ui;padding:6px 10px;border-radius:8px;border:1px solid var(--rule);background:#fff;cursor:pointer}
+.p .v button.on{background:#eef5d8;border-color:#c8dca0;color:var(--g)}
+.p .map-link{font-size:13px;cursor:pointer;color:var(--g);text-decoration:underline}
+.empty{color:var(--mut)}
+.note{color:var(--mut);font-size:13.5px}
+@media (max-width:860px){.grid{grid-template-columns:1fr}#map{height:62vh}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="warnbar">⚠️ To NIE jest aktualny rozkład – zbieramy propozycje do nowej siatki · <a href="../">strona główna</a></div>
+<div class="wrap">
+<a class="back" href="../">← Busy gminy Koszęcin – propozycja</a>
+<h1>Wspólna mapa: czego potrzebujesz?</h1>
+<p class="lead">Napisz, <b>skąd i dokąd</b> potrzebujesz dojechać i na którą, zaproponuj <b>przystanek</b>, zmianę <b>linii</b> albo <b>godziny</b> kursu. Każda propozycja jest sprawdzana przed pokazaniem na stronie. Zebrane potrzeby pokażemy gminie jako argument za nową siatką.</p>
+
+<div class="grid">
+  <div>
+    <div class="mapbox" id="mapbox">
+      <button class="fsbtn" id="fs" type="button">⛶ Powiększ mapę</button>
+      <div id="map" aria-label="Mapa proponowanych linii i propozycji mieszkańców"></div>
+    </div>
+    <p class="maphint">Linie na mapie to <b>propozycja</b> (nie obowiązuje). Kliknij mapę, żeby wskazać miejsce – np. nowy przystanek. Niebieskie kropki: zatwierdzone propozycje mieszkańców.</p>
+  </div>
+
+  <form class="card" id="f" autocomplete="on" novalidate>
+    <div class="tabs" id="tabs">
+      <button type="button" data-r="dojazd" class="on">🧭 Potrzebuję dojechać</button>
+      <button type="button" data-r="przystanek">🚏 Przystanek</button>
+      <button type="button" data-r="linia">〰️ Linia / trasa</button>
+      <button type="button" data-r="godzina">🕒 Godziny</button>
+      <button type="button" data-r="uwaga">💬 Inna uwaga</button>
+    </div>
+
+    <div data-dla="dojazd">
+      <div class="row">
+        <label>Skąd<select name="skad" id="skad"></select></label>
+        <label>Dokąd<select name="dokad" id="dokad"></select></label>
+      </div>
+      <input name="skad_inne" id="skad_inne" placeholder="Skąd – wpisz miejscowość" hidden>
+      <input name="dokad_inne" id="dokad_inne" placeholder="Dokąd – wpisz cel" hidden>
+      <div class="row">
+        <label>Godzina<input name="godzina" type="time" step="300" value="07:40"></label>
+        <label>To jest godzina…<select name="kierunek"><option value="przyjazd">przyjazdu na miejsce</option><option value="odjazd">odjazdu (np. powrót)</option></select></label>
+      </div>
+      <div class="row">
+        <label>W jakie dni<select name="dni"><option value="robocze">dni robocze</option><option value="codziennie">codziennie</option><option value="sobota">soboty</option><option value="niedziela">niedziele i święta</option></select></label>
+        <label>Jak często<select name="czestosc"><option value="codziennie">codziennie / prawie codziennie</option><option value="kilka">kilka razy w tygodniu</option><option value="czasem">czasem</option></select></label>
+      </div>
+      <label>Po co<select name="cel"><option value="szkola">szkoła</option><option value="praca">praca</option><option value="lekarz">lekarz, przychodnia</option><option value="urzad">urząd</option><option value="zakupy">zakupy</option><option value="kolej">przesiadka na pociąg</option><option value="inne">inne</option></select></label>
+    </div>
+
+    <div data-dla="linia godzina" hidden>
+      <label>Której linii dotyczy<select name="linia"><option value="1">1 – Piasek – Koszęcin – Lubliniec</option><option value="2">2 – Boronów – Koszęcin – Kalety</option><option value="3">3 – Lisów – Koszęcin</option><option value="4">4 – Łazy – Koszęcin – Piłka</option><option value="1L">1L – wzmocnienie do Lublińca</option><option value="4S">4S – kursy szkolne do Psar</option><option value="4P">4P – pętla Łazy – Psary</option><option value="nowa">nowa linia</option></select></label>
+    </div>
+
+    <div id="pinbox" data-dla="przystanek linia uwaga" hidden><div class="pin no" id="pin">Kliknij mapę, żeby wskazać miejsce<span data-dla="linia uwaga"> (nieobowiązkowe)</span>.</div></div>
+
+    <label id="tr-l">Opis <span id="tr-h">(nieobowiązkowo)</span><textarea name="tresc" id="tresc" maxlength="2000" placeholder="Np. dziecko kończy lekcje o 15:10, potrzebny powrót do Łaz"></textarea></label>
+
+    <div class="row">
+      <label>Imię lub nick*<input name="nick" required maxlength="60" autocomplete="nickname"></label>
+      <label>Kontakt (nieobowiązkowo)<input name="kontakt" maxlength="120" placeholder="e-mail lub telefon" autocomplete="email"></label>
+    </div>
+    <label class="chk"><input type="checkbox" name="zgoda"> Zgadzam się na kontakt w sprawie tej propozycji. Kontakt widzi tylko administrator, nie jest publikowany.</label>
+    <input class="hp" name="www" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="send" id="send">Wyślij propozycję</button>
+    <div class="msg" id="msg" role="status"></div>
+    <p class="note">Imię lub nick będzie widoczny przy propozycji. Zgłoszenia trafiają do moderacji, zwykle w ciągu 1–2 dni.</p>
+  </form>
+</div>
+
+<h2>Propozycje mieszkańców</h2>
+<div class="filt" id="filt">
+  <button type="button" data-f="" class="on">wszystkie</button><button type="button" data-f="dojazd">potrzebny dojazd</button><button type="button" data-f="przystanek">przystanki</button><button type="button" data-f="linia">linie</button><button type="button" data-f="godzina">godziny</button><button type="button" data-f="uwaga">inne</button>
+</div>
+<div class="list" id="list"><p class="empty">Wczytuję…</p></div>
+<p class="note" style="margin-top:14px">„Też tego potrzebuję” – jeden głos z jednego urządzenia. Dzięki głosom wiemy, które potrzeby są najczęstsze.</p>
+</div>
+
+<script src="../mapa/leaflet.js"></script>
+<script>
+const API = 'https://rowerowy-strzebin.smart-ant.pl/api/busy.php';
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let URZ = '';
+try { URZ = localStorage.getItem('busy_urz') || ''; if (!/^[0-9a-f]{12}$/.test(URZ)) { URZ = [...crypto.getRandomValues(new Uint8Array(6))].map(b => b.toString(16).padStart(2, '0')).join(''); localStorage.setItem('busy_urz', URZ); } }
+catch (e) { URZ = [...crypto.getRandomValues(new Uint8Array(6))].map(b => b.toString(16).padStart(2, '0')).join(''); }
+let GLOS = {}; try { GLOS = JSON.parse(localStorage.getItem('busy_glosy') || '{}'); } catch (e) {}
+
+const MIEJSC = ['Boronów','Brusiek','Bukowiec','Chwostek','Cieszowa','Doły','Koszęcin','Łazy','Piasek','Piłka','Płaszczymąka','Prądy','Rusinowice','Rzyce Irki','Sadów','Strzebiń','Wierzbie'];
+const CELE = ['Lubliniec – szkoła','Lubliniec – praca','Lubliniec PKP (pociąg)','Koszęcin Rynek','Koszęcin – szkoła','Koszęcin – przychodnia / urząd','Koszęcin PKP (pociąg)','Strzebiń – szkoła','Strzebiń PKP (pociąg)','Sadów – szkoła','Rusinowice – szkoła','Kalety','Psary – szkoła','Tarnowskie Góry','Częstochowa','Katowice'];
+const opt = (a, inne) => a.map(x => `<option>${esc(x)}</option>`).join('') + `<option value="__inne">${inne}</option>`;
+$('skad').innerHTML = '<option value="">– wybierz –</option>' + opt(MIEJSC, 'inna miejscowość…');
+$('dokad').innerHTML = '<option value="">– wybierz –</option>' + opt(CELE.concat(MIEJSC.filter(m => !CELE.some(c => c.startsWith(m)))), 'inny cel…');
+$('skad').onchange = () => $('skad_inne').hidden = $('skad').value !== '__inne';
+$('dokad').onchange = () => $('dokad_inne').hidden = $('dokad').value !== '__inne';
+
+// ---- mapa: OpenStreetMap + proponowane linie (z mapy projektu) ----
+const map = L.map('map', {zoomSnap: .5}).setView([50.635, 18.84], 11);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '© OpenStreetMap'}).addTo(map);
+const KOL = {'1':'#00704f','2':'#1f6fd6','3':'#cc8a00','4':'#d4473a','1L':'#00704f','4S':'#d4473a','4P':'#8e3a9d'};
+const PROP = L.layerGroup().addTo(map);
+fetch('../mapa/data.json').then(r => r.json()).then(D => {
+  const ORD = ['1L','4S','4P','3','2','4','1'];
+  for (const [k, l] of Object.entries(D.lines).sort((a, b) => ORD.indexOf(a[0]) - ORD.indexOf(b[0]))) {
+    const dash = ['1L','4S','4P'].includes(k) ? '7 7' : null;
+    L.polyline(l.geom, {color: '#fff', weight: k === '1' ? 9 : 6, opacity: .8, interactive: false}).addTo(map);
+    L.polyline(l.geom, {color: KOL[k] || '#555', weight: k === '1' ? 6 : 3.5, dashArray: dash}).bindTooltip('linia ' + k + ' (propozycja)', {sticky: true}).addTo(map);
+  }
+  for (const s of Object.values(D.stops)) L.circleMarker([s[0], s[1]], {radius: s[3] === 'hub' ? 8 : 4.5, color: '#10201c', weight: 2, fillColor: '#fff', fillOpacity: 1}).bindTooltip(s[2]).addTo(map);
+}).catch(() => {});
+
+let pinLL = null, pinM = null;
+map.on('click', e => {
+  pinLL = [+e.latlng.lat.toFixed(6), +e.latlng.lng.toFixed(6)];
+  if (pinM) pinM.setLatLng(pinLL); else pinM = L.marker(pinLL).addTo(map);
+  $('pin').className = 'pin'; $('pin').textContent = '📍 Miejsce zaznaczone. Kliknij mapę jeszcze raz, żeby je przesunąć.';
+});
+$('fs').onclick = () => {
+  const b = $('mapbox'), on = !b.classList.contains('full');
+  b.classList.toggle('full', on); $('fs').textContent = on ? '✕ Zamknij' : '⛶ Powiększ mapę';
+  document.body.style.overflow = on ? 'hidden' : ''; setTimeout(() => map.invalidateSize(), 60);
+};
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('mapbox').classList.contains('full')) $('fs').click(); });
+
+// ---- formularz ----
+let RODZ = 'dojazd';
+function pokazPola() {
+  document.querySelectorAll('#f [data-dla]').forEach(el => el.hidden = !el.dataset.dla.split(' ').includes(RODZ));
+  const wym = ['linia', 'godzina', 'uwaga'].includes(RODZ);
+  $('tr-h').textContent = wym ? '*' : '(nieobowiązkowo)';
+  $('tresc').placeholder = {dojazd: 'Np. dziecko kończy lekcje o 15:10, potrzebny powrót do Łaz', przystanek: 'Np. przystanek przy skrzyżowaniu – dużo domów, daleko do najbliższego', linia: 'Np. linia 4 mogłaby jechać przez…', godzina: 'Np. kurs o 7:03 z Rynku za wcześnie, lepiej o 7:15, bo…', uwaga: 'Twoja uwaga do propozycji siatki'}[RODZ];
+}
+document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#tabs button').forEach(x => x.classList.toggle('on', x === b)); RODZ = b.dataset.r; pokazPola(); $('msg').textContent = '';
+});
+pokazPola();
+
+$('f').onsubmit = async e => {
+  e.preventDefault();
+  const F = new FormData($('f')), g = k => (F.get(k) || '').toString().trim();
+  const d = {akcja: 'dodaj', rodzaj: RODZ, nick: g('nick'), kontakt: g('kontakt'), zgoda: !!F.get('zgoda'), tresc: g('tresc'), www: g('www'), urz: URZ};
+  if (RODZ === 'dojazd') Object.assign(d, {skad: g('skad') === '__inne' ? g('skad_inne') : g('skad'), dokad: g('dokad') === '__inne' ? g('dokad_inne') : g('dokad'),
+    godzina: g('godzina'), kierunek: g('kierunek'), dni: g('dni'), czestosc: g('czestosc'), cel: g('cel')});
+  if (['linia', 'godzina'].includes(RODZ)) d.linia = g('linia');
+  if (['przystanek', 'linia', 'uwaga'].includes(RODZ) && pinLL) { d.lat = pinLL[0]; d.lon = pinLL[1]; }
+  const msg = $('msg'); msg.className = 'msg';
+  if (d.nick.length < 2) { msg.className = 'msg err'; msg.textContent = 'Podaj imię lub nick (min. 2 znaki).'; return; }
+  if (RODZ === 'dojazd' && (!d.skad || !d.dokad)) { msg.className = 'msg err'; msg.textContent = 'Wybierz, skąd i dokąd chcesz dojechać.'; return; }
+  if (RODZ === 'przystanek' && !pinLL) { msg.className = 'msg err'; msg.textContent = 'Kliknij mapę, żeby wskazać miejsce przystanku.'; return; }
+  $('send').disabled = true; msg.textContent = 'Wysyłam…';
+  try {
+    const r = await fetch(API, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(d)});
+    const j = await r.json();
+    if (j.ok) {
+      msg.className = 'msg ok'; msg.textContent = j.zatwierdzone ? 'Dodano i od razu zatwierdzono (administrator).' : 'Dziękujemy! Propozycja trafiła do sprawdzenia – pojawi się na stronie po zatwierdzeniu.';
+      $('tresc').value = ''; if (pinM) { map.removeLayer(pinM); pinM = null; pinLL = null; $('pin').className = 'pin no'; $('pin').textContent = 'Kliknij mapę, żeby wskazać miejsce.'; }
+      if (j.zatwierdzone) wczytaj();
+    } else { msg.className = 'msg err'; msg.textContent = j.blad || 'Nie udało się wysłać – spróbuj później.'; }
+  } catch (err) { msg.className = 'msg err'; msg.textContent = 'Brak połączenia z serwerem – spróbuj później.'; }
+  $('send').disabled = false;
+};
+
+// ---- lista zatwierdzonych ----
+const RN = {dojazd: ['potrzebny dojazd', '#1f6fd6'], przystanek: ['przystanek', '#237647'], linia: ['linia', '#b45309'], godzina: ['godziny', '#7c3aed'], uwaga: ['uwaga', '#56665c']};
+const CELN = {szkola: 'szkoła', praca: 'praca', lekarz: 'lekarz', urzad: 'urząd', zakupy: 'zakupy', kolej: 'pociąg', inne: 'inne'};
+const DNIN = {robocze: 'dni robocze', codziennie: 'codziennie', sobota: 'soboty', niedziela: 'niedziele'};
+const CZN = {codziennie: 'codziennie', kilka: 'kilka razy w tygodniu', czasem: 'czasem'};
+let LISTA = [], FILTR = '';
+function rysuj() {
+  const L_ = LISTA.filter(p => !FILTR || p.rodzaj === FILTR).sort((a, b) => b.glosy - a.glosy || b.id - a.id);
+  $('list').innerHTML = L_.length ? L_.map(p => {
+    const [n, c] = RN[p.rodzaj] || [p.rodzaj, '#555'];
+    const tyt = p.rodzaj === 'dojazd' ? `${esc(p.skad)} → ${esc(p.dokad)}${p.godzina ? ` · ${p.kierunek === 'odjazd' ? 'odjazd' : 'na'} ${esc(p.godzina)}` : ''}` : (p.linia ? 'Linia ' + esc(p.linia) : '');
+    const dod = [DNIN[p.dni], CZN[p.czestosc], CELN[p.cel]].filter(Boolean).join(' · ');
+    return `<div class="p"><span class="chip" style="background:${c}">${n}</span>${tyt ? `<b>${tyt}</b>` : ''}${dod ? `<div class="m">${esc(dod)}</div>` : ''}
+      ${p.tresc ? `<div>${esc(p.tresc)}</div>` : ''}<div class="m">${esc(p.nick)} · ${esc(p.data)}${p.lat != null ? ` · <span class="map-link" data-ll="${p.lat},${p.lon}">pokaż na mapie</span>` : ''}</div>
+      <div class="v"><button type="button" data-id="${p.id}" class="${GLOS[p.id] ? 'on' : ''}">${GLOS[p.id] ? '✓ ' : '👍 '}Też tego potrzebuję</button><span class="m">${p.glosy} ${p.glosy === 1 ? 'osoba' : (p.glosy % 10 >= 2 && p.glosy % 10 <= 4 && (p.glosy % 100 < 10 || p.glosy % 100 >= 20) ? 'osoby' : 'osób')}</span></div></div>`;
+  }).join('') : '<p class="empty">Na razie brak zatwierdzonych propozycji w tej grupie. Bądź pierwszy!</p>';
+}
+function wczytaj() {
+  fetch(API, {cache: 'no-store'}).then(r => r.json()).then(j => {
+    LISTA = j.propozycje || []; rysuj(); PROP.clearLayers();
+    for (const p of LISTA) if (p.lat != null) L.circleMarker([p.lat, p.lon], {radius: 7, color: '#fff', weight: 2, fillColor: '#1f6fd6', fillOpacity: 1})
+      .bindPopup(`<b>${esc((RN[p.rodzaj] || [p.rodzaj])[0])}</b><br>${esc(p.tresc || '')}<br><small>${esc(p.nick)} · ${p.glosy} głosów</small>`).addTo(PROP);
+  }).catch(() => { $('list').innerHTML = '<p class="empty">Nie udało się wczytać propozycji – spróbuj odświeżyć stronę.</p>'; });
+}
+document.querySelectorAll('#filt button').forEach(b => b.onclick = () => { document.querySelectorAll('#filt button').forEach(x => x.classList.toggle('on', x === b)); FILTR = b.dataset.f; rysuj(); });
+$('list').addEventListener('click', async e => {
+  const ml = e.target.closest('.map-link');
+  if (ml) { const ll = ml.dataset.ll.split(',').map(Number); map.setView(ll, 16); $('mapbox').scrollIntoView({behavior: 'smooth', block: 'center'}); return; }
+  const b = e.target.closest('button[data-id]'); if (!b || GLOS[b.dataset.id]) return;
+  b.disabled = true;
+  try {
+    const r = await fetch(API, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({akcja: 'glos', id: +b.dataset.id, urz: URZ})});
+    const j = await r.json();
+    if (j.ok) { GLOS[b.dataset.id] = 1; try { localStorage.setItem('busy_glosy', JSON.stringify(GLOS)); } catch (e) {}
+      const p = LISTA.find(x => x.id === +b.dataset.id); if (p) p.glosy = j.glosy; rysuj(); }
+  } catch (err) {}
+  b.disabled = false;
+});
+wczytaj();
+</script>
+</body>
+</html>
