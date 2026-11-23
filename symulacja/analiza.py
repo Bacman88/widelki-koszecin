@@ -2,9 +2,7 @@
 import re, json, statistics as st, collections
 import xml.etree.ElementTree as ET
 
-plan = {}   # vid -> [(busStop, until)]
-for m in re.finditer(r'<vehicle id="([^"]*)".*?</vehicle>', open('busy.rou.xml').read(), re.S):
-    plan[m.group(1)] = re.findall(r'busStop="([^"]*)" duration="\d+" until="(\d+)"', m.group(0))
+plan = {v: [(k, u) for k, u, stoi in p if stoi] for v, p in json.load(open('plan_kursow.json')).items()}   # vid -> [(busStop, planowy czas)]
 sim = collections.defaultdict(list)
 for e in ET.parse('wyniki/przystanki.xml').getroot():
     if e.get('id', '').startswith('L') or e.get('id', '').startswith('L'):
@@ -20,7 +18,7 @@ for v, pl in plan.items():
     if not s or len(s) != len(pl): continue
     t_plan = (int(pl[-1][1]) - int(pl[0][1])) / 60
     t_sim = (s[-1][1] - s[0][2]) / 60
-    late = [(s[i][1] - int(pl[i][1])) / 60 for i in range(1, len(pl))]
+    late = [max(0, (s[i][1] - int(pl[i][1])) / 60) for i in range(1, len(pl))]
     line = v.split('_')[0]; kier = v.split('_')[1]
     po_linii[(line, kier)].append((t_plan, t_sim, max(late)))
     for i in range(1, len(pl)):

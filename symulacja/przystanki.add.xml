@@ -3,8 +3,8 @@
   <busStop id="bor_2978#9" lane="2978#9_0" startPos="0.0" endPos="45.0" name="Boronów" friendlyPos="true" parkingLength="120"/>
   <busStop id="borp_-2985#0" lane="-2985#0_0" startPos="136.5" endPos="148.5" name="Boronów PKP" friendlyPos="true"/>
   <busStop id="borp_2985#0" lane="2985#0_0" startPos="0.0" endPos="12.0" name="Boronów PKP" friendlyPos="true"/>
-  <busStop id="bru_-3363#1" lane="-3363#1_0" startPos="7.8" endPos="19.8" name="Brusiek" friendlyPos="true"/>
-  <busStop id="bru_3363#1" lane="3363#1_0" startPos="0.0" endPos="12.0" name="Brusiek" friendlyPos="true"/>
+  <busStop id="bru_-3316" lane="-3316_0" startPos="0.0" endPos="12.0" name="Brusiek" friendlyPos="true"/>
+  <busStop id="bru_3316" lane="3316_0" startPos="9.5" endPos="21.5" name="Brusiek" friendlyPos="true"/>
   <busStop id="buk_-3555#2" lane="-3555#2_0" startPos="279.2" endPos="291.2" name="Bukowiec" friendlyPos="true"/>
   <busStop id="buk_3555#1" lane="3555#1_0" startPos="34.0" endPos="46.0" name="Bukowiec" friendlyPos="true"/>
   <busStop id="chw_-2360" lane="-2360_0" startPos="50.8" endPos="62.8" name="Chwostek" friendlyPos="true"/>
@@ -15,13 +15,12 @@
   <busStop id="dol_2754#1" lane="2754#1_0" startPos="1330.8" endPos="1342.8" name="Hadra" friendlyPos="true"/>
   <busStop id="irk_-2193" lane="-2193_0" startPos="692.9" endPos="704.9" name="Rzyce Irki" friendlyPos="true"/>
   <busStop id="irk_2206" lane="2206_0" startPos="377.6" endPos="389.6" name="Rzyce Irki" friendlyPos="true"/>
-  <busStop id="kalp_3401" lane="3401_0" startPos="1209.3" endPos="1254.3" name="Kalety PKP" friendlyPos="true" parkingLength="120"/>
-  <busStop id="kosp_-1115" lane="-1115_0" startPos="192.9" endPos="237.9" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
+  <busStop id="kalp_3401" lane="3401_0" startPos="1202.4" endPos="1247.4" name="Kalety PKP" friendlyPos="true" parkingLength="120"/>
+  <busStop id="kosp_-1115" lane="-1115_0" startPos="194.4" endPos="239.4" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosp_-2394" lane="-2394_0" startPos="0.0" endPos="45.0" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
-  <busStop id="kosp_2394" lane="2394_0" startPos="48.0" endPos="93.0" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
+  <busStop id="kosp_2394" lane="2394_0" startPos="47.7" endPos="92.7" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosp_2405" lane="2405_0" startPos="0.0" endPos="45.0" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosr_-271#5" lane="-271#5_0" startPos="98.0" endPos="143.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
-  <busStop id="kosr_271#3" lane="271#3_0" startPos="0.0" endPos="24.1" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosr_271#5" lane="271#5_0" startPos="0.0" endPos="45.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kossz_-2178" lane="-2178_0" startPos="136.8" endPos="148.8" name="Koszęcin Szkoła" friendlyPos="true"/>
   <busStop id="kossz_2388" lane="2388_0" startPos="0.0" endPos="12.0" name="Koszęcin Szkoła" friendlyPos="true"/>
@@ -34,16 +33,16 @@
   <busStop id="moc_-2756" lane="-2756_0" startPos="209.4" endPos="221.4" name="Mochała" friendlyPos="true"/>
   <busStop id="pia_-3533#1" lane="-3533#1_0" startPos="0.0" endPos="45.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pia_3533#1" lane="3533#1_0" startPos="242.0" endPos="287.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
-  <busStop id="pil_-727#0" lane="-727#0_0" startPos="51.7" endPos="96.7" name="Piłka" friendlyPos="true" parkingLength="120"/>
+  <busStop id="pil_-727#0" lane="-727#0_0" startPos="56.9" endPos="101.9" name="Piłka" friendlyPos="true" parkingLength="120"/>
   <busStop id="pil_727#0" lane="727#0_0" startPos="0.0" endPos="45.0" name="Piłka" friendlyPos="true" parkingLength="120"/>
-  <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="75.6" endPos="87.6" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
+  <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="74.0" endPos="86.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
   <busStop id="psk_3555#3" lane="3555#3_0" startPos="741.0" endPos="753.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
   <busStop id="rus_-2390" lane="-2390_0" startPos="0.0" endPos="12.0" name="Rusinowice PKP" friendlyPos="true"/>
   <busStop id="rus_2390" lane="2390_0" startPos="94.5" endPos="106.5" name="Rusinowice PKP" friendlyPos="true"/>
   <busStop id="sad_-988#6" lane="-988#6_0" startPos="98.7" endPos="110.7" name="Sadów Przedszkole" friendlyPos="true"/>
   <busStop id="sad_988#6" lane="988#6_0" startPos="59.8" endPos="71.8" name="Sadów Przedszkole" friendlyPos="true"/>
-  <busStop id="str_-2875#2" lane="-2875#2_0" startPos="0.0" endPos="12.0" name="Strzebiń Lubliniecka" friendlyPos="true"/>
-  <busStop id="str_2875#2" lane="2875#2_0" startPos="149.7" endPos="161.7" name="Strzebiń Lubliniecka" friendlyPos="true"/>
+  <busStop id="str_-2875#2" lane="-2875#2_0" startPos="0.0" endPos="45.0" name="Strzebiń Lubliniecka" friendlyPos="true" parkingLength="120"/>
+  <busStop id="str_2875#2" lane="2875#2_0" startPos="116.7" endPos="161.7" name="Strzebiń Lubliniecka" friendlyPos="true" parkingLength="120"/>
   <busStop id="strs_-2947#3" lane="-2947#3_0" startPos="322.4" endPos="334.4" name="Strzebiń Szkoła" friendlyPos="true"/>
   <busStop id="strs_2946#3" lane="2946#3_0" startPos="107.4" endPos="119.4" name="Strzebiń Szkoła" friendlyPos="true"/>
   <busStop id="wie_-533#2" lane="-533#2_0" startPos="0.0" endPos="12.0" name="Wierzbie" friendlyPos="true"/>

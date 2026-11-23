@@ -2,16 +2,12 @@
 import re, collections, json
 import xml.etree.ElementTree as ET
 fm = lambda s: f'{int(s // 3600)}:{int(s % 3600 // 60):02d}'
-plan = {}
-for m in re.finditer(r'<vehicle id="([^"]*)".*?</vehicle>', open('busy.rou.xml').read(), re.S):
-    plan[m.group(1)] = dict(re.findall(r'busStop="([^"]*)" duration="\d+" until="(\d+)"', m.group(0)))
+plan = {v: {k: u for k, u, _ in p} for v, p in json.load(open('plan_kursow.json')).items()}
 sim = collections.defaultdict(dict)
 for e in ET.parse('wyniki/przystanki.xml').getroot():
     sim[e.get('id')][e.get('busStop').split('_')[0]] = (float(e.get('started')), float(e.get('ended')))
 def pu(v, st): return next(int(u) for k, u in plan[v].items() if k.split('_')[0] == st)
 PRZ = [('Strzebiń: linia 4 z Łaz → linia 1 do Lublińca', 'L4_Łazy', 'L1_Piasek', 'str'),
-       ('Irki: linia 4 z Piłki → linia 1 do Lublińca', 'L4_Piłka', 'L1_Piasek', 'irk'),
-       ('Irki: linia 1 z Lublińca → linia 4 do Piłki', 'L1_LubliniecPK', 'L4_Łazy', 'irk'),
        ('Strzebiń: linia 1 z Lublińca → linia 4 do Łaz', 'L1_LubliniecPK', 'L4_Piłka', 'str')]
 wynik = []
 for opis, a, b, st in PRZ:

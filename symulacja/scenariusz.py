@@ -4,8 +4,9 @@ Wejście:  koszecin.net.xml (sieć z OpenStreetMap), data.json (trasy i przystan
 Wyjście:  przystanki.add.xml, busy.rou.xml, pociagi.rou.xml (+ tlo.rou.xml z randomTrips), koszecin.sumocfg.
 
 Założenia (do zmiany na górze pliku):
-- busy jadą trasami z projektu (te same węzły OSM), na przystanku stoją 20 s,
-  nie odjeżdżają przed czasem z rozkładu (until), na Rynku linie 2–4 czekają do :03;
+- busy jadą trasami z projektu (te same węzły OSM); na węzłach stoją 20 s i nie odjeżdżają przed czasem
+  (until), na zwykłych przystankach 10 s, na żądanie (Irki, Płaszczymąka) zatrzymują się tylko czasem, na 6 s;
+  na Rynku linie 2–4 czekają do :03;
 - pociągi: po jednym na godzinę w każdą stronę na każdej linii kolejowej przez obszar (przybliżenie),
   dzięki czemu przejazdy kolejowe zamykają się jak w rzeczywistości;
 - ruch tła: losowe samochody na całej sieci (randomTrips), żeby skrzyżowania nie były puste.
@@ -19,7 +20,11 @@ from sumolib.route import mapTrace
 D = json.load(open(sys.argv[1] if len(sys.argv) > 1 else '../out/data.json'))
 R = json.load(open(sys.argv[2] if len(sys.argv) > 2 else '../out/rozklad_data.json'))
 NET = sumolib.net.readNet('koszecin.net.xml.gz')
-POSTOJ = 20          # s na przystanku
+POSTOJ = 20          # s na węzłach przesiadkowych (Rynek, stacje, Strzebiń, Lubliniec)
+POSTOJ_ZWYKLY = 10   # s na zwykłym przystanku po drodze
+POSTOJ_NZ = 6        # s na przystanku na żądanie, gdy ktoś wsiada/wysiada
+NA_ZADANIE = {'irk': 3.5, 'psk': 14}   # przystanek: ile razy na dobę bus faktycznie się zatrzymuje (szacunek mieszkańca)
+PUNKTY_CZASOWE = set()        # + WEZLY: tylko tu bus czeka, jeśli jest przed czasem
 OKNO = (4 * 3600 + 30 * 60, 23 * 3600 + 59 * 60)
 
 S = D['stops']; NAME2ID = {v[2]: k for k, v in S.items()}
@@ -72,7 +77,7 @@ def przystanek_na_trasie(edges, sid, od):
         if best and d > best[0] + 800 and k > best[1] + 3: break
     return best
 
-WEZLY = {'kosr', 'kosp', 'lubpkp', 'lisp', 'kalp', 'bor', 'laz', 'pil', 'pia'}   # przystanki z zatoką / pętlą: autobus czekający nie blokuje drogi
+WEZLY = {'kosr', 'kosp', 'lubpkp', 'lisp', 'kalp', 'bor', 'laz', 'pil', 'pia', 'str'}   # przystanki z zatoką / pętlą: autobus czekający nie blokuje drogi
 stopdefs = {}; vehicles = []
 for line, days in R['tt'].items():
     if line not in D['lines']: continue
@@ -112,14 +117,29 @@ with open('przystanki.add.xml', 'w') as o:
         o.write(f'  <busStop id="{key}" lane="{lane}" startPos="{a:.1f}" endPos="{b:.1f}" name="{nm}" friendlyPos="true"{pl}/>\n')
     o.write('</additional>\n')
 KOL = {'1': '0,112,79', '2': '31,111,214', '3': '204,138,0', '4': '212,71,58'}
+import random, collections
+LOS = random.Random(7); PLAN = {}
+LICZ = collections.Counter(k.split('_')[0] for *_, st_, _ in vehicles for k, _ in st_)
 with open('busy.rou.xml', 'w') as o:
     o.write('<routes>\n  <vType id="bus" vClass="bus" length="8.5" maxSpeed="25" accel="1.2" decel="3.5" sigma="0.4" speedFactor="normc(1,0.05,0.9,1.1)" guiShape="bus"/>\n')
     for dep, vid, edges, stops, line in sorted(vehicles):
         o.write(f'  <vehicle id="{vid}" type="bus" depart="{dep}" line="{line}" color="{KOL.get(line, "80,80,80")}" departLane="best" departPos="0">\n')
         o.write(f'    <route edges="{" ".join(edges)}"/>\n')
-        for key, until in stops:
-            par = ' parking="true"' if key.split('_')[0] in WEZLY else ''
-            o.write(f'    <stop busStop="{key}" duration="{POSTOJ}" until="{until}"{par}/>\n')
+        PLAN[vid] = []
+        for i, (key, until) in enumerate(stops):
+            sid = key.split('_')[0]; skrajny = i in (0, len(stops) - 1)
+            if sid in NA_ZADANIE and not skrajny and LOS.random() >= NA_ZADANIE[sid] / LICZ[sid]:
+                PLAN[vid].append((key, until, False)); continue          # nikt nie czeka i nikt nie wysiada – przejazd bez zatrzymania
+            PLAN[vid].append((key, until, True))
+            par = ' parking="true"' if sid in WEZLY else ''
+            if i == len(stops) - 1:                                   # pętla końcowa: wysiadka, bez czekania na czas z rozkładu
+                o.write(f'    <stop busStop="{key}" duration="{POSTOJ}"{par}/>\n')
+            elif sid in WEZLY or sid in PUNKTY_CZASOWE or i == 0:
+                o.write(f'    <stop busStop="{key}" duration="{POSTOJ}" until="{until}"{par}/>\n')
+            else:
+                o.write(f'    <stop busStop="{key}" duration="{POSTOJ_NZ if sid in NA_ZADANIE else POSTOJ_ZWYKLY}"{par}/>\n')
         o.write('  </vehicle>\n')
     o.write('</routes>\n')
-print('przystanki', len(stopdefs), 'kursy', len(vehicles))
+json.dump(PLAN, open('plan_kursow.json', 'w'), ensure_ascii=False)
+print('przystanki', len(stopdefs), 'kursy', len(vehicles), 'zatrzymania na żądanie:',
+      {k: sum(1 for p in PLAN.values() for x in p if x[0].startswith(k + '_') and x[2]) for k in NA_ZADANIE})
