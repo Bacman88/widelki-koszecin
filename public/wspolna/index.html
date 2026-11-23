@@ -141,7 +141,7 @@ try { URZ = localStorage.getItem('busy_urz') || ''; if (!/^[0-9a-f]{12}$/.test(U
 catch (e) { URZ = [...crypto.getRandomValues(new Uint8Array(6))].map(b => b.toString(16).padStart(2, '0')).join(''); }
 let GLOS = {}; try { GLOS = JSON.parse(localStorage.getItem('busy_glosy') || '{}'); } catch (e) {}
 
-const MIEJSC = ['Boronów','Brusiek','Bukowiec','Chwostek','Cieszowa','Doły','Koszęcin','Łazy','Piasek','Piłka','Płaszczymąka','Prądy','Rusinowice','Rzyce Irki','Sadów','Strzebiń','Wierzbie'];
+const MIEJSC = ['Boronów','Brusiek','Bukowiec','Chwostek','Cieszowa','Hadra','Koszęcin','Łazy','Mochała','Piasek','Piłka','Płaszczymąka','Prądy','Rusinowice','Rzyce Irki','Sadów','Strzebiń','Wierzbie'];
 const CELE = ['Lubliniec – szkoła','Lubliniec – praca','Lubliniec PKP (pociąg)','Koszęcin Rynek','Koszęcin – szkoła','Koszęcin – przychodnia / urząd','Koszęcin PKP (pociąg)','Strzebiń – szkoła','Strzebiń PKP (pociąg)','Sadów – szkoła','Rusinowice – szkoła','Kalety','Psary – szkoła','Tarnowskie Góry','Częstochowa','Katowice'];
 const opt = (a, inne) => a.map(x => `<option>${esc(x)}</option>`).join('') + `<option value="__inne">${inne}</option>`;
 $('skad').innerHTML = '<option value="">– wybierz –</option>' + opt(MIEJSC, 'inna miejscowość…');
