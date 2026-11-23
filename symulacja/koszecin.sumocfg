@@ -10,6 +10,7 @@
   <output>
     <stop-output value="wyniki/przystanki.xml"/>
     <tripinfo-output value="wyniki/kursy.xml"/>
+    <edgedata-output value="wyniki/natezenia.xml"/>
   </output>
   <report><no-step-log value="true"/><no-warnings value="true"/><duration-log.statistics value="true"/></report>
   <gui_only><gui-settings-file value="widok.xml"/><start value="false"/></gui_only>

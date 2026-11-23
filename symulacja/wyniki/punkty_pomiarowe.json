@@ -1,0 +1,218 @@
+[
+ {
+  "droga": "906",
+  "punkt": 24248,
+  "opis": "Lubliniec, przejście 2: Skłodowskiej – rondo JP II",
+  "sdrr": 11324,
+  "krawedzie": [
+   "1346#1",
+   "-1346#1"
+  ],
+  "ulica": "Marszałka Józefa Piłsudskiego",
+  "odl_m": 2
+ },
+ {
+  "droga": "906",
+  "punkt": 24253,
+  "opis": "Lubliniec, przejście 3: rondo JP II – Stalmacha",
+  "sdrr": 10556,
+  "krawedzie": [
+   "577#1",
+   "-577#1"
+  ],
+  "ulica": "Jana Kilińskiego",
+  "odl_m": 2
+ },
+ {
+  "droga": "906",
+  "punkt": 24118,
+  "opis": "Lubliniec Stalmacha – Sadów Podlesie",
+  "sdrr": 13333,
+  "krawedzie": [
+   "-79#0",
+   "79#0"
+  ],
+  "ulica": "Kopce",
+  "odl_m": 2
+ },
+ {
+  "droga": "906",
+  "punkt": 24119,
+  "opis": "Sadów, przejście",
+  "sdrr": 8839,
+  "krawedzie": [
+   "-988#7",
+   "988#7"
+  ],
+  "ulica": "Powstańców Śląskich",
+  "odl_m": 2
+ },
+ {
+  "droga": "906",
+  "punkt": 24120,
+  "opis": "Sadów Rusinowicka – Koszęcin",
+  "sdrr": 6789,
+  "krawedzie": [
+   "2209#3",
+   "-564"
+  ],
+  "ulica": "Główna",
+  "odl_m": 2
+ },
+ {
+  "droga": "906",
+  "punkt": 24121,
+  "opis": "Koszęcin – Bukowiec",
+  "sdrr": 5209,
+  "krawedzie": [
+   "1067",
+   "-1687"
+  ],
+  "ulica": "Ignacego Krasickiego",
+  "odl_m": 2
+ },
+ {
+  "droga": "906",
+  "punkt": 24122,
+  "opis": "Bukowiec – Piasek",
+  "sdrr": 5708,
+  "krawedzie": [
+   "3555#3",
+   "-3555#3"
+  ],
+  "ulica": "Katowicka",
+  "odl_m": 22
+ },
+ {
+  "droga": "907",
+  "punkt": 24125,
+  "opis": "Boronów – Koszęcin",
+  "sdrr": 3395,
+  "krawedzie": [
+   "1079#1",
+   "-276#0"
+  ],
+  "ulica": "Koszęcińska",
+  "odl_m": 2
+ },
+ {
+  "droga": "907",
+  "punkt": 24126,
+  "opis": "Koszęcin – Brusiek",
+  "sdrr": 4587,
+  "krawedzie": [
+   "2189#1",
+   "-2189#1"
+  ],
+  "ulica": "",
+  "odl_m": 2
+ },
+ {
+  "droga": "907",
+  "punkt": 24127,
+  "opis": "Brusiek – Tworóg",
+  "sdrr": 2653,
+  "krawedzie": [
+   "-3362",
+   "3446"
+  ],
+  "ulica": "",
+  "odl_m": 2
+ },
+ {
+  "droga": "789",
+  "punkt": 24055,
+  "opis": "Brusiek – Kalety Koszęcińska",
+  "sdrr": 1522,
+  "krawedzie": [
+   "3438",
+   "-3271#0"
+  ],
+  "ulica": "Dolna",
+  "odl_m": 2
+ },
+ {
+  "droga": "908",
+  "punkt": 24135,
+  "opis": "Kamienica – Piasek",
+  "sdrr": 2891,
+  "krawedzie": [
+   "3539",
+   "-3568"
+  ],
+  "ulica": "",
+  "odl_m": 2
+ },
+ {
+  "droga": "908",
+  "punkt": 24136,
+  "opis": "Piasek – Sośnica",
+  "sdrr": 7054,
+  "krawedzie": [
+   "-3581",
+   "3586"
+  ],
+  "ulica": "",
+  "odl_m": 2
+ },
+ {
+  "droga": "905",
+  "punkt": 24115,
+  "opis": "Herby – Boronów",
+  "sdrr": 2764,
+  "krawedzie": [
+   "2866#2",
+   "-51#0"
+  ],
+  "ulica": "",
+  "odl_m": 2
+ },
+ {
+  "droga": "905",
+  "punkt": 24117,
+  "opis": "Boronów – Bukowiec",
+  "sdrr": 3054,
+  "krawedzie": [
+   "2881#6",
+   "-2881#6"
+  ],
+  "ulica": "Wolności",
+  "odl_m": 2
+ },
+ {
+  "droga": "11",
+  "punkt": 78340401,
+  "opis": "Lubliniec, obwodnica 2: DW906 – Stalmacha",
+  "sdrr": 5546,
+  "krawedzie": [
+   "1289#0",
+   "-1289#0"
+  ],
+  "ulica": "",
+  "odl_m": 3
+ },
+ {
+  "droga": "11",
+  "punkt": 78440414,
+  "opis": "Lubliniec Stalmacha – Tworóg",
+  "sdrr": 6636,
+  "krawedzie": [
+   "2108#2",
+   "-3376"
+  ],
+  "ulica": "",
+  "odl_m": 3
+ },
+ {
+  "droga": "46",
+  "punkt": 151340722,
+  "opis": "Lubliniec – Kochanowice",
+  "sdrr": 5270,
+  "krawedzie": [
+   "-2706",
+   "1894"
+  ],
+  "ulica": "Kochcicka",
+  "odl_m": 3
+ }
+]

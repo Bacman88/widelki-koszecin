@@ -23,11 +23,15 @@ NET = sumolib.net.readNet('koszecin.net.xml.gz')
 POSTOJ = 20          # s na węzłach przesiadkowych (Rynek, stacje, Strzebiń, Lubliniec)
 POSTOJ_ZWYKLY = 10   # s na zwykłym przystanku po drodze
 POSTOJ_NZ = 6        # s na przystanku na żądanie, gdy ktoś wsiada/wysiada
-NA_ZADANIE = {'irk': 3.5, 'psk': 14}   # przystanek: ile razy na dobę bus faktycznie się zatrzymuje (szacunek mieszkańca)
+NA_ZADANIE = {'irk': 3.5, 'psk': 14, 'prad': 8}   # przystanek: ile razy na dobę bus faktycznie się zatrzymuje (szacunek mieszkańca)
 PUNKTY_CZASOWE = set()        # + WEZLY: tylko tu bus czeka, jeśli jest przed czasem
 OKNO = (4 * 3600 + 30 * 60, 23 * 3600 + 59 * 60)
 
 S = D['stops']; NAME2ID = {v[2]: k for k, v in S.items()}
+# przystanki istniejące, których nie ma w rozkładzie projektu (tylko główne przystanki) – dokładane w symulacji,
+# jeśli trasa linii przechodzi obok; czas przejazdu liczony proporcjonalnie do odległości
+DODATKOWE = {'prad': (50.62416, 18.87249, 'Prądy')}
+S.update({k: list(v) for k, v in DODATKOWE.items()})
 def xy(lat, lon): return NET.convertLonLat2XY(lon, lat)
 def dist(a, b): return math.hypot(a[0] - b[0], a[1] - b[1])
 
@@ -77,6 +81,7 @@ def przystanek_na_trasie(edges, sid, od):
         if best and d > best[0] + 800 and k > best[1] + 3: break
     return best
 
+WSTAW = {}
 WEZLY = {'kosr', 'kosp', 'lubpkp', 'lisp', 'kalp', 'bor', 'laz', 'pil', 'pia', 'str'}   # przystanki z zatoką / pętlą: autobus czekający nie blokuje drogi
 stopdefs = {}; vehicles = []
 for line, days in R['tt'].items():
@@ -84,6 +89,16 @@ for line, days in R['tt'].items():
     for nm, dd in days['wd'].items():
         ids = [NAME2ID.get(s) or NAME2ID[s.split(' (')[0]] for s in dd['stops']]
         edges = trasa(line, ids)
+        for x in DODATKOWE:
+            p = xy(*S[x][:2])
+            d, k = min((sumolib.geomhelper.polygonOffsetAndDistanceToPoint(p, NET.getEdge(e).getLanes()[0].getShape())[1], k)
+                       for k, e in enumerate(edges))
+            if d > 40: continue
+            sk = []
+            for y in ids: sk.append(przystanek_na_trasie(edges, y, sk[-1] if sk else 0)[1])
+            for i in range(1, len(ids)):
+                if sk[i - 1] <= k <= sk[i] and sk[i - 1] < sk[i]:
+                    ids.insert(i, x); WSTAW[(line, nm)] = (i, edges, sk[i - 1], k, sk[i]); break
         k0 = 0; stl = []
         for i, sid in enumerate(ids):
             d, k, pos, ln = przystanek_na_trasie(edges, sid, k0)
@@ -100,11 +115,15 @@ for line, days in R['tt'].items():
             stl.append(key); k0 = k
         for n, (t, dm) in enumerate(dd['trips']):
             if dm: continue
+            if (line, nm) in WSTAW:          # czas na dołożonym przystanku: proporcjonalnie do długości trasy
+                i, ed, ka, kx, kb = WSTAW[(line, nm)]
+                Lk = lambda a, b: sum(NET.getEdge(e).getLength() for e in ed[a:b])
+                t = list(t[:i]) + [t[i - 1] + (t[i] - t[i - 1]) * Lk(ka, kx) / max(1, Lk(ka, kb))] + list(t[i:])
             t0 = t[0] * 60
             if not (OKNO[0] <= t0 <= OKNO[1]): continue
             stops = []
             for i, key in enumerate(stl):
-                until = t[i] * 60
+                until = round(t[i] * 60)
                 if ids[i] == 'kosr' and line in ('2', '3', '4') and 0 < i < len(ids) - 1 and t[i + 1] - t[i] > 6:
                     until = ((t[i] + 11) // 60 * 60 + 3) * 60
                 stops.append((key, until))
@@ -119,7 +138,11 @@ with open('przystanki.add.xml', 'w') as o:
 KOL = {'1': '0,112,79', '2': '31,111,214', '3': '204,138,0', '4': '212,71,58'}
 import random, collections
 LOS = random.Random(7); PLAN = {}
-LICZ = collections.Counter(k.split('_')[0] for *_, st_, _ in vehicles for k, _ in st_)
+PRZEJAZDY = collections.defaultdict(list)
+for _, vid_, _, st_, _ in sorted(vehicles):
+    for i_, (k, _) in enumerate(st_):
+        if k.split('_')[0] in NA_ZADANIE and 0 < i_ < len(st_) - 1: PRZEJAZDY[k.split('_')[0]].append(vid_)
+WYBRANE = {s_: set(LOS.sample(v_, min(len(v_), round(NA_ZADANIE[s_])))) for s_, v_ in PRZEJAZDY.items()}
 with open('busy.rou.xml', 'w') as o:
     o.write('<routes>\n  <vType id="bus" vClass="bus" length="8.5" maxSpeed="25" accel="1.2" decel="3.5" sigma="0.4" speedFactor="normc(1,0.05,0.9,1.1)" guiShape="bus"/>\n')
     for dep, vid, edges, stops, line in sorted(vehicles):
@@ -128,7 +151,7 @@ with open('busy.rou.xml', 'w') as o:
         PLAN[vid] = []
         for i, (key, until) in enumerate(stops):
             sid = key.split('_')[0]; skrajny = i in (0, len(stops) - 1)
-            if sid in NA_ZADANIE and not skrajny and LOS.random() >= NA_ZADANIE[sid] / LICZ[sid]:
+            if sid in NA_ZADANIE and not skrajny and vid not in WYBRANE[sid]:
                 PLAN[vid].append((key, until, False)); continue          # nikt nie czeka i nikt nie wysiada – przejazd bez zatrzymania
             PLAN[vid].append((key, until, True))
             par = ' parking="true"' if sid in WEZLY else ''

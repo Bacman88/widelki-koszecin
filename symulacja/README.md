@@ -5,9 +5,9 @@ Proponowana siatka busów gminy Koszęcin sprawdzona w **SUMO** (Simulation of U
 Model to **dzień roboczy, wariant pełny, 4:30–24:00**:
 - **Drogi:** prawdziwe drogi z OpenStreetMap; 50 km/h w terenie zabudowanym, 90 km/h poza nim.
 - **Przejazdy kolejowe:** 74 przejazdy z rogatkami. 4 z nich leżą na trasach busów: przy Lublińcu, w Lisowie, przy Rusinowicach i przy Boronowie.
-- **Busy:** 91 kursów wg rozkładu z `out/rozklad_data.json`. Na zwykłych przystankach stoją 10 s. Irki i Płaszczymąka to przystanki na żądanie: bus staje tam tylko czasem (Irki ok. 4 razy na dobę, Płaszczymąka kilkanaście), na 6 s. Na czas z rozkładu czekają tylko w węzłach z zatoką (Rynek, stacje, Strzebiń, Lubliniec PKP); na Rynku dojazdówki czekają do :03.
+- **Busy:** 91 kursów wg rozkładu z `out/rozklad_data.json`. Na zwykłych przystankach stoją 10 s. Irki, Płaszczymąka i Prądy to przystanki na żądanie: bus staje tam tylko czasem (Irki ok. 4 razy na dobę, Płaszczymąka 14, Prądy 8), na 6 s. Prądy (linie 1 i 4) nie ma w rozkładzie projektu; czas przejazdu liczony proporcjonalnie do odległości. Na czas z rozkładu czekają tylko w węzłach z zatoką (Rynek, stacje, Strzebiń, Lubliniec PKP); na Rynku dojazdówki czekają do :03.
 - **Pociągi:** na przejeździe przy Lublińcu ruch po wszystkich torach, łącznie ok. 9 pociągów na godzinę; co drugi to długi, wolny skład towarowy (600 m, 60 km/h). Na pozostałych przejazdach pociąg co godzinę w każdą stronę. To przybliżenie, nie rzeczywisty rozkład PKP.
-- **Ruch tła:** ok. 14 tys. samochodów na dobę (`tlo.py`), wg obserwacji mieszkańca: w szczytach duży ruch wschodni Lubliniec ↔ Piasek i dalej oraz Kalety ↔ Koszęcin (w obie strony), umiarkowany po głównych ulicach Lublińca, mało między wsiami. Auta startują tylko z dróg zbiorczych i wyższych, nie z osiedlowych uliczek. To szacunek, nie pomiar; do kalibracji nadają się wyniki Generalnego Pomiaru Ruchu (GDDKiA, drogi krajowe i wojewódzkie).
+- **Ruch tła:** dobrany do pomiarów ruchu (średni dobowy ruch roczny): GPR 2020 na drogach wojewódzkich (ZDW Katowice) i GPR 2020/21 na drogach krajowych (GDDKiA). 18 punktów pomiarowych na DW906, DW907, DW905, DW908, DW789, DK11 i DK46; `routeSampler` z SUMO dobiera trasy aut tak, żeby w każdej godzinie zgadzały się z pomiarem (szczyty 6–8 i 14–17). Ok. 51 tys. aut na dobę, głównie po drogach z pomiarami. Porównanie pomiar/symulacja: `wyniki/kalibracja.json` – na większości punktów różnica do 5%, za mało aut na DK11 (obwodnica Lublińca), DW907 Brusiek – Tworóg i DW908 Kamienica – Piasek (punkty przy brzegu mapy). Ulice osiedlowe nie są mierzone.
 - **Skrzyżowania:** 26 skrzyżowań na trasach busów rozbitych w OSM na kilka węzłów (np. Wierzbie, Główna × Cieszowska) jest sklejonych w jedno (`skrzyzowania.py` → `zlacz.nod.xml`).
 
 ## Wyniki (23.11.2026, wersja z przystankami na żądanie i ruchem wg korytarzy)
@@ -29,6 +29,7 @@ Model to **dzień roboczy, wariant pełny, 4:30–24:00**:
 - Rozkład ma duże zapasy. Linia 1 z Piasku jedzie w symulacji ok. 13 min szybciej niż w planie, więc czeka ok. 3,5 min w Strzebiniu. Rozkład zakłada 40 km/h i 45 s na każdym przystanku; symulacja nie liczy wsiadania pasażerów ani pogody, więc jest optymistyczna. Przed skróceniem rozkładu warto przejechać trasę ze stoperem.
 - Dojazdówki stoją na Rynku od :49 do :03 (ok. 14 min). To założenie pulsu, nie efekt korków.
 - W Strzebiniu przy Lublinieckiej potrzebna jest zatoka: czekająca linia 1 stojąca na jezdni blokowała dojazd linii 4 i przesiadka się nie udawała.
+- Przy ruchu z pomiarów odcinek Sadów → Wierzbie trwa do 7 min (rozkład: 5); bus traci czas na skręcie z DW906 do Wierzbia. Opóźnienie odrabia do Koszęcina.
 - Najciaśniejsze odcinki rozkładu (Lisów PKP → Chwostek, Płaszczymąka → Piasek) przekraczają plan o mniej niż 1 min.
 
 ## Jak obejrzeć u siebie
@@ -55,7 +56,9 @@ bash symulacja/zbuduj.sh         # sieć, kursy, pociągi, ruch tła, symulacja,
 | `teren_zabudowany.py` | ograniczenia prędkości 50/90 km/h |
 | `scenariusz.py` | przystanki i kursy busów z rozkładu (trasy z projektu, te same węzły OSM) |
 | `pociagi.py` | pociągi przez przejazdy na trasach busów |
-| `tlo.py` | ruch samochodów tła wg kierunków i pory dnia |
+| `tlo.py` | ruch samochodów tła dobrany do pomiarów GPR |
+| `kalibracja.py` | pomiar GPR vs ruch w symulacji na punktach pomiarowych |
+| `skrzyzowania.py` | skleja skrzyżowania rozbite w OSM (→ `zlacz.nod.xml`) |
 | `analiza.py`, `przesiadki.py` | porównanie z rozkładem, zapis do `wyniki/*.json` |
 
 ## Ograniczenia

@@ -59,6 +59,7 @@
     <stop busStop="laz_-3095" duration="20" until="20160" parking="true"/>
     <stop busStop="strs_-2947#3" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="20580" parking="true"/>
+    <stop busStop="prad_-1687" duration="6"/>
     <stop busStop="kosp_-1115" duration="20" until="21240" parking="true"/>
     <stop busStop="kossz_-2178" duration="10"/>
     <stop busStop="kosr_-271#5" duration="20" until="21780" parking="true"/>
@@ -101,10 +102,10 @@
     <stop busStop="pil_727#0" duration="20" until="23340" parking="true"/>
     <stop busStop="rus_-2390" duration="10"/>
     <stop busStop="wie_533#2" duration="10"/>
-    <stop busStop="irk_2206" duration="6"/>
     <stop busStop="kosr_271#5" duration="20" until="25380" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
     <stop busStop="kosp_2405" duration="20" until="25620" parking="true"/>
+    <stop busStop="prad_1067" duration="6"/>
     <stop busStop="str_2875#2" duration="20" until="26280" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
@@ -123,8 +124,10 @@
   <vehicle id="L1_Piasek_01_395" type="bus" depart="23640" line="1" color="0,112,79" departLane="best" departPos="0">
     <route edges="3533#1 -3533#1 -3533#0 -3554 -3555#6 3498#1 3500#0 -3555#3 -3555#2 -3555#1 -3555#0 -3556 -2875#8 -2875#7 -2875#6 -2875#5 -2875#4 -2875#3 -2875#2 -2875#0 -2876 -703#5 -703#4 -703#3 -703#2 -703#1 -703#0 410 -410 -700 -1687 -837 -702#0 2393#0 2393#1 2393#3 357#0 357#1 357#2 357#3 357#4 -271#5 -271#3 -271#2 -271#1 -271#0 -2674#1 -2674#0 -835 -2673 -2191#0 -2193 -2205 -564 -2209#2 -2209#1 -2209#0 -2219 -2217 -533#3 -533#2 -533#1 -533#0 -565 -988#14 -988#13 -988#12 -988#11 -988#10 -988#9 -988#8 -988#7 -988#6 -988#5 -988#4 -988#3 -988#2 -988#1 -988#0 -79#1 -79#0 -1645 -1624#10 -1624#9 -1624#8 -1624#7 -1624#6 -1624#5 -1624#4 -1624#3 -1624#2 -1624#1 -1624#0 -1652 -275#15 -275#14 -275#13 -275#12 -275#11 -275#10 -275#9 -275#8 -275#7 -275#6 -275#5 -275#4 -275#3 -275#2 -275#1 -275#0 -2145#3 -1636 -572#3 -572#2 -572#1"/>
     <stop busStop="pia_-3533#1" duration="20" until="23700" parking="true"/>
+    <stop busStop="psk_-3555#3" duration="6"/>
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="24300" parking="true"/>
+    <stop busStop="prad_-1687" duration="6"/>
     <stop busStop="kosr_-271#5" duration="20" until="24780" parking="true"/>
     <stop busStop="wie_-533#2" duration="10"/>
     <stop busStop="sad_-988#6" duration="10"/>
@@ -201,6 +204,7 @@
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="27900" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="28380" parking="true"/>
+    <stop busStop="irk_-2193" duration="6"/>
     <stop busStop="wie_-533#2" duration="10"/>
     <stop busStop="sad_-988#6" duration="10"/>
     <stop busStop="lubpkp_-572#1" duration="20" parking="true"/>
@@ -248,16 +252,15 @@
     <stop busStop="kosr_271#5" duration="20" until="32400" parking="true"/>
     <stop busStop="str_2875#2" duration="20" until="33000" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
-    <stop busStop="psk_3555#3" duration="6"/>
     <stop busStop="pia_3533#1" duration="20" parking="true"/>
   </vehicle>
   <vehicle id="L1_Piasek_03_515" type="bus" depart="30840" line="1" color="0,112,79" departLane="best" departPos="0">
     <route edges="3533#1 -3533#1 -3533#0 -3554 -3555#6 3498#1 3500#0 -3555#3 -3555#2 -3555#1 -3555#0 -3556 -2875#8 -2875#7 -2875#6 -2875#5 -2875#4 -2875#3 -2875#2 -2875#0 -2876 -703#5 -703#4 -703#3 -703#2 -703#1 -703#0 410 -410 -700 -1687 -837 -702#0 2393#0 2393#1 2393#3 357#0 357#1 357#2 357#3 357#4 -271#5 -271#3 -271#2 -271#1 -271#0 -2674#1 -2674#0 -835 -2673 -2191#0 -2193 -2205 -564 -2209#2 -2209#1 -2209#0 -2219 -2217 -533#3 -533#2 -533#1 -533#0 -565 -988#14 -988#13 -988#12 -988#11 -988#10 -988#9 -988#8 -988#7 -988#6 -988#5 -988#4 -988#3 -988#2 -988#1 -988#0 -79#1 -79#0 -1645 -1624#10 -1624#9 -1624#8 -1624#7 -1624#6 -1624#5 -1624#4 -1624#3 -1624#2 -1624#1 -1624#0 -1652 -275#15 -275#14 -275#13 -275#12 -275#11 -275#10 -275#9 -275#8 -275#7 -275#6 -275#5 -275#4 -275#3 -275#2 -275#1 -275#0 -2145#3 -1636 -572#3 -572#2 -572#1"/>
     <stop busStop="pia_-3533#1" duration="20" until="30900" parking="true"/>
+    <stop busStop="psk_-3555#3" duration="6"/>
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="31500" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="31980" parking="true"/>
-    <stop busStop="irk_-2193" duration="6"/>
     <stop busStop="wie_-533#2" duration="10"/>
     <stop busStop="sad_-988#6" duration="10"/>
     <stop busStop="lubpkp_-572#1" duration="20" parking="true"/>
@@ -290,13 +293,11 @@
     <stop busStop="kosr_271#5" duration="20" until="36000" parking="true"/>
     <stop busStop="str_2875#2" duration="20" until="36600" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
-    <stop busStop="psk_3555#3" duration="6"/>
     <stop busStop="pia_3533#1" duration="20" parking="true"/>
   </vehicle>
   <vehicle id="L1_Piasek_04_575" type="bus" depart="34440" line="1" color="0,112,79" departLane="best" departPos="0">
     <route edges="3533#1 -3533#1 -3533#0 -3554 -3555#6 3498#1 3500#0 -3555#3 -3555#2 -3555#1 -3555#0 -3556 -2875#8 -2875#7 -2875#6 -2875#5 -2875#4 -2875#3 -2875#2 -2875#0 -2876 -703#5 -703#4 -703#3 -703#2 -703#1 -703#0 410 -410 -700 -1687 -837 -702#0 2393#0 2393#1 2393#3 357#0 357#1 357#2 357#3 357#4 -271#5 -271#3 -271#2 -271#1 -271#0 -2674#1 -2674#0 -835 -2673 -2191#0 -2193 -2205 -564 -2209#2 -2209#1 -2209#0 -2219 -2217 -533#3 -533#2 -533#1 -533#0 -565 -988#14 -988#13 -988#12 -988#11 -988#10 -988#9 -988#8 -988#7 -988#6 -988#5 -988#4 -988#3 -988#2 -988#1 -988#0 -79#1 -79#0 -1645 -1624#10 -1624#9 -1624#8 -1624#7 -1624#6 -1624#5 -1624#4 -1624#3 -1624#2 -1624#1 -1624#0 -1652 -275#15 -275#14 -275#13 -275#12 -275#11 -275#10 -275#9 -275#8 -275#7 -275#6 -275#5 -275#4 -275#3 -275#2 -275#1 -275#0 -2145#3 -1636 -572#3 -572#2 -572#1"/>
     <stop busStop="pia_-3533#1" duration="20" until="34500" parking="true"/>
-    <stop busStop="psk_-3555#3" duration="6"/>
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="35100" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="35580" parking="true"/>
@@ -384,10 +385,10 @@
     <stop busStop="lubpkp_572#1" duration="20" until="41700" parking="true"/>
     <stop busStop="sad_988#6" duration="10"/>
     <stop busStop="wie_533#2" duration="10"/>
+    <stop busStop="irk_2206" duration="6"/>
     <stop busStop="kosr_271#5" duration="20" until="43200" parking="true"/>
     <stop busStop="str_2875#2" duration="20" until="43800" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
-    <stop busStop="psk_3555#3" duration="6"/>
     <stop busStop="pia_3533#1" duration="20" parking="true"/>
   </vehicle>
   <vehicle id="L1_Piasek_06_695" type="bus" depart="41640" line="1" color="0,112,79" departLane="best" departPos="0">
@@ -432,6 +433,7 @@
     <stop busStop="kosr_271#5" duration="20" until="46980" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
     <stop busStop="kosp_2405" duration="20" until="47220" parking="true"/>
+    <stop busStop="prad_1067" duration="6"/>
     <stop busStop="str_2875#2" duration="20" until="47880" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
@@ -452,6 +454,7 @@
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="45900" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="46380" parking="true"/>
+    <stop busStop="irk_-2193" duration="6"/>
     <stop busStop="wie_-533#2" duration="10"/>
     <stop busStop="sad_-988#6" duration="10"/>
     <stop busStop="lubpkp_-572#1" duration="20" parking="true"/>
@@ -647,6 +650,7 @@
     <stop busStop="sad_988#6" duration="10"/>
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="57600" parking="true"/>
+    <stop busStop="prad_1067" duration="6"/>
     <stop busStop="str_2875#2" duration="20" until="58200" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
     <stop busStop="pia_3533#1" duration="20" parking="true"/>
@@ -654,7 +658,6 @@
   <vehicle id="L1_Piasek_10_935" type="bus" depart="56040" line="1" color="0,112,79" departLane="best" departPos="0">
     <route edges="3533#1 -3533#1 -3533#0 -3554 -3555#6 3498#1 3500#0 -3555#3 -3555#2 -3555#1 -3555#0 -3556 -2875#8 -2875#7 -2875#6 -2875#5 -2875#4 -2875#3 -2875#2 -2875#0 -2876 -703#5 -703#4 -703#3 -703#2 -703#1 -703#0 410 -410 -700 -1687 -837 -702#0 2393#0 2393#1 2393#3 357#0 357#1 357#2 357#3 357#4 -271#5 -271#3 -271#2 -271#1 -271#0 -2674#1 -2674#0 -835 -2673 -2191#0 -2193 -2205 -564 -2209#2 -2209#1 -2209#0 -2219 -2217 -533#3 -533#2 -533#1 -533#0 -565 -988#14 -988#13 -988#12 -988#11 -988#10 -988#9 -988#8 -988#7 -988#6 -988#5 -988#4 -988#3 -988#2 -988#1 -988#0 -79#1 -79#0 -1645 -1624#10 -1624#9 -1624#8 -1624#7 -1624#6 -1624#5 -1624#4 -1624#3 -1624#2 -1624#1 -1624#0 -1652 -275#15 -275#14 -275#13 -275#12 -275#11 -275#10 -275#9 -275#8 -275#7 -275#6 -275#5 -275#4 -275#3 -275#2 -275#1 -275#0 -2145#3 -1636 -572#3 -572#2 -572#1"/>
     <stop busStop="pia_-3533#1" duration="20" until="56100" parking="true"/>
-    <stop busStop="psk_-3555#3" duration="6"/>
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="56700" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="57180" parking="true"/>
@@ -701,6 +704,7 @@
     <stop busStop="kosr_271#5" duration="20" until="61380" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
     <stop busStop="kosp_2405" duration="20" until="61620" parking="true"/>
+    <stop busStop="prad_1067" duration="6"/>
     <stop busStop="str_2875#2" duration="20" until="62280" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
@@ -713,7 +717,6 @@
     <stop busStop="kosr_271#5" duration="20" until="61200" parking="true"/>
     <stop busStop="str_2875#2" duration="20" until="61800" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
-    <stop busStop="psk_3555#3" duration="6"/>
     <stop busStop="pia_3533#1" duration="20" parking="true"/>
   </vehicle>
   <vehicle id="L1_Piasek_11_995" type="bus" depart="59640" line="1" color="0,112,79" departLane="best" departPos="0">
@@ -773,6 +776,7 @@
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="63900" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="64380" parking="true"/>
+    <stop busStop="irk_-2193" duration="6"/>
     <stop busStop="wie_-533#2" duration="10"/>
     <stop busStop="sad_-988#6" duration="10"/>
     <stop busStop="lubpkp_-572#1" duration="20" parking="true"/>
@@ -817,7 +821,6 @@
     <stop busStop="lubpkp_572#1" duration="20" until="66900" parking="true"/>
     <stop busStop="sad_988#6" duration="10"/>
     <stop busStop="wie_533#2" duration="10"/>
-    <stop busStop="irk_2206" duration="6"/>
     <stop busStop="kosr_271#5" duration="20" until="68400" parking="true"/>
     <stop busStop="str_2875#2" duration="20" until="69000" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
@@ -883,7 +886,6 @@
     <stop busStop="kosp_-1115" duration="20" until="71640" parking="true"/>
     <stop busStop="kossz_-2178" duration="10"/>
     <stop busStop="kosr_-271#5" duration="20" until="72180" parking="true"/>
-    <stop busStop="irk_-2193" duration="6"/>
     <stop busStop="wie_-533#2" duration="10"/>
     <stop busStop="rus_2390" duration="10"/>
     <stop busStop="pil_-727#0" duration="20" parking="true"/>
@@ -914,7 +916,6 @@
   <vehicle id="L1_Piasek_15_1235" type="bus" depart="74040" line="1" color="0,112,79" departLane="best" departPos="0">
     <route edges="3533#1 -3533#1 -3533#0 -3554 -3555#6 3498#1 3500#0 -3555#3 -3555#2 -3555#1 -3555#0 -3556 -2875#8 -2875#7 -2875#6 -2875#5 -2875#4 -2875#3 -2875#2 -2875#0 -2876 -703#5 -703#4 -703#3 -703#2 -703#1 -703#0 410 -410 -700 -1687 -837 -702#0 2393#0 2393#1 2393#3 357#0 357#1 357#2 357#3 357#4 -271#5 -271#3 -271#2 -271#1 -271#0 -2674#1 -2674#0 -835 -2673 -2191#0 -2193 -2205 -564 -2209#2 -2209#1 -2209#0 -2219 -2217 -533#3 -533#2 -533#1 -533#0 -565 -988#14 -988#13 -988#12 -988#11 -988#10 -988#9 -988#8 -988#7 -988#6 -988#5 -988#4 -988#3 -988#2 -988#1 -988#0 -79#1 -79#0 -1645 -1624#10 -1624#9 -1624#8 -1624#7 -1624#6 -1624#5 -1624#4 -1624#3 -1624#2 -1624#1 -1624#0 -1652 -275#15 -275#14 -275#13 -275#12 -275#11 -275#10 -275#9 -275#8 -275#7 -275#6 -275#5 -275#4 -275#3 -275#2 -275#1 -275#0 -2145#3 -1636 -572#3 -572#2 -572#1"/>
     <stop busStop="pia_-3533#1" duration="20" until="74100" parking="true"/>
-    <stop busStop="psk_-3555#3" duration="6"/>
     <stop busStop="buk_-3555#2" duration="10"/>
     <stop busStop="str_-2875#2" duration="20" until="74700" parking="true"/>
     <stop busStop="kosr_-271#5" duration="20" until="75180" parking="true"/>
@@ -948,6 +949,7 @@
     <stop busStop="sad_988#6" duration="10"/>
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="79200" parking="true"/>
+    <stop busStop="prad_1067" duration="6"/>
     <stop busStop="str_2875#2" duration="20" until="79800" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
     <stop busStop="psk_3555#3" duration="6"/>
@@ -982,8 +984,10 @@
     <stop busStop="sad_988#6" duration="10"/>
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="82800" parking="true"/>
+    <stop busStop="prad_1067" duration="6"/>
     <stop busStop="str_2875#2" duration="20" until="83400" parking="true"/>
     <stop busStop="buk_3555#1" duration="10"/>
+    <stop busStop="psk_3555#3" duration="6"/>
     <stop busStop="pia_3533#1" duration="20" parking="true"/>
   </vehicle>
 </routes>

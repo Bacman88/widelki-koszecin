@@ -35,6 +35,8 @@
   <busStop id="pia_3533#1" lane="3533#1_0" startPos="242.0" endPos="287.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pil_-727#0" lane="-727#0_0" startPos="56.9" endPos="101.9" name="Piłka" friendlyPos="true" parkingLength="120"/>
   <busStop id="pil_727#0" lane="727#0_0" startPos="0.0" endPos="45.0" name="Piłka" friendlyPos="true" parkingLength="120"/>
+  <busStop id="prad_-1687" lane="-1687_0" startPos="45.1" endPos="57.1" name="Prądy" friendlyPos="true"/>
+  <busStop id="prad_1067" lane="1067_0" startPos="855.2" endPos="867.2" name="Prądy" friendlyPos="true"/>
   <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="74.0" endPos="86.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
   <busStop id="psk_3555#3" lane="3555#3_0" startPos="741.0" endPos="753.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
   <busStop id="rus_-2390" lane="-2390_0" startPos="0.0" endPos="12.0" name="Rusinowice PKP" friendlyPos="true"/>
