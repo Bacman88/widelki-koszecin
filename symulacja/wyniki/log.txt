@@ -1,0 +1,80 @@
+Loading net-file from 'koszecin.net.xml.gz' ...pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+ done (1339ms).
+Loading additional-files from 'przystanki.add.xml' ... done (1ms).
+Loading route-files incrementally from 'pociagi.rou.xml'
+Loading route-files incrementally from 'busy.rou.xml'
+Loading route-files incrementally from 'tlo.rou.xml.gz'
+Loading done.
+Simulation version 1.28.0 started with time: 16200.00.
+Warning: Block after insertion lane '-1565#2_0' exceeds maximum length (stopped searching after edge ':16084_3' (length=20425.32m).
+Warning: Block after insertion lane '1263#0_0' exceeds maximum length (stopped searching after edge ':9565_0' (length=22428.60m).
+Warning: Teleporting vehicle 'pociag3_0'; frontal collision with vehicle 'pociag4_1', lane='-1261#0_0', gap=-1.00, time=18321.00, stage=move.
+Warning: Vehicle 'pociag3_0' ends teleporting on edge '-2691#1', time=18327.00.
+Warning: Block after insertion lane '1153#0_0' exceeds maximum length (stopped searching after edge ':7449_2' (length=20184.27m).
+Warning: Teleporting vehicle 'pociag13_1'; frontal collision with vehicle 'pociag14_1', lane='-2212#0_0', gap=-1.00, time=23092.00, stage=move.
+Warning: Vehicle 'pociag13_1' teleports beyond arrival edge '1565#2', time=23306.00.
+Warning: Teleporting vehicle 'tlo_z_lub_3517'; waited too long (blocked), lane='988#6_0', time=24290.00.
+Warning: Vehicle 'tlo_z_lub_3517' ends teleporting on edge '988#7', time=24290.00.
+Warning: Teleporting vehicle 'tlo_z_lub_9321'; waited too long (blocked), lane='988#6_0', time=31496.00.
+Warning: Vehicle 'tlo_z_lub_9321' ends teleporting on edge '988#7', time=31496.00.
+Warning: Teleporting vehicle 'pociag12_2'; frontal collision with vehicle 'pociag3_3', lane='-1565#2_0', gap=-1.00, time=31783.00, stage=move.
+Warning: Vehicle 'pociag12_2' teleports beyond arrival edge '1565#2', time=31783.00.
+Warning: Teleporting vehicle 'pociag13_3'; frontal collision with vehicle 'pociag14_3', lane='-2212#0_0', gap=-1.00, time=34281.00, stage=move.
+Warning: Vehicle 'pociag13_3' teleports beyond arrival edge '1565#2', time=34495.00.
+Warning: Teleporting vehicle 'tlo_z_lub_11297'; waited too long (blocked), lane='988#6_0', time=35097.00.
+Warning: Vehicle 'tlo_z_lub_11297' ends teleporting on edge '988#7', time=35097.00.
+Warning: Teleporting vehicle 'pociag3_4'; frontal collision with vehicle 'pociag12_3', lane='-1565#0_0', gap=-1.00, time=36243.00, stage=move.
+Warning: Vehicle 'pociag3_4' ends teleporting on edge '-1535', time=36243.00.
+Warning: Teleporting vehicle 'pociag13_4'; frontal collision with vehicle 'pociag14_4', lane='-2212#0_0', gap=-1.00, time=39544.00, stage=move.
+Warning: Vehicle 'pociag13_4' teleports beyond arrival edge '1565#2', time=39758.00.
+Warning: Teleporting vehicle 'pociag13_5'; frontal collision with vehicle 'pociag14_5', lane='-1567#1_0', gap=-1.00, time=47224.00, stage=move.
+Warning: Vehicle 'pociag13_5' ends teleporting on edge '-1567#0', time=47224.00.
+Warning: Teleporting vehicle 'pociag10_9'; frontal collision with vehicle 'pociag1_2', lane='-35#4_0', gap=-1.00, time=50053.00, stage=move.
+Warning: Vehicle 'pociag10_9' ends teleporting on edge '-875#2', time=50055.00.
+Warning: Teleporting vehicle 'pociag2_12'; frontal collision with vehicle 'pociag1_2', lane='1153#0_0', gap=-1.00, time=50699.00, stage=move.
+Warning: Block after insertion lane '1153#1_0' exceeds maximum length (stopped searching after edge ':356_2' (length=21354.70m).
+Warning: Vehicle 'pociag2_12' ends teleporting on edge '1153#1', time=50699.00.
+Warning: Teleporting vehicle 'pociag2_12'; frontal collision with vehicle 'pociag6_2', lane='-2790#0_0', gap=-1.00, time=51102.00, stage=move.
+Warning: Vehicle 'pociag2_12' teleports beyond arrival edge '-1263#0', time=51366.00.
+Warning: Teleporting vehicle 'pociag13_6'; frontal collision with vehicle 'pociag14_6', lane='-2212#0_0', gap=-1.00, time=56442.00, stage=move.
+Warning: Vehicle 'pociag13_6' teleports beyond arrival edge '1565#2', time=56656.00.
+Warning: Teleporting vehicle 'pociag10_12'; frontal collision with vehicle 'pociag1_3', lane='1261#0_0', gap=-1.00, time=59170.00, stage=move.
+Warning: Vehicle 'pociag10_12' ends teleporting on edge '-49', time=59170.00.
+Warning: Teleporting vehicle 'pociag10_13'; frontal collision with vehicle 'pociag11_1', lane='-35#4_0', gap=-1.00, time=63100.00, stage=move.
+Warning: Vehicle 'pociag10_13' ends teleporting on edge '-875#2', time=63102.00.
+Warning: Teleporting vehicle 'pociag13_7'; frontal collision with vehicle 'pociag14_7', lane='-2212#0_0', gap=-1.00, time=63705.00, stage=move.
+Warning: Vehicle 'pociag13_7' teleports beyond arrival edge '1565#2', time=63919.00.
+Warning: Teleporting vehicle 'tlo_do_lub_35166'; waited too long (blocked), lane='-3363#1_0', time=70526.00.
+Warning: Vehicle 'tlo_do_lub_35166' ends teleporting on edge '-3363#0', time=70526.00.
+Warning: Vehicle 'tlo_do_lub_35994' performs emergency braking on lane ':2956_5_0' with decel=9.00, wished=4.50, severity=1.00, time=72176.00.
+Warning: Teleporting vehicle 'pociag13_8'; frontal collision with vehicle 'pociag14_8', lane='-1567#1_0', gap=-1.00, time=73224.00, stage=move.
+Warning: Vehicle 'pociag13_8' ends teleporting on edge '-1567#0', time=73224.00.
+Warning: Teleporting vehicle 'pociag14_8'; frontal collision with vehicle 'pociag5_11', lane='-1565#2_0', gap=-1.00, time=74028.00, stage=move.
+Warning: Vehicle 'pociag14_8' teleports beyond arrival edge '1565#2', time=74028.00.
+Warning: Teleporting vehicle 'pociag6_4'; frontal collision with vehicle 'pociag10_17', lane='1261#0_0', gap=-1.00, time=77331.00, stage=move.
+Warning: Vehicle 'pociag6_4' teleports beyond arrival edge '1565#2', time=77694.00.
+Warning: Teleporting vehicle 'pociag13_9'; frontal collision with vehicle 'pociag14_9', lane='-2212#0_0', gap=-1.00, time=81496.00, stage=move.
+Warning: Vehicle 'pociag13_9' teleports beyond arrival edge '1565#2', time=81710.00.
+Warning: Teleporting vehicle 'pociag12_9'; frontal collision with vehicle 'pociag5_13', lane='-1565#2_0', gap=-1.00, time=85182.00, stage=move.
+Warning: Vehicle 'pociag12_9' teleports beyond arrival edge '1565#2', time=85182.00.
+Simulation ended at time: 90000.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 200.03s
+ Real time factor: 368.95
+ UPS: 116902.198203
+Vehicles:
+ Inserted: 40064 (Loaded: 40266)
+ Running: 4
+ Waiting: 202
+ Teleports: 23 (Collisions: 19, Jam: 4)
+ Emergency Braking: 1
+Statistics (avg of 40060):
+ RouteLength: 8154.69
+ Speed: 13.07
+ Duration: 583.67
+ WaitingTime: 7.41
+ TimeLoss: 72.09
+ DepartDelay: 63.02

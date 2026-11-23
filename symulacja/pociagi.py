@@ -17,9 +17,10 @@ for m in re.finditer(r'<route edges="([^"]*)"', open('busy.rou.xml').read()): uz
 klastry = []
 for j in n.getNodes():
     if j.getType() != 'rail_crossing' or not ({e.getID() for e in j.getIncoming()} & uzyte): continue
-    x, y = j.getCoord()
-    if any(abs(x - a) < 400 and abs(y - b) < 400 for a, b, _ in klastry): continue
-    klastry.append((x, y, [e for e in j.getIncoming() if e.allows('rail') and not e.allows('passenger')]))
+    x, y = j.getCoord(); rin = [e for e in j.getIncoming() if e.allows('rail') and not e.allows('passenger')]
+    for k in klastry:   # kilka torów obok siebie = jeden przejazd (wszystkie tory)
+        if abs(x - k[0]) < 400 and abs(y - k[1]) < 400: k[2].extend(rin); break
+    else: klastry.append((x, y, rin))
 trasy = {}
 for x, y, rin in klastry:
     for r in rin:
@@ -27,16 +28,26 @@ for x, y, rin in klastry:
         best_dn = min((p for p in (n.getShortestPath(r, t, vClass='rail')[0] for t in ujscia) if p), key=len, default=None)
         if best_up and best_dn:
             ed = [e.getID() for e in best_up] + [e.getID() for e in best_dn[1:]]
-            trasy[tuple(ed)] = (n.convertXY2LonLat(x, y))
+            trasy.setdefault(tuple(ed), n.convertXY2LonLat(x, y))
+# Lubliniec to węzeł kolejowy (magistrala węglowa + linie pasażerskie): na przejeździe przy Kopcach
+# łącznie ok. 9 pociągów na godzinę na wszystkich torach, co drugi towarowy (600 m, 60 km/h – długie zamknięcie rogatek).
+# Pozostałe przejazdy: pociąg pasażerski co godzinę na każdym torze i kierunku.
+LUB = (18.70, 50.66, 18.73, 50.68)
+def w_lub(lon, lat): return LUB[0] <= lon <= LUB[2] and LUB[1] <= lat <= LUB[3]
 with open('pociagi.rou.xml', 'w') as o:
     o.write('<routes>\n  <vType id="pociag" vClass="rail" length="75" maxSpeed="33" accel="0.6" decel="0.9" guiShape="rail" color="80,80,80"/>\n')
+    o.write('  <vType id="towarowy" vClass="rail" length="600" maxSpeed="16.7" accel="0.25" decel="0.5" guiShape="rail/cargo" color="40,40,40"/>\n')
     v = []
     for k, (ed, (lon, lat)) in enumerate(trasy.items()):
-        off = random.randint(0, 59)
-        for h in range(4 * 2, 23 * 2):   # co 30 min (przybliżenie ruchu pasażerskiego + towarowego)
-            v.append((h * 1800 + off * 30, f'pociag{k}_{h}', ed))
-    for dep, vid, ed in sorted(v):
-        o.write(f'  <vehicle id="{vid}" type="pociag" depart="{dep}" departLane="best"><route edges="{" ".join(ed)}"/></vehicle>\n')
+        off = random.randint(0, 44) * 60
+        if w_lub(lon, lat):
+            for i, t in enumerate(range(4 * 3600 + off, 23 * 3600, 45 * 60)):
+                v.append((t, f'pociag{k}_{i}', ed, 'towarowy' if i % 2 else 'pociag'))
+        else:
+            for i, t in enumerate(range(4 * 3600 + off * 3, 23 * 3600, 3600)):
+                v.append((t, f'pociag{k}_{i}', ed, 'pociag'))
+    for dep, vid, ed, typ in sorted(v):
+        o.write(f'  <vehicle id="{vid}" type="{typ}" depart="{dep}" departLane="best"><route edges="{" ".join(ed)}"/></vehicle>\n')
     o.write('</routes>\n')
 print('przejazdy na trasach busów:', len(klastry), 'trasy pociągów:', len(trasy), 'pociągów:', len(v))
 for ed, (lon, lat) in trasy.items(): print(f'  przez przejazd {lat:.4f},{lon:.4f}: {len(ed)} odcinków')

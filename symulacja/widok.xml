@@ -1,6 +1,6 @@
 <viewsettings>
   <scheme name="busy">
-    <vehicles vehicleMode="0" vehicleQuality="2" vehicle_minSize="1" vehicle_exaggeration="4" showBlinker="true">
+    <vehicles vehicleMode="0" vehicleQuality="2" vehicle_minSize="1" vehicle_exaggeration="1.5" showBlinker="true">
       <colorScheme name="given"/>
     </vehicles>
     <additionals addName="1" addName.size="40" addExaggeration="3"/>

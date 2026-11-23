@@ -6,8 +6,8 @@ Model to **dzień roboczy, wariant pełny, 4:30–24:00**:
 - **Drogi:** prawdziwe drogi z OpenStreetMap; 50 km/h w terenie zabudowanym, 90 km/h poza nim.
 - **Przejazdy kolejowe:** 74 przejazdy z rogatkami. 4 z nich leżą na trasach busów: przy Lublińcu, w Lisowie, przy Rusinowicach i przy Boronowie.
 - **Busy:** 91 kursów wg rozkładu z `out/rozklad_data.json`. Na przystanku stoją 20 s i nie odjeżdżają przed czasem. Na Rynku dojazdówki czekają do :03.
-- **Pociągi:** co 30 minut przez każdy przejazd na trasach busów. To przybliżenie, nie rzeczywisty rozkład PKP.
-- **Ruch tła:** ok. 28 tys. losowych samochodów w ciągu dnia.
+- **Pociągi:** na przejeździe przy Lublińcu ruch po wszystkich torach, łącznie ok. 9 pociągów na godzinę; co drugi to długi, wolny skład towarowy (600 m, 60 km/h). Na pozostałych przejazdach pociąg co godzinę w każdą stronę. To przybliżenie, nie rzeczywisty rozkład PKP.
+- **Ruch tła:** ok. 40 tys. samochodów w ciągu dnia (`tlo.py`): najwięcej jazd wewnątrz Lublińca, mniej dojazdów do Lublińca i z niego, mało ruchu tranzytowego po DW906. W szczytach (6–8, 14–17) ruch ×1,6, w nocy ×0,25.
 
 ## Wyniki (23.11.2026)
 
@@ -37,7 +37,7 @@ Kolumna „Symulacja” to czas od odjazdu z pierwszego przystanku do przyjazdu 
 - **Koszęcin PKP → Strzebiń Lubliniecka (linia 4 z Piłki):** symulacja pokazuje do 1,5 min więcej niż rozkład. Nie ma tam przesiadki, w której liczy się minuta.
 - **Strzebiń Szkoła → Strzebiń Lubliniecka:** rozkład daje 1 min. Lewoskręt z Szkolnej w Lubliniecką zależy od ruchu na drodze głównej. Przy zbyt szybkich drogach (pierwsza wersja modelu) przesiadka na linię 1 o :45 się nie udawała. Warto sprawdzić w terenie albo przesunąć kurs z Łaz o 1–2 min wcześniej.
 
-**Zapas na przejeździe kolejowym przed Lublińcem** (3 min w rozkładzie) wygląda na wystarczający. Linia 1 dojeżdża do Lublińca ok. 5 min przed czasem przy pociągach co 30 minut. Nie mierzyłem jednak osobno, ile razy bus trafił na zamknięte rogatki.
+**Zapas na przejeździe kolejowym przed Lublińcem** (3 min w rozkładzie) wygląda na wystarczający. Przy ok. 9 pociągach na godzinę odcinek Sadów → Lubliniec PKP zajmuje 4,3–5,0 min (rozkład: 10 min), a w drugą stronę 4,5–6,8 min.
 
 ## Jak obejrzeć u siebie
 
@@ -63,6 +63,7 @@ bash symulacja/zbuduj.sh         # sieć, kursy, pociągi, ruch tła, symulacja,
 | `teren_zabudowany.py` | ograniczenia prędkości 50/90 km/h |
 | `scenariusz.py` | przystanki i kursy busów z rozkładu (trasy z projektu, te same węzły OSM) |
 | `pociagi.py` | pociągi przez przejazdy na trasach busów |
+| `tlo.py` | ruch samochodów tła wg kierunków i pory dnia |
 | `analiza.py`, `przesiadki.py` | porównanie z rozkładem, zapis do `wyniki/*.json` |
 
 ## Ograniczenia
@@ -70,6 +71,7 @@ bash symulacja/zbuduj.sh         # sieć, kursy, pociągi, ruch tła, symulacja,
 Model jest dużo bliższy rzeczywistości niż gra, ale nadal opiera się na założeniach:
 - **Pociągi i ruch samochodów** są przybliżone, a nie zmierzone.
 - **Przystanki** to punkty na drodze, bez zatok. Na węzłach (Rynek, stacje) jest miejsce dla kilku busów.
+- **Sygnalizacja świetlna:** wycinek OSM nie ma danych o światłach w Lublińcu, więc skrzyżowania działają na zasadzie pierwszeństwa.
 - **Kierowcy** jeżdżą „modelowo”, bez korków przy szkołach i bez pasażerów kupujących bilety.
 
 Najlepsze potwierdzenie to przejazd trasy w godzinach szczytu ze stoperem.

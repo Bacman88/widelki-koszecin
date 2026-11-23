@@ -16,8 +16,9 @@ python3 teren_zabudowany.py $GJ                                                 
 gzip -9 -f koszecin.net.xml && rm -f koszecin.osm
 python3 scenariusz.py                     # przystanki.add.xml, busy.rou.xml (z out/data.json i out/rozklad_data.json)
 python3 pociagi.py                        # pociagi.rou.xml
-python3 "$SUMO_HOME/tools/randomTrips.py" -n koszecin.net.xml.gz -r tlo.rou.xml -b 16200 -e 86000 -p 2.5 \
-  --fringe-factor 5 --min-distance 1500 --vehicle-class passenger --prefix tlo --validate --seed 42 && gzip -9 -f tlo.rou.xml
+python3 tlo.py                             # tlo.trips.xml (ruch tła wg kierunków i pory dnia)
+duarouter -n koszecin.net.xml.gz -r tlo.trips.xml -o tlo.rou.xml --ignore-errors --no-warnings --repair \
+  && gzip -9 -f tlo.rou.xml && rm -f tlo.trips.xml tlo.rou.alt.xml
 rm -f trips.trips.xml
 mkdir -p wyniki && "$B/sumo" -c koszecin.sumocfg
 python3 analiza.py && python3 przesiadki.py

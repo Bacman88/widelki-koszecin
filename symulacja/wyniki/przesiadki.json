@@ -3,7 +3,7 @@
   "przesiadka": "Strzebiń: linia 4 z Łaz → linia 1 do Lublińca",
   "kursy": 11,
   "udane": 11,
-  "min_zapas_min": 2.0
+  "min_zapas_min": 1.9
  },
  {
   "przesiadka": "Irki: linia 4 z Piłki → linia 1 do Lublińca",
@@ -21,6 +21,6 @@
   "przesiadka": "Strzebiń: linia 1 z Lublińca → linia 4 do Łaz",
   "kursy": 10,
   "udane": 10,
-  "min_zapas_min": 9.3
+  "min_zapas_min": 9.0
  }
 ]
