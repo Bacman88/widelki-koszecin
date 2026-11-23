@@ -26,6 +26,7 @@ Takt w węźle Koszęcin Rynek: linie 2–4 przyjeżdżają o :49 i odjeżdżaj�
 | `strona/mapa/` | interaktywna mapa linii (Leaflet) |
 | `aplikacja/` | aplikacja dla mieszkańców – plan i (wkrótce) kod |
 | `dokumenty/` | gotowy PDF propozycji |
+| `symulacja/` | symulacja ruchu w SUMO: czy rozkład i przesiadki działają (wyniki w `symulacja/README.md`) |
 | `fonts/` | krój Inter (SIL OFL) |
 
 Wycinek OpenStreetMap całej gminy (`dane/osm/`, ok. 33 MB) nie jest trzymany w tym repozytorium – `skrypty/pobierz_dane.sh` pobiera go z [rowerowy-strzebin](https://github.com/Bacman88/rowerowy-strzebin).

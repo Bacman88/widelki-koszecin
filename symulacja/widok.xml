@@ -1,0 +1,10 @@
+<viewsettings>
+  <scheme name="busy">
+    <vehicles vehicleMode="0" vehicleQuality="2" vehicle_minSize="1" vehicle_exaggeration="4" showBlinker="true">
+      <colorScheme name="given"/>
+    </vehicles>
+    <additionals addName="1" addName.size="40" addExaggeration="3"/>
+  </scheme>
+  <viewport zoom="900" x="15385" y="9073"/>
+  <delay value="20"/>
+</viewsettings>

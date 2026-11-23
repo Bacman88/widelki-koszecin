@@ -1,0 +1,15 @@
+<configuration>
+  <input>
+    <net-file value="koszecin.net.xml.gz"/>
+    <route-files value="pociagi.rou.xml,busy.rou.xml,tlo.rou.xml.gz"/>
+    <additional-files value="przystanki.add.xml"/>
+  </input>
+  <time><begin value="16200"/><end value="90000"/><step-length value="1"/></time>
+  <processing><time-to-teleport value="300"/><ignore-route-errors value="true"/><time-to-impatience value="30"/><ignore-junction-blocker value="15"/></processing>
+  <output>
+    <stop-output value="wyniki/przystanki.xml"/>
+    <tripinfo-output value="wyniki/kursy.xml"/>
+  </output>
+  <report><no-step-log value="true"/><duration-log.statistics value="true"/></report>
+  <gui_only><gui-settings-file value="widok.xml"/><start value="false"/></gui_only>
+</configuration>

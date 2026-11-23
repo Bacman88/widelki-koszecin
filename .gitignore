@@ -3,3 +3,6 @@ dane/osm/
 skrypty/prywatne/
 __pycache__/
 *.pyc
+symulacja/wyniki/*.xml
+symulacja/koszecin.osm
+symulacja/predkosci.edg.xml
