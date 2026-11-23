@@ -13,7 +13,7 @@ K=math.cos(math.radians(50.63))
 P=lambda la,lo:(lo*K,la)   # local equirectangular
 LN={'1':('#00704f','Piasek – Płaszczymąka – Bukowiec – Strzebiń – Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP','co godzinę, 2 busy, bez czekania na Rynku; Strzebiń → Lubliniec 35 min',0),
 '2':('#1f6fd1','Boronów – Boronów PKP – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','co 2 h w każdą stronę, w szczytach dodatkowe kursy Kalety – Brusiek – Rynek; 2 busy',0),
-'3':('#c98a00','Lisów PKP – Chwostek – Doły – Cieszowa – Koszęcin Rynek – Koszęcin PKP','co 2 godziny, w szczytach szkolnych (rano 5–8, po południu 13–16) co godzinę; 1 bus',-1.4),
+'3':('#c98a00','Lisów PKP – Chwostek – Mochała – Hadra – Cieszowa – Koszęcin Rynek – Koszęcin PKP','co 2 godziny, w szczytach szkolnych (rano 5–8, po południu 13–16) co godzinę; 1 bus',-1.4),
 '4':('#d4473a','Łazy – Strzebiń – Koszęcin PKP – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka','co 2 h w każdą stronę, w szczytach (rano 6–8, po południu 14–17) w obie strony; 1 bus, w szczytach 2',2.4)}
 LN['4S']=('#d4473a','Propozycja 4S: kursy szkolne Łazy – Strzebiń – Bukowiec – Płaszczymąka – Psary','poza siatką podstawową; przerywana: Strzebiń Lubliniecka – Psary; Łazy → Psary 20 min',-1.4)
 LN['4P']=('#8e3b8a','Propozycja 4P: pętla Strzebiń – Łazy – Psary – Płaszczymąka – Strzebiń','poza siatką podstawową; po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki)',0)

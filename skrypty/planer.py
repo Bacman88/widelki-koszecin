@@ -38,7 +38,7 @@ def latest_by(src,dst,dead):
         if r and r[0]<=dead: return d,r
     return None
 f=lambda t:'%d:%02d'%divmod(t,60)
-ORIG=['Strzebiń Lubliniecka','Strzebiń Szkoła','Bukowiec','Łazy','Koszęcin Rynek','Rzyce Irki','Wierzbie','Sadów Przedszkole','Rusinowice PKP','Piłka','Cieszowa','Doły','Brusiek']
+ORIG=['Strzebiń Lubliniecka','Strzebiń Szkoła','Bukowiec','Łazy','Koszęcin Rynek','Rzyce Irki','Wierzbie','Sadów Przedszkole','Rusinowice PKP','Piłka','Cieszowa','Hadra','Mochała','Brusiek']
 L='Lubliniec PKP'
 def desc(legs):
     return ' → '.join(f"linia {k} {f(d)} z {s}" for k,s,d in legs)

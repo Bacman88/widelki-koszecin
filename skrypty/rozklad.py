@@ -13,7 +13,7 @@ def offsets(seq):
         k=segkm(a,b);km.append(km[-1]+k);t.append(t[-1]+k/V*60+(DW if i>0 else 0)+(CROSS if {a,b}=={'sad','lubpkp'} else 0))
     return t,km
 NAME={k:v[2] for k,v in S.items()}
-lines={'1':['pia','psk','buk','str','kosr','irk','wie','sad','lubpkp'],'2':['bor','borp','kosr','kossz','kosp','bru','kalp'],'3':['lisp','chw','dol','cie','kosr','kossz','kosp'],'4':['laz','strs','str','kosp','kossz','kosr','irk','wie','rus','pil']}
+lines={'1':['pia','psk','buk','str','kosr','irk','wie','sad','lubpkp'],'2':['bor','borp','kosr','kossz','kosp','bru','kalp'],'3':['lisp','chw','moc','dol','cie','kosr','kossz','kosp'],'4':['laz','strs','str','kosp','kossz','kosr','irk','wie','rus','pil']}
 out={}
 for k,seq in lines.items():
     t,km=offsets(seq);out[k]={'seq':seq,'names':[NAME[s] for s in seq],'t':[round(x,1) for x in t],'km':[round(x,2) for x in km]}

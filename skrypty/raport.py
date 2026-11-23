@@ -17,7 +17,7 @@ import os as _o0
 if _o0.environ.get('SKROT')=='1':   # wersja do druku: teksty i wyróżnienia czarno-białe (oszczędność kolorowego tuszu)
     G=colors.black;INK=colors.black;MUT=colors.HexColor('#444444');LIME=colors.HexColor('#ebebeb');RULE=colors.HexColor('#cfcfcf')
     LC={k:'#111111' for k in LC}
-LN={'1':'Piasek – Płaszczymąka – Bukowiec – Strzebiń Lubliniecka – Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP','2':'Boronów – Boronów PKP – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','3':'Lisów PKP – Chwostek – Doły – Cieszowa – Koszęcin Rynek – Koszęcin PKP','4':'Łazy – Strzebiń Szkoła – Strzebiń Lubliniecka – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka'}
+LN={'1':'Piasek – Płaszczymąka – Bukowiec – Strzebiń Lubliniecka – Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP','2':'Boronów – Boronów PKP – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','3':'Lisów PKP – Chwostek – Mochała – Hadra – Cieszowa – Koszęcin Rynek – Koszęcin PKP','4':'Łazy – Strzebiń Szkoła – Strzebiń Lubliniecka – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka'}
 P=ParagraphStyle('p',fontName='I',fontSize=12.5,leading=18,textColor=INK,spaceAfter=7)
 PS=ParagraphStyle('ps',parent=P,fontSize=10.5,leading=14.5,textColor=MUT)
 H2=ParagraphStyle('h2',fontName='IB',fontSize=20,leading=24,textColor=INK,spaceAfter=10,spaceBefore=4)
