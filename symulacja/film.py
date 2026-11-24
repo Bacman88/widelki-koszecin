@@ -4,7 +4,7 @@ Wejście (z przebiegu symulacji z zapisem pozycji – patrz README, sekcja „Fi
   /tmp/fcd.xml     pozycje busów i pociągów co 10 s (fcd-output, geo)
   /tmp/ed120.xml   prędkości na drogach w przedziałach 2-minutowych (edgeData period=120)
 Wyjście: wyniki/film.mp4 (H.264, do strony WWW) i wyniki/film_kadr.png (kadr na plakat/miniaturę).
-Uruchom: python3 film.py [od_godz] [do_godz]   np. python3 film.py 5.5 10.5
+Uruchom: python3 film.py [od_godz] [do_godz] [nazwa]   np. python3 film.py 5.5 10.5 film; python3 film.py 13 18 film_popoludnie
 """
 import os, sys, math, json, re, collections, xml.etree.ElementTree as ET
 SUMO_HOME = os.environ.get('SUMO_HOME') or __import__('sumo').SUMO_HOME
@@ -18,6 +18,7 @@ from matplotlib.animation import FFMpegWriter
 
 OD = float(sys.argv[1]) * 3600 if len(sys.argv) > 1 else 5.5 * 3600
 DO = float(sys.argv[2]) * 3600 if len(sys.argv) > 2 else 10.5 * 3600
+NAZWA = sys.argv[3] if len(sys.argv) > 3 else 'film'
 KROK = 20          # s symulacji na klatkę (30 kl./s → 10 min symulacji w 1 s filmu)
 FCD, ED = '/tmp/fcd.xml', '/tmp/ed120.xml'
 for f in fm.findSystemFonts():
@@ -133,7 +134,7 @@ def klatka(t):
     gr = []
     for i, (x, y) in enumerate(b):
         for g in gr:
-            if math.dist((x, y), b[g[0]]) < 0.0025: g.append(i); break
+            if math.dist((x, y), b[g[0]]) < 0.004: g.append(i); break
         else: gr.append([i])
     for g in gr:
         if len(g) > 1:
@@ -152,10 +153,10 @@ def klatka(t):
     zegar.set_text(f'{int(t // 3600)}:{int(t % 3600 // 60):02d}')
 
 os.makedirs('wyniki', exist_ok=True)
-klatka(7 * 3600 + 50 * 60); fig.savefig('wyniki/film_kadr.png', dpi=DPI, facecolor=TLO)
+klatka((OD // 3600 + 2) * 3600 + 50 * 60); fig.savefig(f'wyniki/{NAZWA}_kadr.png', dpi=DPI, facecolor=TLO)
 wr = FFMpegWriter(fps=30, codec='libx264', extra_args=['-preset', 'veryfast', '-crf', '26', '-pix_fmt', 'yuv420p', '-movflags', '+faststart'])
-with wr.saving(fig, 'wyniki/film.mp4', DPI):
+with wr.saving(fig, f'wyniki/{NAZWA}.mp4', DPI):
     t = OD
     while t <= DO:
         klatka(t); wr.grab_frame(); t += KROK
-print('wyniki/film.mp4', round((DO - OD) / KROK / 30, 1), 's')
+print(f'wyniki/{NAZWA}.mp4', round((DO - OD) / KROK / 30, 1), 's')
