@@ -31,6 +31,9 @@ ax.text(0, DY - 0.085, 'Koszęcin', color='#E8E4DA', fontsize=21, ha='center', v
 fig.savefig(f'{OUT}/profilowe.png', dpi=100, facecolor=TLO); plt.close(fig)
 
 # --- zdjęcie w tle: mapa siatki + napis ---
+# Facebook na komputerze pokazuje tylko pas ok. 1640×315 (połowa wysokości), na telefonie prawie całość,
+# a na środku na dole kładzie zdjęcie profilowe. Dlatego: napisy przy lewej krawędzi w środkowym pasie
+# (y 0.25–0.75), mapa po prawej z Koszęcinem dokładnie w połowie wysokości.
 net = sumolib.net.readNet('koszecin.net.xml.gz', withPrograms=False)
 kx = math.cos(math.radians(50.64))
 def P(lon, lat): return (lon * kx, lat)
@@ -44,41 +47,38 @@ for m in re.finditer(r'<vehicle id="L(\d)[^"]*".*?edges="([^"]+)"', open('busy.r
     trasy[m.group(1)] |= set(m.group(2).split())
 tp = {l: [[P(*net.convertXY2LonLat(x, y)) for x, y in net.getEdge(e).getShape()] for e in es] for l, es in trasy.items()}
 gmina = json.load(open('../dane/gmina_koszecin.geojson'))['features'][0]['geometry']['coordinates'][0]
-W, H = 1640, 624
-fig = plt.figure(figsize=(W / 100, H / 100), dpi=100, facecolor=TLO)
-ax = fig.add_axes([0.46, 0, 0.54, 1]); ax.set_facecolor(TLO); ax.axis('off')
-allp = [p for l in tp.values() for s in l for p in s]
-xs = [p[0] for p in allp]; ys = [p[1] for p in allp]
-cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
-hy = (max(ys) - min(ys)) / 2 * 1.16; hx = hy * (0.54 * W) / H
-cx -= hx * 0.06
 s_ = open('../skrypty/build.py').read()
-m_ = re.search(r"'kosr':\(([\d.]+),([\d.]+)", s_); cy = float(m_.group(1))   # Koszęcin w połowie wysokości tła
-ax.set_xlim(cx - hx, cx + hx); ax.set_ylim(cy - hy, cy + hy)
+S = {m.group(1): (float(m.group(2)), float(m.group(3))) for m in re.finditer(r"'(\w+)':\(([\d.]+),([\d.]+),'", s_)}
+W, H = 1640, 624
+AX0, AXW = 0.40, 0.60          # mapa: od 40% szerokości do prawej krawędzi
+HUBX = 0.78                    # Koszęcin w 78% szerokości obrazka i w połowie wysokości
+fig = plt.figure(figsize=(W / 100, H / 100), dpi=100, facecolor=TLO)
+ax = fig.add_axes([AX0, 0, AXW, 1]); ax.set_facecolor(TLO); ax.axis('off')
+hx = 0.125; hy = hx * H / (AXW * W)
+kx0, ky0 = P(S['kosr'][1], S['kosr'][0])
+f = (HUBX - AX0) / AXW
+ax.set_xlim(kx0 - 2 * hx * f, kx0 + 2 * hx * (1 - f)); ax.set_ylim(ky0 - hy, ky0 + hy)
 ax.fill([P(*c)[0] for c in gmina], [P(*c)[1] for c in gmina], color='#EAE7DF', lw=0, zorder=0)
 ax.add_collection(LineCollection(drogi, colors='#DEDAD1', linewidths=0.5, zorder=1))
 ax.add_collection(LineCollection(glowne, colors='#BDB8AD', linewidths=1.2, zorder=2))
 for l in sorted(tp):
     ax.add_collection(LineCollection(tp[l], colors=KOL[l], linewidths=4.5, zorder=3, capstyle='round', alpha=0.9))
-s = open('../skrypty/build.py').read()
-S = {m.group(1): (float(m.group(2)), float(m.group(3))) for m in re.finditer(r"'(\w+)':\(([\d.]+),([\d.]+),'", s)}
 for k, nm in {'lubpkp': 'Lubliniec', 'kosr': 'Koszęcin', 'kalp': 'Kalety', 'bor': 'Boronów', 'pia': 'Piasek', 'lisp': 'Lisów', 'laz': 'Łazy', 'pil': 'Piłka', 'str': 'Strzebiń'}.items():
-    x, y = P(S[k][1], S[k][0]); ax.text(x, y + 0.004, nm, fontsize=11, color='#4A4740', ha='center', va='bottom', fontweight='semibold', zorder=5)
-x, y = P(S['kosr'][1], S['kosr'][0])
-ax.scatter([x], [y], s=260, color=CIEMNY, zorder=6, edgecolors='white', linewidths=2.5)
-# gradient przejścia tekst → mapa
+    x, y = P(S[k][1], S[k][0]); ax.text(x, y + 0.003, nm, fontsize=11, color='#4A4740', ha='center', va='bottom', fontweight='semibold', zorder=5)
+ax.scatter([kx0], [ky0], s=260, color=CIEMNY, zorder=6, edgecolors='white', linewidths=2.5)
 import numpy as np
-g = fig.add_axes([0.46, 0, 0.08, 1]); g.axis('off')
+g = fig.add_axes([AX0, 0, 0.10, 1]); g.axis('off')
 g.imshow(np.dstack([np.full((10, 100), c) for c in (0xF7 / 255, 0xF6 / 255, 0xF2 / 255)] + [np.tile(np.linspace(1, 0, 100), (10, 1))]), aspect='auto', extent=[0, 1, 0, 1])
-fx = 0.135
-fig.text(fx, 0.63, 'Busy Koszęcin', fontsize=50, fontweight='bold', color=CIEMNY)
-fig.text(fx, 0.52, 'Propozycja połączeń busów dla całej gminy', fontsize=21, color='#3A3732')
-for i, (l, t) in enumerate([('1', 'co godzinę do Lublińca'), ('2', 'Kalety – Boronów'), ('3', 'Lisów – Cieszowa'), ('4', 'Łazy – Strzebiń – Piłka')]):
-    xx = fx + (i % 2) * 0.18; yy = 0.385 - (i // 2) * 0.08
-    fig.patches.append(matplotlib.patches.Ellipse((xx + 0.009, yy + 0.022), 0.04 * H / W, 0.04 * 1, transform=fig.transFigure, color=KOL[l], figure=fig))
-    fig.text(xx + 0.009, yy + 0.021, l, fontsize=12, color='white', fontweight='bold', ha='center', va='center')
-    fig.text(xx + 0.025, yy + 0.008, t, fontsize=13.5, color='#2E2C28')
-fig.text(fx, 0.155, 'Wszystkie linie spotykają się na Rynku w Koszęcinie\nbusy-koszecin.smart-ant.pl', fontsize=12, linespacing=1.5, color='#5E5A52')
-fig.text(fx, 0.09, 'Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=12, color='#B3261E', fontweight='semibold')
+fx = 0.035
+fig.text(fx, 0.63, 'Busy Koszęcin', fontsize=42, fontweight='bold', color=CIEMNY)
+fig.text(fx, 0.578, 'Propozycja połączeń busów dla całej gminy', fontsize=15, color='#3A3732')
+for i, (l, t) in enumerate([('1', 'co godzinę do Lublińca'), ('2', 'Kalety – Koszęcin – Boronów'),
+                            ('3', 'Lisów – Cieszowa – Koszęcin'), ('4', 'Łazy – Strzebiń – Koszęcin – Piłka')]):
+    yy = 0.5 - i * 0.048
+    fig.patches.append(matplotlib.patches.Ellipse((fx + 0.008, yy + 0.014), 0.032 * H / W, 0.032, transform=fig.transFigure, color=KOL[l], figure=fig))
+    fig.text(fx + 0.008, yy + 0.013, l, fontsize=10, color='white', fontweight='bold', ha='center', va='center')
+    fig.text(fx + 0.02, yy + 0.003, t, fontsize=12, color='#2E2C28')
+fig.text(fx, 0.305, 'Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=11, color='#B3261E', fontweight='semibold')
+fig.text(fx, 0.272, 'busy-koszecin.smart-ant.pl', fontsize=11, color='#5E5A52')
 fig.savefig(f'{OUT}/tlo.png', dpi=100, facecolor=TLO); plt.close(fig)
 print('ok')
