@@ -73,3 +73,19 @@ Model jest dużo bliższy rzeczywistości niż gra, ale nadal opiera się na za�
 - **Kierowcy** jeżdżą „modelowo”, bez korków przy szkołach i bez pasażerów kupujących bilety.
 
 Najlepsze potwierdzenie to przejazd trasy w godzinach szczytu ze stoperem.
+
+## Film (widok całej sieci)
+
+`film.py` rysuje film z przebiegu symulacji: busy w kolorach linii, pociągi, odcinki z wolnym ruchem i zegar. Wynik to `wyniki/film.mp4` (H.264, 1280×720, ok. 0,6 MB, 30 s = poranek 5:30–10:30) i kadr `wyniki/film_kadr.png`. Film jest na stronie busy-koszecin.smart-ant.pl, w sekcji „Symulacja ruchu”.
+
+Przebieg z zapisem pozycji (busy i pociągi co 10 s, prędkości na drogach co 2 min):
+
+```bash
+sed 's#guiShape="bus"/>#guiShape="bus"><param key="has.fcd.device" value="true"/></vType>#' busy.rou.xml > /tmp/busy_fcd.rou.xml
+sed -E 's#(<vType id="(pociag|towarowy)"[^>]*)/>#\1><param key="has.fcd.device" value="true"/></vType>#' pociagi.rou.xml > /tmp/pociagi_fcd.rou.xml
+echo '<additional><edgeData id="ed" period="120" file="/tmp/ed120.xml" excludeEmpty="true"/></additional>' > /tmp/ed.add.xml
+sumo -c koszecin.sumocfg -r /tmp/pociagi_fcd.rou.xml,/tmp/busy_fcd.rou.xml,tlo.rou.xml.gz \
+  -a przystanki.add.xml,przejazdy.add.xml,/tmp/ed.add.xml --end 37800 \
+  --fcd-output /tmp/fcd.xml --device.fcd.probability 0 --device.fcd.period 10 --fcd-output.geo true
+python3 film.py 5.5 10.5
+```
