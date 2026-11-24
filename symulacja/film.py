@@ -125,7 +125,7 @@ fig.text(px + 0.032, ly + 0.003, 'pociąg towarowy (przybliżony)', fontsize=10,
 fig.lines.append(plt.Line2D([px + 0.003, px + 0.022], [ly + 0.012, ly + 0.012], transform=fig.transFigure, color='#D6452F', lw=3.5, figure=fig))
 fig.text(px + 0.032, ly + 0.003, 'wolny ruch / korek', fontsize=10, color='#2E2C28')
 fig.text(px, 0.135, 'To NIE jest aktualny rozkład jazdy.', fontsize=11.5, fontweight='bold', color='#B3261E')
-fig.text(px, 0.098, 'Propozycja mieszkańca; ruch aut wg pomiarów GPR 2020/21,', fontsize=9, color='#5E5A52')
+fig.text(px, 0.098, 'Propozycja mieszkańców; ruch aut wg pomiarów GPR 2020/21,', fontsize=9, color='#5E5A52')
 fig.text(px, 0.072, 'pociągi towarowe i rogatki w przybliżeniu.', fontsize=9, color='#5E5A52')
 fig.text(px, 0.03, 'busy-koszecin.smart-ant.pl', fontsize=9.5, color='#3D6B4F', fontweight='semibold')
 
