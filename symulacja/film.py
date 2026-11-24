@@ -155,6 +155,14 @@ else:
     fig.lines.append(plt.Line2D([px2, px2 + 0.05], [ly + 0.006, ly + 0.006], transform=fig.transFigure, color='#D6452F', lw=5, figure=fig))
     fig.text(px2 + 0.065, ly + 0.001, 'wolny ruch / korek', fontsize=15, color='#2E2C28')
     fig.text(fx, 0.215, 'To NIE jest aktualny rozkład jazdy – propozycja mieszkańców.', fontsize=17, fontweight='bold', color='#B3261E')
+    # ciemne pasy na dole i u góry: Facebook kładzie tam biały opis rolki i białe ikonki
+    import numpy as np
+    for y0, hgt, kier in ((0.0, 0.165, 1), (0.955, 0.045, -1)):
+        gax = fig.add_axes([0, y0, 1, hgt]); gax.axis('off')
+        alfa = np.linspace(1, 0, 200) if kier == 1 else np.linspace(0, 1, 200)
+        alfa = np.clip(alfa * 1.6, 0, 1)[:, None] * np.ones((200, 10))
+        rgb = np.ones((200, 10, 3)) * np.array([0x1E, 0x1D, 0x1B]) / 255
+        gax.imshow(np.dstack([rgb, alfa]), aspect='auto', extent=[0, 1, 0, 1], origin='lower')
     fig.text(fx, 0.19, 'busy-koszecin.smart-ant.pl', fontsize=17, color='#3D6B4F', fontweight='semibold')
 
 czasy = sorted(poz)
