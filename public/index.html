@@ -101,6 +101,19 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 .filmsw{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
 .filmsw button{font:inherit;font-size:14px;padding:7px 14px;border-radius:999px;border:1px solid var(--rule);background:#fff;cursor:pointer}
 .filmsw button.on{background:var(--g);border-color:var(--g);color:#fff}
+.intro{background:#fffdf7;border:1px solid var(--rule);border-left:5px solid var(--g);border-radius:12px;padding:20px 22px;margin:22px 0 0}
+.intro h2{color:var(--g);font-size:20px;margin:0 0 6px}
+.intro p{margin:0 0 14px;max-width:900px}
+.intro .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.intro .cols b{display:block;margin-bottom:2px}
+.intro .cols span{color:var(--mut);font-size:14px}
+.spis{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0;padding:0;list-style:none;counter-reset:n}
+.spis a{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:10px 16px 10px 10px;color:var(--ink);text-decoration:none;font-weight:600;counter-increment:n}
+.spis a::before{content:counter(n);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px}
+.spis a:hover{border-color:var(--g)}
+.spis a.wyr{background:var(--g);border-color:var(--g);color:#fff}.spis a.wyr::before{background:#fff;color:var(--g)}
+section{scroll-margin-top:60px}
+@media (max-width:640px){.spis a{padding:8px 12px 8px 8px;font-size:14px}.intro{padding:16px}}
 </style>
 </head>
 <body>
@@ -117,10 +130,31 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <a class="btn fb" href="https://www.facebook.com/profile.php?id=61596843062847" target="_blank" rel="noopener">Obserwuj na Facebooku</a>
 </div>
 <div class="warnbox"><b>Uwaga: to nie jest obowiązujący rozkład jazdy.</b> Wszystkie linie, trasy i godziny na tej stronie to <b>propozycja</b> mieszkańców, przygotowana do dyskusji z gminą Koszęcin. Nie planuj podróży na podstawie tej strony.</div>
+<div class="intro">
+<h2>Nowa siatka busów dla całej gminy – w skrócie</h2>
+<p>Propozycja mieszkańców, jak połączyć busami wszystkie miejscowości gminy Koszęcin z Lublińcem, ze szkołami i z koleją. Zamiast osobnych kursów do każdej wsi: <b>jeden węzeł przesiadkowy na Rynku</b> i rozkład, który powtarza się co godzinę o tych samych minutach.</p>
+<div class="cols">
+<div><b>🔁 Węzeł Koszęcin Rynek</b><span>Wszystkie linie spotykają się na Rynku między :49 a :03 – przesiadka w obie strony bez długiego czekania.</span></div>
+<div><b>🚌 Linia 1 do Lublińca</b><span>Piasek – Strzebiń – Koszęcin – Sadów – Lubliniec PKP co godzinę przez cały dzień, bez przesiadki.</span></div>
+<div><b>🔀 Dojazdówki „widełki”</b><span>Linie 2, 3 i 4 łączą dwa krańce przez Rynek, więc z każdej wsi da się dojechać do węzła i dalej.</span></div>
+<div><b>🚆 Busy + pociągi</b><span>Przystanki przy 7 stacjach: Koszęcin, Strzebiń, Lisów, Rusinowice, Kalety, Boronów i Lubliniec.</span></div>
+</div>
+</div>
+<ul class="spis">
+<li><a class="wyr" href="#schemat">Schemat linii</a></li>
+<li><a href="#linie">Linie i trasy</a></li>
+<li><a href="#wezel">Jak działa węzeł</a></li>
+<li><a href="#symulacja">Symulacja ruchu (film)</a></li>
+<li><a href="#rano">Rano do Lublińca</a></li>
+<li><a href="#popoludnie">Po południu do domu</a></li>
+<li><a href="#mapa">Mapa interaktywna</a></li>
+<li><a href="#zdanie">Twoje zdanie</a></li>
+<li><a href="#rower">Rowerowy Strzebiń</a></li>
+</ul>
 </header>
 <main>
 
-<section>
+<section id="schemat">
 <h2>Schemat linii</h2>
 <div class="warn-inline">Proponowany – nie obowiązuje</div>
 <div class="sch" id="schwrap"><div class="sch-in"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek" onclick="lupa()" style="cursor:zoom-in"></div><button class="zoombtn" type="button" onclick="lupa()">🔍 Powiększ schemat</button></div>
@@ -128,7 +162,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <p class="note">Schemat, nie mapa w skali. Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Strzałki: dokąd można jechać dalej z końców linii. Kliknij schemat, żeby go powiększyć, albo <a href="dokumenty/schemat-linii.pdf">pobierz w PDF</a>.</p>
 </section>
 
-<section>
+<section id="linie">
 <h2>Linie</h2>
 <div class="warn-inline">Proponowane – nie obowiązują</div>
 <div class="lines">
@@ -139,7 +173,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 </div>
 </section>
 
-<section>
+<section id="wezel">
 <h2>Jak działa węzeł</h2>
 <div class="grid3">
 <div class="card"><div class="big">:49 → :03</div>Dojazdówki 2, 3 i 4 przyjeżdżają na Rynek o :49 i odjeżdżają o :03. Linia 1 przejeżdża w tym czasie w obie strony – przesiadka bez czekania.</div>
@@ -162,7 +196,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <p class="note">Symulacja jest uproszczona: nie liczy wsiadania pasażerów ani pogody, a pociągi towarowe jeżdżą w przybliżeniu. Pliki i opis: <a href="https://github.com/Bacman88/widelki-koszecin/tree/main/symulacja">repozytorium, folder symulacja</a>.</p>
 </section>
 
-<section>
+<section id="rano">
 <h2>Każda miejscowość: rano do Lublińca</h2>
 <div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
 <p class="note">Dzień roboczy, wariant pełny. Przyjazd do Lublińca PKP o 6:20 (praca na 7:00) i 7:20 (szkoła na 8:00).</p>
@@ -183,7 +217,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 </table></div>
 </section>
 
-<section>
+<section id="popoludnie">
 <h2>Po południu z Lublińca – o której w domu</h2>
 <div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
 <div class="scroll"><table class="tpm">
@@ -204,7 +238,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <p class="note">Po lekcjach każda miejscowość jest w domu w niecałą godzinę. Do Rusinowic można też wrócić pociągiem z Lublińca.</p>
 </section>
 
-<section>
+<section id="mapa">
 <h2>Mapa</h2>
 <div class="warn-inline">Proponowane trasy – nie obowiązują</div>
 <div class="mapwrap" id="mapwrap"><iframe src="mapa/" title="Interaktywna mapa proponowanych linii" loading="lazy"></iframe>
@@ -212,7 +246,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <p class="note">Mapę można przybliżać i przesuwać (dwoma palcami na telefonie). Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje. <a href="mapa/">Otwórz mapę na całą stronę</a>.</p>
 </section>
 
-<section>
+<section id="zdanie">
 <h2>Twoje zdanie: wspólna mapa</h2>
 <a class="sister" href="wspolna/"><div class="ico">💬</div><div><b>Napisz, czego potrzebujesz</b><span>Skąd i dokąd chcesz dojechać i na którą, gdzie brakuje przystanku, co zmienić w liniach i godzinach. Propozycje są sprawdzane i pokazywane na wspólnej mapie – można też zagłosować „też tego potrzebuję”.</span></div></a>
 </section>
@@ -222,7 +256,7 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <p>Aplikacja na telefon z busami gminnymi i pociągami Kolei Śląskich, PolRegio i PKP Intercity. Wpisujesz skąd, dokąd i na którą – dostajesz gotowe połączenie z przesiadkami.</p>
 </section>
 
-<section>
+<section id="rower">
 <h2>Drugi projekt: Rowerowy Strzebiń</h2>
 <a class="sister" href="https://rowerowy-strzebin.smart-ant.pl"><div class="ico">🚲</div><div><b>Rowerowy Strzebiń – HUB rowerowy</b><span>Propozycja oznakowania rowerowego Sołectwa Strzebiń: tabliczki kierunkowe, sieć węzłów, trasy pokazowe i mapa stanu dróg. Rower + bus + pociąg to razem dobry sposób na poruszanie się po gminie.</span></div></a>
 <div class="btns male"><a class="btn sec" href="https://rowerowy-strzebin.smart-ant.pl">🚲 Strona HUB-u rowerowego</a><a class="btn fb" href="https://www.facebook.com/profile.php?id=61596715731745" target="_blank" rel="noopener">HUB rowerowy na Facebooku</a></div>
