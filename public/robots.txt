@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://busy-koszecin.smart-ant.pl/sitemap.xml
