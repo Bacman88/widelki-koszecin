@@ -1,3 +1,4 @@
+import os
 """Scenariusz SUMO dla proponowanej siatki busów gminy Koszęcin (dzień roboczy, wariant pełny).
 
 Wejście:  koszecin.net.xml (sieć z OpenStreetMap), data.json (trasy i przystanki), rozklad_data.json (rozkład).
@@ -82,6 +83,12 @@ def przystanek_na_trasie(edges, sid, od):
     return best
 
 WSTAW = {}
+# Koszęcin Rynek wg mieszkańca: kierunek na południe – zatoka za skrzyżowaniem z Placem Kościuszki (jak było);
+# kierunek na północ – zatoka przy placu po wschodniej stronie Powstańców Śląskich, między Placem Kościuszki
+# a wjazdem na Boronowską (ok. 37 m, mieszczą się ok. 3 busy).
+STALE = {'kosr': {'-271#3': True}}    # kierunek na północ: zatoka przy placu; na południe: zatoka jak dotąd (271#5)
+BEZ_ZATOKI = set()
+DL_ZATOKI = {'kosr_-271#3': 37}          # długość zatoki przy placu [m] – ok. 3 busy
 WEZLY = {'kosr', 'kosp', 'lubpkp', 'lisp', 'kalp', 'bor', 'laz', 'pil', 'pia', 'str'}   # przystanki z zatoką / pętlą: autobus czekający nie blokuje drogi
 stopdefs = {}; vehicles = []
 for line, days in R['tt'].items():
@@ -103,7 +110,11 @@ for line, days in R['tt'].items():
         for i, sid in enumerate(ids):
             d, k, pos, ln = przystanek_na_trasie(edges, sid, k0)
             dl = 45 if sid in WEZLY else 12
-            if ln.getLength() < dl + 5:   # za krótka krawędź – przystanek na sąsiedniej (dłuższej) krawędzi trasy
+            kk = [j for j in range(k0, len(edges)) if edges[j] in STALE.get(sid, ())]
+            if kk:                                             # przystanek wskazany ręcznie: cała krawędź
+                k = kk[0]
+                ln = NET.getEdge(edges[k]).getLanes()[0]; pos = ln.getLength() - 0.5; dl = pos - 0.5
+            if not kk and ln.getLength() < dl + 5:   # za krótka krawędź – przystanek na sąsiedniej (dłuższej) krawędzi trasy
                 cand = [(NET.getEdge(edges[j]).getLength(), j) for j in (k - 1, k + 1) if 0 <= j < len(edges) and j >= k0]
                 Lc, j = max(cand)
                 if Lc >= dl + 5:
@@ -132,7 +143,7 @@ for line, days in R['tt'].items():
 with open('przystanki.add.xml', 'w') as o:
     o.write('<additional>\n')
     for key, (lane, a, b, nm) in sorted(stopdefs.items()):
-        pl = ' parkingLength="120"' if key.split('_')[0] in WEZLY else ''   # zatoka / plac: miejsce dla kilku czekających busów
+        pl = f' parkingLength="{DL_ZATOKI.get(key, 120)}"' if key.split('_')[0] in WEZLY and key not in BEZ_ZATOKI else ''   # zatoka / plac: miejsce dla kilku czekających busów
         o.write(f'  <busStop id="{key}" lane="{lane}" startPos="{a:.1f}" endPos="{b:.1f}" name="{nm}" friendlyPos="true"{pl}/>\n')
     o.write('</additional>\n')
 KOL = {'1': '0,112,79', '2': '31,111,214', '3': '204,138,0', '4': '212,71,58'}
@@ -154,7 +165,7 @@ with open('busy.rou.xml', 'w') as o:
             if sid in NA_ZADANIE and not skrajny and vid not in WYBRANE[sid]:
                 PLAN[vid].append((key, until, False)); continue          # nikt nie czeka i nikt nie wysiada – przejazd bez zatrzymania
             PLAN[vid].append((key, until, True))
-            par = ' parking="true"' if sid in WEZLY else ''
+            par = ' parking="true"' if sid in WEZLY and key not in BEZ_ZATOKI else ''
             if i == len(stops) - 1:                                   # pętla końcowa: wysiadka, bez czekania na czas z rozkładu
                 o.write(f'    <stop busStop="{key}" duration="{POSTOJ}"{par}/>\n')
             elif sid in WEZLY or sid in PUNKTY_CZASOWE or i == 0:

@@ -1,0 +1,22 @@
+<nodes>
+  <node id="cluster_8819_8820" type="rail_crossing"/>
+  <node id="cluster_13086_13087_449_9301" type="rail_crossing"/>
+  <node id="cluster_9433_9555" type="rail_crossing"/>
+  <node id="cluster_9440_9565" type="rail_crossing"/>
+  <node id="cluster_659_660_661" type="rail_crossing"/>
+  <node id="cluster_91_92" type="rail_crossing"/>
+  <node id="cluster_895_896_897" type="rail_crossing"/>
+  <node id="cluster_10154_11296_11607_11608_#2more" type="rail_crossing"/>
+  <node id="cluster_7355_7356" type="rail_crossing"/>
+  <node id="cluster_10662_10726_10982_12461" type="rail_crossing"/>
+  <node id="cluster_7416_7449" type="rail_crossing"/>
+  <node id="cluster_5720_5721" type="rail_crossing"/>
+  <node id="cluster_4934_4935" type="rail_crossing"/>
+  <node id="cluster_5484_5485" type="rail_crossing"/>
+  <node id="cluster_16084_16102" type="rail_crossing"/>
+  <node id="cluster_12268_12303_16748_16749" type="rail_crossing"/>
+  <node id="cluster_16193_16194" type="rail_crossing"/>
+  <node id="cluster_2759_2760" type="rail_crossing"/>
+  <node id="cluster_16077_16094" type="rail_crossing"/>
+  <node id="cluster_20691_20692" type="rail_crossing"/>
+</nodes>

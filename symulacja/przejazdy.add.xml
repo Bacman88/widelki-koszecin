@@ -1,0 +1,37 @@
+<additional>
+  <tlLogic id="10782" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="15093" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="1631" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="1807" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="1856" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="2069" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="4206" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="4588" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="6098" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_10154_11296_11607_11608_#2more" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_10236_3831" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_10238_3829" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_10240_11250_3828" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_10662_10726_10982_12461" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_12268_12303_16748_16749" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_13086_13087_449_9301" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_15095_15103" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_16077_16094" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_16084_16102" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_16193_16194" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_18107_18110" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_20691_20692" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_2759_2760" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_2980_2981" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_4934_4935" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_5484_5485" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_5720_5721" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_659_660_661" programID="0" type="rail_crossing"><param key="time-gap" value="120"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_7355_7356" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_7416_7449" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_8819_8820" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_895_896_897" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_91_92" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_9433_9555" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+  <tlLogic id="cluster_9440_9565" programID="0" type="rail_crossing"><param key="time-gap" value="60"/><param key="opening-delay" value="15"/></tlLogic>
+</additional>

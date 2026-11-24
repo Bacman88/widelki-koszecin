@@ -20,6 +20,7 @@
   <busStop id="kosp_-2394" lane="-2394_0" startPos="0.0" endPos="45.0" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosp_2394" lane="2394_0" startPos="47.7" endPos="92.7" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosp_2405" lane="2405_0" startPos="0.0" endPos="45.0" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
+  <busStop id="kosr_-271#3" lane="-271#3_0" startPos="0.0" endPos="24.1" name="Koszęcin Rynek" friendlyPos="true" parkingLength="37"/>
   <busStop id="kosr_-271#5" lane="-271#5_0" startPos="98.0" endPos="143.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosr_271#5" lane="271#5_0" startPos="0.0" endPos="45.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kossz_-2178" lane="-2178_0" startPos="136.8" endPos="148.8" name="Koszęcin Szkoła" friendlyPos="true"/>

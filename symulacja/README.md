@@ -8,6 +8,8 @@ Model to **dzień roboczy, wariant pełny, 4:30–24:00**:
 - **Busy:** 91 kursów wg rozkładu z `out/rozklad_data.json`. Na zwykłych przystankach stoją 10 s. Irki, Płaszczymąka i Prądy to przystanki na żądanie: bus staje tam tylko czasem (Irki ok. 4 razy na dobę, Płaszczymąka 14, Prądy 8), na 6 s. Prądy (linie 1 i 4) nie ma w rozkładzie projektu; czas przejazdu liczony proporcjonalnie do odległości. Na czas z rozkładu czekają tylko w węzłach z zatoką (Rynek, stacje, Strzebiń, Lubliniec PKP); na Rynku dojazdówki czekają do :03.
 - **Pociągi:** na przejeździe przy Lublińcu ruch po wszystkich torach, łącznie ok. 9 pociągów na godzinę; co drugi to długi, wolny skład towarowy (600 m, 60 km/h). Na pozostałych przejazdach pociąg co godzinę w każdą stronę. To przybliżenie, nie rzeczywisty rozkład PKP.
 - **Ruch tła:** dobrany do pomiarów ruchu (średni dobowy ruch roczny): GPR 2020 na drogach wojewódzkich (ZDW Katowice) i GPR 2020/21 na drogach krajowych (GDDKiA). 18 punktów pomiarowych na DW906, DW907, DW905, DW908, DW789, DK11 i DK46; `routeSampler` z SUMO dobiera trasy aut tak, żeby w każdej godzinie zgadzały się z pomiarem (szczyty 6–8 i 14–17). Ok. 51 tys. aut na dobę, głównie po drogach z pomiarami. Porównanie pomiar/symulacja: `wyniki/kalibracja.json` – na większości punktów różnica do 5%, za mało aut na DK11 (obwodnica Lublińca), DW907 Brusiek – Tworóg i DW908 Kamienica – Piasek (punkty przy brzegu mapy). Ulice osiedlowe nie są mierzone.
+- **Koszęcin Rynek:** w stronę południa zatoka za skrzyżowaniem z Placem Kościuszki, w stronę północy zatoka przy placu między Placem Kościuszki a Boronowską (ok. 37 m, 3 busy). Drogi wewnętrzne na posesjach przy Rynku usunięte.
+- **Przejazdy kolejowe:** przejazd przez kilka torów to jeden przejazd (`przejazdy.py`; wcześniej każdy tor był osobnym przejazdem i auta stawały między torami). Rogatki zamykają się 60 s przed pociągiem, w Lublińcu 120 s, i otwierają 15 s po nim (`przejazdy.add.xml`).
 - **Skrzyżowania:** 26 skrzyżowań na trasach busów rozbitych w OSM na kilka węzłów (np. Wierzbie, Główna × Cieszowska) jest sklejonych w jedno (`skrzyzowania.py` → `zlacz.nod.xml`).
 
 ## Wyniki (23.11.2026, wersja z przystankami na żądanie i ruchem wg korytarzy)
@@ -23,7 +25,7 @@ Model to **dzień roboczy, wariant pełny, 4:30–24:00**:
 | 4 z Piłki | 57 | 55,5 | 0 |
 | 4 z Łaz | 47 | 40,6 | 0 |
 
-**Przesiadki:** Rynek 54/54; Strzebiń, linia 4 z Łaz → linia 1 do Lublińca 11/11 (zapas min. 2,2 min); Strzebiń, linia 1 → linia 4 do Łaz 10/10.
+**Przesiadki:** Rynek 54/54 (w zatoce w stronę północy stoją naraz najwyżej 3 busy, czyli tyle, ile się mieści); Strzebiń, linia 4 z Łaz → linia 1 do Lublińca 11/11 (zapas min. 2,2 min); Strzebiń, linia 1 → linia 4 do Łaz 10/10.
 
 **Wnioski:**
 - Rozkład ma duże zapasy. Linia 1 z Piasku jedzie w symulacji ok. 13 min szybciej niż w planie, więc czeka ok. 3,5 min w Strzebiniu. Rozkład zakłada 40 km/h i 45 s na każdym przystanku; symulacja nie liczy wsiadania pasażerów ani pogody, więc jest optymistyczna. Przed skróceniem rozkładu warto przejechać trasę ze stoperem.
@@ -58,6 +60,7 @@ bash symulacja/zbuduj.sh         # sieć, kursy, pociągi, ruch tła, symulacja,
 | `pociagi.py` | pociągi przez przejazdy na trasach busów |
 | `tlo.py` | ruch samochodów tła dobrany do pomiarów GPR |
 | `kalibracja.py` | pomiar GPR vs ruch w symulacji na punktach pomiarowych |
+| `przejazdy.py` | jeden przejazd przez kilka torów, czasy rogatek (→ `przejazdy.add.xml`) |
 | `skrzyzowania.py` | skleja skrzyżowania rozbite w OSM (→ `zlacz.nod.xml`) |
 | `analiza.py`, `przesiadki.py` | porównanie z rozkładem, zapis do `wyniki/*.json` |
 
