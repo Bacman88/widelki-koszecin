@@ -47,6 +47,9 @@ th{font-size:13px;color:var(--mut);font-weight:600}
 td:first-child{font-weight:600}
 .scroll{overflow-x:auto}
 img.map{width:100%;border-radius:12px;border:1px solid var(--rule);display:block}
+video.map{width:100%;max-width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--rule);background:#F7F6F2}
+video.map.pion{width:auto;max-height:82vh;margin:0 auto}
+html,body{overflow-x:hidden}
 .note{color:var(--mut);font-size:14px}
 footer{max-width:980px;margin:auto;padding:24px 20px 40px;color:var(--mut);font-size:13px;border-top:1px solid var(--rule)}
 footer a{color:var(--mut)}
@@ -239,9 +242,14 @@ function pelny(id,b){const w=document.getElementById(id),on=!w.classList.contain
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;lupa(0);const w=document.getElementById('mapwrap');if(w.classList.contains('full'))w.querySelector('.zoombtn').click();});
 </script>
 <script>
+// na telefonie wersja pionowa filmu (1080×1920), na komputerze pozioma
+var FILM_MOB = window.matchMedia('(max-width:640px)').matches;
+function filmNazwa(n){ return FILM_MOB ? n + '_pion' : n; }
 function film(b,n,opis){document.querySelectorAll('.filmsw button').forEach(x=>x.classList.toggle('on',x===b));
-var v=document.getElementById('filmv');v.poster='symulacja/'+n+'_kadr.png';v.src='symulacja/'+n+'.mp4';v.play().catch(function(){});
+var v=document.getElementById('filmv');v.poster='symulacja/'+filmNazwa(n)+'_kadr.png';v.src='symulacja/'+filmNazwa(n)+'.mp4';v.play().catch(function(){});
 document.getElementById('filmopis').textContent=opis;}
+(function(){ if(!FILM_MOB) return; var v=document.getElementById('filmv'); if(!v) return;
+  v.classList.add('pion'); v.poster='symulacja/film_pion_kadr.png'; v.src='symulacja/film_pion.mp4'; v.play().catch(function(){}); })();
 </script>
 </body>
 </html>
