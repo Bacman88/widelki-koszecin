@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:02,600
+Poranek dnia roboczego w symulacji ruchu – 1 sekunda filmu to 10 minut
+
+2
+00:00:02,600 --> 00:00:06,200
+Busy wyjeżdżają z końców linii: Piasek, Łazy, Boronów, Kalety, Lisów, Piłka
+
+3
+00:00:03,200 --> 00:00:05,200
+Pociągi Kolei Śląskich i POLREGIO jadą według rozkładu 2026/27
+
+4
+00:00:07,500 --> 00:00:09,500
+Co godzinę wszystkie linie zjeżdżają się na Rynku w Koszęcinie
+
+5
+00:00:09,500 --> 00:00:12,000
+Przesiadka bez długiego czekania – busy czekają na siebie
+
+6
+00:00:12,000 --> 00:00:16,000
+Linia 1 co godzinę dojeżdża do Lublińca, mimo rogatek w Kopcach
+
+7
+00:00:16,000 --> 00:00:19,500
+Ruch aut według oficjalnych pomiarów – czerwone odcinki to wolny ruch
+
+8
+00:00:19,500 --> 00:00:23,000
+W symulacji wszystkie 54 przesiadki na Rynku się udały
+
+9
+00:00:23,000 --> 00:00:30,000
+Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy · busy-koszecin.smart-ant.pl
+
