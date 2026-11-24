@@ -19,8 +19,9 @@ from matplotlib.animation import FFMpegWriter
 OD = float(sys.argv[1]) * 3600 if len(sys.argv) > 1 else 5.5 * 3600
 DO = float(sys.argv[2]) * 3600 if len(sys.argv) > 2 else 10.5 * 3600
 NAZWA = sys.argv[3] if len(sys.argv) > 3 else 'film'
-KROK = 20          # s symulacji na klatkę (30 kl./s → 10 min symulacji w 1 s filmu)
-FCD, ED = '/tmp/fcd.xml', '/tmp/ed120.xml'
+KROK = int(os.environ.get('KROK', 20))   # s symulacji na klatkę (30 kl./s; 20 → 10 min symulacji w 1 s filmu)
+MIN_S = f'{KROK * 30 // 60} min'
+FCD = os.environ.get('FCD', '/tmp/fcd.xml'); ED = os.environ.get('ED', '/tmp/ed120.xml')
 for f in fm.findSystemFonts():
     if 'Inter' in f: fm.fontManager.addfont(f)
 plt.rcParams['font.family'] = ['Inter', 'DejaVu Sans']
@@ -114,7 +115,7 @@ if not PION:
     fig.text(px, 0.93, 'Proponowana siatka busów', fontsize=17, fontweight='bold', color='#1E1D1B')
     fig.text(px, 0.885, 'gminy Koszęcin – symulacja ruchu (SUMO)', fontsize=12, color='#4A4740')
     zegar = fig.text(px, 0.74, '', fontsize=44, fontweight='bold', color='#1E1D1B')
-    fig.text(px, 0.705, 'dzień roboczy · 1 s filmu = 10 min', fontsize=9.5, color='#77736A')
+    fig.text(px, 0.705, f'dzień roboczy · 1 s filmu = {MIN_S}', fontsize=9.5, color='#77736A')
     ly = 0.62
     for l, nazwa in [('1', 'Linia 1: Lubliniec – Koszęcin – Piasek'), ('2', 'Linia 2: Kalety – Koszęcin – Boronów'),
                      ('3', 'Linia 3: Lisów – Koszęcin PKP'), ('4', 'Linia 4: Łazy – Koszęcin – Piłka')]:
@@ -138,7 +139,7 @@ else:
     fig.text(fx, 0.9, 'Proponowana siatka busów', fontsize=34, fontweight='bold', color='#1E1D1B')
     fig.text(fx, 0.877, 'gminy Koszęcin – symulacja ruchu', fontsize=21, color='#4A4740')
     zegar = fig.text(fx, 0.82, '', fontsize=72, fontweight='bold', color='#1E1D1B')
-    fig.text(fx + 0.36, 0.83, 'dzień roboczy\n1 s filmu = 10 min', linespacing=1.4, fontsize=16, color='#77736A')
+    fig.text(fx + 0.36, 0.83, f'dzień roboczy\n1 s filmu = {MIN_S}', linespacing=1.4, fontsize=16, color='#77736A')
     ly = 0.33
     for l, nazwa in [('1', 'Lubliniec – Koszęcin – Piasek'), ('2', 'Kalety – Koszęcin – Boronów'),
                      ('3', 'Lisów – Koszęcin PKP'), ('4', 'Łazy – Koszęcin – Piłka')]:
