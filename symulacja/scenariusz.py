@@ -70,6 +70,20 @@ def trasa(line, stops):
             p, _ = NET.getShortestPath(a, b, vClass='bus')
             if p: fix += [x.getID() for x in p[1:-1]]
         fix.append(e)
+    # usuń „wjazdy w boczną uliczkę i zawracanie” (mapTrace bywa zwiedziony na skrzyżowaniach): …P, Y, -Y, Q…
+    zmiana = True
+    while zmiana:
+        zmiana = False
+        for i in range(1, len(fix) - 2):
+            Y, Yr = NET.getEdge(fix[i]), NET.getEdge(fix[i + 1])
+            if Y.getFromNode() == Yr.getToNode() and Y.getToNode() == Yr.getFromNode():
+                P, Q = NET.getEdge(fix[i - 1]), NET.getEdge(fix[i + 2])
+                if Q in P.getAllowedOutgoing('bus'): wst = []
+                else:
+                    p, _ = NET.getShortestPath(P, Q, vClass='bus')
+                    if not p or sum(x.getLength() for x in p[1:-1]) > Y.getLength() * 2 + 200: continue
+                    wst = [x.getID() for x in p[1:-1]]
+                fix = fix[:i] + wst + fix[i + 2:]; zmiana = True; break
     return fix
 
 def przystanek_na_trasie(edges, sid, od):

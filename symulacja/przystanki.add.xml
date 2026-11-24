@@ -31,7 +31,8 @@
   <busStop id="lisp_37#1" lane="37#1_0" startPos="61.2" endPos="106.2" name="Lisów PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="lubpkp_-572#1" lane="-572#1_0" startPos="133.8" endPos="178.8" name="Lubliniec PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="lubpkp_572#1" lane="572#1_0" startPos="0.0" endPos="45.0" name="Lubliniec PKP" friendlyPos="true" parkingLength="120"/>
-  <busStop id="moc_-2756" lane="-2756_0" startPos="209.4" endPos="221.4" name="Mochała" friendlyPos="true"/>
+  <busStop id="moc_-2222" lane="-2222_0" startPos="1249.8" endPos="1261.8" name="Mochała" friendlyPos="true"/>
+  <busStop id="moc_2754#1" lane="2754#1_0" startPos="71.2" endPos="83.2" name="Mochała" friendlyPos="true"/>
   <busStop id="pia_-3533#1" lane="-3533#1_0" startPos="0.0" endPos="45.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pia_3533#1" lane="3533#1_0" startPos="242.0" endPos="287.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pil_-727#0" lane="-727#0_0" startPos="56.9" endPos="101.9" name="Piłka" friendlyPos="true" parkingLength="120"/>
