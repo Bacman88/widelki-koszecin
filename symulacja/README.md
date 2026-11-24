@@ -1,6 +1,6 @@
 # Symulacja siatki busów w SUMO
 
-Proponowana siatka busów gminy Koszęcin sprawdzona w **SUMO** (Simulation of Urban MObility, DLR): darmowym symulatorze ruchu używanym przy planowaniu transportu.
+Proponowana siatka busów gminy Koszęcin sprawdzona w **SUMO** (Simulation of Urban MObility, DLR): otwartym (open source) symulatorze ruchu używanym przy planowaniu transportu.
 
 Model to **dzień roboczy, wariant pełny, 4:30–24:00**:
 - **Drogi:** prawdziwe drogi z OpenStreetMap; 50 km/h w terenie zabudowanym, 90 km/h poza nim.

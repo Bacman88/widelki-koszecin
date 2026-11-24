@@ -5,7 +5,7 @@ Grafiki: `profilowe.png` (zdjęcie profilowe), `tlo.png` (zdjęcie w tle 1640×6
 
 ## Opis strony (Informacje)
 
-Propozycja nowych linii i rozkładu darmowych busów w gminie Koszęcin, przygotowana przez mieszkańców. Cztery linie spotykają się co godzinę na Rynku w Koszęcinie, linia 1 jeździ co godzinę do Lublińca. Mapy, rozkład i symulacja ruchu – to NIE jest obowiązujący rozkład jazdy.
+Propozycja nowych połączeń i rozkładu busów w gminie Koszęcin, przygotowana przez mieszkańców. Cztery linie spotykają się co godzinę na Rynku w Koszęcinie, linia 1 jeździ co godzinę do Lublińca. Mapy, rozkład i symulacja ruchu – to NIE jest obowiązujący rozkład jazdy.
 Szczegóły i wspólna mapa: busy-koszecin.smart-ant.pl
 
 ## Post 1 – na start (zdjęcie w tle albo schemat linii)
