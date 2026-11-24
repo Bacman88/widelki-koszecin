@@ -16,18 +16,18 @@ OUT = '../fb'
 
 # --- zdjęcie profilowe: węzeł z 4 liniami ---
 fig = plt.figure(figsize=(7.2, 7.2), dpi=100, facecolor=TLO)
-ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(-1, 1); ax.set_ylim(-1, 1); ax.set_aspect('equal'); ax.axis('off')
+ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(-0.86, 0.86); ax.set_ylim(-0.86, 0.86); ax.set_aspect('equal'); ax.axis('off')
 ax.add_patch(plt.Circle((0, 0), 1, color=TLO))
 kat = {'1': 145, '2': 35, '3': 270, '4': 325}
-DY = 0.08
+DY = 0.04
 for l, a in kat.items():
     x, y = 0.56 * math.cos(math.radians(a)), 0.56 * math.sin(math.radians(a)) + DY
-    ax.plot([0, x], [DY, y], color=KOL[l], lw=26, solid_capstyle='round', zorder=1)
-    ax.add_patch(plt.Circle((x, y), 0.17, color=KOL[l], zorder=3, ec='white', lw=5))
-    ax.text(x, y - 0.005, l, color='white', fontsize=54, fontweight='bold', ha='center', va='center', zorder=4)
-ax.add_patch(plt.Circle((0, DY), 0.25, color=CIEMNY, zorder=5, ec='white', lw=7))
-ax.text(0, DY + 0.035, 'BUSY', color='white', fontsize=27, fontweight='bold', ha='center', va='center', zorder=6)
-ax.text(0, DY - 0.085, 'Koszęcin', color='#E8E4DA', fontsize=17, ha='center', va='center', zorder=6)
+    ax.plot([0, x], [DY, y], color=KOL[l], lw=33, solid_capstyle='round', zorder=1)
+    ax.add_patch(plt.Circle((x, y), 0.17, color=KOL[l], zorder=3, ec='white', lw=6))
+    ax.text(x, y - 0.005, l, color='white', fontsize=68, fontweight='bold', ha='center', va='center', zorder=4)
+ax.add_patch(plt.Circle((0, DY), 0.25, color=CIEMNY, zorder=5, ec='white', lw=9))
+ax.text(0, DY + 0.035, 'BUSY', color='white', fontsize=34, fontweight='bold', ha='center', va='center', zorder=6)
+ax.text(0, DY - 0.085, 'Koszęcin', color='#E8E4DA', fontsize=21, ha='center', va='center', zorder=6)
 fig.savefig(f'{OUT}/profilowe.png', dpi=100, facecolor=TLO); plt.close(fig)
 
 # --- zdjęcie w tle: mapa siatki + napis ---
