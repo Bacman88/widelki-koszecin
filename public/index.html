@@ -81,6 +81,9 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 #lb .bar span{margin-right:auto;color:#fff;font-weight:700;font-size:14px}
 #lb button{font:700 16px system-ui;min-width:44px;height:38px;border-radius:8px;border:0;background:#fff;color:var(--ink);cursor:pointer}
 @media (max-width:640px){.mapwrap iframe{height:70vh}}
+.filmsw{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.filmsw button{font:inherit;font-size:14px;padding:7px 14px;border-radius:999px;border:1px solid var(--rule);background:#fff;cursor:pointer}
+.filmsw button.on{background:var(--g);border-color:var(--g);color:#fff}
 </style>
 </head>
 <body>
@@ -130,8 +133,9 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 <section id="symulacja">
 <h2>Symulacja ruchu: czy busy zdążą?</h2>
 <div class="warn-inline">Symulacja propozycji – nie obowiązujący rozkład</div>
-<video class="map" src="symulacja/film.mp4" poster="symulacja/film_kadr.png" autoplay muted loop playsinline controls preload="metadata"></video>
-<p class="note">Poranek dnia roboczego (5:30–10:30) w programie SUMO: busy jadą proponowanym rozkładem po prawdziwych drogach, razem z samochodami (natężenie z pomiarów GPR 2020/21 na DW906, DW907, DK11 i innych), pociągami i zamykanymi rogatkami. 1 sekunda filmu to 10 minut. Czerwone odcinki to wolny ruch.</p>
+<div class="filmsw" role="group" aria-label="Pora dnia"><button type="button" class="on" onclick="film(this,'film','Poranek dnia roboczego (5:30–10:30)')">Rano 5:30–10:30</button><button type="button" onclick="film(this,'film_popoludnie','Popołudnie dnia roboczego (13:00–18:00), powroty ze szkół i pracy')">Po południu 13:00–18:00</button></div>
+<video id="filmv" class="map" src="symulacja/film.mp4" poster="symulacja/film_kadr.png" autoplay muted loop playsinline controls preload="metadata"></video>
+<p class="note"><span id="filmopis">Poranek dnia roboczego (5:30–10:30)</span> w programie SUMO: busy jadą proponowanym rozkładem po prawdziwych drogach, razem z samochodami (natężenie z pomiarów GPR 2020/21 na DW906, DW907, DK11 i innych), pociągami i zamykanymi rogatkami. 1 sekunda filmu to 10 minut. Czerwone odcinki to wolny ruch.</p>
 <div class="grid3">
 <div class="card"><div class="big">54 z 54</div>przesiadek na Rynku udanych – dojazdówki zdążają na linię 1 i na odjazd :03.</div>
 <div class="card"><div class="big">11 z 11</div>przesiadek w Strzebiniu z linii 4 z Łaz na linię 1 do Lublińca, z zapasem co najmniej 2 minut.</div>
@@ -218,6 +222,11 @@ function zoom(d){Z=Math.min(4,Math.max(1,Z+(d>0?.5:d<0?-.5:0)));document.querySe
 function lupa(on=1){const lb=document.getElementById('lb');lb.classList.toggle('on',!!on);document.body.style.overflow=on?'hidden':'';if(on){Z=window.innerWidth<700?2.5:1.5;zoom(0);}}
 function pelny(id,b){const w=document.getElementById(id),on=!w.classList.contains('full');w.classList.toggle('full',on);b.textContent=on?'✕ Zamknij':'⛶ Powiększ mapę';document.body.style.overflow=on?'hidden':'';}
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;lupa(0);const w=document.getElementById('mapwrap');if(w.classList.contains('full'))w.querySelector('.zoombtn').click();});
+</script>
+<script>
+function film(b,n,opis){document.querySelectorAll('.filmsw button').forEach(x=>x.classList.toggle('on',x===b));
+var v=document.getElementById('filmv');v.poster='symulacja/'+n+'_kadr.png';v.src='symulacja/'+n+'.mp4';v.play().catch(function(){});
+document.getElementById('filmopis').textContent=opis;}
 </script>
 </body>
 </html>
