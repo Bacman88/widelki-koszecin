@@ -1,0 +1,18 @@
+<additional>
+  <trainStop id="st_Boronów_-3062#0" lane="-3062#0_0" startPos="124.8" endPos="204.8" name="Boronów" friendlyPos="true"/>
+  <trainStop id="st_Boronów_3062#0" lane="3062#0_0" startPos="355.3" endPos="435.3" name="Boronów" friendlyPos="true"/>
+  <trainStop id="st_Kochanowice_-2085#2" lane="-2085#2_0" startPos="308.8" endPos="388.8" name="Kochanowice" friendlyPos="true"/>
+  <trainStop id="st_Kochanowice_2085#2" lane="2085#2_0" startPos="288.9" endPos="368.9" name="Kochanowice" friendlyPos="true"/>
+  <trainStop id="st_Kochcice-Glinica_-1283#2" lane="-1283#2_0" startPos="4405.9" endPos="4485.9" name="Kochcice-Glinica" friendlyPos="true"/>
+  <trainStop id="st_Kochcice-Glinica_1283#2" lane="1283#2_0" startPos="2755.8" endPos="2835.8" name="Kochcice-Glinica" friendlyPos="true"/>
+  <trainStop id="st_Koszęcin_-2215#4" lane="-2215#4_0" startPos="200.2" endPos="280.2" name="Koszęcin" friendlyPos="true"/>
+  <trainStop id="st_Koszęcin_2215#4" lane="2215#4_0" startPos="512.8" endPos="592.8" name="Koszęcin" friendlyPos="true"/>
+  <trainStop id="st_Lisów_-1507#0" lane="-1507#0_0" startPos="296.4" endPos="376.4" name="Lisów" friendlyPos="true"/>
+  <trainStop id="st_Lisów_1507#0" lane="1507#0_0" startPos="290.2" endPos="370.2" name="Lisów" friendlyPos="true"/>
+  <trainStop id="st_Lubliniec_-1284" lane="-1284_0" startPos="621.4" endPos="701.4" name="Lubliniec" friendlyPos="true"/>
+  <trainStop id="st_Lubliniec_2551#3" lane="2551#3_0" startPos="283.1" endPos="363.1" name="Lubliniec" friendlyPos="true"/>
+  <trainStop id="st_Rusinowice_-1567#2" lane="-1567#2_0" startPos="521.2" endPos="601.2" name="Rusinowice" friendlyPos="true"/>
+  <trainStop id="st_Rusinowice_1567#2" lane="1567#2_0" startPos="0.0" endPos="80.0" name="Rusinowice" friendlyPos="true"/>
+  <trainStop id="st_Strzebiń_-3355" lane="-3355_0" startPos="2106.4" endPos="2186.4" name="Strzebiń" friendlyPos="true"/>
+  <trainStop id="st_Strzebiń_3094#2" lane="3094#2_0" startPos="824.5" endPos="904.5" name="Strzebiń" friendlyPos="true"/>
+</additional>

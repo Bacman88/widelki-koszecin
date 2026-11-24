@@ -2,7 +2,7 @@
   <input>
     <net-file value="koszecin.net.xml.gz"/>
     <route-files value="pociagi.rou.xml,busy.rou.xml,tlo.rou.xml.gz"/>
-    <additional-files value="przystanki.add.xml,przejazdy.add.xml"/>
+    <additional-files value="przystanki.add.xml,przejazdy.add.xml,stacje.add.xml"/>
   </input>
   <time><begin value="16200"/><end value="90000"/><step-length value="1"/></time>
   <processing><time-to-teleport value="300"/><ignore-route-errors value="true"/><time-to-impatience value="30"/><ignore-junction-blocker value="15"/>
