@@ -65,6 +65,15 @@ for l in sorted(tp):
     ax.add_collection(LineCollection(tp[l], colors=KOL[l], linewidths=4.5, zorder=3, capstyle='round', alpha=0.9))
 for k, nm in {'lubpkp': 'Lubliniec', 'kosr': 'Koszęcin', 'kalp': 'Kalety', 'bor': 'Boronów', 'pia': 'Piasek', 'lisp': 'Lisów', 'laz': 'Łazy', 'pil': 'Piłka', 'str': 'Strzebiń'}.items():
     x, y = P(S[k][1], S[k][0]); ax.text(x, y + 0.003, nm, fontsize=11, color='#4A4740', ha='center', va='bottom', fontweight='semibold', zorder=5)
+# mniejsze miejscowości przy trasach: (lat, lon, nazwa, przesunięcie x, y w stopniach, wyrównanie)
+MNIEJSZE = [(S['sad'][0], S['sad'][1], 'Sadów', 0, 0.003, 'center'), (S['wie'][0], S['wie'][1], 'Wierzbie', 0.004, 0.002, 'left'),
+            (S['cie'][0], S['cie'][1], 'Cieszowa', 0.004, 0, 'left'), (50.62416, 18.87249, 'Prądy', 0.002, 0.003, 'left'),
+            (S['buk'][0], S['buk'][1], 'Bukowiec', -0.002, 0.0045, 'center'), (S['bru'][0], S['bru'][1], 'Brusiek', -0.004, 0, 'right'),
+            (S['rus'][0], S['rus'][1], 'Rusinowice', 0.004, -0.002, 'left'), (S['chw'][0], S['chw'][1], 'Chwostek', 0.004, 0, 'left')]
+for lat, lon, nm, dx, dy, ha in MNIEJSZE:
+    x, y = P(lon + dx, lat + dy)
+    ax.scatter([P(lon, lat)[0]], [P(lon, lat)[1]], s=14, color='#6B675F', zorder=4.5, edgecolors='white', linewidths=0.8)
+    ax.text(x, y, nm, fontsize=9, color='#5E5A52', ha=ha, va='center', zorder=5)
 ax.scatter([kx0], [ky0], s=260, color=CIEMNY, zorder=6, edgecolors='white', linewidths=2.5)
 import numpy as np
 g = fig.add_axes([AX0, 0, 0.10, 1]); g.axis('off')
