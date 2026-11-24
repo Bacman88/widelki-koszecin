@@ -7,7 +7,7 @@ Poranek dnia roboczego w symulacji ruchu – 1 sekunda filmu to 10 minut
 Busy wyjeżdżają z końców linii: Piasek, Łazy, Boronów, Kalety, Lisów, Piłka
 
 3
-00:00:03,200 --> 00:00:05,200
+00:00:06,200 --> 00:00:07,500
 Pociągi Kolei Śląskich i POLREGIO jadą według rozkładu 2026/27
 
 4
