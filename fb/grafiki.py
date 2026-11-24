@@ -52,6 +52,8 @@ xs = [p[0] for p in allp]; ys = [p[1] for p in allp]
 cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
 hy = (max(ys) - min(ys)) / 2 * 1.16; hx = hy * (0.54 * W) / H
 cx -= hx * 0.06
+s_ = open('../skrypty/build.py').read()
+m_ = re.search(r"'kosr':\(([\d.]+),([\d.]+)", s_); cy = float(m_.group(1))   # Koszęcin w połowie wysokości tła
 ax.set_xlim(cx - hx, cx + hx); ax.set_ylim(cy - hy, cy + hy)
 ax.fill([P(*c)[0] for c in gmina], [P(*c)[1] for c in gmina], color='#EAE7DF', lw=0, zorder=0)
 ax.add_collection(LineCollection(drogi, colors='#DEDAD1', linewidths=0.5, zorder=1))
@@ -69,14 +71,14 @@ import numpy as np
 g = fig.add_axes([0.46, 0, 0.08, 1]); g.axis('off')
 g.imshow(np.dstack([np.full((10, 100), c) for c in (0xF7 / 255, 0xF6 / 255, 0xF2 / 255)] + [np.tile(np.linspace(1, 0, 100), (10, 1))]), aspect='auto', extent=[0, 1, 0, 1])
 fx = 0.135
-fig.text(fx, 0.66, 'Busy Koszęcin', fontsize=50, fontweight='bold', color=CIEMNY)
-fig.text(fx, 0.54, 'Propozycja siatki busów dla całej gminy', fontsize=21, color='#3A3732')
+fig.text(fx, 0.63, 'Busy Koszęcin', fontsize=50, fontweight='bold', color=CIEMNY)
+fig.text(fx, 0.52, 'Propozycja połączeń busów dla całej gminy', fontsize=21, color='#3A3732')
 for i, (l, t) in enumerate([('1', 'co godzinę do Lublińca'), ('2', 'Kalety – Boronów'), ('3', 'Lisów – Cieszowa'), ('4', 'Łazy – Strzebiń – Piłka')]):
-    xx = fx + (i % 2) * 0.18; yy = 0.40 - (i // 2) * 0.085
+    xx = fx + (i % 2) * 0.18; yy = 0.385 - (i // 2) * 0.08
     fig.patches.append(matplotlib.patches.Ellipse((xx + 0.009, yy + 0.022), 0.04 * H / W, 0.04 * 1, transform=fig.transFigure, color=KOL[l], figure=fig))
     fig.text(xx + 0.009, yy + 0.021, l, fontsize=12, color='white', fontweight='bold', ha='center', va='center')
     fig.text(xx + 0.025, yy + 0.008, t, fontsize=13.5, color='#2E2C28')
-fig.text(fx, 0.13, 'Wszystkie linie spotykają się na Rynku w Koszęcinie\nbusy-koszecin.smart-ant.pl', fontsize=12, linespacing=1.5, color='#5E5A52')
-fig.text(fx, 0.065, 'Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=12, color='#B3261E', fontweight='semibold')
+fig.text(fx, 0.155, 'Wszystkie linie spotykają się na Rynku w Koszęcinie\nbusy-koszecin.smart-ant.pl', fontsize=12, linespacing=1.5, color='#5E5A52')
+fig.text(fx, 0.09, 'Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=12, color='#B3261E', fontweight='semibold')
 fig.savefig(f'{OUT}/tlo.png', dpi=100, facecolor=TLO); plt.close(fig)
 print('ok')
