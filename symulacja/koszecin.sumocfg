@@ -6,7 +6,8 @@
   </input>
   <time><begin value="16200"/><end value="90000"/><step-length value="1"/></time>
   <processing><time-to-teleport value="300"/><ignore-route-errors value="true"/><time-to-impatience value="30"/><ignore-junction-blocker value="15"/>
-    <collision.check-junctions value="false"/><collision.action value="none"/></processing>
+    <collision.check-junctions value="false"/><collision.action value="none"/>
+        <railsignal.default-classes value="custom1"/></processing>
   <output>
     <stop-output value="wyniki/przystanki.xml"/>
     <tripinfo-output value="wyniki/kursy.xml"/>

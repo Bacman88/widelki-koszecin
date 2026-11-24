@@ -97,7 +97,10 @@ for k, nm in NAZWY.items():
     lat, lon, _ = S[k]; x, y = P(lon, lat)
     ax.text(x, y + 0.0042, nm, fontsize=8.5, color='#5E5A52', ha='center', va='bottom', zorder=5, fontweight='semibold')
 bus_sc = ax.scatter([], [], s=150, zorder=7, edgecolors='white', linewidths=1.2)
-poc_sc = ax.scatter([], [], s=22, marker='s', c='#2B2926', zorder=6, edgecolors='white', linewidths=0.5)
+poc_sc = ax.scatter([], [], s=16, marker='s', c='#8A857B', zorder=6, edgecolors='white', linewidths=0.4)   # towarowe
+KOL_POC = {'K': '#F2B705', 'P': '#7A2E8E'}     # Koleje Śląskie / POLREGIO
+pas_sc = ax.scatter([], [], s=230, marker='s', zorder=6.5, edgecolors='#1E1D1B', linewidths=0.8)
+pas_txt = [ax.text(0, 0, '', fontsize=6.3, ha='center', va='center', zorder=6.6, fontweight='bold', visible=False) for _ in range(30)]
 bus_txt = [ax.text(0, 0, '', fontsize=7.5, color='white', ha='center', va='center', zorder=8, fontweight='bold', visible=False)
            for _ in range(40)]
 
@@ -113,23 +116,33 @@ for l, nazwa in [('1', 'Linia 1: Lubliniec – Koszęcin – Piasek'), ('2', 'Li
     fig.patches.append(matplotlib.patches.Ellipse((px + 0.012, ly + 0.012), 0.022 * H / W, 0.022, transform=fig.transFigure, color=KOL[l], figure=fig))
     fig.text(px + 0.012, ly + 0.012, l, fontsize=8, color='white', ha='center', va='center', fontweight='bold')
     fig.text(px + 0.032, ly + 0.003, nazwa, fontsize=10, color='#2E2C28'); ly -= 0.05
-fig.patches.append(plt.Rectangle((px + 0.006, ly + 0.005), 0.012, 0.014, transform=fig.transFigure, color='#2B2926', figure=fig))
-fig.text(px + 0.032, ly + 0.003, 'pociąg (przybliżony ruch, nie rozkład PKP)', fontsize=10, color='#2E2C28'); ly -= 0.05
+for k, nazwa in (('K', 'pociąg Kolei Śląskich (rozkład 2026/27)'), ('P', 'pociąg POLREGIO (rozkład 2026/27)')):
+    fig.patches.append(plt.Rectangle((px + 0.003, ly + 0.002), 0.019, 0.02, transform=fig.transFigure, facecolor=KOL_POC[k], edgecolor='#1E1D1B', lw=0.8, figure=fig))
+    fig.text(px + 0.0125, ly + 0.012, 'KŚ' if k == 'K' else 'PR', fontsize=6, ha='center', va='center', fontweight='bold', color='#1E1D1B' if k == 'K' else 'white')
+    fig.text(px + 0.032, ly + 0.003, nazwa, fontsize=10, color='#2E2C28'); ly -= 0.045
+fig.patches.append(plt.Rectangle((px + 0.008, ly + 0.007), 0.009, 0.01, transform=fig.transFigure, color='#8A857B', figure=fig))
+fig.text(px + 0.032, ly + 0.003, 'pociąg towarowy (przybliżony)', fontsize=10, color='#2E2C28'); ly -= 0.045
 fig.lines.append(plt.Line2D([px + 0.003, px + 0.022], [ly + 0.012, ly + 0.012], transform=fig.transFigure, color='#D6452F', lw=3.5, figure=fig))
 fig.text(px + 0.032, ly + 0.003, 'wolny ruch / korek', fontsize=10, color='#2E2C28')
 fig.text(px, 0.135, 'To NIE jest aktualny rozkład jazdy.', fontsize=11.5, fontweight='bold', color='#B3261E')
 fig.text(px, 0.098, 'Propozycja mieszkańca; ruch aut wg pomiarów GPR 2020/21,', fontsize=9, color='#5E5A52')
-fig.text(px, 0.072, 'pociągi i rogatki w przybliżeniu.', fontsize=9, color='#5E5A52')
+fig.text(px, 0.072, 'pociągi towarowe i rogatki w przybliżeniu.', fontsize=9, color='#5E5A52')
 fig.text(px, 0.03, 'busy-koszecin.smart-ant.pl', fontsize=9.5, color='#3D6B4F', fontweight='semibold')
 
 czasy = sorted(poz)
 def klatka(t):
     tt = min(czasy, key=lambda c: abs(c - t))
-    b, p, kol, tx = [], [], [], []
+    b, p, kol, tx, pp, pk = [], [], [], [], [], []
     for vid, lon, lat, v in poz[tt]:
         if vid.startswith('L'):
             b.append(P(lon, lat)); kol.append(KOL[vid[1]]); tx.append(vid[1])
+        elif '_p' in vid: pp.append(P(lon, lat)); pk.append(vid[-1])
         else: p.append(P(lon, lat))
+    pas_sc.set_offsets(pp if pp else [[None, None]]); pas_sc.set_color([KOL_POC[k] for k in pk] if pk else ['none']); pas_sc.set_edgecolor('#1E1D1B')
+    for i, txt in enumerate(pas_txt):
+        if i < len(pp):
+            txt.set_position(pp[i]); txt.set_text('KŚ' if pk[i] == 'K' else 'PR'); txt.set_color('#1E1D1B' if pk[i] == 'K' else 'white'); txt.set_visible(True)
+        else: txt.set_visible(False)
     # busy stojące razem (np. przesiadka na Rynku) rozsuwamy w kółko, żeby było widać każdy
     gr = []
     for i, (x, y) in enumerate(b):
