@@ -154,11 +154,10 @@
       "lat": 50.6226,
       "lon": 18.8439,
       "linie": [
-        "2",
         "3",
         "4"
       ],
-      "typ": "istniejący, ul. Sobieskiego przy Św. Trójcy (na pętli przy stacji)",
+      "typ": "istniejący, ul. Sobieskiego przy Św. Trójcy (na pętli przy stacji); linia 2 jedzie inną ulicą (ok. 120 m obok) – sprawdzić, czy ma tam stawać",
       "na_zadanie": false
     }
   ],
