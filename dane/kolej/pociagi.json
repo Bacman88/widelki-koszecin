@@ -1,0 +1,6965 @@
+{
+"zrodlo": "GTFS polish_trains (mkuran.pl), dane PKP PLK",
+"pobrano": "2026-11-25",
+"dni": {
+"wd": "20261214",
+"sat": "20261219",
+"sun": "20261220"
+},
+"pociagi": {
+"wd": [
+{
+"nr": "40550",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+282,
+282
+],
+[
+"Kochanowice",
+287,
+288
+],
+[
+"Lisów",
+291,
+291
+]
+]
+},
+{
+"nr": "40450",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+293,
+293
+],
+[
+"Rusinowice",
+298,
+298
+],
+[
+"Koszęcin",
+302,
+303
+],
+[
+"Kalety",
+308,
+309
+]
+]
+},
+{
+"nr": "44206",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+293,
+293
+],
+[
+"Strzebiń",
+298,
+298
+],
+[
+"Kalety",
+303,
+304
+]
+]
+},
+{
+"nr": "40401",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+311,
+312
+],
+[
+"Koszęcin",
+317,
+318
+],
+[
+"Rusinowice",
+322,
+322
+],
+[
+"Lubliniec",
+328,
+328
+]
+]
+},
+{
+"nr": "40250",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+334,
+334
+],
+[
+"Strzebiń",
+339,
+339
+],
+[
+"Kalety",
+344,
+345
+]
+]
+},
+{
+"nr": "40201",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+336,
+337
+],
+[
+"Strzebiń",
+342,
+342
+],
+[
+"Boronów",
+347,
+347
+]
+]
+},
+{
+"nr": "40452",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+338,
+338
+],
+[
+"Rusinowice",
+343,
+343
+],
+[
+"Koszęcin",
+347,
+348
+],
+[
+"Kalety",
+353,
+354
+]
+]
+},
+{
+"nr": "40552",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+339,
+339
+],
+[
+"Kochanowice",
+344,
+345
+],
+[
+"Lisów",
+348,
+348
+]
+]
+},
+{
+"nr": "40501",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+359,
+359
+],
+[
+"Kochanowice",
+362,
+363
+],
+[
+"Lubliniec",
+369,
+369
+]
+]
+},
+{
+"nr": "40403",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+365,
+366
+],
+[
+"Koszęcin",
+372,
+372
+],
+[
+"Rusinowice",
+376,
+377
+],
+[
+"Lubliniec",
+382,
+382
+]
+]
+},
+{
+"nr": "40252",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+377,
+377
+],
+[
+"Strzebiń",
+382,
+382
+],
+[
+"Kalety",
+387,
+388
+]
+]
+},
+{
+"nr": "40405",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+411,
+412
+],
+[
+"Koszęcin",
+417,
+418
+],
+[
+"Rusinowice",
+422,
+422
+],
+[
+"Lubliniec",
+428,
+428
+]
+]
+},
+{
+"nr": "40554",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+412,
+412
+],
+[
+"Kochanowice",
+417,
+418
+],
+[
+"Lisów",
+421,
+421
+]
+]
+},
+{
+"nr": "44208",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+413,
+413
+],
+[
+"Strzebiń",
+418,
+418
+],
+[
+"Kalety",
+424,
+424
+]
+]
+},
+{
+"nr": "40454",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+415,
+415
+],
+[
+"Rusinowice",
+420,
+420
+],
+[
+"Koszęcin",
+424,
+425
+],
+[
+"Kalety",
+430,
+431
+]
+]
+},
+{
+"nr": "44291",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+417,
+417
+],
+[
+"Strzebiń",
+423,
+423
+],
+[
+"Boronów",
+428,
+428
+]
+]
+},
+{
+"nr": "44309",
+"kier": "Lubliniec",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Lisów",
+419,
+419
+],
+[
+"Kochanowice",
+423,
+423
+],
+[
+"Lubliniec",
+430,
+430
+]
+]
+},
+{
+"nr": "40254",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+439,
+440
+],
+[
+"Strzebiń",
+444,
+445
+],
+[
+"Kalety",
+449,
+450
+]
+]
+},
+{
+"nr": "40203",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+441,
+441
+],
+[
+"Strzebiń",
+446,
+447
+],
+[
+"Boronów",
+451,
+452
+]
+]
+},
+{
+"nr": "44312",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Lubliniec",
+442,
+442
+],
+[
+"Kochanowice",
+448,
+448
+],
+[
+"Lisów",
+452,
+452
+],
+[
+"Boronów",
+478,
+478
+],
+[
+"Strzebiń",
+483,
+483
+],
+[
+"Kalety",
+488,
+489
+]
+]
+},
+{
+"nr": "40407",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+475,
+476
+],
+[
+"Koszęcin",
+481,
+482
+],
+[
+"Rusinowice",
+486,
+486
+],
+[
+"Lubliniec",
+492,
+492
+]
+]
+},
+{
+"nr": "40456",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+479,
+479
+],
+[
+"Rusinowice",
+484,
+484
+],
+[
+"Koszęcin",
+488,
+489
+],
+[
+"Kalety",
+494,
+495
+]
+]
+},
+{
+"nr": "40505",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+505,
+505
+],
+[
+"Kochanowice",
+508,
+509
+],
+[
+"Lubliniec",
+515,
+515
+]
+]
+},
+{
+"nr": "40205",
+"kier": "Kłobuck",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+512,
+512
+],
+[
+"Strzebiń",
+517,
+518
+],
+[
+"Boronów",
+522,
+523
+]
+]
+},
+{
+"nr": "40409",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+531,
+532
+],
+[
+"Koszęcin",
+538,
+538
+],
+[
+"Rusinowice",
+542,
+543
+],
+[
+"Lubliniec",
+548,
+548
+]
+]
+},
+{
+"nr": "40556",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+538,
+538
+],
+[
+"Kochanowice",
+543,
+544
+],
+[
+"Lisów",
+547,
+547
+]
+]
+},
+{
+"nr": "40458",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+544,
+544
+],
+[
+"Rusinowice",
+549,
+549
+],
+[
+"Koszęcin",
+553,
+554
+],
+[
+"Kalety",
+559,
+560
+]
+]
+},
+{
+"nr": "45207",
+"kier": "Zduńska Wola",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+561,
+561
+],
+[
+"Strzebiń",
+566,
+567
+],
+[
+"Boronów",
+571,
+572
+]
+]
+},
+{
+"nr": "44293",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+572,
+572
+],
+[
+"Strzebiń",
+578,
+578
+],
+[
+"Boronów",
+583,
+583
+]
+]
+},
+{
+"nr": "40256",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+574,
+574
+],
+[
+"Strzebiń",
+579,
+579
+],
+[
+"Kalety",
+584,
+585
+]
+]
+},
+{
+"nr": "44210",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+594,
+595
+],
+[
+"Strzebiń",
+599,
+600
+],
+[
+"Kalety",
+605,
+605
+]
+]
+},
+{
+"nr": "40411",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+595,
+596
+],
+[
+"Koszęcin",
+602,
+602
+],
+[
+"Rusinowice",
+606,
+607
+],
+[
+"Lubliniec",
+612,
+612
+]
+]
+},
+{
+"nr": "40460",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+602,
+602
+],
+[
+"Rusinowice",
+607,
+607
+],
+[
+"Koszęcin",
+611,
+612
+],
+[
+"Kalety",
+617,
+618
+]
+]
+},
+{
+"nr": "40507",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+615,
+615
+],
+[
+"Kochanowice",
+618,
+619
+],
+[
+"Lubliniec",
+625,
+625
+]
+]
+},
+{
+"nr": "40558",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+635,
+635
+],
+[
+"Kochanowice",
+640,
+641
+],
+[
+"Lisów",
+644,
+644
+]
+]
+},
+{
+"nr": "40462",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+655,
+655
+],
+[
+"Rusinowice",
+660,
+660
+],
+[
+"Koszęcin",
+664,
+665
+],
+[
+"Kalety",
+670,
+671
+]
+]
+},
+{
+"nr": "40413",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+659,
+660
+],
+[
+"Koszęcin",
+666,
+666
+],
+[
+"Rusinowice",
+670,
+671
+],
+[
+"Lubliniec",
+676,
+676
+]
+]
+},
+{
+"nr": "40258",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+696,
+696
+],
+[
+"Strzebiń",
+701,
+701
+],
+[
+"Kalety",
+706,
+707
+]
+]
+},
+{
+"nr": "44295",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+700,
+700
+],
+[
+"Strzebiń",
+706,
+706
+],
+[
+"Boronów",
+711,
+711
+]
+]
+},
+{
+"nr": "40464",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+718,
+718
+],
+[
+"Rusinowice",
+723,
+723
+],
+[
+"Koszęcin",
+727,
+728
+],
+[
+"Kalety",
+733,
+734
+]
+]
+},
+{
+"nr": "40415",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+717,
+718
+],
+[
+"Koszęcin",
+724,
+724
+],
+[
+"Rusinowice",
+728,
+729
+],
+[
+"Lubliniec",
+734,
+734
+]
+]
+},
+{
+"nr": "40509",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+739,
+739
+],
+[
+"Kochanowice",
+742,
+743
+],
+[
+"Lubliniec",
+749,
+749
+]
+]
+},
+{
+"nr": "40209",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+751,
+751
+],
+[
+"Strzebiń",
+756,
+757
+],
+[
+"Boronów",
+761,
+762
+]
+]
+},
+{
+"nr": "40560",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+759,
+759
+],
+[
+"Kochanowice",
+764,
+765
+],
+[
+"Lisów",
+768,
+768
+]
+]
+},
+{
+"nr": "44212",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+764,
+765
+],
+[
+"Strzebiń",
+769,
+770
+],
+[
+"Kalety",
+775,
+775
+]
+]
+},
+{
+"nr": "40466",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+766,
+766
+],
+[
+"Rusinowice",
+771,
+771
+],
+[
+"Koszęcin",
+775,
+776
+],
+[
+"Kalety",
+781,
+782
+]
+]
+},
+{
+"nr": "40417",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+770,
+771
+],
+[
+"Koszęcin",
+776,
+777
+],
+[
+"Rusinowice",
+781,
+781
+],
+[
+"Lubliniec",
+787,
+787
+]
+]
+},
+{
+"nr": "54260",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+794,
+794
+],
+[
+"Strzebiń",
+799,
+799
+],
+[
+"Kalety",
+804,
+805
+]
+]
+},
+{
+"nr": "44351",
+"kier": "Lubliniec",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+809,
+810
+],
+[
+"Strzebiń",
+815,
+815
+],
+[
+"Boronów",
+820,
+820
+],
+[
+"Lisów",
+845,
+845
+],
+[
+"Kochanowice",
+849,
+849
+],
+[
+"Lubliniec",
+856,
+856
+]
+]
+},
+{
+"nr": "40468",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+839,
+839
+],
+[
+"Rusinowice",
+844,
+844
+],
+[
+"Koszęcin",
+848,
+849
+],
+[
+"Kalety",
+854,
+855
+]
+]
+},
+{
+"nr": "40419",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+841,
+842
+],
+[
+"Koszęcin",
+848,
+848
+],
+[
+"Rusinowice",
+852,
+853
+],
+[
+"Lubliniec",
+858,
+858
+]
+]
+},
+{
+"nr": "44310",
+"kier": "Częstochowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Lubliniec",
+868,
+868
+],
+[
+"Kochanowice",
+874,
+874
+],
+[
+"Lisów",
+878,
+878
+]
+]
+},
+{
+"nr": "45211",
+"kier": "Zduńska Wola",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+871,
+872
+],
+[
+"Strzebiń",
+877,
+877
+],
+[
+"Boronów",
+882,
+882
+]
+]
+},
+{
+"nr": "44297",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+883,
+883
+],
+[
+"Strzebiń",
+889,
+889
+],
+[
+"Boronów",
+894,
+894
+]
+]
+},
+{
+"nr": "44214",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+888,
+888
+],
+[
+"Strzebiń",
+893,
+894
+],
+[
+"Kalety",
+899,
+899
+]
+]
+},
+{
+"nr": "40470",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+892,
+892
+],
+[
+"Rusinowice",
+897,
+897
+],
+[
+"Koszęcin",
+901,
+902
+],
+[
+"Kalety",
+907,
+908
+]
+]
+},
+{
+"nr": "40421",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+900,
+901
+],
+[
+"Koszęcin",
+906,
+907
+],
+[
+"Rusinowice",
+911,
+911
+],
+[
+"Lubliniec",
+917,
+917
+]
+]
+},
+{
+"nr": "40511",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+914,
+914
+],
+[
+"Kochanowice",
+917,
+918
+],
+[
+"Lubliniec",
+924,
+924
+]
+]
+},
+{
+"nr": "40564",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+939,
+939
+],
+[
+"Kochanowice",
+944,
+945
+],
+[
+"Lisów",
+948,
+948
+]
+]
+},
+{
+"nr": "44355",
+"kier": "Herby Nowe",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+942,
+942
+],
+[
+"Strzebiń",
+948,
+948
+],
+[
+"Boronów",
+953,
+953
+]
+]
+},
+{
+"nr": "40472",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+952,
+952
+],
+[
+"Rusinowice",
+957,
+957
+],
+[
+"Koszęcin",
+961,
+962
+],
+[
+"Kalety",
+967,
+968
+]
+]
+},
+{
+"nr": "40423",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+961,
+962
+],
+[
+"Koszęcin",
+968,
+968
+],
+[
+"Rusinowice",
+972,
+973
+],
+[
+"Lubliniec",
+978,
+978
+]
+]
+},
+{
+"nr": "44433",
+"kier": "Lubliniec",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Lisów",
+975,
+976
+],
+[
+"Kochanowice",
+979,
+980
+],
+[
+"Lubliniec",
+986,
+986
+]
+]
+},
+{
+"nr": "40262",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+981,
+981
+],
+[
+"Strzebiń",
+986,
+986
+],
+[
+"Kalety",
+991,
+992
+]
+]
+},
+{
+"nr": "40213",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+989,
+990
+],
+[
+"Strzebiń",
+995,
+995
+],
+[
+"Boronów",
+1000,
+1000
+]
+]
+},
+{
+"nr": "44200",
+"kier": "Częstochowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Lubliniec",
+996,
+996
+],
+[
+"Kochanowice",
+1002,
+1002
+],
+[
+"Lisów",
+1006,
+1006
+]
+]
+},
+{
+"nr": "44352",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+1004,
+1004
+],
+[
+"Strzebiń",
+1009,
+1009
+],
+[
+"Kalety",
+1014,
+1015
+]
+]
+},
+{
+"nr": "40474",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1014,
+1014
+],
+[
+"Rusinowice",
+1019,
+1019
+],
+[
+"Koszęcin",
+1023,
+1024
+],
+[
+"Kalety",
+1029,
+1030
+]
+]
+},
+{
+"nr": "40425",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1017,
+1018
+],
+[
+"Koszęcin",
+1024,
+1024
+],
+[
+"Rusinowice",
+1028,
+1029
+],
+[
+"Lubliniec",
+1034,
+1034
+]
+]
+},
+{
+"nr": "40515",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1035,
+1035
+],
+[
+"Kochanowice",
+1038,
+1039
+],
+[
+"Lubliniec",
+1045,
+1045
+]
+]
+},
+{
+"nr": "44216",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+1040,
+1041
+],
+[
+"Strzebiń",
+1045,
+1046
+],
+[
+"Kalety",
+1051,
+1051
+]
+]
+},
+{
+"nr": "40568",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1055,
+1055
+],
+[
+"Kochanowice",
+1060,
+1061
+],
+[
+"Lisów",
+1064,
+1064
+]
+]
+},
+{
+"nr": "44347",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+1055,
+1055
+],
+[
+"Strzebiń",
+1061,
+1061
+],
+[
+"Boronów",
+1066,
+1066
+]
+]
+},
+{
+"nr": "40476",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1081,
+1081
+],
+[
+"Rusinowice",
+1086,
+1086
+],
+[
+"Koszęcin",
+1090,
+1091
+],
+[
+"Kalety",
+1096,
+1097
+]
+]
+},
+{
+"nr": "40427",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1087,
+1088
+],
+[
+"Koszęcin",
+1093,
+1094
+],
+[
+"Rusinowice",
+1098,
+1098
+],
+[
+"Lubliniec",
+1104,
+1104
+]
+]
+},
+{
+"nr": "54264",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1098,
+1098
+],
+[
+"Strzebiń",
+1103,
+1103
+],
+[
+"Kalety",
+1108,
+1109
+]
+]
+},
+{
+"nr": "40215",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1108,
+1109
+],
+[
+"Strzebiń",
+1114,
+1114
+],
+[
+"Boronów",
+1119,
+1119
+]
+]
+},
+{
+"nr": "40517",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1127,
+1127
+],
+[
+"Kochanowice",
+1130,
+1131
+],
+[
+"Lubliniec",
+1137,
+1137
+]
+]
+},
+{
+"nr": "40429",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1131,
+1132
+],
+[
+"Koszęcin",
+1138,
+1138
+],
+[
+"Rusinowice",
+1142,
+1143
+],
+[
+"Lubliniec",
+1148,
+1148
+]
+]
+},
+{
+"nr": "40478",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1142,
+1142
+],
+[
+"Rusinowice",
+1147,
+1147
+],
+[
+"Koszęcin",
+1151,
+1152
+],
+[
+"Kalety",
+1157,
+1158
+]
+]
+},
+{
+"nr": "44349",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+1142,
+1142
+],
+[
+"Strzebiń",
+1148,
+1148
+],
+[
+"Boronów",
+1153,
+1153
+]
+]
+},
+{
+"nr": "40570",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1177,
+1177
+],
+[
+"Kochanowice",
+1182,
+1183
+],
+[
+"Lisów",
+1186,
+1186
+]
+]
+},
+{
+"nr": "40480",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1195,
+1195
+],
+[
+"Rusinowice",
+1200,
+1200
+],
+[
+"Koszęcin",
+1204,
+1205
+],
+[
+"Kalety",
+1210,
+1211
+]
+]
+},
+{
+"nr": "40431",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1209,
+1210
+],
+[
+"Koszęcin",
+1216,
+1216
+],
+[
+"Rusinowice",
+1220,
+1221
+],
+[
+"Lubliniec",
+1226,
+1226
+]
+]
+},
+{
+"nr": "40519",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1213,
+1213
+],
+[
+"Kochanowice",
+1216,
+1217
+],
+[
+"Lubliniec",
+1223,
+1223
+]
+]
+},
+{
+"nr": "40217",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1228,
+1229
+],
+[
+"Strzebiń",
+1234,
+1234
+],
+[
+"Boronów",
+1239,
+1239
+]
+]
+},
+{
+"nr": "40266",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1231,
+1231
+],
+[
+"Strzebiń",
+1236,
+1236
+],
+[
+"Kalety",
+1241,
+1241
+]
+]
+},
+{
+"nr": "40572",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1243,
+1243
+],
+[
+"Kochanowice",
+1248,
+1249
+],
+[
+"Lisów",
+1252,
+1252
+]
+]
+},
+{
+"nr": "40482",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1255,
+1255
+],
+[
+"Rusinowice",
+1260,
+1260
+],
+[
+"Koszęcin",
+1264,
+1265
+],
+[
+"Kalety",
+1270,
+1271
+]
+]
+},
+{
+"nr": "40521",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1267,
+1267
+],
+[
+"Kochanowice",
+1270,
+1271
+],
+[
+"Lubliniec",
+1277,
+1277
+]
+]
+},
+{
+"nr": "40433",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1270,
+1271
+],
+[
+"Koszęcin",
+1277,
+1277
+],
+[
+"Rusinowice",
+1281,
+1282
+],
+[
+"Lubliniec",
+1287,
+1287
+]
+]
+},
+{
+"nr": "40268",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1283,
+1284
+],
+[
+"Strzebiń",
+1288,
+1289
+],
+[
+"Kalety",
+1293,
+1294
+]
+]
+},
+{
+"nr": "40484",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1296,
+1296
+],
+[
+"Rusinowice",
+1301,
+1301
+],
+[
+"Koszęcin",
+1305,
+1306
+],
+[
+"Kalety",
+1311,
+1312
+]
+]
+},
+{
+"nr": "40435",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1309,
+1310
+],
+[
+"Koszęcin",
+1316,
+1316
+],
+[
+"Rusinowice",
+1320,
+1321
+],
+[
+"Lubliniec",
+1326,
+1326
+]
+]
+},
+{
+"nr": "40574",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1311,
+1311
+],
+[
+"Kochanowice",
+1317,
+1317
+],
+[
+"Lisów",
+1320,
+1321
+]
+]
+},
+{
+"nr": "40523",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1319,
+1319
+],
+[
+"Kochanowice",
+1322,
+1323
+],
+[
+"Lubliniec",
+1329,
+1329
+]
+]
+},
+{
+"nr": "40486",
+"kier": "Bytom",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1349,
+1349
+],
+[
+"Rusinowice",
+1354,
+1354
+],
+[
+"Koszęcin",
+1358,
+1359
+],
+[
+"Kalety",
+1364,
+1365
+]
+]
+},
+{
+"nr": "40219",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1351,
+1352
+],
+[
+"Strzebiń",
+1357,
+1357
+],
+[
+"Boronów",
+1362,
+1362
+]
+]
+},
+{
+"nr": "40437",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1370,
+1371
+],
+[
+"Koszęcin",
+1377,
+1377
+],
+[
+"Rusinowice",
+1381,
+1382
+],
+[
+"Lubliniec",
+1387,
+1387
+]
+]
+},
+{
+"nr": "40525",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1389,
+1389
+],
+[
+"Kochanowice",
+1392,
+1393
+],
+[
+"Lubliniec",
+1399,
+1399
+]
+]
+}
+],
+"sat": [
+{
+"nr": "40550",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+282,
+282
+],
+[
+"Kochanowice",
+287,
+288
+],
+[
+"Lisów",
+291,
+291
+]
+]
+},
+{
+"nr": "40450",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+293,
+293
+],
+[
+"Rusinowice",
+298,
+298
+],
+[
+"Koszęcin",
+302,
+303
+],
+[
+"Kalety",
+308,
+309
+]
+]
+},
+{
+"nr": "44206",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+293,
+293
+],
+[
+"Strzebiń",
+298,
+298
+],
+[
+"Kalety",
+303,
+304
+]
+]
+},
+{
+"nr": "40401",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+316,
+317
+],
+[
+"Koszęcin",
+322,
+323
+],
+[
+"Rusinowice",
+327,
+327
+],
+[
+"Lubliniec",
+333,
+333
+]
+]
+},
+{
+"nr": "40250",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+334,
+334
+],
+[
+"Strzebiń",
+339,
+339
+],
+[
+"Kalety",
+344,
+345
+]
+]
+},
+{
+"nr": "40201",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+336,
+337
+],
+[
+"Strzebiń",
+342,
+342
+],
+[
+"Boronów",
+347,
+347
+]
+]
+},
+{
+"nr": "40552",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+339,
+339
+],
+[
+"Kochanowice",
+344,
+345
+],
+[
+"Lisów",
+348,
+348
+]
+]
+},
+{
+"nr": "40452",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+353,
+353
+],
+[
+"Rusinowice",
+358,
+358
+],
+[
+"Koszęcin",
+362,
+363
+],
+[
+"Kalety",
+368,
+369
+]
+]
+},
+{
+"nr": "40501",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+359,
+359
+],
+[
+"Kochanowice",
+362,
+363
+],
+[
+"Lubliniec",
+369,
+369
+]
+]
+},
+{
+"nr": "40403",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+365,
+366
+],
+[
+"Koszęcin",
+372,
+372
+],
+[
+"Rusinowice",
+376,
+377
+],
+[
+"Lubliniec",
+382,
+382
+]
+]
+},
+{
+"nr": "40252",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+377,
+377
+],
+[
+"Strzebiń",
+382,
+382
+],
+[
+"Kalety",
+387,
+388
+]
+]
+},
+{
+"nr": "40405",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+411,
+412
+],
+[
+"Koszęcin",
+417,
+418
+],
+[
+"Rusinowice",
+422,
+422
+],
+[
+"Lubliniec",
+428,
+428
+]
+]
+},
+{
+"nr": "40554",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+412,
+412
+],
+[
+"Kochanowice",
+417,
+418
+],
+[
+"Lisów",
+421,
+421
+]
+]
+},
+{
+"nr": "40454",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+415,
+415
+],
+[
+"Rusinowice",
+420,
+420
+],
+[
+"Koszęcin",
+424,
+425
+],
+[
+"Kalety",
+430,
+431
+]
+]
+},
+{
+"nr": "44291",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+417,
+417
+],
+[
+"Strzebiń",
+423,
+423
+],
+[
+"Boronów",
+428,
+428
+]
+]
+},
+{
+"nr": "40254",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+439,
+440
+],
+[
+"Strzebiń",
+444,
+445
+],
+[
+"Kalety",
+449,
+450
+]
+]
+},
+{
+"nr": "40203",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+441,
+441
+],
+[
+"Strzebiń",
+446,
+447
+],
+[
+"Boronów",
+451,
+452
+]
+]
+},
+{
+"nr": "40407",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+470,
+471
+],
+[
+"Koszęcin",
+477,
+477
+],
+[
+"Rusinowice",
+481,
+482
+],
+[
+"Lubliniec",
+487,
+487
+]
+]
+},
+{
+"nr": "40456",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+479,
+479
+],
+[
+"Rusinowice",
+484,
+484
+],
+[
+"Koszęcin",
+488,
+489
+],
+[
+"Kalety",
+494,
+495
+]
+]
+},
+{
+"nr": "40505",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+505,
+505
+],
+[
+"Kochanowice",
+508,
+509
+],
+[
+"Lubliniec",
+515,
+515
+]
+]
+},
+{
+"nr": "40205",
+"kier": "Kłobuck",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+512,
+512
+],
+[
+"Strzebiń",
+517,
+518
+],
+[
+"Boronów",
+522,
+523
+]
+]
+},
+{
+"nr": "40409",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+531,
+532
+],
+[
+"Koszęcin",
+538,
+538
+],
+[
+"Rusinowice",
+542,
+543
+],
+[
+"Lubliniec",
+548,
+548
+]
+]
+},
+{
+"nr": "40556",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+538,
+538
+],
+[
+"Kochanowice",
+543,
+544
+],
+[
+"Lisów",
+547,
+547
+]
+]
+},
+{
+"nr": "40458",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+544,
+544
+],
+[
+"Rusinowice",
+549,
+549
+],
+[
+"Koszęcin",
+553,
+554
+],
+[
+"Kalety",
+559,
+560
+]
+]
+},
+{
+"nr": "45207",
+"kier": "Zduńska Wola",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+561,
+561
+],
+[
+"Strzebiń",
+566,
+567
+],
+[
+"Boronów",
+571,
+572
+]
+]
+},
+{
+"nr": "40256",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+574,
+574
+],
+[
+"Strzebiń",
+579,
+579
+],
+[
+"Kalety",
+584,
+585
+]
+]
+},
+{
+"nr": "44210",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+594,
+595
+],
+[
+"Strzebiń",
+599,
+600
+],
+[
+"Kalety",
+605,
+605
+]
+]
+},
+{
+"nr": "40411",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+595,
+596
+],
+[
+"Koszęcin",
+602,
+602
+],
+[
+"Rusinowice",
+606,
+607
+],
+[
+"Lubliniec",
+612,
+612
+]
+]
+},
+{
+"nr": "40460",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+602,
+602
+],
+[
+"Rusinowice",
+607,
+607
+],
+[
+"Koszęcin",
+611,
+612
+],
+[
+"Kalety",
+617,
+618
+]
+]
+},
+{
+"nr": "40507",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+615,
+615
+],
+[
+"Kochanowice",
+618,
+619
+],
+[
+"Lubliniec",
+625,
+625
+]
+]
+},
+{
+"nr": "40558",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+635,
+635
+],
+[
+"Kochanowice",
+640,
+641
+],
+[
+"Lisów",
+644,
+644
+]
+]
+},
+{
+"nr": "40462",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+655,
+655
+],
+[
+"Rusinowice",
+660,
+660
+],
+[
+"Koszęcin",
+664,
+665
+],
+[
+"Kalety",
+670,
+671
+]
+]
+},
+{
+"nr": "40413",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+659,
+660
+],
+[
+"Koszęcin",
+666,
+666
+],
+[
+"Rusinowice",
+670,
+671
+],
+[
+"Lubliniec",
+676,
+676
+]
+]
+},
+{
+"nr": "40258",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+696,
+696
+],
+[
+"Strzebiń",
+701,
+701
+],
+[
+"Kalety",
+706,
+707
+]
+]
+},
+{
+"nr": "40464",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+718,
+718
+],
+[
+"Rusinowice",
+723,
+723
+],
+[
+"Koszęcin",
+727,
+728
+],
+[
+"Kalety",
+733,
+734
+]
+]
+},
+{
+"nr": "40415",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+717,
+718
+],
+[
+"Koszęcin",
+724,
+724
+],
+[
+"Rusinowice",
+728,
+729
+],
+[
+"Lubliniec",
+734,
+734
+]
+]
+},
+{
+"nr": "44352/3",
+"kier": "Częstochowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+724,
+724
+],
+[
+"Strzebiń",
+730,
+730
+],
+[
+"Boronów",
+735,
+735
+]
+]
+},
+{
+"nr": "40509",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+739,
+739
+],
+[
+"Kochanowice",
+742,
+743
+],
+[
+"Lubliniec",
+749,
+749
+]
+]
+},
+{
+"nr": "40209",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+751,
+751
+],
+[
+"Strzebiń",
+756,
+757
+],
+[
+"Boronów",
+761,
+762
+]
+]
+},
+{
+"nr": "40560",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+759,
+759
+],
+[
+"Kochanowice",
+764,
+765
+],
+[
+"Lisów",
+768,
+768
+]
+]
+},
+{
+"nr": "40466",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+766,
+766
+],
+[
+"Rusinowice",
+771,
+771
+],
+[
+"Koszęcin",
+775,
+776
+],
+[
+"Kalety",
+781,
+782
+]
+]
+},
+{
+"nr": "40417",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+770,
+771
+],
+[
+"Koszęcin",
+776,
+777
+],
+[
+"Rusinowice",
+781,
+781
+],
+[
+"Lubliniec",
+787,
+787
+]
+]
+},
+{
+"nr": "54260",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+794,
+794
+],
+[
+"Strzebiń",
+799,
+799
+],
+[
+"Kalety",
+804,
+805
+]
+]
+},
+{
+"nr": "44350/1",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+823,
+824
+],
+[
+"Strzebiń",
+828,
+829
+],
+[
+"Kalety",
+834,
+834
+]
+]
+},
+{
+"nr": "40468",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+839,
+839
+],
+[
+"Rusinowice",
+844,
+844
+],
+[
+"Koszęcin",
+848,
+849
+],
+[
+"Kalety",
+854,
+855
+]
+]
+},
+{
+"nr": "40419",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+841,
+842
+],
+[
+"Koszęcin",
+848,
+848
+],
+[
+"Rusinowice",
+852,
+853
+],
+[
+"Lubliniec",
+858,
+858
+]
+]
+},
+{
+"nr": "45211",
+"kier": "Zduńska Wola",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+871,
+872
+],
+[
+"Strzebiń",
+877,
+877
+],
+[
+"Boronów",
+882,
+882
+]
+]
+},
+{
+"nr": "44297",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+883,
+883
+],
+[
+"Strzebiń",
+889,
+889
+],
+[
+"Boronów",
+894,
+894
+]
+]
+},
+{
+"nr": "40470",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+892,
+892
+],
+[
+"Rusinowice",
+897,
+897
+],
+[
+"Koszęcin",
+901,
+902
+],
+[
+"Kalety",
+907,
+908
+]
+]
+},
+{
+"nr": "40421",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+900,
+901
+],
+[
+"Koszęcin",
+906,
+907
+],
+[
+"Rusinowice",
+911,
+911
+],
+[
+"Lubliniec",
+917,
+917
+]
+]
+},
+{
+"nr": "40511",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+914,
+914
+],
+[
+"Kochanowice",
+917,
+918
+],
+[
+"Lubliniec",
+924,
+924
+]
+]
+},
+{
+"nr": "40564",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+939,
+939
+],
+[
+"Kochanowice",
+944,
+945
+],
+[
+"Lisów",
+948,
+948
+]
+]
+},
+{
+"nr": "40472",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+952,
+952
+],
+[
+"Rusinowice",
+957,
+957
+],
+[
+"Koszęcin",
+961,
+962
+],
+[
+"Kalety",
+967,
+968
+]
+]
+},
+{
+"nr": "40423",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+961,
+962
+],
+[
+"Koszęcin",
+968,
+968
+],
+[
+"Rusinowice",
+972,
+973
+],
+[
+"Lubliniec",
+978,
+978
+]
+]
+},
+{
+"nr": "40262",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+981,
+981
+],
+[
+"Strzebiń",
+986,
+986
+],
+[
+"Kalety",
+991,
+992
+]
+]
+},
+{
+"nr": "40213",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+989,
+990
+],
+[
+"Strzebiń",
+995,
+995
+],
+[
+"Boronów",
+1000,
+1000
+]
+]
+},
+{
+"nr": "40474",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1014,
+1014
+],
+[
+"Rusinowice",
+1019,
+1019
+],
+[
+"Koszęcin",
+1023,
+1024
+],
+[
+"Kalety",
+1029,
+1030
+]
+]
+},
+{
+"nr": "40425",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1017,
+1018
+],
+[
+"Koszęcin",
+1024,
+1024
+],
+[
+"Rusinowice",
+1028,
+1029
+],
+[
+"Lubliniec",
+1034,
+1034
+]
+]
+},
+{
+"nr": "40515",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1035,
+1035
+],
+[
+"Kochanowice",
+1038,
+1039
+],
+[
+"Lubliniec",
+1045,
+1045
+]
+]
+},
+{
+"nr": "44216",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+1040,
+1041
+],
+[
+"Strzebiń",
+1045,
+1046
+],
+[
+"Kalety",
+1051,
+1051
+]
+]
+},
+{
+"nr": "40568",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1055,
+1055
+],
+[
+"Kochanowice",
+1060,
+1061
+],
+[
+"Lisów",
+1064,
+1064
+]
+]
+},
+{
+"nr": "40476",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1081,
+1081
+],
+[
+"Rusinowice",
+1086,
+1086
+],
+[
+"Koszęcin",
+1090,
+1091
+],
+[
+"Kalety",
+1096,
+1097
+]
+]
+},
+{
+"nr": "40427",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1087,
+1088
+],
+[
+"Koszęcin",
+1093,
+1094
+],
+[
+"Rusinowice",
+1098,
+1098
+],
+[
+"Lubliniec",
+1104,
+1104
+]
+]
+},
+{
+"nr": "54264",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1098,
+1098
+],
+[
+"Strzebiń",
+1103,
+1103
+],
+[
+"Kalety",
+1108,
+1109
+]
+]
+},
+{
+"nr": "40215",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1108,
+1109
+],
+[
+"Strzebiń",
+1114,
+1114
+],
+[
+"Boronów",
+1119,
+1119
+]
+]
+},
+{
+"nr": "40517",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1127,
+1127
+],
+[
+"Kochanowice",
+1130,
+1131
+],
+[
+"Lubliniec",
+1137,
+1137
+]
+]
+},
+{
+"nr": "40429",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1131,
+1132
+],
+[
+"Koszęcin",
+1138,
+1138
+],
+[
+"Rusinowice",
+1142,
+1143
+],
+[
+"Lubliniec",
+1148,
+1148
+]
+]
+},
+{
+"nr": "40478",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1142,
+1142
+],
+[
+"Rusinowice",
+1147,
+1147
+],
+[
+"Koszęcin",
+1151,
+1152
+],
+[
+"Kalety",
+1157,
+1158
+]
+]
+},
+{
+"nr": "44349",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+1142,
+1142
+],
+[
+"Strzebiń",
+1148,
+1148
+],
+[
+"Boronów",
+1153,
+1153
+]
+]
+},
+{
+"nr": "40570",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1177,
+1177
+],
+[
+"Kochanowice",
+1182,
+1183
+],
+[
+"Lisów",
+1186,
+1186
+]
+]
+},
+{
+"nr": "40480",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1195,
+1195
+],
+[
+"Rusinowice",
+1200,
+1200
+],
+[
+"Koszęcin",
+1204,
+1205
+],
+[
+"Kalety",
+1210,
+1211
+]
+]
+},
+{
+"nr": "40431",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1209,
+1210
+],
+[
+"Koszęcin",
+1216,
+1216
+],
+[
+"Rusinowice",
+1220,
+1221
+],
+[
+"Lubliniec",
+1226,
+1226
+]
+]
+},
+{
+"nr": "40519",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1227,
+1227
+],
+[
+"Kochanowice",
+1230,
+1231
+],
+[
+"Lubliniec",
+1237,
+1237
+]
+]
+},
+{
+"nr": "40217",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1228,
+1229
+],
+[
+"Strzebiń",
+1234,
+1234
+],
+[
+"Boronów",
+1239,
+1239
+]
+]
+},
+{
+"nr": "40266",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1231,
+1231
+],
+[
+"Strzebiń",
+1236,
+1236
+],
+[
+"Kalety",
+1241,
+1241
+]
+]
+},
+{
+"nr": "40572",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1247,
+1247
+],
+[
+"Kochanowice",
+1252,
+1253
+],
+[
+"Lisów",
+1256,
+1256
+]
+]
+},
+{
+"nr": "40482",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1255,
+1255
+],
+[
+"Rusinowice",
+1260,
+1260
+],
+[
+"Koszęcin",
+1264,
+1265
+],
+[
+"Kalety",
+1270,
+1271
+]
+]
+},
+{
+"nr": "40521",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1267,
+1267
+],
+[
+"Kochanowice",
+1270,
+1271
+],
+[
+"Lubliniec",
+1277,
+1277
+]
+]
+},
+{
+"nr": "40433",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1270,
+1271
+],
+[
+"Koszęcin",
+1277,
+1277
+],
+[
+"Rusinowice",
+1281,
+1282
+],
+[
+"Lubliniec",
+1287,
+1287
+]
+]
+},
+{
+"nr": "40268",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1283,
+1284
+],
+[
+"Strzebiń",
+1288,
+1289
+],
+[
+"Kalety",
+1293,
+1294
+]
+]
+},
+{
+"nr": "40484",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1296,
+1296
+],
+[
+"Rusinowice",
+1301,
+1301
+],
+[
+"Koszęcin",
+1305,
+1306
+],
+[
+"Kalety",
+1311,
+1312
+]
+]
+},
+{
+"nr": "40435",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1309,
+1310
+],
+[
+"Koszęcin",
+1316,
+1316
+],
+[
+"Rusinowice",
+1320,
+1321
+],
+[
+"Lubliniec",
+1326,
+1326
+]
+]
+},
+{
+"nr": "40574",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1311,
+1311
+],
+[
+"Kochanowice",
+1317,
+1317
+],
+[
+"Lisów",
+1320,
+1321
+]
+]
+},
+{
+"nr": "40523",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1319,
+1319
+],
+[
+"Kochanowice",
+1322,
+1323
+],
+[
+"Lubliniec",
+1329,
+1329
+]
+]
+},
+{
+"nr": "40486",
+"kier": "Bytom",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1349,
+1349
+],
+[
+"Rusinowice",
+1354,
+1354
+],
+[
+"Koszęcin",
+1358,
+1359
+],
+[
+"Kalety",
+1364,
+1365
+]
+]
+},
+{
+"nr": "40219",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1351,
+1352
+],
+[
+"Strzebiń",
+1357,
+1357
+],
+[
+"Boronów",
+1362,
+1362
+]
+]
+},
+{
+"nr": "40437",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1370,
+1371
+],
+[
+"Koszęcin",
+1377,
+1377
+],
+[
+"Rusinowice",
+1381,
+1382
+],
+[
+"Lubliniec",
+1387,
+1387
+]
+]
+},
+{
+"nr": "40525",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1389,
+1389
+],
+[
+"Kochanowice",
+1392,
+1393
+],
+[
+"Lubliniec",
+1399,
+1399
+]
+]
+}
+],
+"sun": [
+{
+"nr": "40550",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+282,
+282
+],
+[
+"Kochanowice",
+287,
+288
+],
+[
+"Lisów",
+291,
+291
+]
+]
+},
+{
+"nr": "40450",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+293,
+293
+],
+[
+"Rusinowice",
+298,
+298
+],
+[
+"Koszęcin",
+302,
+303
+],
+[
+"Kalety",
+308,
+309
+]
+]
+},
+{
+"nr": "44206",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+293,
+293
+],
+[
+"Strzebiń",
+298,
+298
+],
+[
+"Kalety",
+303,
+304
+]
+]
+},
+{
+"nr": "40401",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+316,
+317
+],
+[
+"Koszęcin",
+322,
+323
+],
+[
+"Rusinowice",
+327,
+327
+],
+[
+"Lubliniec",
+333,
+333
+]
+]
+},
+{
+"nr": "40250",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+334,
+334
+],
+[
+"Strzebiń",
+339,
+339
+],
+[
+"Kalety",
+344,
+345
+]
+]
+},
+{
+"nr": "40201",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+336,
+337
+],
+[
+"Strzebiń",
+342,
+342
+],
+[
+"Boronów",
+347,
+347
+]
+]
+},
+{
+"nr": "40552",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+339,
+339
+],
+[
+"Kochanowice",
+344,
+345
+],
+[
+"Lisów",
+348,
+348
+]
+]
+},
+{
+"nr": "40452",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+353,
+353
+],
+[
+"Rusinowice",
+358,
+358
+],
+[
+"Koszęcin",
+362,
+363
+],
+[
+"Kalety",
+368,
+369
+]
+]
+},
+{
+"nr": "40501",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+359,
+359
+],
+[
+"Kochanowice",
+362,
+363
+],
+[
+"Lubliniec",
+369,
+369
+]
+]
+},
+{
+"nr": "40403",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+365,
+366
+],
+[
+"Koszęcin",
+372,
+372
+],
+[
+"Rusinowice",
+376,
+377
+],
+[
+"Lubliniec",
+382,
+382
+]
+]
+},
+{
+"nr": "40252",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+377,
+377
+],
+[
+"Strzebiń",
+382,
+382
+],
+[
+"Kalety",
+387,
+388
+]
+]
+},
+{
+"nr": "40405",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+411,
+412
+],
+[
+"Koszęcin",
+417,
+418
+],
+[
+"Rusinowice",
+422,
+422
+],
+[
+"Lubliniec",
+428,
+428
+]
+]
+},
+{
+"nr": "40554",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+412,
+412
+],
+[
+"Kochanowice",
+417,
+418
+],
+[
+"Lisów",
+421,
+421
+]
+]
+},
+{
+"nr": "40454",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+415,
+415
+],
+[
+"Rusinowice",
+420,
+420
+],
+[
+"Koszęcin",
+424,
+425
+],
+[
+"Kalety",
+430,
+431
+]
+]
+},
+{
+"nr": "44291",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+417,
+417
+],
+[
+"Strzebiń",
+423,
+423
+],
+[
+"Boronów",
+428,
+428
+]
+]
+},
+{
+"nr": "40254",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+439,
+440
+],
+[
+"Strzebiń",
+444,
+445
+],
+[
+"Kalety",
+449,
+450
+]
+]
+},
+{
+"nr": "40203",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+441,
+441
+],
+[
+"Strzebiń",
+446,
+447
+],
+[
+"Boronów",
+451,
+452
+]
+]
+},
+{
+"nr": "40407",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+470,
+471
+],
+[
+"Koszęcin",
+477,
+477
+],
+[
+"Rusinowice",
+481,
+482
+],
+[
+"Lubliniec",
+487,
+487
+]
+]
+},
+{
+"nr": "40456",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+479,
+479
+],
+[
+"Rusinowice",
+484,
+484
+],
+[
+"Koszęcin",
+488,
+489
+],
+[
+"Kalety",
+494,
+495
+]
+]
+},
+{
+"nr": "40505",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+505,
+505
+],
+[
+"Kochanowice",
+508,
+509
+],
+[
+"Lubliniec",
+515,
+515
+]
+]
+},
+{
+"nr": "40205",
+"kier": "Kłobuck",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+512,
+512
+],
+[
+"Strzebiń",
+517,
+518
+],
+[
+"Boronów",
+522,
+523
+]
+]
+},
+{
+"nr": "40409",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+531,
+532
+],
+[
+"Koszęcin",
+538,
+538
+],
+[
+"Rusinowice",
+542,
+543
+],
+[
+"Lubliniec",
+548,
+548
+]
+]
+},
+{
+"nr": "40556",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+538,
+538
+],
+[
+"Kochanowice",
+543,
+544
+],
+[
+"Lisów",
+547,
+547
+]
+]
+},
+{
+"nr": "40458",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+544,
+544
+],
+[
+"Rusinowice",
+549,
+549
+],
+[
+"Koszęcin",
+553,
+554
+],
+[
+"Kalety",
+559,
+560
+]
+]
+},
+{
+"nr": "45207",
+"kier": "Zduńska Wola",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+561,
+561
+],
+[
+"Strzebiń",
+566,
+567
+],
+[
+"Boronów",
+571,
+572
+]
+]
+},
+{
+"nr": "40256",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+574,
+574
+],
+[
+"Strzebiń",
+579,
+579
+],
+[
+"Kalety",
+584,
+585
+]
+]
+},
+{
+"nr": "44210",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+594,
+595
+],
+[
+"Strzebiń",
+599,
+600
+],
+[
+"Kalety",
+605,
+605
+]
+]
+},
+{
+"nr": "40411",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+595,
+596
+],
+[
+"Koszęcin",
+602,
+602
+],
+[
+"Rusinowice",
+606,
+607
+],
+[
+"Lubliniec",
+612,
+612
+]
+]
+},
+{
+"nr": "40460",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+602,
+602
+],
+[
+"Rusinowice",
+607,
+607
+],
+[
+"Koszęcin",
+611,
+612
+],
+[
+"Kalety",
+617,
+618
+]
+]
+},
+{
+"nr": "40507",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+615,
+615
+],
+[
+"Kochanowice",
+618,
+619
+],
+[
+"Lubliniec",
+625,
+625
+]
+]
+},
+{
+"nr": "40558",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+635,
+635
+],
+[
+"Kochanowice",
+640,
+641
+],
+[
+"Lisów",
+644,
+644
+]
+]
+},
+{
+"nr": "40462",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+655,
+655
+],
+[
+"Rusinowice",
+660,
+660
+],
+[
+"Koszęcin",
+664,
+665
+],
+[
+"Kalety",
+670,
+671
+]
+]
+},
+{
+"nr": "40413",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+659,
+660
+],
+[
+"Koszęcin",
+666,
+666
+],
+[
+"Rusinowice",
+670,
+671
+],
+[
+"Lubliniec",
+676,
+676
+]
+]
+},
+{
+"nr": "40258",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+696,
+696
+],
+[
+"Strzebiń",
+701,
+701
+],
+[
+"Kalety",
+706,
+707
+]
+]
+},
+{
+"nr": "40464",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+718,
+718
+],
+[
+"Rusinowice",
+723,
+723
+],
+[
+"Koszęcin",
+727,
+728
+],
+[
+"Kalety",
+733,
+734
+]
+]
+},
+{
+"nr": "40415",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+717,
+718
+],
+[
+"Koszęcin",
+724,
+724
+],
+[
+"Rusinowice",
+728,
+729
+],
+[
+"Lubliniec",
+734,
+734
+]
+]
+},
+{
+"nr": "44352/3",
+"kier": "Częstochowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+724,
+724
+],
+[
+"Strzebiń",
+730,
+730
+],
+[
+"Boronów",
+735,
+735
+]
+]
+},
+{
+"nr": "40509",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+739,
+739
+],
+[
+"Kochanowice",
+742,
+743
+],
+[
+"Lubliniec",
+749,
+749
+]
+]
+},
+{
+"nr": "40209",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+751,
+751
+],
+[
+"Strzebiń",
+756,
+757
+],
+[
+"Boronów",
+761,
+762
+]
+]
+},
+{
+"nr": "40560",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+759,
+759
+],
+[
+"Kochanowice",
+764,
+765
+],
+[
+"Lisów",
+768,
+768
+]
+]
+},
+{
+"nr": "40466",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+766,
+766
+],
+[
+"Rusinowice",
+771,
+771
+],
+[
+"Koszęcin",
+775,
+776
+],
+[
+"Kalety",
+781,
+782
+]
+]
+},
+{
+"nr": "40417",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+770,
+771
+],
+[
+"Koszęcin",
+776,
+777
+],
+[
+"Rusinowice",
+781,
+781
+],
+[
+"Lubliniec",
+787,
+787
+]
+]
+},
+{
+"nr": "54260",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+794,
+794
+],
+[
+"Strzebiń",
+799,
+799
+],
+[
+"Kalety",
+804,
+805
+]
+]
+},
+{
+"nr": "44350/1",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+823,
+824
+],
+[
+"Strzebiń",
+828,
+829
+],
+[
+"Kalety",
+834,
+834
+]
+]
+},
+{
+"nr": "40468",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+839,
+839
+],
+[
+"Rusinowice",
+844,
+844
+],
+[
+"Koszęcin",
+848,
+849
+],
+[
+"Kalety",
+854,
+855
+]
+]
+},
+{
+"nr": "40419",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+841,
+842
+],
+[
+"Koszęcin",
+848,
+848
+],
+[
+"Rusinowice",
+852,
+853
+],
+[
+"Lubliniec",
+858,
+858
+]
+]
+},
+{
+"nr": "45211",
+"kier": "Zduńska Wola",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+871,
+872
+],
+[
+"Strzebiń",
+877,
+877
+],
+[
+"Boronów",
+882,
+882
+]
+]
+},
+{
+"nr": "44297",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+883,
+883
+],
+[
+"Strzebiń",
+889,
+889
+],
+[
+"Boronów",
+894,
+894
+]
+]
+},
+{
+"nr": "40470",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+892,
+892
+],
+[
+"Rusinowice",
+897,
+897
+],
+[
+"Koszęcin",
+901,
+902
+],
+[
+"Kalety",
+907,
+908
+]
+]
+},
+{
+"nr": "40421",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+900,
+901
+],
+[
+"Koszęcin",
+906,
+907
+],
+[
+"Rusinowice",
+911,
+911
+],
+[
+"Lubliniec",
+917,
+917
+]
+]
+},
+{
+"nr": "40511",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+914,
+914
+],
+[
+"Kochanowice",
+917,
+918
+],
+[
+"Lubliniec",
+924,
+924
+]
+]
+},
+{
+"nr": "40564",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+939,
+939
+],
+[
+"Kochanowice",
+944,
+945
+],
+[
+"Lisów",
+948,
+948
+]
+]
+},
+{
+"nr": "40472",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+952,
+952
+],
+[
+"Rusinowice",
+957,
+957
+],
+[
+"Koszęcin",
+961,
+962
+],
+[
+"Kalety",
+967,
+968
+]
+]
+},
+{
+"nr": "40423",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+961,
+962
+],
+[
+"Koszęcin",
+968,
+968
+],
+[
+"Rusinowice",
+972,
+973
+],
+[
+"Lubliniec",
+978,
+978
+]
+]
+},
+{
+"nr": "40262",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+981,
+981
+],
+[
+"Strzebiń",
+986,
+986
+],
+[
+"Kalety",
+991,
+992
+]
+]
+},
+{
+"nr": "40213",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+989,
+990
+],
+[
+"Strzebiń",
+995,
+995
+],
+[
+"Boronów",
+1000,
+1000
+]
+]
+},
+{
+"nr": "40474",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1014,
+1014
+],
+[
+"Rusinowice",
+1019,
+1019
+],
+[
+"Koszęcin",
+1023,
+1024
+],
+[
+"Kalety",
+1029,
+1030
+]
+]
+},
+{
+"nr": "40425",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1017,
+1018
+],
+[
+"Koszęcin",
+1024,
+1024
+],
+[
+"Rusinowice",
+1028,
+1029
+],
+[
+"Lubliniec",
+1034,
+1034
+]
+]
+},
+{
+"nr": "40515",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1035,
+1035
+],
+[
+"Kochanowice",
+1038,
+1039
+],
+[
+"Lubliniec",
+1045,
+1045
+]
+]
+},
+{
+"nr": "44216",
+"kier": "Tarnowskie Góry",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Boronów",
+1040,
+1041
+],
+[
+"Strzebiń",
+1045,
+1046
+],
+[
+"Kalety",
+1051,
+1051
+]
+]
+},
+{
+"nr": "40568",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1055,
+1055
+],
+[
+"Kochanowice",
+1060,
+1061
+],
+[
+"Lisów",
+1064,
+1064
+]
+]
+},
+{
+"nr": "40476",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1081,
+1081
+],
+[
+"Rusinowice",
+1086,
+1086
+],
+[
+"Koszęcin",
+1090,
+1091
+],
+[
+"Kalety",
+1096,
+1097
+]
+]
+},
+{
+"nr": "40427",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1087,
+1088
+],
+[
+"Koszęcin",
+1093,
+1094
+],
+[
+"Rusinowice",
+1098,
+1098
+],
+[
+"Lubliniec",
+1104,
+1104
+]
+]
+},
+{
+"nr": "54264",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1098,
+1098
+],
+[
+"Strzebiń",
+1103,
+1103
+],
+[
+"Kalety",
+1108,
+1109
+]
+]
+},
+{
+"nr": "40215",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1108,
+1109
+],
+[
+"Strzebiń",
+1114,
+1114
+],
+[
+"Boronów",
+1119,
+1119
+]
+]
+},
+{
+"nr": "40517",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1127,
+1127
+],
+[
+"Kochanowice",
+1130,
+1131
+],
+[
+"Lubliniec",
+1137,
+1137
+]
+]
+},
+{
+"nr": "40429",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1131,
+1132
+],
+[
+"Koszęcin",
+1138,
+1138
+],
+[
+"Rusinowice",
+1142,
+1143
+],
+[
+"Lubliniec",
+1148,
+1148
+]
+]
+},
+{
+"nr": "40478",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1142,
+1142
+],
+[
+"Rusinowice",
+1147,
+1147
+],
+[
+"Koszęcin",
+1151,
+1152
+],
+[
+"Kalety",
+1157,
+1158
+]
+]
+},
+{
+"nr": "44349",
+"kier": "Wieluń Dąbrowa",
+"przewoznik": "PolRegio",
+"linia": "REG",
+"p": [
+[
+"Kalety",
+1142,
+1142
+],
+[
+"Strzebiń",
+1148,
+1148
+],
+[
+"Boronów",
+1153,
+1153
+]
+]
+},
+{
+"nr": "40570",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1177,
+1177
+],
+[
+"Kochanowice",
+1182,
+1183
+],
+[
+"Lisów",
+1186,
+1186
+]
+]
+},
+{
+"nr": "40480",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1195,
+1195
+],
+[
+"Rusinowice",
+1200,
+1200
+],
+[
+"Koszęcin",
+1204,
+1205
+],
+[
+"Kalety",
+1210,
+1211
+]
+]
+},
+{
+"nr": "40431",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1209,
+1210
+],
+[
+"Koszęcin",
+1216,
+1216
+],
+[
+"Rusinowice",
+1220,
+1221
+],
+[
+"Lubliniec",
+1226,
+1226
+]
+]
+},
+{
+"nr": "40519",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1227,
+1227
+],
+[
+"Kochanowice",
+1230,
+1231
+],
+[
+"Lubliniec",
+1237,
+1237
+]
+]
+},
+{
+"nr": "40217",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1228,
+1229
+],
+[
+"Strzebiń",
+1234,
+1234
+],
+[
+"Boronów",
+1239,
+1239
+]
+]
+},
+{
+"nr": "40266",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1231,
+1231
+],
+[
+"Strzebiń",
+1236,
+1236
+],
+[
+"Kalety",
+1241,
+1241
+]
+]
+},
+{
+"nr": "40572",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1247,
+1247
+],
+[
+"Kochanowice",
+1252,
+1253
+],
+[
+"Lisów",
+1256,
+1256
+]
+]
+},
+{
+"nr": "40482",
+"kier": "Chorzów Batory",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1255,
+1255
+],
+[
+"Rusinowice",
+1260,
+1260
+],
+[
+"Koszęcin",
+1264,
+1265
+],
+[
+"Kalety",
+1270,
+1271
+]
+]
+},
+{
+"nr": "40521",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1267,
+1267
+],
+[
+"Kochanowice",
+1270,
+1271
+],
+[
+"Lubliniec",
+1277,
+1277
+]
+]
+},
+{
+"nr": "40433",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1270,
+1271
+],
+[
+"Koszęcin",
+1277,
+1277
+],
+[
+"Rusinowice",
+1281,
+1282
+],
+[
+"Lubliniec",
+1287,
+1287
+]
+]
+},
+{
+"nr": "40268",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Boronów",
+1283,
+1284
+],
+[
+"Strzebiń",
+1288,
+1289
+],
+[
+"Kalety",
+1293,
+1294
+]
+]
+},
+{
+"nr": "40484",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1296,
+1296
+],
+[
+"Rusinowice",
+1301,
+1301
+],
+[
+"Koszęcin",
+1305,
+1306
+],
+[
+"Kalety",
+1311,
+1312
+]
+]
+},
+{
+"nr": "40435",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1309,
+1310
+],
+[
+"Koszęcin",
+1316,
+1316
+],
+[
+"Rusinowice",
+1320,
+1321
+],
+[
+"Lubliniec",
+1326,
+1326
+]
+]
+},
+{
+"nr": "40574",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lubliniec",
+1311,
+1311
+],
+[
+"Kochanowice",
+1317,
+1317
+],
+[
+"Lisów",
+1320,
+1321
+]
+]
+},
+{
+"nr": "40523",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1319,
+1319
+],
+[
+"Kochanowice",
+1322,
+1323
+],
+[
+"Lubliniec",
+1329,
+1329
+]
+]
+},
+{
+"nr": "40486",
+"kier": "Bytom",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Lubliniec",
+1349,
+1349
+],
+[
+"Rusinowice",
+1354,
+1354
+],
+[
+"Koszęcin",
+1358,
+1359
+],
+[
+"Kalety",
+1364,
+1365
+]
+]
+},
+{
+"nr": "40219",
+"kier": "Chorzew Siemkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S82",
+"p": [
+[
+"Kalety",
+1351,
+1352
+],
+[
+"Strzebiń",
+1357,
+1357
+],
+[
+"Boronów",
+1362,
+1362
+]
+]
+},
+{
+"nr": "40437",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S8",
+"p": [
+[
+"Kalety",
+1370,
+1371
+],
+[
+"Koszęcin",
+1377,
+1377
+],
+[
+"Rusinowice",
+1381,
+1382
+],
+[
+"Lubliniec",
+1387,
+1387
+]
+]
+},
+{
+"nr": "40525",
+"kier": "Lubliniec",
+"przewoznik": "Koleje Śląskie",
+"linia": "S13",
+"p": [
+[
+"Lisów",
+1389,
+1389
+],
+[
+"Kochanowice",
+1392,
+1393
+],
+[
+"Lubliniec",
+1399,
+1399
+]
+]
+}
+]
+}
+}
