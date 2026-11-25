@@ -60,7 +60,7 @@ body{font:15px/1.45 Inter,system-ui,sans-serif;color:var(--ink);background:var(-
 <div class="panel" id="panel">
 <h1>Propozycja siatki: Koszęcin Rynek jako główny węzeł</h1>
 <p style="color:#b3261e;font-weight:700;margin:4px 0 8px">Nie obowiązuje – to propozycja, nie aktualne trasy.</p>
-<p>Linie poprowadzone po prawdziwych drogach z OpenStreetMap. Wszystkie spotykają się na Rynku, linie 2, 3 i 4 dojeżdżają też do stacji Koszęcin PKP. Na obrzeżach są węzły zewnętrzne: Lubliniec, Piasek, Boronów i Kalety. Kliknij linię albo przystanek, żeby zobaczyć szczegóły.</p>
+<p>Linie poprowadzone po prawdziwych drogach z OpenStreetMap. Wszystkie spotykają się na Rynku, linie 2, 3, 4 i 5 dojeżdżają też do stacji Koszęcin PKP. Na obrzeżach są węzły zewnętrzne: Lubliniec, Piasek, Boronów i Kalety. Kliknij linię albo przystanek, żeby zobaczyć szczegóły.</p>
 <button class="tog" id="tog" type="button" aria-expanded="false">Linie i legenda</button>
 <div class="more">
 <div id="lines"></div>
@@ -73,7 +73,7 @@ body{font:15px/1.45 Inter,system-ui,sans-serif;color:var(--ink);background:var(-
 <span class="fr"></span><span>las</span>
 <span class="gm"></span><span>granica gminy Koszęcin</span>
 </div>
-<div class="box"><b>Ta wersja:</b> 4 linie. Linia 1 przelotowa Piasek – Strzebiń – Koszęcin – Lubliniec (2 busy, co godzinę, bez czekania na Rynku), linia 2 Boronów – Kalety, linia 3 Lisów PKP – Koszęcin, linia 4 Łazy – Piłka; linie 2, 3 i 4 to dojazdówki co 2 godziny (linia 3 w szczytach szkolnych co godzinę). Razem 6 autobusów.<br><b>Gruba linia</b> – co godzinę, <b>cienka</b> – co 2 godziny, <b>przerywana</b> – propozycje.</div>
+<div class="box"><b>Ta wersja:</b> 5 linii. Linia 1 przelotowa Piasek – Strzebiń – Koszęcin – Lubliniec (2 busy, co godzinę, bez czekania na Rynku), linia 2 Boronów – Kalety, linia 3 Lisów PKP – Koszęcin, linia 4 Łazy – Strzebiń – Koszęcin (co godzinę), linia 5 Koszęcin – Wierzbie – Piłka – Sadów – Lubliniec; linie 2, 3 i 5 co 2 godziny (3 i 5 w szczytach co godzinę). Razem 7 autobusów, w szczytach 8.<br><b>Gruba linia</b> – co godzinę, <b>cienka</b> – co 2 godziny, <b>przerywana</b> – propozycje.</div>
 <p style="margin-top:10px">Dane mapy © współtwórcy OpenStreetMap (ODbL). Propozycja do dyskusji, nie wyliczenie przewoźnika.</p>
 </div>
 </div>
@@ -85,16 +85,16 @@ const LN={
 '1':{c:'#00704f',n:'Piasek – Płaszczymąka – Bukowiec – Strzebiń – Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP',f:'co godzinę, 2 busy; przejeżdża przez Rynek bez czekania; Strzebiń → Lubliniec 35 min',o:0},
 '2':{c:'#1f6fd1',n:'Boronów – Boronów PKP – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP',f:'co 2 h w każdą stronę, 2 busy',o:0},
 '3':{c:'#c98a00',n:'Lisów PKP – Chwostek – Mochała – Hadra – Cieszowa – Koszęcin Rynek – Koszęcin PKP',f:'co 2 godziny, w szczytach szkolnych (rano 5–8, po południu 13–16) co godzinę; 1 bus',o:-6},
-'4':{c:'#d4473a',n:'Łazy – Strzebiń – Koszęcin PKP – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka',f:'co 2 h w każdą stronę, 1 bus',o:6}};
+'4':{c:'#d4473a',n:'Łazy – Stary Strzebiń – Strzebiń – Koszęcin PKP – Koszęcin Szkoła – Koszęcin Rynek',f:'co godzinę, 1 bus; w szczytach w pulsie (przesiadka do Lublińca w Strzebiniu), poza szczytem 15 min później',o:6},
+'5':{c:'#7c3aed',n:'Koszęcin PKP – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka – Sadów – Lubliniec PKP',f:'co 2 h, w szczytach co godzinę; Piłka → Lubliniec 22 min, na Koszęcinie PKP postój pod pociągi (:54–:06)',o:-6}};
 LN['4S']={c:'#d4473a',n:'Propozycja 4S (poza siatką podstawową): kursy szkolne Łazy – Strzebiń Szkoła – Bukowiec – Płaszczymąka – Psary',f:'z Łazów przez Strzebiń Szkoła do Strzebinia Lublinieckiej po trasie linii 4, dalej (przerywana) przez Bukowiec i Płaszczymąkę do Psar; Łazy → Psary 19 min, w dni nauki',o:0,d:'7 7'};
 LN['4P']={c:'#8e3b8a',n:'Propozycja 4P (poza siatką podstawową): pętla Strzebiń Szkoła – Łazy – Psary – Płaszczymąka – Bukowiec – Strzebiń',f:'po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki); kółko 25 min, Łazy → Psary 6 min',o:0,d:'2 7'};
 LN['4k']={c:'#d4473a',n:'Linia 4 – zjazd do Koszęcina PKP w czasie postoju na Rynku',f:'',o:6,hide:1};
-LN['1L']={c:'#00704f',n:'Propozycja 1L (wzmocnienie w szczycie): Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP',f:'w pół taktu, dni nauki 5:30–8:30 i 12:30–16:30; w Wierzbiu czeka na linię 4 z Piłki i Rusinowic',o:-6,d:'7 7'};
-LN['4L']={c:'#db2777',n:'Propozycja 4L (ewentualność, dni nauki): Piłka – Rusinowice PKP – Sadów – Lubliniec PKP',f:'bez przesiadki i bez postoju w Wierzbiu, ok. 24 min; np. Piłka 6:05 i 7:05 → Lubliniec PKP 6:29 / 7:29, po lekcjach z Lublińca 13:40, 14:40, 15:40',o:6,d:'7 7'};
+LN['1L']={c:'#00704f',n:'Propozycja 1L (wzmocnienie w szczycie): Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP',f:'w pół taktu, dni nauki 5:30–8:30 i 12:30–16:30',o:-6,d:'7 7'};
 LN['4e']=Object.assign({},LN['4'],{hide:1});LN['4r']=Object.assign({},LN['4'],{hide:1,o:-LN['4'].o});LN['3r']=Object.assign({},LN['3'],{hide:1,o:-LN['3'].o});
 const INFO={
-kosr:'<b>Koszęcin Rynek – główny węzeł</b><br>Linia 1 Piasek – Lubliniec przejeżdża bez czekania (w stronę Lublińca :53/:55, w stronę Strzebinia :00/:02). Linie 2, 3 i 4 dowożą do niej na :49–:58 i odjeżdżają o :03.',
-kosp:'<b>Koszęcin PKP</b><br>Proponowany przystanek przy stacji. Pętla linii 3, linia 2 jedzie dalej do Bruśka i Kalet. Pociągi Kolei Śląskich do Lublińca i Tarnowskich Gór/Bytomia.',
+kosr:'<b>Koszęcin Rynek – główny węzeł</b><br>Linia 1 Piasek – Lubliniec przejeżdża bez czekania (w stronę Lublińca :53/:55, w stronę Strzebinia :00/:02). Linie 2, 3, 4 i 5 dowożą do niej na :49–:58; linie 2, 3 i 4 odjeżdżają o :03, linia 5 o :11.',
+kosp:'<b>Koszęcin PKP</b><br>Proponowany przystanek przy stacji. Pętla linii 3 i 5 (linia 5 stoi :54–:06 pod pociągi), linia 2 jedzie dalej do Bruśka i Kalet, linia 4 przejeżdża w drodze Strzebiń – Rynek. Pociągi Kolei Śląskich do Lublińca i Tarnowskich Gór/Bytomia.',
 str:'<b>Strzebiń Centrum</b><br>Linia 1 i linia 4, przystanek przy ul. Lublinieckiej w miejscu obecnego; obsługuje też stację Strzebiń (ok. 300 m). Do Rynku 9 min, do Lublińca PKP 38 min.',
 strs:'<b>Strzebiń Szkoła</b><br>Linia 4 Łazy – Koszęcin jedzie przez szkołę, tak jak dziś, a potem przez Strzebiń Centrum na Rynek. Do stacji Strzebiń podobnie blisko jak ze Strzebinia Centrum.',
 psy:'<b>Psary (szkoła)</b><br>Propozycja (poza siatką podstawową): kursy szkolne 4S z Łazów przez Strzebiń, Bukowiec i Płaszczymąkę, rano na lekcje i po południu z powrotem. Psary leżą w gminie Woźniki, więc kursy do dogadania z Woźnikami.',
@@ -105,11 +105,11 @@ pia:'<b>Piasek – węzeł na styku z gminą Woźniki</b><br>Przesiadka na busy 
 bor:'<b>Boronów – węzeł zewnętrzny</b><br>Przesiadka na kierunek Konopiska – Częstochowa. Początek linii 2.',
 lubpkp:'<b>Lubliniec PKP – węzeł zewnętrzny</b><br>Pętla linii 1 (ze Strzebinia 38 min bez przesiadki). Dalej kolej i komunikacja Lublińca („Jedźmy razem!”).',
 psk:'<b>Płaszczymąka (Psary Skrzyżowanie)</b><br>Linia 1 jedzie z Piasku najkrótszą drogą. Do Psar (LO) busy gminy Woźniki i linia powiatowa 69 Psary – Bukowiec.',
-rus:'<b>Rusinowice PKP</b><br>Przystanek GTV „Rusinowice Dworzec PKP” już istnieje. Linia 4.',
-pil:'<b>Piłka</b><br>Pętla linii 4. Z Piłki do Koszęcina prosto prowadzi tylko leśny dojazd pożarowy, więc bus jedzie przez Rusinowice i Wierzbie.',
+rus:'<b>Rusinowice PKP</b><br>Przystanek GTV „Rusinowice Dworzec PKP” już istnieje. Linia 5 do Lublińca i do Koszęcina.',
+pil:'<b>Piłka</b><br>Linia 5 wjeżdża do Piłki i wraca do Rusinowic (odnoga). Do Lublińca 22 min bez przesiadki, do Koszęcina przez Rusinowice i Wierzbie (z Piłki prosto prowadzi tylko leśny dojazd pożarowy).',
 
 bru:'<b>Brusiek – węzeł na styku z Tworogiem</b><br>Tu gmina Tworóg może dowęzłować swoje linie do linii 2 (Koszęcin, Kalety, Boronów).',
-laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 przez cały rok, przez Koszęcin do Rusinowic i Piłki. Łazy Kurzychowe: kursy szkolne w dni nauki (rano 7:33, powroty 13:33 i 16:33).'};
+laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 co godzinę przez cały rok, przez Strzebiń do Koszęcina PKP i na Rynek. Łazy Kurzychowe (ok. 300 m dalej) – opcja na kursy szkolne.'};
 const map=L.map('map',{zoomControl:true,attributionControl:true,minZoom:10,maxZoom:16,zoomSnap:.25});
 map.attributionControl.setPrefix(false).addAttribution('© OpenStreetMap');
 const lineLayers={};
