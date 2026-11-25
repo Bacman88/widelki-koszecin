@@ -154,10 +154,11 @@
       "lat": 50.6226,
       "lon": 18.8439,
       "linie": [
+        "2",
         "3",
         "4"
       ],
-      "typ": "istniejący, ul. Sobieskiego przy Św. Trójcy (na pętli przy stacji); linia 2 jedzie inną ulicą (ok. 120 m obok) – sprawdzić, czy ma tam stawać",
+      "typ": "istniejący, ul. Sobieskiego przy Św. Trójcy; linia 2 też ma tam jechać (zmiana trasy linii 2 w Koszęcinie)",
       "na_zadanie": false
     },
     {
@@ -253,14 +254,17 @@
         "1L",
         "4L"
       ],
-      "typ": "istniejący, przed Lubliniec PKP",
+      "typ": "istniejący, ul. Powstańców Śląskich przy sklepie (potwierdzone na mapie), przed Lubliniec PKP",
       "na_zadanie": false
     }
   ],
-  "do_sprawdzenia": [],
+  "do_sprawdzenia": [
+    "Brusiek – ul. Kościelna (2 słupki) i Cieszowa – Koszęcińska 1 i 2: dodać; potrzebne dokładne położenia (mieszkaniec zaznaczy na mapie)."
+  ],
   "zmiany_tras": [
     "Linia 4: koniec w Łazach – Kurzychowe zamiast Łazy (ul. Św. Jana Chrzciciela → ul. Michała Drzymały na północ do Kurzychowego). Sprawdzić czas i miejsce do zawracania.",
-    "Linia 4 i 4L: Piłka (18) → Rusinowice – Piaskowa/Straż (20) → Rusinowice – Dworzec PKP (19) → na północ do DW906 (skrzyżowanie tuż na wschód od przystanku Sadów – skrzyżowanie): 4 w prawo (Wierzbie, Las, Irki, Koszęcin), 4L w lewo (Sadów – skrzyżowanie, Sadów, Lubliniec). Obecny przebieg w projekcie już tak idzie – sprawdzić tylko kolejność przystanków w Rusinowicach."
+    "Linia 4 i 4L: Piłka (18) → Rusinowice – Piaskowa/Straż (20) → Rusinowice – Dworzec PKP (19) → na północ do DW906 (skrzyżowanie tuż na wschód od przystanku Sadów – skrzyżowanie): 4 w prawo (Wierzbie, Las, Irki, Koszęcin), 4L w lewo (Sadów – skrzyżowanie, Sadów, Lubliniec). Obecny przebieg w projekcie już tak idzie – sprawdzić tylko kolejność przystanków w Rusinowicach.",
+    "Linia 2 w Koszęcinie: przez ul. Sobieskiego obok przystanku Koszęcin – Święta Trójca (jak linie 3 i 4)."
   ],
   "uwagi": [
     "Punkty 12–15 z mapy przewoźnika (Dworcowa, Kolejowa) to błąd w bazie – nie dodawać."
