@@ -1,0 +1,12 @@
+{
+  "opis": "Przystanki do dodania w kolejnej wersji (wg wskazań mieszkańca, 25.11.2026). Współrzędne odczytane z mapy, dokładność ok. 20–40 m. Postój: zwykły < 1 min. Status: zebrane, jeszcze nie wpisane do tras/rozkładu.",
+  "przystanki": [
+    {"id": "strb", "nazwa_robocza": "Strzebiń – Bagno (?)", "nr_mapy_przewoznika": 27, "lat": 50.6173, "lon": 18.8901, "linie": ["1", "4"], "typ": "istniejący", "na_zadanie": false},
+    {"id": "str", "nazwa_robocza": "Strzebiń Lubliniecka – do zmiany nazwy (Rozbark?)", "nr_mapy_przewoznika": 28, "lat": 50.6150, "lon": 18.9007, "linie": ["1", "4"], "typ": "istniejący, już w projekcie", "na_zadanie": false},
+    {"id": "strd", "nazwa_robocza": "Strzebiń – koło Dino (nazwa do ustalenia)", "nr_mapy_przewoznika": 29, "lat": 50.6118, "lon": 18.9169, "linie": ["1"], "typ": "istniejący", "na_zadanie": false},
+    {"id": "bukz", "nazwa_robocza": "Bukowiec (na żądanie)", "nr_mapy_przewoznika": 5, "lat": 50.6084, "lon": 18.9345, "linie": ["1"], "typ": "istniejący", "na_zadanie": true},
+    {"id": "buk", "nazwa_robocza": "Bukowiec", "nr_mapy_przewoznika": 4, "lat": 50.6071, "lon": 18.9408, "linie": ["1"], "typ": "istniejący, już w projekcie", "na_zadanie": false},
+    {"id": "strs", "nazwa_robocza": "Strzebiń Szkoła", "lat": 50.6162, "lon": 18.9033, "linie": ["4"], "typ": "istniejący, już w projekcie (sprawdzić położenie – w projekcie 50.61755, 18.90364)", "na_zadanie": false},
+    {"id": "strst", "nazwa_robocza": "Stary Strzebiń", "lat": 50.6158, "lon": 18.9188, "linie": ["4"], "typ": "proponowany (dzieci do szkoły, mieszkańcy Starego Strzebinia)", "na_zadanie": false}
+  ]
+}
