@@ -120,7 +120,7 @@ function ustawTryb(m,cicho){tryb=m;$('tOdj').classList.toggle('on',m==='o');$('t
 function czytajHash(){const h=new URLSearchParams(location.hash.slice(1));if(h.get('z')&&D.przystanki[h.get('z')])$('z').value=h.get('z');if(h.get('do')&&D.przystanki[h.get('do')])$('do').value=h.get('do');if(h.get('t'))$('czas').value=h.get('t');ustawTryb(h.get('tryb')==='p'?'p':'o',true);if(['wd','sat','sun'].includes(h.get('dz')))ustawDzien(h.get('dz'),true);szukaj()}
 
 // Connection Scan: najwcześniejszy przyjazd z jednego odjazdu startowego
-function csa(zr,t0){
+function csa(zr,t0,busy){
   // A: przyjazd (min), R: liczba jazd (przy równym przyjeździe wygrywa mniej przesiadek), J: skąd, w: wejście do kursu
   const A={},R={},J={},w={};
   const ustaw=(s,t,r,j)=>{if(t<(A[s]??1e9)||(t===A[s]&&r<R[s])){A[s]=t;R[s]=r;J[s]=j;return true}return false};
@@ -128,9 +128,10 @@ function csa(zr,t0){
   for(const [b,m] of FP[zr]||[])ustaw(b,t0+m,0,{pie:zr,m});
   for(const c of C){
     if(c.d<t0||c.a<c.d)continue;
+    if(busy&&!/^[1-4]$/.test(KURSY[c.t].l))continue;   // wariant tylko busami
     const a=A[c.z];
     if(a!==undefined&&a+(J[c.z].wys?PRZES:0)<=c.d){const r=R[c.z]+1,p=!!J[c.z].pie,o=w[c.t];
-      if(o===undefined||r<o.r||(r===o.r&&o.p&&!p))w[c.t]={c,r,p}}   // mniej jazd, a przy remisie bez dojścia pieszo
+      if(o===undefined||r<o.r||(r===o.r&&(!p||o.p)))w[c.t]={c,r,p}}   // mniej jazd; przy remisie wsiadamy jak najpóźniej (bez jazdy tam i z powrotem), bez dojścia pieszo
     if(w[c.t]===undefined)continue;
     const r=w[c.t].r;
     if(ustaw(c.do,c.a,r,{wej:w[c.t].c,wys:c}))
@@ -156,19 +157,23 @@ function szukaj(){
   // momenty wyjścia z domu: odjazdy z przystanku startowego i odjazdy ze stacji obok minus dojście
   const pies=new Map([[z,0],...(FP[z]||[])]);
   const kand=[...new Set(C.filter(c=>pies.has(c.z)).map(c=>c.d-pies.get(c.z)).filter(t=>t>=lo&&t<=hi))].sort((a,b)=>a-b);
-  const wyn=[];
-  for(const t0 of kand){
-    const {A,J}=csa(z,t0);if(A[cel]===undefined)continue;
-    const nogi=trasa(J,cel);if(!nogi.length)continue;
-    const jazda=nogi.filter(n=>!n.pie);if(!jazda.length)continue;
-    let odj=jazda[0].d;
-    const pierw=nogi[0].pie?nogi[0].m:0;odj-=pierw;
-    wyn.push({odj,prz:A[cel],nogi});
-  }
-  // bez zdominowanych (później wyjazd i nie później przyjazd)
-  let r=wyn.filter(x=>!wyn.some(y=>y!==x&&y.odj>=x.odj&&y.prz<=x.prz&&(y.odj>x.odj||y.prz<x.prz||jazdy(y)<jazdy(x))));
-  const kl=new Set();r=r.filter(x=>{const k=x.odj+'|'+x.prz;if(kl.has(k))return false;kl.add(k);return true}).sort((a,b)=>a.odj-b.odj);
-  if(tryb==='o')r=r.filter(x=>x.odj>=T).slice(0,4);else r=r.filter(x=>x.prz<=T).slice(-3);
+  // szukamy dwa razy: z pociągami i tylko busami – połączenie samymi busami pokazujemy też wtedy, gdy pociąg jest szybszy
+  const zbierz=busy=>{const wyn=[];
+    for(const t0 of kand){
+      const {A,J}=csa(z,t0,busy);if(A[cel]===undefined)continue;
+      const nogi=trasa(J,cel);if(!nogi.length)continue;
+      const jazda=nogi.filter(n=>!n.pie);if(!jazda.length)continue;
+      const odj=jazda[0].d-(nogi[0].pie?nogi[0].m:0);
+      wyn.push({odj,prz:A[cel],nogi,busy});
+    }
+    // bez zdominowanych (później wyjazd i nie później przyjazd)
+    return wyn.filter(x=>!wyn.some(y=>y!==x&&y.odj>=x.odj&&y.prz<=x.prz&&(y.odj>x.odj||y.prz<x.prz||jazdy(y)<jazdy(x))));};
+  const wsz=zbierz(false),bus=zbierz(true);
+  const podpis=x=>x.nogi.map(n=>n.pie?'p':n.k.l+n.d).join(',');
+  const pod=new Set(wsz.map(podpis));
+  let r=[...wsz,...bus.filter(x=>!pod.has(podpis(x))&&!wsz.some(y=>y.odj===x.odj&&y.prz===x.prz))];
+  const kl=new Set();r=r.filter(x=>{const k=x.odj+'|'+x.prz;if(kl.has(k))return false;kl.add(k);return true}).sort((a,b)=>a.odj-b.odj||a.prz-b.prz);
+  if(tryb==='o')r=r.filter(x=>x.odj>=T).slice(0,5);else r=r.filter(x=>x.prz<=T).slice(-4);
   // bardzo okrężne warianty (ponad 2× dłuższe od najlepszego i ponad 2 h) pomijamy, chyba że nie ma nic innego
   const naj=Math.min(...r.map(x=>x.prz-x.odj));r=r.filter(x=>x.prz-x.odj<=Math.max(120,2*naj));
   pokaz(r, tryb==='o'?`Brak połączenia w ciągu 4 godzin po ${hm(T)}.`:`Brak połączenia z przyjazdem przed ${hm(T)} (szukano od ${hm(T-OKNO)}).`);
