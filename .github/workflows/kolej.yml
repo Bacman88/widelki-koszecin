@@ -1,0 +1,33 @@
+name: Rozkład kolejowy (wycinek GTFS)
+# Pobiera rozkład pociągów (GTFS polish_trains, mkuran.pl) i zapisuje wycinek dla stacji w okolicy gminy Koszęcin
+# do dane/kolej/pociagi.json (gałąź kolej-dane). Dni do wycięcia: dane/kolej/DNI (roboczy sobota niedziela).
+on:
+  workflow_dispatch:
+  push:
+    branches: [kolej-dane]
+    paths: ['skrypty/gtfs_wycinek.py', '.github/workflows/kolej.yml', 'dane/kolej/DNI']
+  schedule:
+    - cron: '17 3 * * 1'
+permissions:
+  contents: write
+jobs:
+  wycinek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: kolej-dane
+      - name: Pobierz GTFS
+        run: curl -fsSL -o /tmp/pt.zip https://mkuran.pl/gtfs/polish_trains.zip
+      - name: Wytnij stacje z okolicy
+        run: |
+          mkdir -p dane/kolej
+          read WD SAT SUN < dane/kolej/DNI
+          python3 skrypty/gtfs_wycinek.py /tmp/pt.zip $WD $SAT $SUN | tee dane/kolej/log.txt
+      - name: Zapisz w repozytorium
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add dane/kolej
+          git commit -m "Rozkład kolejowy: wycinek GTFS $(date +%F)" || echo "brak zmian"
+          git push
