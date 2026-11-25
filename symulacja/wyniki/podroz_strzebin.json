@@ -1,0 +1,59 @@
+{
+ "tytul": "Strzebiń ⇄ Lubliniec – do pracy i z powrotem",
+ "odcinki": [
+  {
+   "naglowek": "RANO · do pracy lub szkoły",
+   "opis": "linia 1: Strzebiń 6:45 → Lubliniec PKP 7:20\n35 min, bez przesiadki",
+   "kursy": [
+    [
+     "L1_Piasek_01_395",
+     24300.0,
+     25637.0
+    ]
+   ],
+   "od": 24060.0,
+   "do": 25727.0,
+   "nazwy": [
+    "Strzebiń",
+    "Lubliniec PKP"
+   ],
+   "punkty": [
+    [
+     18.900084,
+     50.615128
+    ],
+    [
+     18.690536,
+     50.672101
+    ]
+   ]
+  },
+  {
+   "naglowek": "PO POŁUDNIU · powrót do domu",
+   "opis": "linia 1: Lubliniec PKP 15:35 → Strzebiń 16:10\n35 min, bez przesiadki",
+   "kursy": [
+    [
+     "L1_LubliniecPK_10_935",
+     56100.0,
+     57913.0
+    ]
+   ],
+   "od": 55860.0,
+   "do": 58003.0,
+   "nazwy": [
+    "Lubliniec PKP",
+    "Strzebiń"
+   ],
+   "punkty": [
+    [
+     18.690552,
+     50.67169
+    ],
+    [
+     18.900663,
+     50.614981
+    ]
+   ]
+  }
+ ]
+}

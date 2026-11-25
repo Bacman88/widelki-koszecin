@@ -22,6 +22,11 @@ NAZWA = sys.argv[3] if len(sys.argv) > 3 else 'film'
 KROK = int(os.environ.get('KROK', 20))   # s symulacji na klatkę (30 kl./s; 20 → 10 min symulacji w 1 s filmu)
 MIN_S = f'{KROK * 30 // 60} min'
 FCD = os.environ.get('FCD', '/tmp/fcd.xml'); ED = os.environ.get('ED', '/tmp/ed120.xml')
+# tryb „przykładowa podróż”: PODROZ=plik.json – odcinki z wyróżnionym busem (patrz przyklady_film.py)
+PODROZ = json.load(open(os.environ['PODROZ'])) if os.environ.get('PODROZ') else None
+if PODROZ:
+    OD = min(o['od'] for o in PODROZ['odcinki']); DO = max(o['do'] for o in PODROZ['odcinki'])
+    OKNA = [(o['od'] - 20, o['do'] + 20) for o in PODROZ['odcinki']]
 for f in fm.findSystemFonts():
     if 'Inter' in f: fm.fontManager.addfont(f)
 plt.rcParams['font.family'] = ['Inter', 'DejaVu Sans']
@@ -67,7 +72,7 @@ poz = collections.defaultdict(list)
 for _, el in ET.iterparse(FCD):
     if el.tag == 'timestep':
         t = float(el.get('time'))
-        if OD - 10 <= t <= DO + 10:
+        if (OD - 10 <= t <= DO + 10) and (not PODROZ or any(a <= t <= b for a, b in OKNA)):
             for v in el: poz[t].append((v.get('id'), float(v.get('x')), float(v.get('y')), float(v.get('speed'))))
         el.clear()
 
@@ -137,7 +142,7 @@ if not PION:
 else:
     fx = 0.06
     fig.text(fx, 0.9, 'Proponowana siatka busów', fontsize=34, fontweight='bold', color='#1E1D1B')
-    fig.text(fx, 0.877, 'gminy Koszęcin – symulacja ruchu', fontsize=21, color='#4A4740')
+    fig.text(fx, 0.877, PODROZ['tytul'] if PODROZ else 'gminy Koszęcin – symulacja ruchu', fontsize=21, color='#4A4740')
     zegar = fig.text(fx, 0.82, '', fontsize=72, fontweight='bold', color='#1E1D1B')
     fig.text(fx + 0.36, 0.83, f'dzień roboczy\n1 s filmu = {MIN_S}', linespacing=1.4, fontsize=16, color='#77736A')
     ly = 0.33
@@ -166,11 +171,46 @@ else:
         gax.imshow(np.dstack([rgb, alfa]), aspect='auto', extent=[0, 1, 0, 1], origin='lower')
     fig.text(fx, 0.19, 'busy-koszecin.smart-ant.pl', fontsize=17, color='#3D6B4F', fontweight='semibold')
 
+# --- tryb podróży: wyróżniony bus, ślad trasy, przystanki, karta z opisem ---
+ODC = None
+if PODROZ:
+    bus_sc.set_alpha(0.45)
+    hl_slad = LineCollection([], linewidths=7 * SK, zorder=6.8, capstyle='round', joinstyle='round', alpha=0.85); ax.add_collection(hl_slad)
+    hl_sc = ax.scatter([], [], s=420 * SK * SK, zorder=9, edgecolors='#1E1D1B', linewidths=3.5)
+    hl_txt = ax.text(0, 0, '', fontsize=12 * SK, color='white', ha='center', va='center', zorder=9.1, fontweight='bold')
+    pin_sc = ax.scatter([], [], s=260 * SK * SK, marker='o', zorder=8.8, facecolors='white', edgecolors='#1E1D1B', linewidths=3)
+    pin_txt = [ax.text(0, 0, '', fontsize=13 * SK, color='#1E1D1B', ha='center', va='top', zorder=9.2, fontweight='bold',
+                       bbox=dict(boxstyle='round,pad=0.25', fc='white', ec='none', alpha=0.9)) for _ in range(4)]
+    k_tyt = fig.text(0.5, 0.466, '', fontsize=30, fontweight='bold', color='white', ha='center', va='center', zorder=20,
+                     bbox=dict(boxstyle='round,pad=0.45', fc='#1E1D1B', ec='none', alpha=0.88))
+    k_op = fig.text(0.5, 0.442, '', fontsize=22, color='#1E1D1B', ha='center', va='top', zorder=20, linespacing=1.35,
+                    bbox=dict(boxstyle='round,pad=0.5', fc='white', ec='#1E1D1B', lw=1.5, alpha=0.95))
+    def ustaw_odcinek(o):
+        global ODC
+        ODC = o; k_tyt.set_text(o['naglowek']); k_op.set_text(o['opis'])
+        pin_sc.set_offsets([P(*xy) for xy in o['punkty']])
+        for i, t in enumerate(pin_txt):
+            if i < len(o['punkty']):
+                x, y = P(*o['punkty'][i]); t.set_position((x, y - 0.006)); t.set_text(o['nazwy'][i]); t.set_visible(True)
+            else: t.set_visible(False)
+
 czasy = sorted(poz)
+import bisect
+def pozycje(t):
+    """Pozycje w chwili t, liniowo między zapisami co 10 s (płynny ruch przy wolnym tempie)."""
+    i = bisect.bisect_right(czasy, t)
+    if i == 0 or i == len(czasy): return poz[czasy[min(i, len(czasy) - 1)]]
+    t0, t1 = czasy[i - 1], czasy[i]
+    if t1 - t0 > 30: return poz[t0 if t - t0 < t1 - t else t1]
+    w = (t - t0) / (t1 - t0); nast = {v[0]: v for v in poz[t1]}
+    out = []
+    for vid, lon, lat, v in poz[t0]:
+        n = nast.get(vid)
+        out.append((vid, lon + (n[1] - lon) * w, lat + (n[2] - lat) * w, v) if n else (vid, lon, lat, v))
+    return out
 def klatka(t):
-    tt = min(czasy, key=lambda c: abs(c - t))
     b, p, kol, tx, pp, pk = [], [], [], [], [], []
-    for vid, lon, lat, v in poz[tt]:
+    for vid, lon, lat, v in pozycje(t):
         if vid.startswith('L'):
             b.append(P(lon, lat)); kol.append(KOL[vid[1]]); tx.append(vid[1])
         elif '_p' in vid: pp.append(P(lon, lat)); pk.append(vid[-1])
@@ -201,12 +241,41 @@ def klatka(t):
     lc_korki.set_segments([kraw_seg[i][1] for i, _ in kb])
     lc_korki.set_color([(0.84, 0.27 + 0.35 * (1 - z), 0.18, 0.55 + 0.4 * z) for _, z in kb])
     zegar.set_text(f'{int(t // 3600)}:{int(t % 3600 // 60):02d}')
+    if PODROZ and ODC:
+        segs, cur = [], None
+        for kurs, a, z in ODC['kursy']:
+            if t < a: break
+            pts = [P(x[1], x[2]) for c in czasy[bisect.bisect_left(czasy, a):bisect.bisect_right(czasy, min(t, z))] for x in poz[c] if x[0] == kurs]
+            if len(pts) > 1: segs.append((pts, KOL[kurs[1]]))
+            cur = kurs
+        if cur is None: cur = ODC['kursy'][0][0]
+        hl_slad.set_segments([sg for sg, _ in segs]); hl_slad.set_color([c for _, c in segs])
+        here = [P(x[1], x[2]) for x in pozycje(t) if x[0] == cur]
+        if here:
+            hl_sc.set_offsets(here); hl_sc.set_color(KOL[cur[1]]); hl_sc.set_edgecolor('#1E1D1B')
+            hl_txt.set_position(here[0]); hl_txt.set_text(cur[1]); hl_txt.set_visible(True)
+        else:
+            hl_sc.set_offsets([[None, None]]); hl_txt.set_visible(False)
 
 os.makedirs('wyniki', exist_ok=True)
-klatka((OD // 3600 + 2) * 3600 + 50 * 60); fig.savefig(f'wyniki/{NAZWA}_kadr.png', dpi=DPI, facecolor=TLO)
+if PODROZ:
+    o = PODROZ['odcinki'][0]; ustaw_odcinek(o); klatka((o['od'] + o['do']) / 2)
+else: klatka((OD // 3600 + 2) * 3600 + 50 * 60)
+fig.savefig(f'wyniki/{NAZWA}_kadr.png', dpi=DPI, facecolor=TLO)
 wr = FFMpegWriter(fps=30, codec='libx264', extra_args=['-preset', 'veryfast', '-crf', '26', '-pix_fmt', 'yuv420p', '-movflags', '+faststart'])
+n = 0
 with wr.saving(fig, f'wyniki/{NAZWA}.mp4', DPI):
-    t = OD
-    while t <= DO:
-        klatka(t); wr.grab_frame(); t += KROK
-print(f'wyniki/{NAZWA}.mp4', round((DO - OD) / KROK / 30, 1), 's')
+    if PODROZ:
+        for o in PODROZ['odcinki']:
+            ustaw_odcinek(o); krok = o.get('krok', KROK)
+            klatka(o['od'])
+            for _ in range(int(30 * o.get('pauza_przed', 1.2))): wr.grab_frame(); n += 1
+            t = o['od']
+            while t <= o['do']:
+                klatka(t); wr.grab_frame(); t += krok; n += 1
+            for _ in range(int(30 * o.get('pauza_po', 2.0))): wr.grab_frame(); n += 1
+    else:
+        t = OD
+        while t <= DO:
+            klatka(t); wr.grab_frame(); t += KROK; n += 1
+print(f'wyniki/{NAZWA}.mp4', round(n / 30, 1), 's')

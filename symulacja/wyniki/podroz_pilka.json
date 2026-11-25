@@ -1,0 +1,79 @@
+{
+ "tytul": "Piłka ⇄ Lubliniec – przez węzeł Koszęcin Rynek",
+ "odcinki": [
+  {
+   "naglowek": "RANO · z Piłki do Lublińca",
+   "opis": "linia 4: Piłka 6:29 → Koszęcin Rynek 6:49\nprzesiadka Koszęcin Rynek (4 min)\nlinia 1: Koszęcin Rynek 6:53 → Lubliniec PKP 7:20\nrazem 51 min",
+   "kursy": [
+    [
+     "L4_Piłka_01_389",
+     23340.0,
+     24178.0
+    ],
+    [
+     "L1_Piasek_01_395",
+     24786.0,
+     25637.0
+    ]
+   ],
+   "od": 23100.0,
+   "do": 25727.0,
+   "nazwy": [
+    "Piłka",
+    "Koszęcin Rynek",
+    "Lubliniec PKP"
+   ],
+   "punkty": [
+    [
+     18.759108,
+     50.627933
+    ],
+    [
+     18.84103,
+     50.635502
+    ],
+    [
+     18.690536,
+     50.672101
+    ]
+   ]
+  },
+  {
+   "naglowek": "PO POŁUDNIU · z Lublińca do Piłki",
+   "opis": "linia 1: Lubliniec PKP 15:35 → Koszęcin Rynek 16:00\nprzesiadka Koszęcin Rynek (3 min)\nlinia 4: Koszęcin Rynek 16:03 → Piłka 16:23\nrazem 48 min",
+   "kursy": [
+    [
+     "L1_LubliniecPK_10_935",
+     56100.0,
+     57047.0
+    ],
+    [
+     "L4_Łazy_07_936",
+     57790.0,
+     58623.0
+    ]
+   ],
+   "od": 55860.0,
+   "do": 58713.0,
+   "nazwy": [
+    "Lubliniec PKP",
+    "Koszęcin Rynek",
+    "Piłka"
+   ],
+   "punkty": [
+    [
+     18.690552,
+     50.67169
+    ],
+    [
+     18.841027,
+     50.635553
+    ],
+    [
+     18.758698,
+     50.627637
+    ]
+   ]
+  }
+ ]
+}

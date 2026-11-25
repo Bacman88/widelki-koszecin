@@ -1,0 +1,283 @@
+[
+ {
+  "tytul": "Ze Strzebinia do Lublińca rano (praca na 7:00 / 8:00, szkoła na 8:00)",
+  "skad": "Strzebiń Lubliniecka",
+  "dokad": "Lubliniec PKP",
+  "polaczenia": [
+   {
+    "tekst": "linia 1 (kier. Lubliniec PKP): Strzebiń Lubliniecka 5:45 → Lubliniec PKP 6:20",
+    "czas_min": 35,
+    "odjazd": "5:45",
+    "przyjazd": "6:20"
+   },
+   {
+    "tekst": "linia 1 (kier. Lubliniec PKP): Strzebiń Lubliniecka 6:45 → Lubliniec PKP 7:20",
+    "czas_min": 35,
+    "odjazd": "6:45",
+    "przyjazd": "7:20"
+   }
+  ]
+ },
+ {
+  "tytul": "Z Piłki do Lublińca rano – przesiadka w Wierzbiu",
+  "skad": "Piłka",
+  "dokad": "Lubliniec PKP",
+  "polaczenia": [
+   {
+    "tekst": "linia 4 (kier. Łazy): Piłka 5:29 → Koszęcin Rynek 5:49; przesiadka, linia 1 (kier. Lubliniec PKP): Koszęcin Rynek 5:53 → Lubliniec PKP 6:20",
+    "czas_min": 51,
+    "odjazd": "5:29",
+    "przyjazd": "6:20",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 4.0,
+    "zapas_symulacja_min": 11.0
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Piłka 5:29 → Rzyce Irki 5:44; przesiadka, linia 1 (kier. Lubliniec PKP): Rzyce Irki 6:00 → Lubliniec PKP 6:20",
+    "czas_min": 51,
+    "odjazd": "5:29",
+    "przyjazd": "6:20",
+    "przesiadka": "Rzyce Irki",
+    "zapas_plan_min": 16.0
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Piłka 5:29 → Wierzbie 5:39; przesiadka, linia 1 (kier. Lubliniec PKP): Wierzbie 6:05 → Lubliniec PKP 6:20",
+    "czas_min": 51,
+    "odjazd": "5:29",
+    "przyjazd": "6:20",
+    "przesiadka": "Wierzbie",
+    "zapas_plan_min": 26.0,
+    "zapas_symulacja_min": 21.5
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Piłka 6:29 → Koszęcin Rynek 6:49; przesiadka, linia 1 (kier. Lubliniec PKP): Koszęcin Rynek 6:53 → Lubliniec PKP 7:20",
+    "czas_min": 51,
+    "odjazd": "6:29",
+    "przyjazd": "7:20",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 4.0,
+    "zapas_symulacja_min": 10.1
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Piłka 6:29 → Rzyce Irki 6:44; przesiadka, linia 1 (kier. Lubliniec PKP): Rzyce Irki 7:00 → Lubliniec PKP 7:20",
+    "czas_min": 51,
+    "odjazd": "6:29",
+    "przyjazd": "7:20",
+    "przesiadka": "Rzyce Irki",
+    "zapas_plan_min": 16.0
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Piłka 6:29 → Wierzbie 6:39; przesiadka, linia 1 (kier. Lubliniec PKP): Wierzbie 7:05 → Lubliniec PKP 7:20",
+    "czas_min": 51,
+    "odjazd": "6:29",
+    "przyjazd": "7:20",
+    "przesiadka": "Wierzbie",
+    "zapas_plan_min": 26.0,
+    "zapas_symulacja_min": 21.7
+   }
+  ]
+ },
+ {
+  "tytul": "Z Rusinowic do Lublińca rano – przesiadka w Wierzbiu",
+  "skad": "Rusinowice PKP",
+  "dokad": "Lubliniec PKP",
+  "polaczenia": [
+   {
+    "tekst": "linia 4 (kier. Łazy): Rusinowice PKP 5:33 → Koszęcin Rynek 5:49; przesiadka, linia 1 (kier. Lubliniec PKP): Koszęcin Rynek 5:53 → Lubliniec PKP 6:20",
+    "czas_min": 47,
+    "odjazd": "5:33",
+    "przyjazd": "6:20",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 4.0,
+    "zapas_symulacja_min": 11.0
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Rusinowice PKP 5:33 → Rzyce Irki 5:44; przesiadka, linia 1 (kier. Lubliniec PKP): Rzyce Irki 6:00 → Lubliniec PKP 6:20",
+    "czas_min": 47,
+    "odjazd": "5:33",
+    "przyjazd": "6:20",
+    "przesiadka": "Rzyce Irki",
+    "zapas_plan_min": 16.0
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Rusinowice PKP 5:33 → Wierzbie 5:39; przesiadka, linia 1 (kier. Lubliniec PKP): Wierzbie 6:05 → Lubliniec PKP 6:20",
+    "czas_min": 47,
+    "odjazd": "5:33",
+    "przyjazd": "6:20",
+    "przesiadka": "Wierzbie",
+    "zapas_plan_min": 26.0,
+    "zapas_symulacja_min": 21.5
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Rusinowice PKP 6:33 → Koszęcin Rynek 6:49; przesiadka, linia 1 (kier. Lubliniec PKP): Koszęcin Rynek 6:53 → Lubliniec PKP 7:20",
+    "czas_min": 47,
+    "odjazd": "6:33",
+    "przyjazd": "7:20",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 4.0,
+    "zapas_symulacja_min": 10.1
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Rusinowice PKP 6:33 → Rzyce Irki 6:44; przesiadka, linia 1 (kier. Lubliniec PKP): Rzyce Irki 7:00 → Lubliniec PKP 7:20",
+    "czas_min": 47,
+    "odjazd": "6:33",
+    "przyjazd": "7:20",
+    "przesiadka": "Rzyce Irki",
+    "zapas_plan_min": 16.0
+   },
+   {
+    "tekst": "linia 4 (kier. Łazy): Rusinowice PKP 6:33 → Wierzbie 6:39; przesiadka, linia 1 (kier. Lubliniec PKP): Wierzbie 7:05 → Lubliniec PKP 7:20",
+    "czas_min": 47,
+    "odjazd": "6:33",
+    "przyjazd": "7:20",
+    "przesiadka": "Wierzbie",
+    "zapas_plan_min": 26.0,
+    "zapas_symulacja_min": 21.7
+   }
+  ]
+ },
+ {
+  "tytul": "Z Boronowa do Lublińca rano",
+  "skad": "Boronów",
+  "dokad": "Lubliniec PKP",
+  "polaczenia": [
+   {
+    "tekst": "linia 2 (kier. Kalety PKP): Boronów 6:37 → Koszęcin Rynek 6:49; przesiadka, linia 1 (kier. Lubliniec PKP): Koszęcin Rynek 6:53 → Lubliniec PKP 7:20",
+    "czas_min": 43,
+    "odjazd": "6:37",
+    "przyjazd": "7:20",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 4.0,
+    "zapas_symulacja_min": 8.6
+   }
+  ]
+ },
+ {
+  "tytul": "Z Łaz do szkoły w Koszęcinie (na 8:00)",
+  "skad": "Łazy",
+  "dokad": "Koszęcin Szkoła",
+  "polaczenia": [
+   {
+    "tekst": "linia 4 (kier. Piłka): Łazy 6:36 → Koszęcin Szkoła 6:57",
+    "czas_min": 21,
+    "odjazd": "6:36",
+    "przyjazd": "6:57"
+   },
+   {
+    "tekst": "linia 4 (kier. Piłka): Łazy 7:36 → Koszęcin Szkoła 7:57",
+    "czas_min": 21,
+    "odjazd": "7:36",
+    "przyjazd": "7:57"
+   }
+  ]
+ },
+ {
+  "tytul": "Z Lublińca do Strzebinia po południu",
+  "skad": "Lubliniec PKP",
+  "dokad": "Strzebiń Lubliniecka",
+  "polaczenia": [
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:35 → Strzebiń Lubliniecka 15:10",
+    "czas_min": 35,
+    "odjazd": "14:35",
+    "przyjazd": "15:10"
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Strzebiń Lubliniecka 16:10",
+    "czas_min": 35,
+    "odjazd": "15:35",
+    "przyjazd": "16:10"
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 16:35 → Strzebiń Lubliniecka 17:10",
+    "czas_min": 35,
+    "odjazd": "16:35",
+    "przyjazd": "17:10"
+   }
+  ]
+ },
+ {
+  "tytul": "Z Lublińca do Piłki po południu – przesiadka w Wierzbiu",
+  "skad": "Lubliniec PKP",
+  "dokad": "Piłka",
+  "polaczenia": [
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:35 → Koszęcin Rynek 15:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 15:03 → Piłka 15:23",
+    "czas_min": 48,
+    "odjazd": "14:35",
+    "przyjazd": "15:23",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 3.0,
+    "zapas_symulacja_min": 12.4
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:35 → Rzyce Irki 14:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 15:08 → Piłka 15:23",
+    "czas_min": 48,
+    "odjazd": "14:35",
+    "przyjazd": "15:23",
+    "przesiadka": "Rzyce Irki",
+    "zapas_plan_min": 13.0
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:35 → Wierzbie 14:50; przesiadka, linia 4 (kier. Piłka): Wierzbie 15:13 → Piłka 15:23",
+    "czas_min": 48,
+    "odjazd": "14:35",
+    "przyjazd": "15:23",
+    "przesiadka": "Wierzbie",
+    "zapas_plan_min": 23.0,
+    "zapas_symulacja_min": 23.7
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Koszęcin Rynek 16:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 16:03 → Piłka 16:23",
+    "czas_min": 48,
+    "odjazd": "15:35",
+    "przyjazd": "16:23",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 3.0,
+    "zapas_symulacja_min": 12.4
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Rzyce Irki 15:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 16:08 → Piłka 16:23",
+    "czas_min": 48,
+    "odjazd": "15:35",
+    "przyjazd": "16:23",
+    "przesiadka": "Rzyce Irki",
+    "zapas_plan_min": 13.0
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Wierzbie 15:50; przesiadka, linia 4 (kier. Piłka): Wierzbie 16:13 → Piłka 16:23",
+    "czas_min": 48,
+    "odjazd": "15:35",
+    "przyjazd": "16:23",
+    "przesiadka": "Wierzbie",
+    "zapas_plan_min": 23.0,
+    "zapas_symulacja_min": 25.1
+   },
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 16:35 → Strzebiń Lubliniecka 17:10; przesiadka, linia 4 (kier. Piłka): Strzebiń Lubliniecka 17:43 → Piłka 18:23",
+    "czas_min": 108,
+    "odjazd": "16:35",
+    "przyjazd": "18:23",
+    "przesiadka": "Strzebiń Lubliniecka",
+    "zapas_plan_min": 33.0,
+    "zapas_symulacja_min": 38.0
+   }
+  ]
+ },
+ {
+  "tytul": "Z Lublińca do Boronowa po południu",
+  "skad": "Lubliniec PKP",
+  "dokad": "Boronów",
+  "polaczenia": [
+   {
+    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Koszęcin Rynek 16:00; przesiadka, linia 2 (kier. Boronów): Koszęcin Rynek 16:03 → Boronów 16:15",
+    "czas_min": 40,
+    "odjazd": "15:35",
+    "przyjazd": "16:15",
+    "przesiadka": "Koszęcin Rynek",
+    "zapas_plan_min": 3.0,
+    "zapas_symulacja_min": 12.3
+   }
+  ]
+ }
+]

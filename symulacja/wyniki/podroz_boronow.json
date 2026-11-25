@@ -1,0 +1,79 @@
+{
+ "tytul": "Boronów ⇄ Lubliniec – przez węzeł Koszęcin Rynek",
+ "odcinki": [
+  {
+   "naglowek": "RANO · z Boronowa do Lublińca",
+   "opis": "linia 2: Boronów 6:37 → Koszęcin Rynek 6:49\nprzesiadka Koszęcin Rynek (4 min)\nlinia 1: Koszęcin Rynek 6:53 → Lubliniec PKP 7:20\nrazem 43 min",
+   "kursy": [
+    [
+     "L2_Boronów_00_397",
+     23820.0,
+     24273.0
+    ],
+    [
+     "L1_Piasek_01_395",
+     24786.0,
+     25637.0
+    ]
+   ],
+   "od": 23580.0,
+   "do": 25727.0,
+   "nazwy": [
+    "Boronów",
+    "Koszęcin Rynek",
+    "Lubliniec PKP"
+   ],
+   "punkty": [
+    [
+     18.90572,
+     50.67466
+    ],
+    [
+     18.841066,
+     50.635645
+    ],
+    [
+     18.690536,
+     50.672101
+    ]
+   ]
+  },
+  {
+   "naglowek": "PO POŁUDNIU · z Lublińca do Boronowa",
+   "opis": "linia 1: Lubliniec PKP 15:35 → Koszęcin Rynek 16:00\nprzesiadka Koszęcin Rynek (3 min)\nlinia 2: Koszęcin Rynek 16:03 → Boronów 16:15\nrazem 40 min",
+   "kursy": [
+    [
+     "L1_LubliniecPK_10_935",
+     56100.0,
+     57047.0
+    ],
+    [
+     "L2_KaletyPKP_05_924",
+     57783.0,
+     58296.0
+    ]
+   ],
+   "od": 55860.0,
+   "do": 58386.0,
+   "nazwy": [
+    "Lubliniec PKP",
+    "Koszęcin Rynek",
+    "Boronów"
+   ],
+   "punkty": [
+    [
+     18.690552,
+     50.67169
+    ],
+    [
+     18.841027,
+     50.635553
+    ],
+    [
+     18.905189,
+     50.674859
+    ]
+   ]
+  }
+ ]
+}
