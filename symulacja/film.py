@@ -146,14 +146,14 @@ else:
     fig.text(fx, 0.877, PODROZ['tytul'] if PODROZ else 'gminy Koszęcin – symulacja ruchu', fontsize=21, color='#4A4740')
     zegar = fig.text(fx, 0.82, '', fontsize=72, fontweight='bold', color='#1E1D1B')
     fig.text(fx + 0.36, 0.83, f'dzień roboczy\n1 s filmu = {MIN_S}', linespacing=1.4, fontsize=16, color='#77736A')
-    ly = 0.33
+    ly = 0.348
     for l, nazwa in [('1', 'Lubliniec – Koszęcin – Piasek'), ('2', 'Kalety – Koszęcin – Boronów'),
                      ('3', 'Lisów – Koszęcin PKP'), ('4', 'Łazy – Strzebiń – Koszęcin'),
                      ('5', 'Koszęcin – Piłka – Lubliniec')]:
         fig.patches.append(matplotlib.patches.Ellipse((fx + 0.016, ly + 0.006), 0.022 * H / W, 0.022, transform=fig.transFigure, color=KOL[l], figure=fig))
         fig.text(fx + 0.016, ly + 0.006, l, fontsize=13, color='white', ha='center', va='center', fontweight='bold')
-        fig.text(fx + 0.045, ly + 0.001, nazwa, fontsize=15, color='#2E2C28'); ly -= 0.026
-    px2, ly = 0.56, 0.33
+        fig.text(fx + 0.045, ly + 0.001, nazwa, fontsize=15, color='#2E2C28'); ly -= 0.0245
+    px2, ly = 0.56, 0.348
     for k, nazwa in (('K', 'Koleje Śląskie'), ('P', 'POLREGIO')):
         fig.patches.append(plt.Rectangle((px2, ly - 0.004), 0.05, 0.02, transform=fig.transFigure, facecolor=KOL_POC[k], edgecolor='#1E1D1B', lw=1, figure=fig))
         fig.text(px2 + 0.025, ly + 0.006, 'KŚ' if k == 'K' else 'PR', fontsize=11, ha='center', va='center', fontweight='bold', color='#1E1D1B' if k == 'K' else 'white')
