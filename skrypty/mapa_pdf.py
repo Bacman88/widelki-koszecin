@@ -19,7 +19,7 @@ LN['4S']=('#d4473a','Propozycja 4S: kursy szkolne Łazy – Strzebiń – Bukowi
 LN['4P']=('#8e3b8a','Propozycja 4P: pętla Strzebiń – Łazy – Psary – Płaszczymąka – Strzebiń','poza siatką podstawową; po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki)',0)
 LN['4k']=('#d4473a','','',1.4)
 LN['1L']=('#00704f','Propozycja 1L: wzmocnienie Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP','poza siatką podstawową; w pół taktu w szczytach (dni nauki), w Wierzbiu przesiadka z linii 4',-2.4)
-LN['4L']=('#d4473a','Propozycja 4L: Piłka – Rusinowice PKP – Sadów – Lubliniec PKP','poza siatką podstawową; ewentualność w dni nauki, bez przesiadki i bez postoju w Wierzbiu, ok. 22 min',2.4)
+LN['4L']=('#0f8b8d','Propozycja 4L: Piłka – Rusinowice PKP – Sadów – Lubliniec PKP','poza siatką podstawową; ewentualność w dni nauki, bez przesiadki i bez postoju w Wierzbiu, ok. 22 min',2.4)
 LN['4e']=LN['4'];LN['4r']=LN['4'][:3]+(-LN['4'][3],);LN['3r']=LN['3'][:3]+(-LN['3'][3],)
 DASH={'1L':(0,(3,2.2)),'4L':(0,(3,2.2)),'4S':(0,(3,2.2)),'4P':(0,(1,1.6))}
 PAPER='#f7f4ec'
