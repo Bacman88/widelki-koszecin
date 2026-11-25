@@ -200,6 +200,61 @@
       ],
       "typ": "istniejący",
       "na_zadanie": false
+    },
+    {
+      "id": "sadk",
+      "nazwa_robocza": "Sadów – Kopce",
+      "nr_mapy_przewoznika": 21,
+      "lat": 50.6709,
+      "lon": 18.72323,
+      "linie": [
+        "1",
+        "1L",
+        "4L"
+      ],
+      "typ": "istniejący (w danych OSM jako „Lubliniec Powstańców Śląskich 2”)",
+      "na_zadanie": false
+    },
+    {
+      "id": "sadsz",
+      "nazwa_robocza": "Sadów – Szkoła",
+      "nr_mapy_przewoznika": 25,
+      "lat": 50.67162,
+      "lon": 18.74797,
+      "linie": [
+        "1",
+        "1L",
+        "4L"
+      ],
+      "typ": "istniejący",
+      "na_zadanie": false
+    },
+    {
+      "id": "sad",
+      "nazwa_robocza": "Sadów – Przedszkole",
+      "nr_mapy_przewoznika": 23,
+      "lat": 50.67178,
+      "lon": 18.74093,
+      "linie": [
+        "1",
+        "1L",
+        "4L"
+      ],
+      "typ": "istniejący, już w projekcie",
+      "na_zadanie": false
+    },
+    {
+      "id": "lubp1",
+      "nazwa_robocza": "Lubliniec – Powstańców Śląskich",
+      "lat": 50.67003,
+      "lon": 18.70488,
+      "linie": [
+        "1",
+        "1L",
+        "4L"
+      ],
+      "typ": "istniejący, przed Lubliniec PKP",
+      "na_zadanie": false
     }
   ],
   "do_sprawdzenia": [],
@@ -209,5 +264,14 @@
   ],
   "uwagi": [
     "Punkty 12–15 z mapy przewoźnika (Dworcowa, Kolejowa) to błąd w bazie – nie dodawać."
+  ],
+  "tylko_na_mapie": [
+    {
+      "nazwa": "Sadów – Leśna",
+      "nr_mapy_przewoznika": 22,
+      "lat": 50.6752,
+      "lon": 18.75663,
+      "uwagi": "nie na trasie naszych linii – pokazać na szaro jako istniejący przystanek innych przewoźników"
+    }
   ]
 }
