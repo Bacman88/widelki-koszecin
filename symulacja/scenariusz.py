@@ -153,7 +153,10 @@ for line, days in R['tt'].items():
             for i, key in enumerate(stl):
                 until = round(t[i] * 60)
                 if ids[i] == 'kosr' and line in ('2', '3', '4') and 0 < i < len(ids) - 1 and t[i + 1] - t[i] > 6:
-                    until = ((t[i] + 11) // 60 * 60 + 3) * 60
+                    # odjazd z Rynku: :03 (puls) albo :18 (linia 4 poza szczytem) – najpóźniejszy, który mieści się przed następnym przystankiem
+                    kand = [h * 60 + m for h in range(int(t[i] // 60), int(t[i + 1] // 60) + 1) for m in (3, 18)]
+                    kand = [x for x in kand if t[i] <= x <= t[i + 1] - 1]
+                    until = (max(kand) if kand else ((t[i] + 11) // 60 * 60 + 3)) * 60
                 stops.append((key, until))
             vehicles.append((t0 - 60, f'L{line}_{nm.split(" →")[0][:12].replace(" ", "")}_{n:02d}_{t[0]}', edges, stops, line))
 

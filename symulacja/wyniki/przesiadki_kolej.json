@@ -2,7 +2,7 @@
  "Koszęcin": {
   "w stronę Kalet / Tarnowskich Gór": {
    "pociagow": 19,
-   "z_pociagu_na_busa": 9,
+   "z_pociagu_na_busa": 8,
    "z_busa_na_pociag": 12,
    "szczegoly": [
     {
@@ -27,17 +27,17 @@
     },
     {
      "pociag_przyjazd": "9:13",
-     "bus_odjazd": null,
+     "bus_odjazd": "9:26",
      "bus_przyjazd": "9:06"
     },
     {
      "pociag_przyjazd": "10:11",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "10:04"
     },
     {
      "pociag_przyjazd": "11:04",
-     "bus_odjazd": "11:11",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
@@ -73,26 +73,26 @@
     {
      "pociag_przyjazd": "18:10",
      "bus_odjazd": null,
-     "bus_przyjazd": "17:57"
+     "bus_przyjazd": "18:04"
     },
     {
      "pociag_przyjazd": "19:11",
-     "bus_odjazd": null,
+     "bus_odjazd": "19:26",
      "bus_przyjazd": "19:06"
     },
     {
      "pociag_przyjazd": "20:04",
      "bus_odjazd": null,
-     "bus_przyjazd": "19:49"
+     "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "21:04",
-     "bus_odjazd": "21:11",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "21:46",
-     "bus_odjazd": "21:54",
+     "bus_odjazd": null,
      "bus_przyjazd": "21:35"
     },
     {
@@ -104,7 +104,7 @@
   },
   "w stronę Lublińca": {
    "pociagow": 19,
-   "z_pociagu_na_busa": 7,
+   "z_pociagu_na_busa": 10,
    "z_busa_na_pociag": 11,
    "szczegoly": [
     {
@@ -134,17 +134,17 @@
     },
     {
      "pociag_przyjazd": "10:00",
-     "bus_odjazd": null,
-     "bus_przyjazd": "9:49"
+     "bus_odjazd": "10:09",
+     "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "11:04",
-     "bus_odjazd": "11:11",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "12:02",
-     "bus_odjazd": null,
+     "bus_odjazd": "12:09",
      "bus_przyjazd": "11:57"
     },
     {
@@ -175,7 +175,7 @@
     {
      "pociag_przyjazd": "18:12",
      "bus_odjazd": null,
-     "bus_przyjazd": "17:57"
+     "bus_przyjazd": "18:04"
     },
     {
      "pociag_przyjazd": "18:56",
@@ -185,17 +185,17 @@
     {
      "pociag_przyjazd": "20:14",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "20:04"
     },
     {
      "pociag_przyjazd": "21:15",
-     "bus_odjazd": null,
+     "bus_odjazd": "21:26",
      "bus_przyjazd": "21:06"
     },
     {
      "pociag_przyjazd": "21:54",
-     "bus_odjazd": null,
-     "bus_przyjazd": "21:49"
+     "bus_odjazd": "22:09",
+     "bus_przyjazd": "21:35"
     },
     {
      "pociag_przyjazd": "22:55",
@@ -208,8 +208,8 @@
  "Strzebiń": {
   "w stronę Tarnowskich Gór / Bytomia": {
    "pociagow": 18,
-   "z_pociagu_na_busa": 12,
-   "z_busa_na_pociag": 13,
+   "z_pociagu_na_busa": 13,
+   "z_busa_na_pociag": 12,
    "szczegoly": [
     {
      "pociag_przyjazd": "4:56",
@@ -244,7 +244,7 @@
     {
      "pociag_przyjazd": "9:38",
      "bus_odjazd": "9:44",
-     "bus_przyjazd": "9:20"
+     "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "9:58",
@@ -253,8 +253,8 @@
     },
     {
      "pociag_przyjazd": "11:39",
-     "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_odjazd": "11:56",
+     "bus_przyjazd": "11:34"
     },
     {
      "pociag_przyjazd": "12:48",
@@ -283,7 +283,7 @@
     },
     {
      "pociag_przyjazd": "17:25",
-     "bus_odjazd": "17:41",
+     "bus_odjazd": "17:44",
      "bus_przyjazd": "17:19"
     },
     {
@@ -298,15 +298,15 @@
     },
     {
      "pociag_przyjazd": "21:27",
-     "bus_odjazd": "21:41",
-     "bus_przyjazd": "21:19"
+     "bus_odjazd": "21:39",
+     "bus_przyjazd": null
     }
    ]
   },
   "w stronę Herb (Wieluń, Chorzew)": {
    "pociagow": 18,
-   "z_pociagu_na_busa": 12,
-   "z_busa_na_pociag": 8,
+   "z_pociagu_na_busa": 14,
+   "z_busa_na_pociag": 6,
    "szczegoly": [
     {
      "pociag_przyjazd": "5:40",
@@ -330,17 +330,17 @@
     },
     {
      "pociag_przyjazd": "9:25",
-     "bus_odjazd": "9:41",
-     "bus_przyjazd": "9:20"
+     "bus_odjazd": "9:39",
+     "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "9:36",
      "bus_odjazd": "9:44",
-     "bus_przyjazd": "9:20"
+     "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "11:44",
-     "bus_odjazd": null,
+     "bus_odjazd": "11:56",
      "bus_przyjazd": "11:39"
     },
     {
@@ -375,7 +375,7 @@
     },
     {
      "pociag_przyjazd": "17:39",
-     "bus_odjazd": null,
+     "bus_odjazd": "17:56",
      "bus_przyjazd": null
     },
     {
@@ -621,7 +621,7 @@
     {
      "pociag_przyjazd": "14:48",
      "bus_odjazd": null,
-     "bus_przyjazd": "14:38"
+     "bus_przyjazd": "14:39"
     },
     {
      "pociag_przyjazd": "16:21",
@@ -631,7 +631,7 @@
     {
      "pociag_przyjazd": "16:43",
      "bus_odjazd": null,
-     "bus_przyjazd": "16:38"
+     "bus_przyjazd": "16:39"
     },
     {
      "pociag_przyjazd": "17:21",
@@ -713,7 +713,7 @@
     {
      "pociag_przyjazd": "14:51",
      "bus_odjazd": null,
-     "bus_przyjazd": "14:38"
+     "bus_przyjazd": "14:39"
     },
     {
      "pociag_przyjazd": "15:50",
@@ -756,8 +756,8 @@
  "Rusinowice": {
   "w stronę Kalet / Tarnowskich Gór": {
    "pociagow": 19,
-   "z_pociagu_na_busa": 9,
-   "z_busa_na_pociag": 2,
+   "z_pociagu_na_busa": 5,
+   "z_busa_na_pociag": 7,
    "szczegoly": [
     {
      "pociag_przyjazd": "4:58",
@@ -782,21 +782,21 @@
     {
      "pociag_przyjazd": "9:09",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "8:53"
     },
     {
      "pociag_przyjazd": "10:07",
-     "bus_odjazd": "10:13",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "11:00",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "10:51"
     },
     {
      "pociag_przyjazd": "12:03",
-     "bus_odjazd": "12:13",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
@@ -811,7 +811,7 @@
     },
     {
      "pociag_przyjazd": "14:57",
-     "bus_odjazd": "15:13",
+     "bus_odjazd": "15:14",
      "bus_przyjazd": null
     },
     {
@@ -826,23 +826,23 @@
     },
     {
      "pociag_przyjazd": "18:06",
-     "bus_odjazd": "18:14",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "19:07",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "18:51"
     },
     {
      "pociag_przyjazd": "20:00",
-     "bus_odjazd": "20:13",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "21:00",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "20:51"
     },
     {
      "pociag_przyjazd": "21:41",
@@ -852,14 +852,14 @@
     {
      "pociag_przyjazd": "22:34",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "22:28"
     }
    ]
   },
   "w stronę Lublińca": {
    "pociagow": 19,
-   "z_pociagu_na_busa": 7,
-   "z_busa_na_pociag": 1,
+   "z_pociagu_na_busa": 5,
+   "z_busa_na_pociag": 3,
    "szczegoly": [
     {
      "pociag_przyjazd": "5:20",
@@ -884,21 +884,21 @@
     {
      "pociag_przyjazd": "9:00",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "8:53"
     },
     {
      "pociag_przyjazd": "10:04",
-     "bus_odjazd": "10:13",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "11:08",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "10:51"
     },
     {
      "pociag_przyjazd": "12:06",
-     "bus_odjazd": "12:13",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
@@ -928,18 +928,18 @@
     },
     {
      "pociag_przyjazd": "18:16",
-     "bus_odjazd": null,
+     "bus_odjazd": "18:29",
      "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "19:00",
      "bus_odjazd": null,
-     "bus_przyjazd": null
+     "bus_przyjazd": "18:51"
     },
     {
      "pociag_przyjazd": "20:18",
-     "bus_odjazd": "20:36",
-     "bus_przyjazd": "20:13"
+     "bus_odjazd": "20:28",
+     "bus_przyjazd": null
     },
     {
      "pociag_przyjazd": "21:19",
@@ -948,7 +948,7 @@
     },
     {
      "pociag_przyjazd": "21:58",
-     "bus_odjazd": "22:13",
+     "bus_odjazd": null,
      "bus_przyjazd": null
     },
     {
@@ -1017,7 +1017,7 @@
     },
     {
      "pociag_przyjazd": "14:53",
-     "bus_odjazd": "15:09",
+     "bus_odjazd": "15:08",
      "bus_przyjazd": null
     },
     {
@@ -1110,7 +1110,7 @@
     {
      "pociag_przyjazd": "17:21",
      "bus_odjazd": "17:33",
-     "bus_przyjazd": "17:09"
+     "bus_przyjazd": "17:10"
     },
     {
      "pociag_przyjazd": "18:53",

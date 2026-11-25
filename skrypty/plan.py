@@ -108,4 +108,16 @@ for name,v in list(d4.items()):
             else: zost.append(tr)
         v['trips']=zost
 d4.update(nowe)
+# Linia 4 poza szczytami 15 min później (25.11.2026): czwórka nie jedzie razem z jedynką na odcinkach
+# Strzebiń – Koszęcin i Koszęcin – Wierzbie. W szczytach (rano do 8:00, po południu 12:30–17:30) bez zmian:
+# przesiadki do/z Lublińca, szkoły, Kurzychowe, pociągi w Koszęcinie. Obieg dalej 2 h jednym busem.
+L4_PRZES = int(os.environ.get('L4_PRZES', 15))
+L4_SZCZYT = {'Łazy → Piłka': {5*60+34, 6*60+34, 13*60+38, 14*60+34, 15*60+34},
+             'Piłka → Łazy': {5*60+33, 6*60+33, 14*60+33, 16*60+33}}
+for name, keep in L4_SZCZYT.items():
+    for tr in tt['4']['wd'][name]['trips']:
+        if tr[0][0] not in keep: tr[0] = [x + L4_PRZES for x in tr[0]]
+for dz in ('sat', 'sun'):          # weekend: cała czwórka 15 min później (więcej różnych godzin do Koszęcina)
+    for name, v in tt['4'][dz].items():
+        for tr in v['trips']: tr[0] = [x + L4_PRZES for x in tr[0]]
 json.dump({'tt':tt,'var':res},open('out/rozklad_data.json','w'),ensure_ascii=False,separators=(',',':'))

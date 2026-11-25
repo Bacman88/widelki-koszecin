@@ -51,19 +51,17 @@ Wg planu kursów (`plan_kursow.json`); zapas przesiadki sprawdzony w symulacji S
 
 ## Z Lublińca do Piłki po południu – przesiadka w Wierzbiu
 
-- **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Koszęcin Rynek 15:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 15:03 → Piłka 15:25 — przesiadka Koszęcin Rynek: 3.0 min wg planu, 13.2 min w symulacji
-- **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Koszęcin Lubliniecka 14:58; przesiadka, linia 4 (kier. Piłka): Koszęcin Lubliniecka 15:05 → Piłka 15:25 — przesiadka Koszęcin Lubliniecka: 7.0 min wg planu, 16.1 min w symulacji
+- **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Koszęcin Rynek 15:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 15:03 → Piłka 15:25 — przesiadka Koszęcin Rynek: 3.0 min wg planu, 13.3 min w symulacji
+- **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Koszęcin Lubliniecka 14:58; przesiadka, linia 4 (kier. Piłka): Koszęcin Lubliniecka 15:05 → Piłka 15:25 — przesiadka Koszęcin Lubliniecka: 7.0 min wg planu, 16.6 min w symulacji
 - **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Rzyce Irki 14:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 15:08 → Piłka 15:25 — przesiadka Rzyce Irki: 13.0 min wg planu
 - **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Wierzbie Las 14:52; przesiadka, linia 4 (kier. Piłka): Wierzbie Las 15:11 → Piłka 15:25 — przesiadka Wierzbie Las: 19.0 min wg planu
-- **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Wierzbie 14:49; przesiadka, linia 4 (kier. Piłka): Wierzbie 15:14 → Piłka 15:25 — przesiadka Wierzbie: 25.0 min wg planu, 26.0 min w symulacji
-- **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Rynek 16:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 16:03 → Piłka 16:25 — przesiadka Koszęcin Rynek: 3.0 min wg planu, 14.1 min w symulacji
-- **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Lubliniecka 15:58; przesiadka, linia 4 (kier. Piłka): Koszęcin Lubliniecka 16:05 → Piłka 16:25 — przesiadka Koszęcin Lubliniecka: 7.0 min wg planu, 17.4 min w symulacji
+- **14:33 → 15:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Wierzbie 14:49; przesiadka, linia 4 (kier. Piłka): Wierzbie 15:14 → Piłka 15:25 — przesiadka Wierzbie: 25.0 min wg planu, 26.7 min w symulacji
+- **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Rynek 16:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 16:03 → Piłka 16:25 — przesiadka Koszęcin Rynek: 3.0 min wg planu, 13.9 min w symulacji
+- **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Lubliniecka 15:58; przesiadka, linia 4 (kier. Piłka): Koszęcin Lubliniecka 16:05 → Piłka 16:25 — przesiadka Koszęcin Lubliniecka: 7.0 min wg planu, 17.2 min w symulacji
 - **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Rzyce Irki 15:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 16:08 → Piłka 16:25 — przesiadka Rzyce Irki: 13.0 min wg planu
 - **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Wierzbie Las 15:52; przesiadka, linia 4 (kier. Piłka): Wierzbie Las 16:11 → Piłka 16:25 — przesiadka Wierzbie Las: 19.0 min wg planu
-- **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Wierzbie 15:49; przesiadka, linia 4 (kier. Piłka): Wierzbie 16:14 → Piłka 16:25 — przesiadka Wierzbie: 25.0 min wg planu, 27.2 min w symulacji
-- **16:33 → 18:25** (112 min): linia 1 (kier. Piasek): Lubliniec PKP 16:33 → Strzebiń Centrum 17:12; przesiadka, linia 4 (kier. Piłka): Strzebiń Centrum 17:41 → Piłka 18:25 — przesiadka Strzebiń Centrum: 29.0 min wg planu, 34.7 min w symulacji
-- **16:33 → 18:25** (112 min): linia 1 (kier. Piasek): Lubliniec PKP 16:33 → Strzebiń Ligonia 17:10; przesiadka, linia 4 (kier. Piłka): Strzebiń Ligonia 17:43 → Piłka 18:25 — przesiadka Strzebiń Ligonia: 33.0 min wg planu, 37.2 min w symulacji
+- **15:33 → 16:25** (52 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Wierzbie 15:49; przesiadka, linia 4 (kier. Piłka): Wierzbie 16:14 → Piłka 16:25 — przesiadka Wierzbie: 25.0 min wg planu, 27.0 min w symulacji
 
 ## Z Lublińca do Boronowa po południu
 
-- **15:33 → 16:15** (42 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Rynek 16:00; przesiadka, linia 2 (kier. Boronów): Koszęcin Rynek 16:03 → Boronów 16:15 — przesiadka Koszęcin Rynek: 3.0 min wg planu, 13.9 min w symulacji
+- **15:33 → 16:15** (42 min): linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Rynek 16:00; przesiadka, linia 2 (kier. Boronów): Koszęcin Rynek 16:03 → Boronów 16:15 — przesiadka Koszęcin Rynek: 3.0 min wg planu, 13.8 min w symulacji

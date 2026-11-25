@@ -276,7 +276,7 @@
     "przyjazd": "15:25",
     "przesiadka": "Koszęcin Rynek",
     "zapas_plan_min": 3.0,
-    "zapas_symulacja_min": 13.2
+    "zapas_symulacja_min": 13.3
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Koszęcin Lubliniecka 14:58; przesiadka, linia 4 (kier. Piłka): Koszęcin Lubliniecka 15:05 → Piłka 15:25",
@@ -285,7 +285,7 @@
     "przyjazd": "15:25",
     "przesiadka": "Koszęcin Lubliniecka",
     "zapas_plan_min": 7.0,
-    "zapas_symulacja_min": 16.1
+    "zapas_symulacja_min": 16.6
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:33 → Rzyce Irki 14:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 15:08 → Piłka 15:25",
@@ -310,7 +310,7 @@
     "przyjazd": "15:25",
     "przesiadka": "Wierzbie",
     "zapas_plan_min": 25.0,
-    "zapas_symulacja_min": 26.0
+    "zapas_symulacja_min": 26.7
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Rynek 16:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 16:03 → Piłka 16:25",
@@ -319,7 +319,7 @@
     "przyjazd": "16:25",
     "przesiadka": "Koszęcin Rynek",
     "zapas_plan_min": 3.0,
-    "zapas_symulacja_min": 14.1
+    "zapas_symulacja_min": 13.9
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Koszęcin Lubliniecka 15:58; przesiadka, linia 4 (kier. Piłka): Koszęcin Lubliniecka 16:05 → Piłka 16:25",
@@ -328,7 +328,7 @@
     "przyjazd": "16:25",
     "przesiadka": "Koszęcin Lubliniecka",
     "zapas_plan_min": 7.0,
-    "zapas_symulacja_min": 17.4
+    "zapas_symulacja_min": 17.2
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:33 → Rzyce Irki 15:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 16:08 → Piłka 16:25",
@@ -353,25 +353,7 @@
     "przyjazd": "16:25",
     "przesiadka": "Wierzbie",
     "zapas_plan_min": 25.0,
-    "zapas_symulacja_min": 27.2
-   },
-   {
-    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 16:33 → Strzebiń Centrum 17:12; przesiadka, linia 4 (kier. Piłka): Strzebiń Centrum 17:41 → Piłka 18:25",
-    "czas_min": 112,
-    "odjazd": "16:33",
-    "przyjazd": "18:25",
-    "przesiadka": "Strzebiń Centrum",
-    "zapas_plan_min": 29.0,
-    "zapas_symulacja_min": 34.7
-   },
-   {
-    "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 16:33 → Strzebiń Ligonia 17:10; przesiadka, linia 4 (kier. Piłka): Strzebiń Ligonia 17:43 → Piłka 18:25",
-    "czas_min": 112,
-    "odjazd": "16:33",
-    "przyjazd": "18:25",
-    "przesiadka": "Strzebiń Ligonia",
-    "zapas_plan_min": 33.0,
-    "zapas_symulacja_min": 37.2
+    "zapas_symulacja_min": 27.0
    }
   ]
  },
@@ -387,7 +369,7 @@
     "przyjazd": "16:15",
     "przesiadka": "Koszęcin Rynek",
     "zapas_plan_min": 3.0,
-    "zapas_symulacja_min": 13.9
+    "zapas_symulacja_min": 13.8
    }
   ]
  }
