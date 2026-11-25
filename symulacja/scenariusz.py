@@ -152,7 +152,7 @@ for line, days in R['tt'].items():
             stops = []
             for i, key in enumerate(stl):
                 until = round(t[i] * 60)
-                if ids[i] == 'kosr' and line in ('2', '3', '4') and 0 < i < len(ids) - 1 and t[i + 1] - t[i] > 6:
+                if ids[i] == 'kosr' and line in ('2', '3', '4', '5') and 0 < i < len(ids) - 1 and t[i + 1] - t[i] > 6:
                     # odjazd z Rynku: :03 (puls) albo :18 (linia 4 poza szczytem) – najpóźniejszy, który mieści się przed następnym przystankiem
                     kand = [h * 60 + m for h in range(int(t[i] // 60), int(t[i + 1] // 60) + 1) for m in (3, 18)]
                     kand = [x for x in kand if t[i] <= x <= t[i + 1] - 1]
@@ -166,7 +166,7 @@ with open('przystanki.add.xml', 'w') as o:
         pl = f' parkingLength="{DL_ZATOKI.get(key, 120)}"' if key.split('_')[0] in WEZLY and key not in BEZ_ZATOKI else ''   # zatoka / plac: miejsce dla kilku czekających busów
         o.write(f'  <busStop id="{key}" lane="{lane}" startPos="{a:.1f}" endPos="{b:.1f}" name="{nm}" friendlyPos="true"{pl}/>\n')
     o.write('</additional>\n')
-KOL = {'1': '0,112,79', '2': '31,111,214', '3': '204,138,0', '4': '212,71,58'}
+KOL = {'1': '0,112,79', '2': '31,111,214', '3': '204,138,0', '4': '212,71,58', '5': '124,58,237'}
 import random, collections
 LOS = random.Random(7); PLAN = {}
 PRZEJAZDY = collections.defaultdict(list)

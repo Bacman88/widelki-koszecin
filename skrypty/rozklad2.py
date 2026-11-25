@@ -2,7 +2,8 @@ import json,math
 B=json.load(open('out/rozklad_base.json'))
 WD=[6,7,8,10,12,13,14,15,16,17,18,20,22];SAT=[7,9,11,13,15,17,19,21];SUN=[8,11,14,17,20]
 DEM={'wd':{'3':[10,12,20]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}}
-THROUGH={'1','2','4'}
+THROUGH={'1','2'}
+ARR={'4':-2}   # linia 4 (Łazy – Koszęcin) przyjeżdża na Rynek o :58 (przez PKP), pozostałe dojazdówki o :49
 OFF={'1':((-7,-5),(0,2)),'2':((-11,3),(-11,3)),'4':((-2,3),(-5,3))}   # linia 4 od Piłki na Rynek o :55 (25.11.2026: więcej czasu na zawrócenie w Piłce)
 def trips_for(k,H):
     b=B[k];t=b['t'];seq=b['names'];ir=seq.index('Koszęcin Rynek')
@@ -22,7 +23,7 @@ def trips_for(k,H):
         rt=[t[-1]-x for x in t][::-1];rs=seq[::-1]
         through(rs,rt,H*60+a2,H*60+d2,'B')
     else:
-        arr=H*60-11
+        arr=H*60+ARR.get(k,-11)
         res.append(('do węzła',seq,[round(arr-(t[ir]-x)) for x in t],b['km'][-1]))
         rs=seq[::-1];rt=[t[-1]-x for x in t][::-1];jr=rs.index('Koszęcin Rynek');dep=H*60+3
         res.append(('z węzła',rs,[round(dep-(rt[jr]-x)) for x in rt],b['km'][-1]))

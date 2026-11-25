@@ -46,15 +46,15 @@ a{color:var(--g)}
 <div class="tabs" id="dni"><button data-d="wd" class="on">Dzień roboczy</button><button data-d="sat">Sobota</button><button data-d="sun">Niedziela i święta</button></div>
 <div class="tabs" id="linie"></div>
 <div id="tabele"></div>
-<p class="note">Na Koszęcin Rynek linie 2, 3 i 4 przyjeżdżają ok. :49 i odjeżdżają o :03 (w tabeli: przyjazd nad odjazdem) – w tym czasie przejeżdża linia 1, przesiadka bez długiego czekania. <span class="ż">ż</span> – przystanek na żądanie. Kolumny na jasnopomarańczowym tle – kurs na zamówienie (w weekend linie 3 i 4). Dzień roboczy sprawdzony w symulacji ruchu.</p>
+<p class="note">Na Koszęcin Rynek linie 2, 3 i 5 przyjeżdżają ok. :49, linia 4 ok. :58, odjeżdżają o :03 (linia 5 o :11) (w tabeli: przyjazd nad odjazdem) – w tym czasie przejeżdża linia 1, przesiadka bez długiego czekania. <span class="ż">ż</span> – przystanek na żądanie. Kolumny na jasnopomarańczowym tle – kurs na zamówienie (w weekend linie 3, 4 i 5). Dzień roboczy sprawdzony w symulacji ruchu.</p>
 </main>
 <script>
-const KOL={'1':'#00704f','2':'#1f6fd6','3':'#cc8a00','4':'#d4473a'};
-const OPIS={'1':'Piasek – Strzebiń – Koszęcin Rynek – Wierzbie – Sadów – Lubliniec PKP','2':'Boronów – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','3':'Lisów PKP – Cieszowa – Koszęcin Rynek – Koszęcin PKP','4':'Łazy – Strzebiń – Koszęcin PKP – Koszęcin Rynek – Wierzbie – Rusinowice PKP – Piłka'};
+const KOL={'1':'#00704f','2':'#1f6fd6','3':'#cc8a00','4':'#d4473a','5':'#7c3aed'};
+const OPIS={'1':'Piasek – Strzebiń – Koszęcin Rynek – Wierzbie – Sadów – Lubliniec PKP','2':'Boronów – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','3':'Lisów PKP – Cieszowa – Koszęcin Rynek – Koszęcin PKP','4':'Łazy – Strzebiń – Koszęcin PKP – Koszęcin Rynek','5':'Koszęcin PKP – Koszęcin Rynek – Wierzbie – Rusinowice – Piłka – Sadów – Lubliniec PKP'};
 let D,dz='wd',ln='1';
 const hm=m=>Math.floor(m/60)+':'+String(m%60).padStart(2,'0');
 fetch('../wyszukiwarka/dane.json').then(r=>r.json()).then(d=>{D=d;
-  document.getElementById('linie').innerHTML=['1','2','3','4'].map(l=>`<button data-l="${l}" class="${l===ln?'on':''}"><span class="sw" style="background:${KOL[l]}"></span>Linia ${l}</button>`).join('');
+  document.getElementById('linie').innerHTML=['1','2','3','4','5'].map(l=>`<button data-l="${l}" class="${l===ln?'on':''}"><span class="sw" style="background:${KOL[l]}"></span>Linia ${l}</button>`).join('');
   document.querySelectorAll('#linie button').forEach(b=>b.onclick=()=>{ln=b.dataset.l;rysuj()});
   document.querySelectorAll('#dni button').forEach(b=>b.onclick=()=>{dz=b.dataset.d;rysuj()});
   const h=new URLSearchParams(location.hash.slice(1));if(h.get('linia'))ln=h.get('linia');if(h.get('dz'))dz=h.get('dz');rysuj();});

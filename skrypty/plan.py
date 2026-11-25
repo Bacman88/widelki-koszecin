@@ -1,6 +1,6 @@
 import json, os
 exec(open('skrypty/rozklad2.py').read().split("days={'wd'")[0])
-ALT={'2','4'}
+ALT={'2'}
 X2={7,16}
 X4={6,7,15,16}   # linia 4: w szczytach oba kierunki (praca 7:00 z Piłki, szkoły w Lublińcu z Łaz, powroty)   # linia 2: w szczycie szkolnym oba kierunki (Brusiek – Lubliniec)
 def build2(day,P,dem,LH=None):
@@ -25,8 +25,8 @@ def build2(day,P,dem,LH=None):
         if k=='1' and day=='wd' and P and P[-1]==22: trips.append(trips_for('1',23)[1]+(False,))
         out[k]=trips
     return out
-VAR={'pelny':({'wd':list(range(6,23)),'sat':[8,10,12,14,16,18,20,22],'sun':[9,12,15,18,20,22]},{'wd':{'3':[10,20]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}},{'wd':{'3':[6,7,8,10,12,14,15,16,18,20]}}),
-     'oszczedny':({'wd':[6,7,8,10,12,13,14,15,16,17,18,20,22],'sat':[8,10,12,14,16,18,20],'sun':[10,13,16,19]},{'wd':{'3':[18]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}},{'wd':{'3':[6,7,8,12,14,16,18],'4':[7,8,13,14,15,16,17,18],'2':[7,8,13,14,15,16,17,18]}})}
+VAR={'pelny':({'wd':list(range(6,23)),'sat':[8,10,12,14,16,18,20,22],'sun':[9,12,15,18,20,22]},{'wd':{'3':[10,20]},'sat':{'3':'all','4':'all','5':'all'},'sun':{'3':'all','4':'all','5':'all'}},{'wd':{'3':[6,7,8,10,12,14,15,16,18,20],'5':[6,7,8,10,12,14,15,16,17,18,20]},'sat':{'5':[8,10,12,14,16,18,20,22]}}),
+     'oszczedny':({'wd':[6,7,8,10,12,13,14,15,16,17,18,20,22],'sat':[8,10,12,14,16,18,20],'sun':[10,13,16,19]},{'wd':{'3':[18]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}},{'wd':{'3':[6,7,8,12,14,16,18],'4':[6,7,8,10,12,14,15,16,17,18],'5':[6,7,8,12,14,15,16,18],'2':[7,8,13,14,15,16,17,18]}})}
 DH={frozenset(('Koszęcin Rynek','Kalety PKP')):22,frozenset(('Piłka','Łazy')):41}   # przejazd techniczny (min)
 def vehicles(trips,lay=3):
     tr=sorted([(x[2][0],x[1][0],x[2][-1],x[1][-1]) for x in trips if not x[4]])
@@ -45,7 +45,7 @@ for v,(P,dem,LH) in VAR.items():
         row={};kmr=0
         for d in ND:
             tr=build2(d,P[d],dem,LH)[k];fx=[x for x in tr if not x[4]];dm=[x for x in tr if x[4]]
-            kd=sum(x[3] for x in fx)+0.5*sum(x[3] for x in dm)+(24.7 if (k=='4' and d=='wd') else 0)   # linia 4: przejazd techniczny drugiego busa Piłka → Łazy
+            kd=sum(x[3] for x in fx)+0.5*sum(x[3] for x in dm)   # linia 4: przejazd techniczny drugiego busa Piłka → Łazy
             row[d]={'kursy':len(fx),'zam':len(dm),'km':round(kd,1),'bus':vehicles(tr,lay=3)};kmr+=kd*ND[d]
         row['km_rok']=round(kmr);S[k]=row;tot+=kmr;fleet+=row['wd']['bus']
     res[v]=[S,round(tot),fleet]
@@ -86,7 +86,9 @@ for d in ND:
 
 # Kurzychowe: tylko kursy szkolne w dni robocze (rano 7:34 do szkół, po południu 13:33 i 16:33 z powrotem).
 # Kurs poranny z Łaz przesunięty o 1 min (Kurzychowe 7:33, Łazy 7:35), kurs z Łaz o 13:34 przesunięty na 13:38, żeby bus zdążył zawrócić.
-KURZ_RANO={7*60+34:1}; KURZ_PRZYJ={13*60+31,16*60+31}; PRZESUN={13*60+34:4}
+# 25.11.2026: Kurzychowe jako opcja (przystanek Łazy ok. 300 m dalej) – w rozkładzie podstawowym bez kursów; KURZ=1 włącza
+if os.environ.get('KURZ') == '1': KURZ_RANO={7*60+34:1}; KURZ_PRZYJ={13*60+31,16*60+31}; PRZESUN={13*60+34:4}
+else: KURZ_RANO={}; KURZ_PRZYJ=set(); PRZESUN={}
 d4=tt['4']['wd']; nowe={}
 for name,v in list(d4.items()):
     st=v['stops']
@@ -108,16 +110,47 @@ for name,v in list(d4.items()):
             else: zost.append(tr)
         v['trips']=zost
 d4.update(nowe)
-# Linia 4 poza szczytami 15 min później (25.11.2026): czwórka nie jedzie razem z jedynką na odcinkach
-# Strzebiń – Koszęcin i Koszęcin – Wierzbie. W szczytach (rano do 8:00, po południu 12:30–17:30) bez zmian:
-# przesiadki do/z Lublińca, szkoły, Kurzychowe, pociągi w Koszęcinie. Obieg dalej 2 h jednym busem.
-L4_PRZES = int(os.environ.get('L4_PRZES', 15))
-L4_SZCZYT = {'Łazy → Piłka': {5*60+34, 6*60+34, 13*60+38, 14*60+34, 15*60+34},
-             'Piłka → Łazy': {5*60+33, 6*60+33, 14*60+33, 16*60+33}}
-for name, keep in L4_SZCZYT.items():
-    for tr in tt['4']['wd'][name]['trips']:
-        if tr[0][0] not in keep: tr[0] = [x + L4_PRZES for x in tr[0]]
-for dz in ('sat', 'sun'):          # weekend: cała czwórka 15 min później (więcej różnych godzin do Koszęcina)
+# 25.11.2026: podział dawnej linii 4 – linia 4 Łazy – Strzebiń – Koszęcin PKP – Rynek (jeden bus, kółko w godzinę),
+# linia 5 Koszęcin – Wierzbie – Rusinowice – Piłka – Sadów – Lubliniec (co 2 h, w szczytach co godzinę).
+# Linia 4: w szczytach w pulsie (przesiadka do Lublińca w Strzebiniu, powroty z Rynku :03), poza szczytem 15 min później,
+# żeby nie jechać razem z linią 1. Wariant A: poza szczytem co godzinę, B: co ok. 2 h.
+WAR = os.environ.get('WARIANT', 'A')
+hm = lambda x: int(x.split(':')[0])*60 + int(x.split(':')[1])
+L4_WD = {'A': ('5:34 6:34 7:34 8:49 9:49 10:49 11:49 13:34 14:34 15:34 16:34 17:49 18:49 19:49',
+               '6:03 7:03 8:03 9:18 10:18 11:18 12:18 14:03 15:03 16:03 17:03 18:18 19:18 20:18'),
+         'B': ('5:34 6:34 7:34 8:49 10:49 13:34 14:34 15:34 16:34 17:49 19:49',
+               '6:03 7:03 8:03 10:18 12:18 14:03 15:03 16:03 17:03 18:18 20:18')}[WAR]
+def l4_set(dz, eastbound, starts):
     for name, v in tt['4'][dz].items():
-        for tr in v['trips']: tr[0] = [x + L4_PRZES for x in tr[0]]
+        if (v['stops'][0] == 'Łazy') != eastbound: continue
+        wzor = v['trips'][0]; base = wzor[0]
+        ref = base[0] if eastbound else base[v['stops'].index('Koszęcin Rynek')]
+        v['trips'] = [[[x - ref + st for x in base], wzor[1]] for st in starts]
+l4_set('wd', True, [hm(x) for x in L4_WD[0].split()])
+l4_set('wd', False, [hm(x) for x in L4_WD[1].split()])
+for dz in ('sat', 'sun'):          # weekend: linia 4 15 min później
+    for name, v in tt['4'][dz].items():
+        for tr in v['trips']: tr[0] = [x + 15 for x in tr[0]]
+# bez późnych wieczornych kursów linii 4 i 5 (odjazd po 20:30) – 25.11.2026
+for dz in ('wd', 'sat', 'sun'):
+  for ln in ('4', '5'):
+    for name, v in tt[ln][dz].items():
+        v['trips'] = [tr for tr in v['trips'] if tr[0][0] < 20*60+30]
+# linia 5: przesunięcie kursów (L5_SA – z Lublińca do Koszęcina, L5_SB – z Koszęcina do Lublińca), np. dłuższy postój na Koszęcinie PKP
+_sA=int(os.environ.get('L5_SA',0)); _sB=int(os.environ.get('L5_SB',8))
+for dz in ND:
+    for name, v in tt['5'][dz].items():
+        s_=_sA if v['stops'][0]=='Lubliniec PKP' else _sB
+        for tr in v['trips']: tr[0]=[x+s_ for x in tr[0]]
+# zestawienie wariantu pełnego po poprawkach (kursy, km, busy) – z gotowego rozkładu
+_BASE=json.load(open('out/rozklad_base.json'));_S={};_tot=0;_fl=0
+for k in tt:
+    row={};kmr=0;km=_BASE[k]['km'][-1]
+    for d in ND:
+        tr=[(None,v['stops'],t[0],km,t[1]) for v in tt[k][d].values() for t in v['trips']]
+        fx=[x for x in tr if not x[4]];dm=[x for x in tr if x[4]]
+        kd=km*(len(fx)+0.5*len(dm));row[d]={'kursy':len(fx),'zam':len(dm),'km':round(kd,1),'bus':vehicles(tr,lay=3)};kmr+=kd*ND[d]
+    row['km_rok']=round(kmr);_S[k]=row;_tot+=kmr;_fl+=row['wd']['bus']
+res['pelny']=[_S,round(_tot),_fl]
+print('pelny (po poprawkach)',round(_tot),_fl,{k:(x['km_rok'],x['wd']['bus'],x['wd']['kursy']) for k,x in _S.items()})
 json.dump({'tt':tt,'var':res},open('out/rozklad_data.json','w'),ensure_ascii=False,separators=(',',':'))

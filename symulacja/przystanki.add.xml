@@ -38,8 +38,6 @@
   <busStop id="kossz_2388" lane="2388_0" startPos="0.0" endPos="12.0" name="Koszęcin Szkoła" friendlyPos="true"/>
   <busStop id="kost_-2181#2" lane="-2181#2_0" startPos="118.4" endPos="130.4" name="Koszęcin Święta Trójca" friendlyPos="true"/>
   <busStop id="kost_2181#1" lane="2181#1_0" startPos="46.8" endPos="58.8" name="Koszęcin Święta Trójca" friendlyPos="true"/>
-  <busStop id="kurz_-2927#0" lane="-2927#0_0" startPos="79.5" endPos="124.5" name="Łazy Kurzychowe" friendlyPos="true" parkingLength="120"/>
-  <busStop id="kurz_2927#0" lane="2927#0_0" startPos="0.0" endPos="45.0" name="Łazy Kurzychowe" friendlyPos="true" parkingLength="120"/>
   <busStop id="laz_-3162" lane="-3162_0" startPos="0.0" endPos="45.0" name="Łazy" friendlyPos="true" parkingLength="120"/>
   <busStop id="laz_3162" lane="3162_0" startPos="316.5" endPos="361.5" name="Łazy" friendlyPos="true" parkingLength="120"/>
   <busStop id="lisp_-2365" lane="-2365_0" startPos="223.0" endPos="268.0" name="Lisów PKP" friendlyPos="true" parkingLength="120"/>
@@ -53,7 +51,6 @@
   <busStop id="pia_-3533#1" lane="-3533#1_0" startPos="0.0" endPos="45.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pia_3533#1" lane="3533#1_0" startPos="242.0" endPos="287.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pil_-727#0" lane="-727#0_0" startPos="56.9" endPos="101.9" name="Piłka" friendlyPos="true" parkingLength="120"/>
-  <busStop id="pil_727#0" lane="727#0_0" startPos="0.0" endPos="45.0" name="Piłka" friendlyPos="true" parkingLength="120"/>
   <busStop id="prad_-700" lane="-700_0" startPos="1250.2" endPos="1262.2" name="Prądy" friendlyPos="true"/>
   <busStop id="prad_700" lane="700_0" startPos="0.0" endPos="12.0" name="Prądy" friendlyPos="true"/>
   <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="74.0" endPos="86.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
