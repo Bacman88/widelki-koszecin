@@ -15,7 +15,7 @@ Projekt ma charakter **propozycji do dyskusji** z gminą. Czasy przejazdów są 
 | **3** | Lisów PKP – Chwostek – Mochała – Hadra – Cieszowa – Koszęcin Rynek – Koszęcin Szkoła – Koszęcin PKP | co 2 h; w szczytach szkolnych co godzinę |
 | **4** | Łazy – Strzebiń Szkoła – Strzebiń Lubliniecka – Koszęcin PKP – Koszęcin Szkoła – Koszęcin Rynek – Rzyce Irki – Wierzbie – Rusinowice PKP – Piłka | co 2 h; w szczytach w obie strony |
 
-Takt w węźle Koszęcin Rynek: linie 2–4 przyjeżdżają o :49 i odjeżdżają o :03, linia 1 przejeżdża bez czekania. 6 autobusów przez cały dzień, 7 w szczytach. Propozycje poza siatką podstawową (linie przerywane): **1L** (wzmocnienie Rynek – Lubliniec w szczycie), **4S** (kursy szkolne do Psar), **4P** (pętla Łazy – Psary po utwardzeniu drogi).
+Takt w węźle Koszęcin Rynek: linie 2–4 przyjeżdżają o :49 i odjeżdżają o :03, linia 1 przejeżdża bez czekania. 6 autobusów przez cały dzień, 7 w szczytach. Propozycje poza siatką podstawową (linie przerywane): **1L** (ewentualność: bezpośrednio Piłka – Rusinowice – Sadów – Lubliniec w dni nauki), **4S** (kursy szkolne do Psar), **4P** (pętla Łazy – Psary po utwardzeniu drogi).
 
 ## Co jest w środku
 
