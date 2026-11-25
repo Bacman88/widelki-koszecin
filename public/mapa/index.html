@@ -90,26 +90,26 @@ LN['4S']={c:'#d4473a',n:'Propozycja 4S (poza siatką podstawową): kursy szkolne
 LN['4P']={c:'#8e3b8a',n:'Propozycja 4P (poza siatką podstawową): pętla Strzebiń Szkoła – Łazy – Psary – Płaszczymąka – Bukowiec – Strzebiń',f:'po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki); kółko 25 min, Łazy → Psary 6 min',o:0,d:'2 7'};
 LN['4k']={c:'#d4473a',n:'Linia 4 – zjazd do Koszęcina PKP w czasie postoju na Rynku',f:'',o:6,hide:1};
 LN['1L']={c:'#00704f',n:'Propozycja 1L (wzmocnienie w szczycie): Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP',f:'w pół taktu, dni nauki 5:30–8:30 i 12:30–16:30; w Wierzbiu czeka na linię 4 z Piłki i Rusinowic',o:-6,d:'7 7'};
-LN['4L']={c:'#db2777',n:'Propozycja 4L (ewentualność, dni nauki): Piłka – Rusinowice PKP – Sadów – Lubliniec PKP',f:'bez przesiadki i bez postoju w Wierzbiu, ok. 22 min; np. Piłka 6:05 i 7:05 → Lubliniec PKP 6:27 / 7:27, po lekcjach z Lublińca 13:40, 14:40, 15:40',o:6,d:'7 7'};
+LN['4L']={c:'#db2777',n:'Propozycja 4L (ewentualność, dni nauki): Piłka – Rusinowice PKP – Sadów – Lubliniec PKP',f:'bez przesiadki i bez postoju w Wierzbiu, ok. 24 min; np. Piłka 6:05 i 7:05 → Lubliniec PKP 6:29 / 7:29, po lekcjach z Lublińca 13:40, 14:40, 15:40',o:6,d:'7 7'};
 LN['4e']=Object.assign({},LN['4'],{hide:1});LN['4r']=Object.assign({},LN['4'],{hide:1,o:-LN['4'].o});LN['3r']=Object.assign({},LN['3'],{hide:1,o:-LN['3'].o});
 const INFO={
-kosr:'<b>Koszęcin Rynek – główny węzeł</b><br>Linia 1 Piasek – Lubliniec przejeżdża bez czekania (w stronę Lublińca :53/:55, w stronę Strzebinia :00/:02). Linie 2, 3 i 4 dowożą do niej na :49 i odjeżdżają o :03.',
+kosr:'<b>Koszęcin Rynek – główny węzeł</b><br>Linia 1 Piasek – Lubliniec przejeżdża bez czekania (w stronę Lublińca :53/:55, w stronę Strzebinia :00/:02). Linie 2, 3 i 4 dowożą do niej na :49–:58 i odjeżdżają o :03.',
 kosp:'<b>Koszęcin PKP</b><br>Proponowany przystanek przy stacji. Pętla linii 3, linia 2 jedzie dalej do Bruśka i Kalet. Pociągi Kolei Śląskich do Lublińca i Tarnowskich Gór/Bytomia.',
-str:'<b>Strzebiń Lubliniecka</b><br>Linia 1 jedzie ul. Lubliniecką, przystanek w miejscu obecnego; na razie obsługuje też stację Strzebiń. Do Rynku 9 min, do Lublińca PKP 35 min.',
-strs:'<b>Strzebiń Szkoła</b><br>Linia 4 Łazy – Koszęcin jedzie przez szkołę, tak jak dziś, a potem przez Strzebiń Lubliniecka na Rynek.',
+str:'<b>Strzebiń Centrum</b><br>Linia 1 i linia 4, przystanek przy ul. Lublinieckiej w miejscu obecnego; obsługuje też stację Strzebiń (ok. 300 m). Do Rynku 9 min, do Lublińca PKP 38 min.',
+strs:'<b>Strzebiń Szkoła</b><br>Linia 4 Łazy – Koszęcin jedzie przez szkołę, tak jak dziś, a potem przez Strzebiń Centrum na Rynek. Do stacji Strzebiń podobnie blisko jak ze Strzebinia Centrum.',
 psy:'<b>Psary (szkoła)</b><br>Propozycja (poza siatką podstawową): kursy szkolne 4S z Łazów przez Strzebiń, Bukowiec i Płaszczymąkę, rano na lekcje i po południu z powrotem. Psary leżą w gminie Woźniki, więc kursy do dogadania z Woźnikami.',
 lisp:'<b>Lisów PKP – przesiadka na Częstochowę</b><br>Pętla linii 3 przy stacji w Lisowie (do centrum wsi ok. 10 min pieszo, busy gminy Herby). Pociągi Kolei Śląskich do Częstochowy (26 min) – te same, które jadą z Lublińca, tylko bliżej. Z Rynku 20 min.',
 borp:'<b>Boronów PKP</b><br>Proponowany przystanek przy stacji. Linia 2.',
 kalp:'<b>Kalety PKP – węzeł zewnętrzny</b><br>Stacja, na której spotykają się obie linie kolejowe. Pociągi do Tarnowskich Gór i Bytomia, komunikacja Kalet. Pętla linii 2.',
 pia:'<b>Piasek – węzeł na styku z gminą Woźniki</b><br>Przesiadka na busy GTV do Psar, Woźnik i Tarnowskich Gór. Pętla linii 1.',
 bor:'<b>Boronów – węzeł zewnętrzny</b><br>Przesiadka na kierunek Konopiska – Częstochowa. Początek linii 2.',
-lubpkp:'<b>Lubliniec PKP – węzeł zewnętrzny</b><br>Pętla linii 1 (ze Strzebinia 35 min bez przesiadki). Dalej kolej i komunikacja Lublińca („Jedźmy razem!”).',
+lubpkp:'<b>Lubliniec PKP – węzeł zewnętrzny</b><br>Pętla linii 1 (ze Strzebinia 38 min bez przesiadki). Dalej kolej i komunikacja Lublińca („Jedźmy razem!”).',
 psk:'<b>Płaszczymąka (Psary Skrzyżowanie)</b><br>Linia 1 jedzie z Piasku najkrótszą drogą. Do Psar (LO) busy gminy Woźniki i linia powiatowa 69 Psary – Bukowiec.',
 rus:'<b>Rusinowice PKP</b><br>Przystanek GTV „Rusinowice Dworzec PKP” już istnieje. Linia 4.',
 pil:'<b>Piłka</b><br>Pętla linii 4. Z Piłki do Koszęcina prosto prowadzi tylko leśny dojazd pożarowy, więc bus jedzie przez Rusinowice i Wierzbie.',
 
 bru:'<b>Brusiek – węzeł na styku z Tworogiem</b><br>Tu gmina Tworóg może dowęzłować swoje linie do linii 2 (Koszęcin, Kalety, Boronów).',
-laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 przez cały rok, przez Koszęcin do Rusinowic i Piłki.'};
+laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 przez cały rok, przez Koszęcin do Rusinowic i Piłki. Łazy Kurzychowe: kursy szkolne w dni nauki (rano 7:33, powroty 13:33 i 16:33).'};
 const map=L.map('map',{zoomControl:true,attributionControl:true,minZoom:10,maxZoom:16,zoomSnap:.25});
 map.attributionControl.setPrefix(false).addAttribution('© OpenStreetMap');
 const lineLayers={};
@@ -146,10 +146,10 @@ Promise.all([fetch('baza.json').then(r=>r.json()),fetch('data.json').then(r=>r.j
  const servedBy={};for(const [k,l] of Object.entries(D.lines))for(const s of l.stops)(servedBy[s]=servedBy[s]||[]).push(k);
  for(const [id,[la,lo,t,kind]] of Object.entries(D.stops)){
   const hub=kind==='hub',hz=kind==='hubz',nw=kind==='nowy';
-  const mk=L.circleMarker([la,lo],{pane:'stops',radius:hub?13:(hz?9:(nw?8:5.5)),color:hub?'#e6f5c8':(hz?'#1c2420':(nw?'#ff6f59':'#1c2420')),weight:hub?4:(hz?5:(nw?4:2.5)),fillColor:hub?'#00463c':(hz?'#e6f5c8':'#fff'),fillOpacity:1}).addTo(map);
+  const mk=L.circleMarker([la,lo],{pane:'stops',radius:hub?13:(hz?9:(nw?8:(kind==='zad'?4:5.5))),color:hub?'#e6f5c8':(hz?'#1c2420':(nw?'#ff6f59':'#1c2420')),weight:hub?4:(hz?5:(nw?4:2.5)),fillColor:hub?'#00463c':(hz?'#e6f5c8':'#fff'),fillOpacity:1}).addTo(map);
   const ls=[...new Set((servedBy[id]||[]).map(k=>(k==='4k'||k==='4e'||k==='4r')?'4':(k==='3r'?'3':k)))].map(k=>`<span class="sw" style="background:${LN[k].c}">${k}</span>`).join('');
   mk.bindPopup(`<div class="pp">${INFO[id]||'<b>'+t+'</b>'}<br><span style="display:inline-block;margin-top:6px">${ls}</span></div>`);
-  mk.bindTooltip(t+(nw?' (proponowany)':''),{permanent:true,direction:hub?'top':'right',offset:hub?[0,-12]:[8,0],className:'lbl'+(hub||hz?' big':'')+(nw?' new':'')});
+  mk.bindTooltip(t+(nw?' (proponowany)':'')+(kind==='zad'?' (na żądanie)':''),{permanent:true,direction:hub?'top':'right',offset:hub?[0,-12]:[8,0],className:'lbl'+(hub||hz?' big':'')+(nw?' new':'')});
  }
  const all=L.featureGroup(Object.values(lineLayers).flatMap(g=>g.getLayers()));
  map.setMaxBounds([[50.50,18.55],[50.80,19.15]]);map.fitBounds(all.getBounds(),{paddingTopLeft:[innerWidth>700?360:10,20],paddingBottomRight:[20,20]});
