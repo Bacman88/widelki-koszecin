@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:02,800
+Popołudnie dnia roboczego w symulacji ruchu – 1 sekunda filmu to 10 minut
+
+2
+00:00:02,800 --> 00:00:06,500
+Powroty z pracy i ze szkół – linia 1 co godzinę z Lublińca przez Koszęcin do Piasku
+
+3
+00:00:06,500 --> 00:00:10,000
+Na Rynku w Koszęcinie co godzinę przesiadka na busy do wszystkich wsi
+
+4
+00:00:10,000 --> 00:00:13,500
+W Strzebiniu na linię 1 z Lublińca czeka linia 4 do Łaz
+
+5
+00:00:13,500 --> 00:00:17,000
+Pociągi Kolei Śląskich i POLREGIO jadą według rozkładu 2026/27
+
+6
+00:00:17,000 --> 00:00:20,500
+Ruch aut według oficjalnych pomiarów – czerwone odcinki to wolny ruch
+
+7
+00:00:20,500 --> 00:00:24,000
+W szczycie najwięcej aut na trasie Lubliniec – Piasek i od strony Kalet
+
+8
+00:00:24,000 --> 00:00:30,000
+Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy · busy-koszecin.smart-ant.pl
