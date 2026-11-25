@@ -84,9 +84,32 @@
       ],
       "typ": "proponowany (dzieci do szkoły, mieszkańcy Starego Strzebinia)",
       "na_zadanie": false
+    },
+    {
+      "id": "laz",
+      "nazwa_robocza": "Łazy",
+      "lat": 50.6355,
+      "lon": 18.927,
+      "linie": [
+        "4"
+      ],
+      "typ": "istniejący, już w projekcie – POPRAWIĆ położenie (w projekcie 50.6345, 18.9315, ok. 350 m dalej); przy drodze na południe od ul. Św. Jana Chrzciciela",
+      "na_zadanie": false
+    },
+    {
+      "id": "kurz",
+      "nazwa_robocza": "Łazy – Kurzychowe",
+      "lat": 50.6413,
+      "lon": 18.9232,
+      "linie": [
+        "4"
+      ],
+      "typ": "istniejący; nowa pętla/koniec linii 4 (Piłka – Łazy – Kurzychowe), ul. Michała Drzymały przy Kurzychowem",
+      "na_zadanie": false
     }
   ],
-  "do_sprawdzenia": [
-    "Łazy – Kurzychowe: prawdopodobnie istniejący przystanek; możliwa zmiana pętli linii 4 w Łazach (położenie poda mieszkaniec)."
+  "do_sprawdzenia": [],
+  "zmiany_tras": [
+    "Linia 4: koniec w Łazach – Kurzychowe zamiast Łazy (ul. Św. Jana Chrzciciela → ul. Michała Drzymały na północ do Kurzychowego). Sprawdzić czas i miejsce do zawracania."
   ]
 }
