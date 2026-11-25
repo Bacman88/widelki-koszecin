@@ -115,6 +115,12 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 .spis a.wyr{background:var(--g);border-color:var(--g);color:#fff}.spis a.wyr::before{background:#fff;color:var(--g)}
 section{scroll-margin-top:60px}
 @media (max-width:640px){.spis a{padding:8px 12px 8px 8px;font-size:14px}.intro{padding:16px}}
+.podroze{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.podroz h3{margin:0 0 8px;font-size:18px}
+.podroz .kier{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--mut);margin:10px 0 2px;text-transform:uppercase}
+.podroz ol{margin:0;padding-left:20px}.podroz li{margin:2px 0}
+.podroz .czas{display:inline-block;margin-top:4px;font-weight:700;color:var(--g)}
+.podroz .alt{margin-top:10px;font-size:14px;color:var(--mut);border-top:1px dashed var(--rule);padding-top:8px}
 </style>
 </head>
 <body>
@@ -147,6 +153,7 @@ section{scroll-margin-top:60px}
 <li><a href="#symulacja">Symulacja ruchu (film)</a></li>
 <li><a href="#rano">Rano do Lublińca</a></li>
 <li><a href="#popoludnie">Po południu do domu</a></li>
+<li><a href="#przyklady">Przykładowe podróże</a></li>
 <li><a href="#mapa">Mapa interaktywna</a></li>
 <li><a href="#zdanie">Twoje zdanie</a></li>
 <li><a href="#rower">Rowerowy Strzebiń</a></li>
@@ -205,15 +212,15 @@ section{scroll-margin-top:60px}
 <tr><td>Sadów<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:10</td><td>7:10</td></tr>
 <tr><td>Wierzbie<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:05</td><td>7:05</td></tr>
 <tr><td>Rzyce Irki<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:00</td><td>7:00</td></tr>
-<tr><td>Koszęcin Rynek<span class="m">linia 1</span></td><td class="how">linia 1</td><td>6:03</td><td>7:03</td></tr>
+<tr><td>Koszęcin Rynek<span class="m">linia 1</span></td><td class="how">linia 1</td><td>5:53</td><td>6:53</td></tr>
 <tr><td>Strzebiń Lubliniecka<span class="m">linia 1</span></td><td class="how">linia 1</td><td>5:45</td><td>6:45</td></tr>
 <tr><td>Bukowiec<span class="m">linia 1</span></td><td class="how">linia 1</td><td>5:40</td><td>6:40</td></tr>
 <tr><td>Strzebiń Szkoła<span class="m">linia 4 → w Strzebiniu linia 1</span></td><td class="how">linia 4 → w Strzebiniu linia 1</td><td>5:42</td><td>6:42</td></tr>
 <tr><td>Łazy<span class="m">linia 4 → w Strzebiniu linia 1</span></td><td class="how">linia 4 → w Strzebiniu linia 1</td><td>5:36</td><td>6:36</td></tr>
 <tr><td>Cieszowa<span class="m">linia 3 → na Rynku linia 1</span></td><td class="how">linia 3 → na Rynku linia 1</td><td>5:42</td><td>6:42</td></tr>
 <tr><td>Brusiek<span class="m">linia 2 → na Rynku linia 1</span></td><td class="how">linia 2 → na Rynku linia 1</td><td>5:36</td><td>6:36</td></tr>
-<tr><td>Rusinowice<span class="m">linia 4 → w Irkach linia 1</span></td><td class="how">linia 4 → w Irkach linia 1</td><td>5:33</td><td>6:33</td></tr>
-<tr><td>Piłka<span class="m">linia 4 → w Irkach linia 1</span></td><td class="how">linia 4 → w Irkach linia 1</td><td>5:29</td><td>6:29</td></tr>
+<tr><td>Rusinowice<span class="m">linia 4 → w Wierzbiu linia 1</span></td><td class="how">linia 4 → w Wierzbiu linia 1</td><td>5:33</td><td>6:33</td></tr>
+<tr><td>Piłka<span class="m">linia 4 → w Wierzbiu linia 1</span></td><td class="how">linia 4 → w Wierzbiu linia 1</td><td>5:29</td><td>6:29</td></tr>
 </table></div>
 </section>
 
@@ -236,6 +243,28 @@ section{scroll-margin-top:60px}
 <tr><td>Piłka</td><td>15:23</td><td>16:23</td><td>18:23</td></tr>
 </table></div>
 <p class="note">Po lekcjach każda miejscowość jest w domu w niecałą godzinę. Do Rusinowic można też wrócić pociągiem z Lublińca.</p>
+</section>
+<section id="przyklady">
+<h2>Przykładowe podróże</h2>
+<div class="warn-inline">Przykładowe godziny z proponowanego rozkładu – nie obowiązują</div>
+<p class="note">Dzień roboczy. Godziny przesiadek sprawdzone w symulacji ruchu.</p>
+<div class="podroze">
+<div class="card podroz"><h3>Strzebiń ⇄ Lubliniec</h3>
+<div class="kier">Rano do pracy lub szkoły</div><ol><li>Strzebiń Lubliniecka 6:45 – linia 1 – Lubliniec PKP 7:20</li></ol><span class="czas">35 min, bez przesiadki</span>
+<div class="kier">Po południu do domu</div><ol><li>Lubliniec PKP 15:35 – linia 1 – Strzebiń Lubliniecka 16:10</li></ol><span class="czas">35 min, bez przesiadki</span>
+<div class="alt">Linia 1 jeździ co godzinę przez cały dzień, o tych samych minutach.</div></div>
+<div class="card podroz"><h3>Piłka, Rusinowice ⇄ Lubliniec</h3>
+<div class="kier">Rano – przesiadka w Wierzbiu</div><ol><li>Piłka 6:29 (Rusinowice PKP 6:33) – linia 4 – Wierzbie 6:39</li><li>Wierzbie 7:05 – linia 1 – Lubliniec PKP 7:20</li></ol><span class="czas">51 min (z Rusinowic 47 min), przesiadka na tym samym przystanku</span>
+<div class="kier">Po południu – przesiadka w Wierzbiu</div><ol><li>Lubliniec PKP 15:35 – linia 1 – Wierzbie 15:50</li><li>Wierzbie 16:13 – linia 4 – Rusinowice PKP 16:19, Piłka 16:23</li></ol><span class="czas">48 min do Piłki</span>
+<div class="alt">W Wierzbiu czeka się ok. 25 minut. Można też zostać w busie do Koszęcin Rynek i przesiąść się tam po 3–4 minutach – przyjazd do Lublińca jest ten sam. Z Rusinowic do Lublińca jedzie też pociąg (ok. 4 minuty).</div></div>
+<div class="card podroz"><h3>Boronów ⇄ Lubliniec</h3>
+<div class="kier">Rano – przesiadka na Rynku</div><ol><li>Boronów 6:37 – linia 2 – Koszęcin Rynek 6:49</li><li>Koszęcin Rynek 6:53 – linia 1 – Lubliniec PKP 7:20</li></ol><span class="czas">43 min</span>
+<div class="kier">Po południu – przesiadka na Rynku</div><ol><li>Lubliniec PKP 15:35 – linia 1 – Koszęcin Rynek 16:00</li><li>Koszęcin Rynek 16:03 – linia 2 – Boronów 16:15</li></ol><span class="czas">40 min</span>
+<div class="alt">Linia 2 jeździ co 2 godziny; na Rynku bus czeka na przesiadkę z linii 1.</div></div>
+<div class="card podroz"><h3>Łazy → szkoła w Koszęcinie</h3>
+<div class="kier">Rano na lekcje o 8:00</div><ol><li>Łazy 7:36 – linia 4 – Koszęcin Szkoła 7:57</li></ol><span class="czas">21 min, bez przesiadki</span>
+<div class="alt">Wcześniejszy kurs: Łazy 6:36 → Koszęcin Szkoła 6:57.</div></div>
+</div>
 </section>
 
 <section id="mapa">
