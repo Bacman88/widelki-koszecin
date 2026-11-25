@@ -172,7 +172,7 @@ for _, vid_, _, st_, _ in sorted(vehicles):
         if k.split('_')[0] in NA_ZADANIE and 0 < i_ < len(st_) - 1: PRZEJAZDY[k.split('_')[0]].append(vid_)
 WYBRANE = {s_: set(LOS.sample(v_, min(len(v_), round(NA_ZADANIE[s_])))) for s_, v_ in PRZEJAZDY.items()}
 with open('busy.rou.xml', 'w') as o:
-    o.write('<routes>\n  <vType id="bus" vClass="bus" length="8.5" maxSpeed="25" accel="1.2" decel="3.5" sigma="0.4" speedFactor="normc(1,0.05,0.9,1.1)" guiShape="bus"/>\n')
+    o.write('<routes>\n  <vType id="bus" vClass="bus" length="8.5" maxSpeed="19.44" accel="1.2" decel="3.5" sigma="0.4" speedFactor="normc(1,0.05,0.9,1.1)" guiShape="bus"/>\n')
     for dep, vid, edges, stops, line in sorted(vehicles):
         o.write(f'  <vehicle id="{vid}" type="bus" depart="{dep}" line="{line}" color="{KOL.get(line, "80,80,80")}" departLane="best" departPos="0">\n')
         o.write(f'    <route edges="{" ".join(edges)}"/>\n')

@@ -9,8 +9,8 @@
   <busStop id="bruk_3284" lane="3284_0" startPos="297.4" endPos="309.4" name="Brusiek Kościelna" friendlyPos="true"/>
   <busStop id="buk_-3555#2" lane="-3555#2_0" startPos="279.2" endPos="291.2" name="Bukowiec" friendlyPos="true"/>
   <busStop id="buk_3555#1" lane="3555#1_0" startPos="34.0" endPos="46.0" name="Bukowiec" friendlyPos="true"/>
-  <busStop id="bukz_-3555#0" lane="-3555#0_0" startPos="408.9" endPos="420.9" name="Bukowiec Zachód" friendlyPos="true"/>
-  <busStop id="bukz_3569" lane="3569_0" startPos="105.7" endPos="117.7" name="Bukowiec Zachód" friendlyPos="true"/>
+  <busStop id="bukz_-3555#0" lane="-3555#0_0" startPos="408.9" endPos="420.9" name="Bukowiec Katowicka" friendlyPos="true"/>
+  <busStop id="bukz_3569" lane="3569_0" startPos="105.7" endPos="117.7" name="Bukowiec Katowicka" friendlyPos="true"/>
   <busStop id="chw_-2360" lane="-2360_0" startPos="50.8" endPos="62.8" name="Chwostek" friendlyPos="true"/>
   <busStop id="chw_14#5" lane="14#5_0" startPos="31.6" endPos="43.6" name="Chwostek" friendlyPos="true"/>
   <busStop id="cie_-739#4" lane="-739#4_0" startPos="148.7" endPos="160.7" name="Cieszowa" friendlyPos="true"/>

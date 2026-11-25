@@ -63,7 +63,7 @@ S={ 'lubpkp':(50.6726,18.6910,'Lubliniec PKP','hubz'),'lisp':(50.7211,18.7922,'L
 'cie':(50.6712,18.8362,'Cieszowa','ist'),'rus':(50.6494,18.7637,'Rusinowice PKP','ist'),'pil':(50.6275,18.7585,'Piłka','ist'),'laz':(50.6355,18.9270,'Łazy','ist'),'psy':(50.6135,18.9664,'Psary (szkoła)','ist'),
 # przystanki dodane 25.11.2026 wg wskazań mieszkańca (dane/przystanki_uzupelnienia.json); typ 'zad' = na żądanie
 'kurz':(50.6413,18.9232,'Łazy Kurzychowe','ist'),'strst':(50.6150,18.9208,'Stary Strzebiń','nowy'),'strb':(50.6173,18.8901,'Strzebiń Ligonia','ist'),
-'strd':(50.6118,18.9169,'Strzebiń Poprzeczna','ist'),'bukz':(50.6084,18.9345,'Bukowiec Zachód','zad'),'prad':(50.62416,18.87249,'Prądy','zad'),
+'strd':(50.6118,18.9169,'Strzebiń Poprzeczna','ist'),'bukz':(50.6084,18.9345,'Bukowiec Katowicka','zad'),'prad':(50.62416,18.87249,'Prądy','zad'),
 'kosl':(50.6346,18.8440,'Koszęcin Ligonia','ist'),'kosll':(50.64105,18.83299,'Koszęcin Lubliniecka','ist'),'kost':(50.6226,18.8439,'Koszęcin Święta Trójca','ist'),
 'wiel':(50.65673,18.79453,'Wierzbie Las','zad'),'rusp':(50.64398,18.76527,'Rusinowice Straż','ist'),'sadsk':(50.66984,18.76039,'Sadów Skrzyżowanie','ist'),
 'sadsz':(50.67162,18.74797,'Sadów Szkoła','ist'),'sadk':(50.6709,18.72323,'Sadów Kopce','ist'),'lubp1':(50.67003,18.70488,'Lubliniec Powstańców Śląskich','ist'),

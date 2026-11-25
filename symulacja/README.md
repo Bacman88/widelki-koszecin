@@ -77,6 +77,8 @@ Najlepsze potwierdzenie to przejazd trasy w godzinach szczytu ze stoperem.
 
 ## Film (widok całej sieci)
 
+Busy w symulacji: do 50 km/h w terenie zabudowanym, do 70 km/h poza nim (autobus powyżej 9 miejsc). Rozkład liczony średnio 40 km/h plus postoje.
+
 `film.py` rysuje film z przebiegu symulacji: busy w kolorach linii, pociągi, odcinki z wolnym ruchem i zegar. Wynik to `wyniki/film.mp4` (H.264, 1280×720, ok. 0,6 MB, 30 s = poranek 5:30–10:30) i kadr `wyniki/film_kadr.png`. Film jest na stronie busy-koszecin.smart-ant.pl, w sekcji „Symulacja ruchu”.
 
 Przebieg z zapisem pozycji (busy i pociągi co 10 s, prędkości na drogach co 2 min):
