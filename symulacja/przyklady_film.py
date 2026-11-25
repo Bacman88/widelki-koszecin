@@ -10,16 +10,16 @@ from przyklady import plan, sym, szukaj, kod, linia, kier, hm, przyj, NAZWY
 
 FCD = os.environ.get('FCD', '/tmp/fcd_dz.xml')
 H = 3600
-KROTKIE = dict(NAZWY, lubpkp='Lubliniec PKP', str='Strzebiń', kosr='Koszęcin Rynek', rus='Rusinowice', bor='Boronów')
+KROTKIE = dict(NAZWY, lubpkp='Lubliniec PKP', str='Strzebiń', kosr='Koszęcin Rynek', rus='Rusinowice', bor='Boronów', wie='Wierzbie')
 
 # nazwa: (tytuł, [(nagłówek, skąd, dokąd, szukaj_od, szukaj_do, preferowana przesiadka)])
 PODROZE = {
     'strzebin': ('Strzebiń ⇄ Lubliniec – do pracy i z powrotem', [
         ('RANO · do pracy lub szkoły', 'str', 'lubpkp', 6.7 * H, 6.8 * H, None),
         ('PO POŁUDNIU · powrót do domu', 'lubpkp', 'str', 15.5 * H, 15.6 * H, None)]),
-    'pilka': ('Piłka ⇄ Lubliniec – przez węzeł Koszęcin Rynek', [
-        ('RANO · z Piłki do Lublińca', 'pil', 'lubpkp', 6.4 * H, 6.6 * H, 'kosr'),
-        ('PO POŁUDNIU · z Lublińca do Piłki', 'lubpkp', 'pil', 15.5 * H, 15.6 * H, 'kosr')]),
+    'pilka': ('Piłka ⇄ Lubliniec – przesiadka w Wierzbiu', [
+        ('RANO · z Piłki do Lublińca', 'pil', 'lubpkp', 6.4 * H, 6.6 * H, 'wie'),
+        ('PO POŁUDNIU · z Lublińca do Piłki', 'lubpkp', 'pil', 15.5 * H, 15.6 * H, 'wie')]),
     'boronow': ('Boronów ⇄ Lubliniec – przez węzeł Koszęcin Rynek', [
         ('RANO · z Boronowa do Lublińca', 'bor', 'lubpkp', 6.5 * H, 6.7 * H, 'kosr'),
         ('PO POŁUDNIU · z Lublińca do Boronowa', 'lubpkp', 'bor', 15.5 * H, 15.6 * H, 'kosr')]),

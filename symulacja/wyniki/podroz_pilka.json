@@ -1,18 +1,18 @@
 {
- "tytul": "Piłka ⇄ Lubliniec – przez węzeł Koszęcin Rynek",
+ "tytul": "Piłka ⇄ Lubliniec – przesiadka w Wierzbiu",
  "odcinki": [
   {
    "naglowek": "RANO · z Piłki do Lublińca",
-   "opis": "linia 4: Piłka 6:29 → Koszęcin Rynek 6:49\nprzesiadka Koszęcin Rynek (4 min)\nlinia 1: Koszęcin Rynek 6:53 → Lubliniec PKP 7:20\nrazem 51 min",
+   "opis": "linia 4: Piłka 6:29 → Wierzbie 6:39\nprzesiadka Wierzbie (26 min)\nlinia 1: Wierzbie 7:05 → Lubliniec PKP 7:20\nrazem 51 min",
    "kursy": [
     [
      "L4_Piłka_01_389",
      23340.0,
-     24179.0
+     23839.0
     ],
     [
      "L1_Piasek_01_395",
-     24786.0,
+     25129.0,
      25634.0
     ]
    ],
@@ -20,7 +20,7 @@
    "do": 25724.0,
    "nazwy": [
     "Piłka",
-    "Koszęcin Rynek",
+    "Wierzbie",
     "Lubliniec PKP"
    ],
    "punkty": [
@@ -29,8 +29,8 @@
      50.627933
     ],
     [
-     18.84103,
-     50.635502
+     18.774886,
+     50.66539
     ],
     [
      18.690519,
@@ -40,16 +40,16 @@
   },
   {
    "naglowek": "PO POŁUDNIU · z Lublińca do Piłki",
-   "opis": "linia 1: Lubliniec PKP 15:35 → Koszęcin Rynek 16:00\nprzesiadka Koszęcin Rynek (3 min)\nlinia 4: Koszęcin Rynek 16:03 → Piłka 16:23\nrazem 48 min",
+   "opis": "linia 1: Lubliniec PKP 15:35 → Wierzbie 15:50\nprzesiadka Wierzbie (23 min)\nlinia 4: Wierzbie 16:13 → Piłka 16:23\nrazem 48 min",
    "kursy": [
     [
      "L1_LubliniecPK_10_935",
      56100.0,
-     56944.0
+     56621.0
     ],
     [
      "L4_Łazy_07_936",
-     57787.0,
+     58183.0,
      58630.0
     ]
    ],
@@ -57,7 +57,7 @@
    "do": 58720.0,
    "nazwy": [
     "Lubliniec PKP",
-    "Koszęcin Rynek",
+    "Wierzbie",
     "Piłka"
    ],
    "punkty": [
@@ -66,8 +66,8 @@
      50.671692
     ],
     [
-     18.841068,
-     50.635612
+     18.774886,
+     50.665391
     ],
     [
      18.758652,

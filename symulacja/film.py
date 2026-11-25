@@ -250,6 +250,14 @@ def klatka(t):
             cur = kurs
         if cur is None: cur = ODC['kursy'][0][0]
         hl_slad.set_segments([sg for sg, _ in segs]); hl_slad.set_color([c for _, c in segs])
+        # czekanie na przesiadkę: pasażer stoi na przystanku (znacznik w kolorze następnej linii), bus jedzie dalej bez niego
+        ks = ODC['kursy']; ci = [k[0] for k in ks].index(cur)
+        if t > ks[ci][2] and ci + 1 < len(ks) and t < ks[ci + 1][1]:
+            nast = ks[ci + 1][0]; pp_ = P(*ODC['punkty'][ci + 1])
+            hl_sc.set_offsets([pp_]); hl_sc.set_color(KOL[nast[1]]); hl_sc.set_edgecolor('#1E1D1B'); hl_sc.set_alpha(0.55)
+            hl_txt.set_position(pp_); hl_txt.set_text(nast[1]); hl_txt.set_visible(True)
+            zegar.set_text(f'{int(t // 3600)}:{int(t % 3600 // 60):02d}'); return
+        hl_sc.set_alpha(1)
         here = [P(x[1], x[2]) for x in pozycje(t) if x[0] == cur]
         if here:
             hl_sc.set_offsets(here); hl_sc.set_color(KOL[cur[1]]); hl_sc.set_edgecolor('#1E1D1B')
