@@ -3,7 +3,7 @@
   "przystanki": [
     {
       "id": "strb",
-      "nazwa_robocza": "Strzebiń – Bagno (?)",
+      "nazwa_robocza": "Strzebiń – Juliusza Ligonia",
       "nr_mapy_przewoznika": 27,
       "lat": 50.6173,
       "lon": 18.8901,
@@ -133,10 +133,40 @@
       ],
       "typ": "istniejący",
       "na_zadanie": false
+    },
+    {
+      "id": "kosp",
+      "nazwa_robocza": "Koszęcin – Dworzec PKP",
+      "lat": 50.6233,
+      "lon": 18.8375,
+      "linie": [
+        "2",
+        "3",
+        "4"
+      ],
+      "typ": "istniejący, już w projekcie jako „Koszęcin PKP” (położenie zgodne, ok. 50 m) – zmiana nazwy na urzędową",
+      "na_zadanie": false
+    },
+    {
+      "id": "kost",
+      "nazwa_robocza": "Koszęcin – Święta Trójca",
+      "nr_mapy_przewoznika": 10,
+      "lat": 50.6226,
+      "lon": 18.8439,
+      "linie": [
+        "2",
+        "3",
+        "4"
+      ],
+      "typ": "istniejący, ul. Sobieskiego przy Św. Trójcy (na pętli przy stacji)",
+      "na_zadanie": false
     }
   ],
   "do_sprawdzenia": [],
   "zmiany_tras": [
     "Linia 4: koniec w Łazach – Kurzychowe zamiast Łazy (ul. Św. Jana Chrzciciela → ul. Michała Drzymały na północ do Kurzychowego). Sprawdzić czas i miejsce do zawracania."
+  ],
+  "uwagi": [
+    "Punkty 12–15 z mapy przewoźnika (Dworcowa, Kolejowa) to błąd w bazie – nie dodawać."
   ]
 }
