@@ -38,6 +38,7 @@ for st, (p, bus) in STACJE.items():
     if bus:
         d = m(p, S[bus]); piesze.append(['st_' + st, bus, max(2, round(d / 70 + 1))])
 piesze.append(['kosr', 'kossz', 6])
+piesze.append(['st_Strzebiń', 'strs', max(2, round(m(STACJE['Strzebiń'][0], S['strs']) / 70 + 1))])   # ze Strzebinia Szkoły też blisko na peron
 
 # --- busy: dzień roboczy z planu symulacji (plan_kursow.json), sobota i niedziela z rozkładu (out/rozklad_data.json)
 def kurs_z_planu(kid, st):
