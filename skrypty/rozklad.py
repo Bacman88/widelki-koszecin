@@ -17,7 +17,7 @@ def offsets(seq):
         k=segkm(a,b);km.append(km[-1]+k);t.append(t[-1]+k/V*60+(dw(a) if i>0 else 0)+(CROSS if b=='lubpkp' or a=='lubpkp' else 0))
     return t,km
 NAME={k:v[2] for k,v in S.items()}
-lines={'1':['pia','psk','buk','bukz','strd','str','strb','prad','kosl','kosr','kosll','irk','wiel','wie','sadsk','sadsz','sad','sadk','lubp1','lubpkp'],'2':['bor','borp','kosr','kossz','kost','kosp','bru','bruk','dru','kalm','kalp'],'3':['lisp','chw','moc','dol','cien','cie','kosr','kossz','kost','kosp'],'4':['laz','strst','strs','str','strb','prad','kosl','kost','kosp','kossz','kosr'],'5':['lubpkp','lubp1','sadk','sad','sadsz','sadsk','rus','rusp','pil','rusp','rus','wie','wiel','irk','kosll','kosr']}
+lines={'1':['pia','psk','buk','bukz','strd','str','strb','prad','kosl','kosr','kosll','irk','wiel','wie','sadsk','sadsz','sad','sadk','lubp1','lubpkp'],'2':['bor','borp','kosr','kossz','kost','kosp','bru','bruk','dru','kalm','kalp'],'3':['lisp','chw','moc','dol','cien','cie','kosr','kossz','kost','kosp'],'4':['laz','strst','strs','str','strb','prad','kosl','kost','kosp','kossz','kosr'],'5':['lubpkp','lubp1','sadk','sad','sadsz','sadsk','rus','rusp','pil','rusp','rus','wie','wiel','irk','kosll','kosr']+(['kossz','kost','kosp'] if __import__('os').environ.get('L5_PKP')=='1' else [])}
 out={}
 for k,seq in lines.items():
     t,km=offsets(seq);out[k]={'seq':seq,'names':[NAME[s] for s in seq],'t':[round(x,1) for x in t],'km':[round(x,2) for x in km]}

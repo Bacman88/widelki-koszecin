@@ -31,10 +31,8 @@
   <busStop id="kosll_835" lane="835_0" startPos="77.6" endPos="89.6" name="Koszęcin Lubliniecka" friendlyPos="true"/>
   <busStop id="kosp_-1115" lane="-1115_0" startPos="194.4" endPos="239.4" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosp_2405" lane="2405_0" startPos="0.0" endPos="45.0" name="Koszęcin PKP" friendlyPos="true" parkingLength="120"/>
-  <busStop id="kosr_-271#0" lane="-271#0_0" startPos="0.0" endPos="45.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosr_-271#3" lane="-271#3_0" startPos="0.0" endPos="24.1" name="Koszęcin Rynek" friendlyPos="true" parkingLength="37"/>
   <busStop id="kosr_-271#5" lane="-271#5_0" startPos="98.0" endPos="143.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
-  <busStop id="kosr_271#0" lane="271#0_0" startPos="54.7" endPos="99.7" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kosr_271#5" lane="271#5_0" startPos="0.0" endPos="45.0" name="Koszęcin Rynek" friendlyPos="true" parkingLength="120"/>
   <busStop id="kossz_-2178" lane="-2178_0" startPos="136.8" endPos="148.8" name="Koszęcin Szkoła" friendlyPos="true"/>
   <busStop id="kossz_2388" lane="2388_0" startPos="0.0" endPos="12.0" name="Koszęcin Szkoła" friendlyPos="true"/>

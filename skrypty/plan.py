@@ -136,6 +136,12 @@ for dz in ('wd', 'sat', 'sun'):
   for ln in ('4', '5'):
     for name, v in tt[ln][dz].items():
         v['trips'] = [tr for tr in v['trips'] if tr[0][0] < 20*60+30]
+# linia 5: przesunięcie kursów (L5_SA – z Lublińca do Koszęcina, L5_SB – z Koszęcina do Lublińca), np. dłuższy postój na Koszęcinie PKP
+_sA=int(os.environ.get('L5_SA',0)); _sB=int(os.environ.get('L5_SB',0))
+for dz in ND:
+    for name, v in tt['5'][dz].items():
+        s_=_sA if v['stops'][0]=='Lubliniec PKP' else _sB
+        for tr in v['trips']: tr[0]=[x+s_ for x in tr[0]]
 # zestawienie wariantu pełnego po poprawkach (kursy, km, busy) – z gotowego rozkładu
 _BASE=json.load(open('out/rozklad_base.json'));_S={};_tot=0;_fl=0
 for k in tt:

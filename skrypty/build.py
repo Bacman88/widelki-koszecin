@@ -1,3 +1,4 @@
+import os
 import json,math,networkx as nx
 from shapely.geometry import shape,box,mapping
 from shapely.ops import unary_union
@@ -68,7 +69,7 @@ S={ 'lubpkp':(50.6726,18.6910,'Lubliniec PKP','hubz'),'lisp':(50.7211,18.7922,'L
 'wiel':(50.65673,18.79453,'Wierzbie Las','zad'),'rusp':(50.64398,18.76527,'Rusinowice Straż','ist'),'sadsk':(50.66984,18.76039,'Sadów Skrzyżowanie','ist'),
 'sadsz':(50.67162,18.74797,'Sadów Szkoła','ist'),'sadk':(50.6709,18.72323,'Sadów Kopce','ist'),'lubp1':(50.67003,18.70488,'Lubliniec Powstańców Śląskich','ist'),
 'cien':(50.6790,18.8373,'Cieszowa Północ','zad'),'bruk':(50.5813,18.8112,'Brusiek Kościelna','ist'),'dru':(50.5801,18.8591,'Kalety Drutarnia','ist'),'kalm':(50.5672,18.8802,'Kalety 1 Maja','ist')}
-L={'1':['pia','psk','buk','bukz','strd','str','strb','prad','kosl','kosr','kosll','irk','wiel','wie','sadsk','sadsz','sad','sadk','lubp1','lubpkp'],'2':['bor','borp','@sk','kosr','kossz','kost','@sj','@tr','kosp','@tr','@sj','bru','bruk','dru','kalm','kalp'],'3':['lisp','chw','moc','dol','cien','cie','kosr','kossz','kost','@sj','@tr','kosp','@tr','@sj','kost','kossz','kosr'],'4':['laz','strst','strs','str','strb','prad','kosl','kost','@sj','@tr','kosp','@dw','kossz','kosr'],'5':['lubpkp','lubp1','sadk','sad','sadsz','sadsk','rus','rusp','pil','rusp','rus','wie','wiel','irk','kosll','kosr'],'1L':['kosr','kosll','irk','wiel','wie','sadsk','sadsz','sad','sadk','lubp1','lubpkp'],'4S':['str','strd','bukz','buk','psk','psy'],'4P':['laz','psy']}
+L={'1':['pia','psk','buk','bukz','strd','str','strb','prad','kosl','kosr','kosll','irk','wiel','wie','sadsk','sadsz','sad','sadk','lubp1','lubpkp'],'2':['bor','borp','@sk','kosr','kossz','kost','@sj','@tr','kosp','@tr','@sj','bru','bruk','dru','kalm','kalp'],'3':['lisp','chw','moc','dol','cien','cie','kosr','kossz','kost','@sj','@tr','kosp','@tr','@sj','kost','kossz','kosr'],'4':['laz','strst','strs','str','strb','prad','kosl','kost','@sj','@tr','kosp','@dw','kossz','kosr'],'5':['lubpkp','lubp1','sadk','sad','sadsz','sadsk','rus','rusp','pil','rusp','rus','wie','wiel','irk','kosll','kosr']+(['kossz','kost','@sj','@tr','kosp'] if os.environ.get('L5_PKP')=='1' else []),'1L':['kosr','kosll','irk','wiel','wie','sadsk','sadsz','sad','sadk','lubp1','lubpkp'],'4S':['str','strd','bukz','buk','psk','psy'],'4P':['laz','psy']}
 lines={}
 WP={'@dw':(50.6248,18.8406),'@tr':(50.6214,18.8415),'@sj':(50.6214,18.8437),'@li':(50.6346,18.8432),'@sk':(50.6377,18.8435),'@sjn':(50.6258,18.8431),'@lj':(50.6345,18.8412)}
 for k,seq in L.items():
