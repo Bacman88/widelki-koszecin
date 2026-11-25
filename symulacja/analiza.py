@@ -23,7 +23,7 @@ for v, pl in plan.items():
     po_linii[(line, kier)].append((t_plan, t_sim, max(late)))
     for i in range(1, len(pl)):
         nm = pl[i][0].split('_')[0]
-        if not (nm == 'kosr' and line in ('L2', 'L3', 'L4')):   # na Rynku dojazdówki mają czas odjazdu, nie przyjazdu
+        if not (nm == 'kosr' and line in ('L2', 'L3', 'L4', 'L5')):   # na Rynku dojazdówki mają czas odjazdu, nie przyjazdu
             spoz[nm].append((s[i][1] - int(pl[i][1])) / 60)
     wynik['kursy'].append({'kurs': v, 'odjazd': fm(int(pl[0][1])), 'plan_min': round(t_plan, 1), 'symulacja_min': round(t_sim, 1),
                            'maks_spoznienie_min': round(max(late), 1)})
@@ -40,7 +40,7 @@ for nm, xs in sorted(spoz.items(), key=lambda kv: -st.mean(kv[1]))[:8]:
 prz = []
 for v, pl in plan.items():
     s = sim.get(v); line = v.split('_')[0]
-    if not s or line not in ('L2', 'L3', 'L4'): continue
+    if not s or line not in ('L2', 'L3', 'L4', 'L5'): continue
     for i, (bs, until) in enumerate(pl):
         if bs.startswith('kosr') and 0 < i < len(pl) - 1:
             arr = s[i][1]; mn = arr % 3600 / 60
@@ -60,7 +60,7 @@ for v, pl in plan.items():
     for i in range(len(pl) - 1):
         a, b = pl[i][0].split('_')[0], pl[i + 1][0].split('_')[0]
         p = (int(pl[i + 1][1]) - int(pl[i][1])) / 60
-        if a == 'kosr' and v.split('_')[0] in ('L2', 'L3', 'L4') and i > 0: continue   # postój w węźle
+        if a == 'kosr' and v.split('_')[0] in ('L2', 'L3', 'L4', 'L5') and i > 0: continue   # postój w węźle
         jazda = (s[i + 1][1] - s[i][2]) / 60
         seg[(NAZ.get(a, a), NAZ.get(b, b))].append((p, jazda))
 print('\nOdcinki z najmniejszym zapasem (rozkład – jazda w symulacji, min; ujemny = rozkład za ciasny):')

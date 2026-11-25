@@ -8,7 +8,7 @@ for e in ET.parse('wyniki/przystanki.xml').getroot():
     sim[e.get('id')][e.get('busStop').split('_')[0]] = (float(e.get('started')), float(e.get('ended')))
 def pu(v, st): return next(int(u) for k, u in plan[v].items() if k.split('_')[0] == st)
 PRZ = [('Strzebiń: linia 4 z Łaz → linia 1 do Lublińca', 'L4_Łazy', 'L1_Piasek', 'str'),
-       ('Strzebiń: linia 1 z Lublińca → linia 4 do Łaz', 'L1_LubliniecPK', 'L4_Piłka', 'str')]
+       ('Strzebiń: linia 1 z Lublińca → linia 4 do Łaz', 'L1_LubliniecPK', 'L4_KoszęcinRyn', 'str')]
 wynik = []
 for opis, a, b, st in PRZ:
     ok = 0; n = 0; marg = []
