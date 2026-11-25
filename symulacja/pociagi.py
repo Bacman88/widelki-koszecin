@@ -45,6 +45,35 @@ PASAZERSKIE = {
 PR = {('131', 'a'): '04:58 06:58 08:03 10:00 12:50 13:35 14:54 16:49 17:26',
       ('131', 'b'): '07:03 09:38 11:46 14:49 15:48 17:41 19:08',
       ('61', 'a'): '14:38 16:46', ('61', 'b'): '06:59 07:32 14:05 16:16'}
+# Nowy rozkład 2026/27 z GTFS (dane/kolej/pociagi.json – akcja GitHub „Rozkład kolejowy”): nadpisuje tablice powyżej.
+# Pociąg dzielony na odcinki linii (np. POLREGIO Lubliniec – Lisów – Herby – Boronów – Strzebiń to 61a + 131a).
+LINIE_ST = {'131': ['Boronów', 'Strzebiń', 'Kalety'], '143': ['Lubliniec', 'Rusinowice', 'Koszęcin', 'Kalety'],
+            '61': ['Lubliniec', 'Kochanowice', 'Lisów']}
+REF = {'131': 'Strzebiń', '143': 'Koszęcin', '61': 'Lisów'}
+def z_gtfs(plik='../dane/kolej/pociagi.json', dzien='wd'):
+    import json
+    pas, pr = {}, {}
+    for x in json.load(open(plik))['pociagi'][dzien]:
+        st = [(s, b) for s, a, b in x['p']]
+        i = 0
+        while i < len(st):
+            # najdłuższy ciąg kolejnych stacji należących do jednej linii (z co najmniej dwiema stacjami)
+            best = None
+            for lin, lst in LINIE_ST.items():
+                j = i
+                while j < len(st) and st[j][0] in lst: j += 1
+                if j - i >= 2 and (best is None or j - i > best[1] - i): best = (lin, j)
+            if not best: i += 1; continue
+            lin, j = best; odc = st[i:j]; lst = LINIE_ST[lin]
+            kier = 'a' if lst.index(odc[0][0]) < lst.index(odc[1][0]) else 'b'
+            t = dict(odc).get(REF[lin])
+            if t is not None:
+                g = f'{t // 60:02d}:{t % 60:02d}'
+                pas.setdefault((lin, kier), set()).add(g)
+                if 'PolRegio' in x['przewoznik'] or 'POLREGIO' in x['przewoznik'].upper(): pr.setdefault((lin, kier), set()).add(g)
+            i = j
+    return ({k: (REF[k[0]], ' '.join(sorted(v))) for k, v in pas.items()}, {k: ' '.join(sorted(v)) for k, v in pr.items()})
+PASAZERSKIE, PR = z_gtfs()
 # pociągi S8 (Koleje Śląskie) kończą bieg w Lublińcu – pasażerskie na 143 jeżdżą Lubliniec ↔ Kalety
 TRASA_PAS = {'143': ['Lubliniec', 'Rusinowice', 'Koszęcin', (18.8852, 50.5740)]}
 
