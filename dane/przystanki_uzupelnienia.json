@@ -106,6 +106,32 @@
       ],
       "typ": "istniejący; nowa pętla/koniec linii 4 (Piłka – Łazy – Kurzychowe), ul. Michała Drzymały przy Kurzychowem",
       "na_zadanie": false
+    },
+    {
+      "id": "kosl",
+      "nazwa_robocza": "Koszęcin – Ligonia",
+      "nr_mapy_przewoznika": 16,
+      "lat": 50.6346,
+      "lon": 18.844,
+      "linie": [
+        "4"
+      ],
+      "typ": "istniejący; u przewoźnika na żądanie, ale dużo pasażerów – traktować jak stały",
+      "na_zadanie": false
+    },
+    {
+      "id": "kosll",
+      "nazwa_robocza": "Koszęcin – Lubliniecka",
+      "nr_mapy_przewoznika": 17,
+      "lat": 50.64105,
+      "lon": 18.83299,
+      "linie": [
+        "1",
+        "4",
+        "1L"
+      ],
+      "typ": "istniejący",
+      "na_zadanie": false
     }
   ],
   "do_sprawdzenia": [],
