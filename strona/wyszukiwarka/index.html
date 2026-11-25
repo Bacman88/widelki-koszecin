@@ -28,6 +28,7 @@ label{display:block;font-size:13px;font-weight:700;color:var(--mut);margin-botto
 select,input[type=time]{width:100%;font:inherit;padding:10px 12px;border:1px solid #cfc8b8;border-radius:10px;background:#fff;color:var(--ink)}
 .swap{height:44px;border:1px solid var(--rule);background:var(--paper);border-radius:10px;font-size:20px;cursor:pointer}
 .row2{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.tryb button{white-space:nowrap}
 .tryb{display:flex;border:1px solid #cfc8b8;border-radius:10px;overflow:hidden}
 .tryb button{font:inherit;border:0;background:#fff;padding:10px 14px;cursor:pointer;color:var(--ink)}
 .tryb button.on{background:var(--ink);color:#fff}
@@ -61,7 +62,7 @@ a{color:var(--g)}
 <div class="bar">⚠️ Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
 <main>
 <h1>Wyszukiwarka połączeń</h1>
-<p class="lead">Skąd, dokąd i o której – połączenie w proponowanej siatce busów gminy Koszęcin, z przesiadkami na pociągi Kolei Śląskich i POLREGIO. Dzień roboczy.</p>
+<p class="lead">Skąd, dokąd i o której – połączenie w proponowanej siatce busów gminy Koszęcin, z przesiadkami na pociągi Kolei Śląskich i POLREGIO – w dzień roboczy, sobotę i niedzielę.</p>
 <div class="form">
   <div class="row">
     <div><label for="z">Skąd</label><select id="z"></select></div>
@@ -69,6 +70,7 @@ a{color:var(--g)}
     <div><label for="do">Dokąd</label><select id="do"></select></div>
   </div>
   <div class="row2">
+    <div><label>Dzień</label><div class="tryb" id="dzien"><button data-d="wd" class="on">Roboczy</button><button data-d="sat">Sobota</button><button data-d="sun">Niedziela</button></div></div>
     <div><label>&nbsp;</label><div class="tryb"><button id="tOdj" class="on">Odjazd po</button><button id="tPrz">Przyjazd przed</button></div></div>
     <div><label for="czas">Godzina</label><input type="time" id="czas" value="07:00"></div>
     <button class="szukaj" id="szukaj">Szukaj</button>
@@ -81,14 +83,15 @@ a{color:var(--g)}
   <button data-q="lubpkp,laz,15:00,o">Lubliniec → Łazy po 15:00</button>
   <button data-q="cie,st_Koszęcin,06:00,o">Cieszowa → pociąg w Koszęcinie</button>
   <button data-q="pia,lisp,05:30,o">Piasek → Lisów (pociąg do Częstochowy)</button>
+  <button data-q="bru,lubpkp,07:30,p">Brusiek → Lubliniec przez Kalety</button>
 </div>
 <div id="wyniki"></div>
-<p class="note">Busy: proponowany rozkład (dzień roboczy), godziny sprawdzone w symulacji ruchu. Pociągi KŚ i POLREGIO: rozkład 2026/27 na stacjach w okolicy (Lubliniec, Kochanowice, Lisów, Rusinowice, Koszęcin, Strzebiń, Boronów), w przybliżeniu ±1 min – przed podróżą sprawdź rozkład przewoźnika. Przesiadka bus–bus co najmniej 2 minuty, przejście na peron wliczone. Propozycja 1L i kursy szkolne nie są uwzględnione. <a href="../">Więcej o propozycji</a>.</p>
+<p class="note">Busy: proponowany rozkład; dzień roboczy sprawdzony w symulacji ruchu, w weekend linie 3 i 4 jeżdżą na zamówienie. Pociągi KŚ i POLREGIO: nowy rozkład 2026/27 (od 13.12.2026, dane PKP PLK przez GTFS) na stacjach Lubliniec, Kochanowice, Lisów, Rusinowice, Koszęcin, Strzebiń, Boronów i Kalety – przed podróżą sprawdź rozkład przewoźnika. Przesiadka bus–bus co najmniej 2 minuty, przejście na peron wliczone. Propozycje przerywane (1L, 4L, 4S, 4P) nie są uwzględnione. <a href="../">Więcej o propozycji</a>.</p>
 </main>
 <script>
 const KOL_TXT={KŚ:'pociąg Kolei Śląskich',PR:'pociąg POLREGIO'};
 const PRZES=2, OKNO=240;
-let D,C=[],FP={},tryb='o';
+let D,C=[],FP={},tryb='o',dz='wd',KURSY=[];
 const $=id=>document.getElementById(id);
 const hm=m=>{m=((m%1440)+1440)%1440;return Math.floor(m/60)+':'+String(m%60).padStart(2,'0')};
 const nm=id=>D.przystanki[id].n;
@@ -97,20 +100,24 @@ fetch('dane.json').then(r=>r.json()).then(d=>{D=d;przygotuj();czytajHash();windo
 let ostHash='';
 
 function przygotuj(){
-  D.kursy.forEach((k,ti)=>{for(let i=0;i<k.p.length-1;i++){const a=k.p[i],b=k.p[i+1];C.push({d:a[2],a:b[1],z:a[0],do:b[0],t:ti,i})}});
-  C.sort((x,y)=>x.d-y.d||x.a-y.a);
+  ustawDzien(dz,true);
   D.piesze.forEach(([a,b,m])=>{(FP[a]=FP[a]||[]).push([b,m]);(FP[b]=FP[b]||[]).push([a,m])});
   const ids=Object.keys(D.przystanki), bus=ids.filter(i=>!D.przystanki[i].kolej).sort((a,b)=>nm(a).localeCompare(nm(b),'pl')), st=ids.filter(i=>D.przystanki[i].kolej).sort((a,b)=>nm(a).localeCompare(nm(b),'pl'));
   const opt=i=>`<option value="${i}">${nm(i)}${D.przystanki[i].g?' ('+D.przystanki[i].g+')':''}</option>`;
   const html=`<optgroup label="Przystanki busów">${bus.map(opt).join('')}</optgroup><optgroup label="Stacje kolejowe">${st.map(opt).join('')}</optgroup>`;
   $('z').innerHTML=html;$('do').innerHTML=html;$('z').value='str';$('do').value='lubpkp';
   $('swap').onclick=()=>{const v=$('z').value;$('z').value=$('do').value;$('do').value=v;szukaj()};
+  document.querySelectorAll('#dzien button').forEach(b=>b.onclick=()=>ustawDzien(b.dataset.d));
   $('tOdj').onclick=()=>ustawTryb('o');$('tPrz').onclick=()=>ustawTryb('p');
   $('szukaj').onclick=szukaj;$('z').onchange=$('do').onchange=$('czas').onchange=szukaj;
   document.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>{const [z,d,t,m]=b.dataset.q.split(',');$('z').value=z;$('do').value=d;$('czas').value=t.padStart(5,'0');ustawTryb(m,true);szukaj()});
 }
+function ustawDzien(d,cicho){dz=d;KURSY=D.dni[d];C=[];
+  KURSY.forEach((k,ti)=>{for(let i=0;i<k.p.length-1;i++){const a=k.p[i],b=k.p[i+1];C.push({d:a[2],a:b[1],z:a[0],do:b[0],t:ti,i})}});
+  C.sort((x,y)=>x.d-y.d||x.a-y.a);
+  document.querySelectorAll('#dzien button').forEach(b=>b.classList.toggle('on',b.dataset.d===d));if(!cicho)szukaj()}
 function ustawTryb(m,cicho){tryb=m;$('tOdj').classList.toggle('on',m==='o');$('tPrz').classList.toggle('on',m==='p');if(!cicho)szukaj()}
-function czytajHash(){const h=new URLSearchParams(location.hash.slice(1));if(h.get('z')&&D.przystanki[h.get('z')])$('z').value=h.get('z');if(h.get('do')&&D.przystanki[h.get('do')])$('do').value=h.get('do');if(h.get('t'))$('czas').value=h.get('t');ustawTryb(h.get('tryb')==='p'?'p':'o',true);szukaj()}
+function czytajHash(){const h=new URLSearchParams(location.hash.slice(1));if(h.get('z')&&D.przystanki[h.get('z')])$('z').value=h.get('z');if(h.get('do')&&D.przystanki[h.get('do')])$('do').value=h.get('do');if(h.get('t'))$('czas').value=h.get('t');ustawTryb(h.get('tryb')==='p'?'p':'o',true);if(['wd','sat','sun'].includes(h.get('dz')))ustawDzien(h.get('dz'),true);szukaj()}
 
 // Connection Scan: najwcześniejszy przyjazd z jednego odjazdu startowego
 function csa(zr,t0){
@@ -136,14 +143,14 @@ function trasa(J,cel){
   while(J[s]&&!J[s].start&&g++<50){
     const j=J[s];
     if(j.pie!==undefined){nogi.unshift({pie:1,z:j.pie,do:s,m:j.m});s=j.pie}
-    else{const k=D.kursy[j.wej.t];nogi.unshift({k,z:j.wej.z,do:j.wys.do,d:j.wej.d,a:j.wys.a,i0:j.wej.i,i1:j.wys.i+1});s=j.wej.z}
+    else{const k=KURSY[j.wej.t];nogi.unshift({k,z:j.wej.z,do:j.wys.do,d:j.wej.d,a:j.wys.a,i0:j.wej.i,i1:j.wys.i+1});s=j.wej.z}
   }
   return nogi;
 }
 function szukaj(){
   if(!D)return;
   const z=$('z').value,cel=$('do').value,[hh,mm]=$('czas').value.split(':').map(Number),T=hh*60+mm;
-  ostHash=`z=${z}&do=${cel}&t=${$('czas').value}&tryb=${tryb}`;history.replaceState(null,'','#'+ostHash);
+  ostHash=`z=${z}&do=${cel}&t=${$('czas').value}&tryb=${tryb}&dz=${dz}`;history.replaceState(null,'','#'+ostHash);
   if(z===cel){pokaz([], 'Wybierz dwa różne przystanki.');return}
   const lo=tryb==='o'?T:T-OKNO, hi=tryb==='o'?T+OKNO:T;
   // momenty wyjścia z domu: odjazdy z przystanku startowego i odjazdy ze stacji obok minus dojście
@@ -177,7 +184,7 @@ function pokaz(r,brak){
       if(prev!==null){const c=n.d-prev;maxc=Math.max(maxc,c);if(c>0)html+=`<div class="czek ${c>=30?'dd':c>=15?'d':''}">czekanie ${c} min${c>=15?' – słabszy punkt':''}</div>`}
       const k=n.k,poc=!/^[1-4]$/.test(k.l),ile=n.i1-n.i0-1;
       const nz=k.p[n.i0][3]||k.p[n.i1][3];
-      html+=`<div class="leg"><div><span class="bdg l${k.l}">${k.l}</span></div><div><div class="t">${hm(n.d)} ${nm(n.z)} → ${hm(n.a)} ${nm(n.do)}</div><div class="s">${poc?KOL_TXT[k.l]+', kierunek '+k.k:'linia '+k.l+', kierunek '+k.k}${ile>0?' · '+ile+' przyst. po drodze':''}${nz?' · przystanek na żądanie':''}</div></div></div>`;
+      html+=`<div class="leg"><div><span class="bdg l${k.l}">${k.l}</span></div><div><div class="t">${hm(n.d)} ${nm(n.z)} → ${hm(n.a)} ${nm(n.do)}</div><div class="s">${poc?KOL_TXT[k.l]+' '+k.nr+', kierunek '+k.k:'linia '+k.l+', kierunek '+k.k}${ile>0?' · '+ile+' przyst. po drodze':''}${nz?' · przystanek na żądanie':''}${k.zam?' · <b>kurs na zamówienie</b>':''}</div></div></div>`;
       prev=n.a;
     });
     const czas=o.prz-o.odj,prz=jz.length-1,sl=maxc>=15||czas>=90;

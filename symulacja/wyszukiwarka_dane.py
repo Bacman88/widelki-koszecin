@@ -1,7 +1,7 @@
 """Dane dla wyszukiwarki połączeń na stronie (strona/wyszukiwarka/dane.json).
 
 Busy: proponowany rozkład dnia roboczego (plan_kursow.json – ten sam, który jedzie w symulacji).
-Pociągi KŚ i POLREGIO: postoje na stacjach z symulacji (wyniki/przystanki.xml, rozkład 2026/27, ±1 min).
+Pociągi KŚ i POLREGIO: rozkład 2026/27 z GTFS (dane/kolej/pociagi.json).
 Przejścia piesze: przystanek przy stacji ↔ peron, Koszęcin Rynek ↔ Koszęcin Szkoła.
 Uruchom po pełnym przebiegu symulacji (cała doba, patrz README „Film”):  python3 wyszukiwarka_dane.py
 """
@@ -23,7 +23,7 @@ S['prad'] = (50.62416, 18.87249)   # Prądy: przystanek dodany w symulacji (scen
 STACJE = {'Lubliniec': ((50.6726, 18.6910), 'lubpkp'), 'Rusinowice': ((50.6490, 18.7638), 'rus'),
           'Koszęcin': ((50.6230, 18.8359), 'kosp'), 'Strzebiń': ((50.6184, 18.9000), 'str'),
           'Boronów': ((50.6654, 18.9014), 'borp'), 'Lisów': ((50.7208, 18.7911), 'lisp'),
-          'Kochanowice': ((50.6995, 18.7486), None)}
+          'Kochanowice': ((50.6995, 18.7486), None), 'Kalety': ((50.5663, 18.8883), 'kalp')}
 
 def m(a, b):   # metry
     return math.hypot((a[0] - b[0]) * 111200, (a[1] - b[1]) * 111200 * math.cos(math.radians(50.65)))
@@ -39,36 +39,50 @@ for st, (p, bus) in STACJE.items():
         d = m(p, S[bus]); piesze.append(['st_' + st, bus, max(2, round(d / 70 + 1))])
 piesze.append(['kosr', 'kossz', 6])
 
-kursy = []   # {l: linia, k: kierunek, p: [[przystanek, przyjazd, odjazd, na_żądanie]]}
-for kid, st in sorted(plan.items(), key=lambda x: x[1][0][1]):
-    l = kid.split('_')[0][1:]
-    p = []
+# --- busy: dzień roboczy z planu symulacji (plan_kursow.json), sobota i niedziela z rozkładu (out/rozklad_data.json)
+def kurs_z_planu(kid, st):
+    l = kid.split('_')[0][1:]; p = []
     for i, (sid, t, stale) in enumerate(st):
-        kod = sid.split('_')[0]
-        arr = dep = round(t / 60)
+        kod = sid.split('_')[0]; arr = dep = round(t / 60)
         if kod == 'kosr' and l in '234' and 0 < i < len(st) - 1:   # postój w węźle: przyjazd ok. :49, odjazd :03
             arr = max(round((t - POSTOJ_RYNEK) / 60), p[-1][2] + 1)
         p.append([kod, arr, dep, 0 if stale else 1])
-    assert all(b[1] >= a[2] for a, b in zip(p, p[1:])), kid
-    kursy.append({'l': l, 'k': NAZWY[p[-1][0]], 'p': p})
+    return {'l': l, 'k': NAZWY[p[-1][0]], 'p': p}
 
-# pociągi pasażerskie z symulacji
-KIER = {('131', 'a'): 'Tarnowskie Góry', ('131', 'b'): 'Herby Nowe', ('143', 'a'): 'Kalety, Tarnowskie Góry',
-        ('143', 'b'): 'Lubliniec', ('61', 'a'): 'Częstochowa', ('61', 'b'): 'Lubliniec'}
-poc = {}
-for mm in re.finditer(r'<stopinfo id="(poc(\d+)([ab])_p\d+(\w))" type="pociag"[^>]*started="([\d.]+)" ended="([\d.]+)"[^>]*busStop="st_([^_"]+)',
-                      open('wyniki/przystanki.xml', encoding='utf-8').read()):
-    vid, lin, kier, prz, a, b, st = mm.groups()
-    if st not in STACJE: continue
-    poc.setdefault(vid, {'l': 'KŚ' if prz == 'K' else 'PR', 'tor': lin, 'k': KIER.get((lin, kier), ''), 'p': []})['p'].append(
-        ['st_' + st, round(float(a) / 60), round(float(b) / 60), 0])
-for v in poc.values():
-    v['p'].sort(key=lambda x: x[1])
-    if len(v['p']) > 1: kursy.append(v)
+dni = {'wd': [kurs_z_planu(k, st) for k, st in sorted(plan.items(), key=lambda x: x[1][0][1])]}
+# czasy przejazdu między kolejnymi przystankami (z dnia roboczego) – do wyliczenia odjazdu z Rynku w weekend
+jazda = {}
+for k in dni['wd']:
+    for a, b in zip(k['p'], k['p'][1:]): jazda.setdefault((k['l'], a[0], b[0]), b[1] - a[2])
+KOD = {v: k for k, v in NAZWY.items()}
+rd = json.load(open('../out/rozklad_data.json'))['tt']
+for dz in ('sat', 'sun'):
+    dni[dz] = []
+    for l, v in rd.items():
+        for kier, x in v[dz].items():
+            kody = [KOD[n] for n in x['stops']]
+            for czasy, zam in x['trips']:
+                p = []
+                for i, (kod, t) in enumerate(zip(kody, czasy)):
+                    dep = t
+                    if kod == 'kosr' and 0 < i < len(kody) - 1 and (l, kod, kody[i + 1]) in jazda:
+                        dep = max(t, czasy[i + 1] - jazda[(l, kod, kody[i + 1])])
+                    p.append([kod, t, dep, 1 if kod in ('irk', 'psk') else 0])
+                k = {'l': l, 'k': NAZWY[kody[-1]], 'p': p}
+                if zam: k['zam'] = 1
+                dni[dz].append(k)
 
-out = {'opis': 'Propozycja siatki busów gminy Koszęcin – dzień roboczy. Pociągi KŚ i POLREGIO wg rozkładu 2026/27 (w przybliżeniu). Nie obowiązuje.',
-       'przystanki': stops, 'piesze': piesze, 'kursy': kursy}
+# --- pociągi: rozkład 2026/27 z GTFS (dane/kolej/pociagi.json, akcja GitHub „Rozkład kolejowy”)
+kol = json.load(open('../dane/kolej/pociagi.json'))
+for dz, lst in kol['pociagi'].items():
+    for x in lst:
+        prz = 'KŚ' if 'Śląskie' in x['przewoznik'] else 'PR'
+        dni[dz].append({'l': prz, 'nr': f"{x['linia']} {x['nr']}".strip(), 'k': x['kier'],
+                        'p': [['st_' + s, a, b, 0] for s, a, b in x['p']]})
+for dz, v in dni.items(): v.sort(key=lambda k: k['p'][0][2])
+out = {'opis': 'Propozycja siatki busów gminy Koszęcin. Pociągi KŚ i POLREGIO wg rozkładu 2026/27 (GTFS, dni: ' + ', '.join(kol['dni'].values()) + '). Nie obowiązuje.',
+       'przystanki': stops, 'piesze': piesze, 'dni': dni}
 dst = sys.argv[1] if len(sys.argv) > 1 else '../strona/wyszukiwarka/dane.json'
 import os; os.makedirs(os.path.dirname(dst), exist_ok=True)
 json.dump(out, open(dst, 'w'), ensure_ascii=False, separators=(',', ':'))
-print(dst, len(stops), 'przystanków,', sum(1 for k in kursy if k['l'] in '1234'), 'kursów busów,', len(poc), 'pociągów,', piesze)
+print(dst, len(stops), 'przystanków;', {d: (sum(1 for k in v if k['l'] in '1234'), sum(1 for k in v if k['l'] not in '1234')) for d, v in dni.items()}, piesze)
