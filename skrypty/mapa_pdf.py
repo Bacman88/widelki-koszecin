@@ -18,9 +18,10 @@ LN={'1':('#00704f','Piasek – Płaszczymąka – Bukowiec – Strzebiń – Kos
 LN['4S']=('#d4473a','Propozycja 4S: kursy szkolne Łazy – Strzebiń – Bukowiec – Płaszczymąka – Psary','poza siatką podstawową; przerywana: Strzebiń Lubliniecka – Psary; Łazy → Psary 20 min',-1.4)
 LN['4P']=('#8e3b8a','Propozycja 4P: pętla Strzebiń – Łazy – Psary – Płaszczymąka – Strzebiń','poza siatką podstawową; po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki)',0)
 LN['4k']=('#d4473a','','',1.4)
-LN['1L']=('#00704f','Propozycja 1L: Piłka – Rusinowice PKP – Sadów – Lubliniec PKP','poza siatką podstawową; ewentualność w dni nauki, bez przesiadki w Wierzbiu, ok. 22 min',-2.4)
+LN['1L']=('#00704f','Propozycja 1L: wzmocnienie Koszęcin Rynek – Irki – Wierzbie – Sadów – Lubliniec PKP','poza siatką podstawową; w pół taktu w szczytach (dni nauki), w Wierzbiu przesiadka z linii 4',-2.4)
+LN['4L']=('#d4473a','Propozycja 4L: Piłka – Rusinowice PKP – Sadów – Lubliniec PKP','poza siatką podstawową; ewentualność w dni nauki, bez przesiadki i bez postoju w Wierzbiu, ok. 22 min',2.4)
 LN['4e']=LN['4'];LN['4r']=LN['4'][:3]+(-LN['4'][3],);LN['3r']=LN['3'][:3]+(-LN['3'][3],)
-DASH={'1L':(0,(3,2.2)),'4S':(0,(3,2.2)),'4P':(0,(1,1.6))}
+DASH={'1L':(0,(3,2.2)),'4L':(0,(3,2.2)),'4S':(0,(3,2.2)),'4P':(0,(1,1.6))}
 PAPER='#f7f4ec'
 def page_map(pdf,ext,title,sub,fname=None,lab_scale=1.0,inset=False):
     fig=plt.figure(figsize=(16.54,11.69));fig.patch.set_facecolor(PAPER)
@@ -49,8 +50,8 @@ def page_map(pdf,ext,title,sub,fname=None,lab_scale=1.0,inset=False):
     # linie: wspólne odcinki jako stykające się paski na osi drogi (jak w hubie rowerowym)
     import collections
     u=max((x1-x0)*K/(16.54*.98*72),(y1-y0)/(11.69*.98*72))   # jednostki mapy na 1 pt
-    BW={'1':4.6,'2':2.4,'3':2.4,'4':2.4,'1L':2.2,'4S':2.2,'4P':2.2}
-    ORD=['1','4','2','3','1L','4S','4P'];GAP=0.9   # propozycje zawsze na zewnątrz; odstęp między paskami (pt)
+    BW={'1':4.6,'2':2.4,'3':2.4,'4':2.4,'1L':2.2,'4L':2.2,'4S':2.2,'4P':2.2}
+    ORD=['1','4','2','3','1L','4L','4S','4P'];GAP=0.9   # propozycje zawsze na zewnątrz; odstęp między paskami (pt)
     PTH={k:[tuple(q) for q in l['path']] for k,l in D['lines'].items()}
     # propozycje: obetnij krótkie końcówki biegnące wspólnie z liniami podstawowymi (np. 1L między Rynkiem a skrzyżowaniem)
     CORE=set()
