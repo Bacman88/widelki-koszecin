@@ -159,11 +159,53 @@
       ],
       "typ": "istniejący, ul. Sobieskiego przy Św. Trójcy (na pętli przy stacji); linia 2 jedzie inną ulicą (ok. 120 m obok) – sprawdzić, czy ma tam stawać",
       "na_zadanie": false
+    },
+    {
+      "id": "wiel",
+      "nazwa_robocza": "Wierzbie – Główna (Las)",
+      "nr_mapy_przewoznika": 31,
+      "lat": 50.65673,
+      "lon": 18.79453,
+      "linie": [
+        "1",
+        "4",
+        "1L"
+      ],
+      "typ": "istniejący",
+      "na_zadanie": true
+    },
+    {
+      "id": "rusp",
+      "nazwa_robocza": "Rusinowice – Piaskowa (Straż)",
+      "nr_mapy_przewoznika": 20,
+      "lat": 50.64398,
+      "lon": 18.76527,
+      "linie": [
+        "4",
+        "4L"
+      ],
+      "typ": "istniejący",
+      "na_zadanie": false
+    },
+    {
+      "id": "sadsk",
+      "nazwa_robocza": "Sadów – Powstańców Śląskich (skrzyżowanie)",
+      "nr_mapy_przewoznika": 24,
+      "lat": 50.66984,
+      "lon": 18.76039,
+      "linie": [
+        "1",
+        "1L",
+        "4L"
+      ],
+      "typ": "istniejący",
+      "na_zadanie": false
     }
   ],
   "do_sprawdzenia": [],
   "zmiany_tras": [
-    "Linia 4: koniec w Łazach – Kurzychowe zamiast Łazy (ul. Św. Jana Chrzciciela → ul. Michała Drzymały na północ do Kurzychowego). Sprawdzić czas i miejsce do zawracania."
+    "Linia 4: koniec w Łazach – Kurzychowe zamiast Łazy (ul. Św. Jana Chrzciciela → ul. Michała Drzymały na północ do Kurzychowego). Sprawdzić czas i miejsce do zawracania.",
+    "Linia 4 i 4L: Piłka (18) → Rusinowice – Piaskowa/Straż (20) → Rusinowice – Dworzec PKP (19) → na północ do DW906 (skrzyżowanie tuż na wschód od przystanku Sadów – skrzyżowanie): 4 w prawo (Wierzbie, Las, Irki, Koszęcin), 4L w lewo (Sadów – skrzyżowanie, Sadów, Lubliniec). Obecny przebieg w projekcie już tak idzie – sprawdzić tylko kolejność przystanków w Rusinowicach."
   ],
   "uwagi": [
     "Punkty 12–15 z mapy przewoźnika (Dworcowa, Kolejowa) to błąd w bazie – nie dodawać."
