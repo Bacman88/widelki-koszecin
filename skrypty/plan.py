@@ -1,4 +1,4 @@
-import json
+import json, os
 exec(open('skrypty/rozklad2.py').read().split("days={'wd'")[0])
 ALT={'2','4'}
 X2={7,16}
@@ -72,4 +72,13 @@ for d in ND:
             r=st.index('Koszęcin Rynek');j=st.index('Koszęcin Szkoła')
             for tr in v['trips']:
                 t=tr[0];t[j]=t[r]-1;t[0]=t[r]-RET3
+# Linia 4 w stronę Łaz czeka na Koszęcin PKP do :13 (zamiast odjazdu :07), żeby łapać pociągi przyjeżdżające o :04–:10
+POSTOJ_KOSP_L4 = int(os.environ.get('POSTOJ_KOSP_L4', 6))
+for d in ND:
+    for name,v in tt['4'][d].items():
+        st=v['stops']
+        if st[-1]=='Łazy' and 'Koszęcin PKP' in st:
+            j=st.index('Koszęcin PKP')
+            for tr in v['trips']:
+                for i in range(j,len(st)): tr[0][i]+=POSTOJ_KOSP_L4
 json.dump({'tt':tt,'var':res},open('out/rozklad_data.json','w'),ensure_ascii=False,separators=(',',':'))

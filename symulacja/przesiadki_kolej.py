@@ -6,7 +6,7 @@ STACJE = {'Koszęcin': ('Koszęcin', 'kosp'), 'Strzebiń': ('Strzebiń', 'str'),
 KIER = {'131a': 'w stronę Tarnowskich Gór / Bytomia', '131b': 'w stronę Herb (Wieluń, Chorzew)',
         '143a': 'w stronę Kalet / Tarnowskich Gór', '143b': 'w stronę Lublińca',
         '61a': 'w stronę Częstochowy', '61b': 'w stronę Lublińca'}
-MIN, MAX = 3, 20
+MIN, MAX = int(__import__("os").environ.get("MIN_PRZES", 3)), 20
 poc = collections.defaultdict(list); bus = collections.defaultdict(list)
 for e in ET.parse('wyniki/przystanki.xml').getroot():
     vid = e.get('id'); st = e.get('busStop') or e.get('trainStop') or ''

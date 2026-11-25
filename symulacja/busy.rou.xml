@@ -28,8 +28,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="21780" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="22020" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="22680" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="22380" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="23040" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -104,9 +104,9 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="25380" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="25620" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="25980" parking="true"/>
     <stop busStop="prad_1067" duration="6"/>
-    <stop busStop="str_2875#2" duration="20" until="26280" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="26640" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -239,8 +239,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="32580" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="32820" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="33480" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="33180" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="33840" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -324,8 +324,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="39780" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="40020" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="40680" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="40380" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="41040" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -432,9 +432,9 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="46980" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="47220" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="47580" parking="true"/>
     <stop busStop="prad_1067" duration="6"/>
-    <stop busStop="str_2875#2" duration="20" until="47880" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="48240" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -552,8 +552,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="54180" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="54420" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="55080" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="54780" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="55440" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -639,8 +639,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="57780" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="58020" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="58680" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="58380" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="59040" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -703,9 +703,9 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="61380" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="61620" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="61980" parking="true"/>
     <stop busStop="prad_1067" duration="6"/>
-    <stop busStop="str_2875#2" duration="20" until="62280" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="62640" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -811,8 +811,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="68580" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="68820" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="69480" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="69180" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="69840" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>
@@ -897,8 +897,8 @@
     <stop busStop="wie_533#2" duration="10"/>
     <stop busStop="kosr_271#5" duration="20" until="75780" parking="true"/>
     <stop busStop="kossz_2388" duration="10"/>
-    <stop busStop="kosp_2405" duration="20" until="76020" parking="true"/>
-    <stop busStop="str_2875#2" duration="20" until="76680" parking="true"/>
+    <stop busStop="kosp_2405" duration="20" until="76380" parking="true"/>
+    <stop busStop="str_2875#2" duration="20" until="77040" parking="true"/>
     <stop busStop="strs_2946#3" duration="10"/>
     <stop busStop="laz_3095" duration="20" parking="true"/>
   </vehicle>

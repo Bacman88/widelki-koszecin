@@ -73,7 +73,7 @@
     "przyjazd": "7:20",
     "przesiadka": "Wierzbie",
     "zapas_plan_min": 26.0,
-    "zapas_symulacja_min": 21.7
+    "zapas_symulacja_min": 21.5
    }
   ]
  },
@@ -132,7 +132,7 @@
     "przyjazd": "7:20",
     "przesiadka": "Wierzbie",
     "zapas_plan_min": 26.0,
-    "zapas_symulacja_min": 21.7
+    "zapas_symulacja_min": 21.5
    }
   ]
  },
@@ -208,7 +208,7 @@
     "przyjazd": "15:23",
     "przesiadka": "Koszęcin Rynek",
     "zapas_plan_min": 3.0,
-    "zapas_symulacja_min": 12.9
+    "zapas_symulacja_min": 12.4
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 14:35 → Rzyce Irki 14:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 15:08 → Piłka 15:23",
@@ -225,7 +225,7 @@
     "przyjazd": "15:23",
     "przesiadka": "Wierzbie",
     "zapas_plan_min": 23.0,
-    "zapas_symulacja_min": 24.2
+    "zapas_symulacja_min": 23.8
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Koszęcin Rynek 16:00; przesiadka, linia 4 (kier. Piłka): Koszęcin Rynek 16:03 → Piłka 16:23",
@@ -234,7 +234,7 @@
     "przyjazd": "16:23",
     "przesiadka": "Koszęcin Rynek",
     "zapas_plan_min": 3.0,
-    "zapas_symulacja_min": 14.4
+    "zapas_symulacja_min": 14.1
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 15:35 → Rzyce Irki 15:55; przesiadka, linia 4 (kier. Piłka): Rzyce Irki 16:08 → Piłka 16:23",
@@ -251,7 +251,7 @@
     "przyjazd": "16:23",
     "przesiadka": "Wierzbie",
     "zapas_plan_min": 23.0,
-    "zapas_symulacja_min": 26.5
+    "zapas_symulacja_min": 26.0
    },
    {
     "tekst": "linia 1 (kier. Piasek): Lubliniec PKP 16:35 → Strzebiń Lubliniecka 17:10; przesiadka, linia 4 (kier. Piłka): Strzebiń Lubliniecka 17:43 → Piłka 18:23",
@@ -260,7 +260,7 @@
     "przyjazd": "18:23",
     "przesiadka": "Strzebiń Lubliniecka",
     "zapas_plan_min": 33.0,
-    "zapas_symulacja_min": 38.0
+    "zapas_symulacja_min": 37.7
    }
   ]
  },

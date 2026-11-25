@@ -15,8 +15,8 @@
   "L2 Boronów": {
    "kursy": 8,
    "plan": 51.0,
-   "symulacja": 40.8,
-   "maks_spoznienie": 0.0
+   "symulacja": 40.7,
+   "maks_spoznienie": 0.2
   },
   "L2 KaletyPKP": {
    "kursy": 10,
@@ -27,13 +27,13 @@
   "L2 KoszęcinRyn": {
    "kursy": 1,
    "plan": 25.0,
-   "symulacja": 14.7,
+   "symulacja": 14.8,
    "maks_spoznienie": 0
   },
   "L3 KoszęcinPKP": {
    "kursy": 8,
    "plan": 26.0,
-   "symulacja": 18.9,
+   "symulacja": 18.6,
    "maks_spoznienie": 0
   },
   "L3 LisówPKP": {
@@ -44,14 +44,14 @@
   },
   "L4 Piłka": {
    "kursy": 10,
-   "plan": 57.0,
-   "symulacja": 55.6,
+   "plan": 63.0,
+   "symulacja": 61.6,
    "maks_spoznienie": 0
   },
   "L4 Łazy": {
    "kursy": 11,
    "plan": 47.0,
-   "symulacja": 40.7,
+   "symulacja": 40.8,
    "maks_spoznienie": 0
   }
  },
@@ -73,15 +73,15 @@
   {
    "kurs": "L4_Piłka_00_329",
    "odjazd": "5:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.4,
+   "plan_min": 63.0,
+   "symulacja_min": 61.4,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_LubliniecPK_00_335",
    "odjazd": "5:35",
    "plan_min": 45.0,
-   "symulacja_min": 43.1,
+   "symulacja_min": 43.2,
    "maks_spoznienie_min": 0
   },
   {
@@ -122,22 +122,22 @@
   {
    "kurs": "L4_Piłka_01_389",
    "odjazd": "6:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.9,
+   "plan_min": 63.0,
+   "symulacja_min": 61.7,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_LubliniecPK_01_395",
    "odjazd": "6:35",
    "plan_min": 45.0,
-   "symulacja_min": 41.4,
+   "symulacja_min": 41.3,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_Piasek_01_395",
    "odjazd": "6:35",
    "plan_min": 45.0,
-   "symulacja_min": 32.3,
+   "symulacja_min": 32.2,
    "maks_spoznienie_min": 0
   },
   {
@@ -158,14 +158,14 @@
    "kurs": "L3_KoszęcinPKP_01_418",
    "odjazd": "6:58",
    "plan_min": 26.0,
-   "symulacja_min": 18.2,
+   "symulacja_min": 17.8,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_KaletyPKP_01_444",
    "odjazd": "7:24",
    "plan_min": 51.0,
-   "symulacja_min": 46.8,
+   "symulacja_min": 46.7,
    "maks_spoznienie_min": 0
   },
   {
@@ -179,21 +179,21 @@
    "kurs": "L1_LubliniecPK_02_455",
    "odjazd": "7:35",
    "plan_min": 45.0,
-   "symulacja_min": 41.2,
+   "symulacja_min": 41.1,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_Piasek_02_455",
    "odjazd": "7:35",
    "plan_min": 45.0,
-   "symulacja_min": 32.2,
+   "symulacja_min": 33.1,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Łazy_02_456",
    "odjazd": "7:36",
    "plan_min": 47.0,
-   "symulacja_min": 40.3,
+   "symulacja_min": 40.2,
    "maks_spoznienie_min": 0
   },
   {
@@ -206,8 +206,8 @@
   {
    "kurs": "L4_Piłka_02_509",
    "odjazd": "8:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.3,
+   "plan_min": 63.0,
+   "symulacja_min": 61.3,
    "maks_spoznienie_min": 0
   },
   {
@@ -229,13 +229,13 @@
    "odjazd": "8:37",
    "plan_min": 51.0,
    "symulacja_min": 41.5,
-   "maks_spoznienie_min": 0.0
+   "maks_spoznienie_min": 0.1
   },
   {
    "kurs": "L2_KaletyPKP_02_564",
    "odjazd": "9:24",
    "plan_min": 51.0,
-   "symulacja_min": 46.8,
+   "symulacja_min": 47.0,
    "maks_spoznienie_min": 0
   },
   {
@@ -262,8 +262,8 @@
   {
    "kurs": "L4_Piłka_03_629",
    "odjazd": "10:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.9,
+   "plan_min": 63.0,
+   "symulacja_min": 61.8,
    "maks_spoznienie_min": 0
   },
   {
@@ -284,14 +284,14 @@
    "kurs": "L2_Boronów_02_637",
    "odjazd": "10:37",
    "plan_min": 51.0,
-   "symulacja_min": 40.7,
+   "symulacja_min": 40.5,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_KaletyPKP_03_684",
    "odjazd": "11:24",
    "plan_min": 51.0,
-   "symulacja_min": 46.3,
+   "symulacja_min": 46.2,
    "maks_spoznienie_min": 0
   },
   {
@@ -312,7 +312,7 @@
    "kurs": "L1_Piasek_06_695",
    "odjazd": "11:35",
    "plan_min": 45.0,
-   "symulacja_min": 31.4,
+   "symulacja_min": 31.6,
    "maks_spoznienie_min": 0
   },
   {
@@ -326,14 +326,14 @@
    "kurs": "L3_KoszęcinPKP_04_718",
    "odjazd": "11:58",
    "plan_min": 26.0,
-   "symulacja_min": 17.4,
+   "symulacja_min": 17.3,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Piłka_04_749",
    "odjazd": "12:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.9,
+   "plan_min": 63.0,
+   "symulacja_min": 61.6,
    "maks_spoznienie_min": 0
   },
   {
@@ -354,7 +354,7 @@
    "kurs": "L2_Boronów_03_757",
    "odjazd": "12:37",
    "plan_min": 51.0,
-   "symulacja_min": 40.5,
+   "symulacja_min": 40.3,
    "maks_spoznienie_min": 0
   },
   {
@@ -382,14 +382,14 @@
    "kurs": "L1_Piasek_08_815",
    "odjazd": "13:35",
    "plan_min": 45.0,
-   "symulacja_min": 32.2,
+   "symulacja_min": 32.4,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Łazy_05_816",
    "odjazd": "13:36",
    "plan_min": 47.0,
-   "symulacja_min": 40.8,
+   "symulacja_min": 41.5,
    "maks_spoznienie_min": 0
   },
   {
@@ -409,8 +409,8 @@
   {
    "kurs": "L4_Piłka_05_869",
    "odjazd": "14:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.8,
+   "plan_min": 63.0,
+   "symulacja_min": 62.0,
    "maks_spoznienie_min": 0
   },
   {
@@ -431,7 +431,7 @@
    "kurs": "L4_Łazy_06_876",
    "odjazd": "14:36",
    "plan_min": 47.0,
-   "symulacja_min": 40.1,
+   "symulacja_min": 40.2,
    "maks_spoznienie_min": 0
   },
   {
@@ -445,28 +445,28 @@
    "kurs": "L3_KoszęcinPKP_06_898",
    "odjazd": "14:58",
    "plan_min": 26.0,
-   "symulacja_min": 18.2,
+   "symulacja_min": 18.1,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_KaletyPKP_05_924",
    "odjazd": "15:24",
    "plan_min": 51.0,
-   "symulacja_min": 47.6,
+   "symulacja_min": 47.4,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L3_LisówPKP_07_928",
    "odjazd": "15:28",
    "plan_min": 25.0,
-   "symulacja_min": 23.3,
+   "symulacja_min": 23.4,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Piłka_06_929",
    "odjazd": "15:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.3,
+   "plan_min": 63.0,
+   "symulacja_min": 61.4,
    "maks_spoznienie_min": 0
   },
   {
@@ -480,35 +480,35 @@
    "kurs": "L1_Piasek_10_935",
    "odjazd": "15:35",
    "plan_min": 45.0,
-   "symulacja_min": 37.4,
+   "symulacja_min": 37.3,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Łazy_07_936",
    "odjazd": "15:36",
    "plan_min": 47.0,
-   "symulacja_min": 41.4,
+   "symulacja_min": 41.2,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L3_KoszęcinPKP_07_958",
    "odjazd": "15:58",
    "plan_min": 26.0,
-   "symulacja_min": 20.0,
+   "symulacja_min": 19.9,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_KoszęcinRyn_00_963",
    "odjazd": "16:03",
    "plan_min": 25.0,
-   "symulacja_min": 14.7,
+   "symulacja_min": 14.8,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Piłka_07_989",
    "odjazd": "16:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.9,
+   "plan_min": 63.0,
+   "symulacja_min": 61.6,
    "maks_spoznienie_min": 0
   },
   {
@@ -522,15 +522,15 @@
    "kurs": "L1_Piasek_11_995",
    "odjazd": "16:35",
    "plan_min": 45.0,
-   "symulacja_min": 32.6,
+   "symulacja_min": 32.5,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_Boronów_05_997",
    "odjazd": "16:37",
    "plan_min": 51.0,
-   "symulacja_min": 41.0,
-   "maks_spoznienie_min": 0
+   "symulacja_min": 40.8,
+   "maks_spoznienie_min": 0.2
   },
   {
    "kurs": "L2_KaletyPKP_06_1044",
@@ -550,7 +550,7 @@
    "kurs": "L1_LubliniecPK_12_1055",
    "odjazd": "17:35",
    "plan_min": 45.0,
-   "symulacja_min": 41.2,
+   "symulacja_min": 40.9,
    "maks_spoznienie_min": 0
   },
   {
@@ -564,21 +564,21 @@
    "kurs": "L4_Łazy_08_1056",
    "odjazd": "17:36",
    "plan_min": 47.0,
-   "symulacja_min": 41.4,
+   "symulacja_min": 41.8,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L3_KoszęcinPKP_08_1078",
    "odjazd": "17:58",
    "plan_min": 26.0,
-   "symulacja_min": 19.9,
+   "symulacja_min": 17.8,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Piłka_08_1109",
    "odjazd": "18:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.5,
+   "plan_min": 63.0,
+   "symulacja_min": 61.5,
    "maks_spoznienie_min": 0
   },
   {
@@ -627,42 +627,42 @@
    "kurs": "L4_Łazy_09_1176",
    "odjazd": "19:36",
    "plan_min": 47.0,
-   "symulacja_min": 40.6,
+   "symulacja_min": 40.4,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L4_Piłka_09_1229",
    "odjazd": "20:29",
-   "plan_min": 57.0,
-   "symulacja_min": 55.3,
+   "plan_min": 63.0,
+   "symulacja_min": 61.4,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_LubliniecPK_15_1235",
    "odjazd": "20:35",
    "plan_min": 45.0,
-   "symulacja_min": 41.2,
+   "symulacja_min": 41.3,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_Piasek_15_1235",
    "odjazd": "20:35",
    "plan_min": 45.0,
-   "symulacja_min": 31.1,
+   "symulacja_min": 31.0,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_Boronów_07_1237",
    "odjazd": "20:37",
    "plan_min": 51.0,
-   "symulacja_min": 40.6,
+   "symulacja_min": 40.5,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L2_KaletyPKP_08_1284",
    "odjazd": "21:24",
    "plan_min": 51.0,
-   "symulacja_min": 46.5,
+   "symulacja_min": 46.6,
    "maks_spoznienie_min": 0
   },
   {
@@ -683,14 +683,14 @@
    "kurs": "L4_Łazy_10_1296",
    "odjazd": "21:36",
    "plan_min": 47.0,
-   "symulacja_min": 40.1,
+   "symulacja_min": 40.2,
    "maks_spoznienie_min": 0
   },
   {
    "kurs": "L1_LubliniecPK_17_1355",
    "odjazd": "22:35",
    "plan_min": 45.0,
-   "symulacja_min": 41.2,
+   "symulacja_min": 41.1,
    "maks_spoznienie_min": 0
   }
  ],
@@ -700,17 +700,17 @@
  },
  "odcinki": [
   {
-   "z": "Chwostek",
-   "do": "Lisów PKP",
-   "rozklad": 2.0,
-   "najdluzsza_jazda": 3.6,
-   "zapas": -1.6
-  },
-  {
    "z": "Rusinowice PKP",
    "do": "Piłka",
    "rozklad": 4.0,
    "najdluzsza_jazda": 5.5,
+   "zapas": -1.5
+  },
+  {
+   "z": "Chwostek",
+   "do": "Lisów PKP",
+   "rozklad": 2.0,
+   "najdluzsza_jazda": 3.5,
    "zapas": -1.5
   },
   {
@@ -724,8 +724,8 @@
    "z": "Boronów",
    "do": "Boronów PKP",
    "rozklad": 2.0,
-   "najdluzsza_jazda": 2.0,
-   "zapas": -0.0
+   "najdluzsza_jazda": 2.2,
+   "zapas": -0.2
   },
   {
    "z": "Strzebiń Szkoła",
@@ -735,31 +735,31 @@
    "zapas": 0.0
   },
   {
-   "z": "Koszęcin Rynek",
-   "do": "Koszęcin Szkoła",
-   "rozklad": 1.0,
-   "najdluzsza_jazda": 0.9,
-   "zapas": 0.1
-  },
-  {
    "z": "Koszęcin PKP",
    "do": "prad",
    "rozklad": 6.0,
    "najdluzsza_jazda": 5.8,
-   "zapas": 0.2
+   "zapas": 0.1
   },
   {
-   "z": "Lisów PKP",
-   "do": "Chwostek",
-   "rozklad": 2.0,
-   "najdluzsza_jazda": 1.7,
-   "zapas": 0.3
+   "z": "Koszęcin Rynek",
+   "do": "Koszęcin Szkoła",
+   "rozklad": 1.0,
+   "najdluzsza_jazda": 0.8,
+   "zapas": 0.2
   },
   {
    "z": "Strzebiń Szkoła",
    "do": "Łazy",
    "rozklad": 6.0,
    "najdluzsza_jazda": 5.7,
+   "zapas": 0.3
+  },
+  {
+   "z": "Lisów PKP",
+   "do": "Chwostek",
+   "rozklad": 2.0,
+   "najdluzsza_jazda": 1.7,
    "zapas": 0.3
   },
   {
@@ -794,21 +794,28 @@
    "z": "Płaszczymąka (Psary Skrzyżowanie)",
    "do": "Piasek",
    "rozklad": 2.0,
-   "najdluzsza_jazda": 1.3,
-   "zapas": 0.7
+   "najdluzsza_jazda": 1.4,
+   "zapas": 0.6
   },
   {
    "z": "Piasek",
    "do": "Płaszczymąka (Psary Skrzyżowanie)",
    "rozklad": 2.0,
-   "najdluzsza_jazda": 1.2,
+   "najdluzsza_jazda": 1.3,
+   "zapas": 0.7
+  },
+  {
+   "z": "Sadów Przedszkole",
+   "do": "Wierzbie",
+   "rozklad": 5.0,
+   "najdluzsza_jazda": 4.2,
    "zapas": 0.8
   },
   {
-   "z": "Strzebiń Lubliniecka",
-   "do": "Strzebiń Szkoła",
-   "rozklad": 2.0,
-   "najdluzsza_jazda": 1.2,
+   "z": "Koszęcin Rynek",
+   "do": "prad",
+   "rozklad": 3.8,
+   "najdluzsza_jazda": 3.0,
    "zapas": 0.8
   },
   {
@@ -819,32 +826,18 @@
    "zapas": 0.8
   },
   {
+   "z": "Strzebiń Lubliniecka",
+   "do": "Strzebiń Szkoła",
+   "rozklad": 2.0,
+   "najdluzsza_jazda": 1.1,
+   "zapas": 0.9
+  },
+  {
    "z": "Koszęcin PKP",
    "do": "Koszęcin Szkoła",
    "rozklad": 3.3,
    "najdluzsza_jazda": 2.3,
    "zapas": 1.0
-  },
-  {
-   "z": "Koszęcin Rynek",
-   "do": "prad",
-   "rozklad": 3.8,
-   "najdluzsza_jazda": 2.7,
-   "zapas": 1.1
-  },
-  {
-   "z": "Koszęcin Szkoła",
-   "do": "Koszęcin PKP",
-   "rozklad": 3.0,
-   "najdluzsza_jazda": 1.9,
-   "zapas": 1.1
-  },
-  {
-   "z": "Sadów Przedszkole",
-   "do": "Wierzbie",
-   "rozklad": 5.0,
-   "najdluzsza_jazda": 3.9,
-   "zapas": 1.1
   },
   {
    "z": "Rusinowice PKP",
@@ -871,8 +864,8 @@
    "z": "Bukowiec",
    "do": "Strzebiń Lubliniecka",
    "rozklad": 5.0,
-   "najdluzsza_jazda": 3.8,
-   "zapas": 1.2
+   "najdluzsza_jazda": 3.7,
+   "zapas": 1.3
   },
   {
    "z": "Strzebiń Lubliniecka",
@@ -896,17 +889,24 @@
    "zapas": 1.5
   },
   {
-   "z": "Mochała",
-   "do": "Chwostek",
-   "rozklad": 4.0,
-   "najdluzsza_jazda": 2.5,
-   "zapas": 1.5
-  },
-  {
    "z": "Strzebiń Lubliniecka",
    "do": "Bukowiec",
    "rozklad": 6.0,
-   "najdluzsza_jazda": 4.4,
+   "najdluzsza_jazda": 4.5,
+   "zapas": 1.5
+  },
+  {
+   "z": "prad",
+   "do": "Koszęcin Rynek",
+   "rozklad": 4.5,
+   "najdluzsza_jazda": 2.9,
+   "zapas": 1.6
+  },
+  {
+   "z": "Mochała",
+   "do": "Chwostek",
+   "rozklad": 4.0,
+   "najdluzsza_jazda": 2.4,
    "zapas": 1.6
   },
   {
@@ -914,13 +914,6 @@
    "do": "Mochała",
    "rozklad": 4.0,
    "najdluzsza_jazda": 2.4,
-   "zapas": 1.6
-  },
-  {
-   "z": "prad",
-   "do": "Koszęcin Rynek",
-   "rozklad": 4.5,
-   "najdluzsza_jazda": 2.9,
    "zapas": 1.6
   },
   {
@@ -938,13 +931,6 @@
    "zapas": 1.7
   },
   {
-   "z": "Cieszowa",
-   "do": "Hadra",
-   "rozklad": 5.0,
-   "najdluzsza_jazda": 3.1,
-   "zapas": 1.9
-  },
-  {
    "z": "Piasek",
    "do": "Bukowiec",
    "rozklad": 5.0,
@@ -955,8 +941,8 @@
    "z": "Rzyce Irki",
    "do": "Wierzbie",
    "rozklad": 5.0,
-   "najdluzsza_jazda": 2.8,
-   "zapas": 2.2
+   "najdluzsza_jazda": 2.9,
+   "zapas": 2.1
   },
   {
    "z": "Hadra",
@@ -971,6 +957,13 @@
    "rozklad": 5.0,
    "najdluzsza_jazda": 2.8,
    "zapas": 2.2
+  },
+  {
+   "z": "Cieszowa",
+   "do": "Hadra",
+   "rozklad": 5.0,
+   "najdluzsza_jazda": 2.7,
+   "zapas": 2.3
   },
   {
    "z": "Cieszowa",
@@ -990,15 +983,8 @@
    "z": "Strzebiń Lubliniecka",
    "do": "Koszęcin Rynek",
    "rozklad": 8.0,
-   "najdluzsza_jazda": 5.3,
-   "zapas": 2.7
-  },
-  {
-   "z": "Koszęcin PKP",
-   "do": "Strzebiń Lubliniecka",
-   "rozklad": 11.0,
-   "najdluzsza_jazda": 8.1,
-   "zapas": 2.9
+   "najdluzsza_jazda": 5.6,
+   "zapas": 2.4
   },
   {
    "z": "Lubliniec PKP",
@@ -1008,11 +994,25 @@
    "zapas": 2.9
   },
   {
+   "z": "Koszęcin PKP",
+   "do": "Strzebiń Lubliniecka",
+   "rozklad": 11.0,
+   "najdluzsza_jazda": 7.9,
+   "zapas": 3.1
+  },
+  {
    "z": "prad",
    "do": "Strzebiń Lubliniecka",
    "rozklad": 5.6,
-   "najdluzsza_jazda": 2.5,
-   "zapas": 3.1
+   "najdluzsza_jazda": 2.4,
+   "zapas": 3.2
+  },
+  {
+   "z": "Koszęcin Szkoła",
+   "do": "Koszęcin PKP",
+   "rozklad": 5.2,
+   "najdluzsza_jazda": 1.9,
+   "zapas": 3.3
   },
   {
    "z": "Strzebiń Lubliniecka",
@@ -1039,15 +1039,15 @@
    "z": "Koszęcin Rynek",
    "do": "Rzyce Irki",
    "rozklad": 7.0,
-   "najdluzsza_jazda": 2.8,
-   "zapas": 4.2
+   "najdluzsza_jazda": 3.0,
+   "zapas": 4.0
   },
   {
    "z": "Koszęcin Rynek",
    "do": "Strzebiń Lubliniecka",
    "rozklad": 10.0,
-   "najdluzsza_jazda": 5.2,
-   "zapas": 4.8
+   "najdluzsza_jazda": 5.5,
+   "zapas": 4.5
   },
   {
    "z": "Koszęcin Rynek",
@@ -1081,15 +1081,15 @@
    "z": "Wierzbie",
    "do": "Koszęcin Rynek",
    "rozklad": 15.2,
-   "najdluzsza_jazda": 6.9,
-   "zapas": 8.3
+   "najdluzsza_jazda": 6.8,
+   "zapas": 8.4
   },
   {
    "z": "Boronów PKP",
    "do": "Koszęcin Rynek",
    "rozklad": 24.0,
-   "najdluzsza_jazda": 7.7,
-   "zapas": 16.3
+   "najdluzsza_jazda": 7.4,
+   "zapas": 16.6
   }
  ]
 }
