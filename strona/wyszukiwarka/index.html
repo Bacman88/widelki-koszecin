@@ -46,7 +46,7 @@ select,input[type=time]{width:100%;font:inherit;padding:10px 12px;border:1px sol
 .leg{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:6px 0;border-top:1px dashed var(--rule)}
 .leg:first-of-type{border-top:0}
 .bdg{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:26px;padding:0 6px;border-radius:7px;font-weight:800;font-size:13px;color:#fff}
-.l1{background:#00704f}.l2{background:#1f6fd6}.l3{background:#cc8a00}.l4{background:#d4473a}
+.l1{background:#00704f}.l2{background:#1f6fd6}.l3{background:#cc8a00}.l4{background:#d4473a}.l5{background:#7c3aed}
 .lKŚ{background:#f2b705;color:#1e1d1b}.lPR{background:#7a2e8e}.lpi{background:#e9e5da;color:var(--ink)}
 .leg .t{font-weight:700}
 .leg .s{color:var(--mut);font-size:14px}
@@ -86,7 +86,7 @@ a{color:var(--g)}
   <button data-q="bru,lubpkp,07:30,p">Brusiek → Lubliniec przez Kalety</button>
 </div>
 <div id="wyniki"></div>
-<p class="note">Busy: proponowany rozkład; dzień roboczy sprawdzony w symulacji ruchu, w weekend linie 3 i 4 jeżdżą na zamówienie. Pociągi KŚ i POLREGIO: nowy rozkład 2026/27 (od 13.12.2026, dane PKP PLK przez GTFS) na stacjach Lubliniec, Kochanowice, Lisów, Rusinowice, Koszęcin, Strzebiń, Boronów i Kalety – przed podróżą sprawdź rozkład przewoźnika. Przesiadka bus–bus co najmniej 2 minuty, przejście na peron wliczone. Propozycje przerywane (1L, 4L, 4S, 4P) nie są uwzględnione. <a href="../">Więcej o propozycji</a>.</p>
+<p class="note">Busy: proponowany rozkład; dzień roboczy sprawdzony w symulacji ruchu, w weekend linie 3, 4 i 5 jeżdżą na zamówienie. Pociągi KŚ i POLREGIO: nowy rozkład 2026/27 (od 13.12.2026, dane PKP PLK przez GTFS) na stacjach Lubliniec, Kochanowice, Lisów, Rusinowice, Koszęcin, Strzebiń, Boronów i Kalety – przed podróżą sprawdź rozkład przewoźnika. Przesiadka bus–bus co najmniej 2 minuty, przejście na peron wliczone. Propozycje przerywane (1L, 4L, 4S, 4P) nie są uwzględnione. <a href="../">Więcej o propozycji</a>.</p>
 </main>
 <script>
 const KOL_TXT={KŚ:'pociąg Kolei Śląskich',PR:'pociąg POLREGIO'};
@@ -128,7 +128,7 @@ function csa(zr,t0,busy){
   for(const [b,m] of FP[zr]||[])ustaw(b,t0+m,0,{pie:zr,m});
   for(const c of C){
     if(c.d<t0||c.a<c.d)continue;
-    if(busy&&!/^[1-4]$/.test(KURSY[c.t].l))continue;   // wariant tylko busami
+    if(busy&&!/^[1-5]$/.test(KURSY[c.t].l))continue;   // wariant tylko busami
     const a=A[c.z];
     if(a!==undefined&&a+(J[c.z].wys?PRZES:0)<=c.d){const r=R[c.z]+1,p=!!J[c.z].pie,o=w[c.t];
       if(o===undefined||r<o.r||(r===o.r&&(!p||o.p)))w[c.t]={c,r,p}}   // mniej jazd; przy remisie wsiadamy jak najpóźniej (bez jazdy tam i z powrotem), bez dojścia pieszo
@@ -187,7 +187,7 @@ function pokaz(r,brak){
     o.nogi.forEach(n=>{
       if(n.pie){html+=`<div class="leg"><div><span class="bdg lpi">🚶</span></div><div><div class="t">przejście ${n.m} min</div><div class="s">${nm(n.z)} → ${nm(n.do)}</div></div></div>`;prev=prev!==null?prev+n.m:null;return}
       if(prev!==null){const c=n.d-prev;maxc=Math.max(maxc,c);if(c>0)html+=`<div class="czek ${c>=30?'dd':c>=15?'d':''}">czekanie ${c} min${c>=15?' – słabszy punkt':''}</div>`}
-      const k=n.k,poc=!/^[1-4]$/.test(k.l),ile=n.i1-n.i0-1;
+      const k=n.k,poc=!/^[1-5]$/.test(k.l),ile=n.i1-n.i0-1;
       const nz=k.p[n.i0][3]||k.p[n.i1][3];
       html+=`<div class="leg"><div><span class="bdg l${k.l}">${k.l}</span></div><div><div class="t">${hm(n.d)} ${nm(n.z)} → ${hm(n.a)} ${nm(n.do)}</div><div class="s">${poc?KOL_TXT[k.l]+' '+k.nr+', kierunek '+k.k:'linia '+k.l+', kierunek '+k.k}${ile>0?' · '+ile+' przyst. po drodze':''}${nz?' · przystanek na żądanie':''}${k.zam?' · <b>kurs na zamówienie</b>':''}</div></div></div>`;
       prev=n.a;

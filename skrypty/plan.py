@@ -137,7 +137,7 @@ for dz in ('wd', 'sat', 'sun'):
     for name, v in tt[ln][dz].items():
         v['trips'] = [tr for tr in v['trips'] if tr[0][0] < 20*60+30]
 # linia 5: przesunięcie kursów (L5_SA – z Lublińca do Koszęcina, L5_SB – z Koszęcina do Lublińca), np. dłuższy postój na Koszęcinie PKP
-_sA=int(os.environ.get('L5_SA',0)); _sB=int(os.environ.get('L5_SB',0))
+_sA=int(os.environ.get('L5_SA',0)); _sB=int(os.environ.get('L5_SB',8))
 for dz in ND:
     for name, v in tt['5'][dz].items():
         s_=_sA if v['stops'][0]=='Lubliniec PKP' else _sB
