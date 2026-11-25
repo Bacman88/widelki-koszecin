@@ -3,7 +3,7 @@ B=json.load(open('out/rozklad_base.json'))
 WD=[6,7,8,10,12,13,14,15,16,17,18,20,22];SAT=[7,9,11,13,15,17,19,21];SUN=[8,11,14,17,20]
 DEM={'wd':{'3':[10,12,20]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}}
 THROUGH={'1','2','4'}
-OFF={'1':((-7,-5),(0,2)),'2':((-11,3),(-11,3)),'4':((-2,3),(-11,3))}
+OFF={'1':((-7,-5),(0,2)),'2':((-11,3),(-11,3)),'4':((-2,3),(-5,3))}   # linia 4 od Piłki na Rynek o :55 (25.11.2026: więcej czasu na zawrócenie w Piłce)
 def trips_for(k,H):
     b=B[k];t=b['t'];seq=b['names'];ir=seq.index('Koszęcin Rynek')
     res=[]

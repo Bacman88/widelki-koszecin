@@ -24,14 +24,14 @@ NET = sumolib.net.readNet('koszecin.net.xml.gz')
 POSTOJ = 20          # s na węzłach przesiadkowych (Rynek, stacje, Strzebiń, Lubliniec)
 POSTOJ_ZWYKLY = 10   # s na zwykłym przystanku po drodze
 POSTOJ_NZ = 6        # s na przystanku na żądanie, gdy ktoś wsiada/wysiada
-NA_ZADANIE = {'irk': 3.5, 'psk': 14, 'prad': 8}   # przystanek: ile razy na dobę bus faktycznie się zatrzymuje (szacunek mieszkańca)
+NA_ZADANIE = {'irk': 3.5, 'psk': 14, 'prad': 8, 'bukz': 4, 'wiel': 3, 'cien': 3}   # przystanek: ile razy na dobę bus faktycznie się zatrzymuje (szacunek mieszkańca)
 PUNKTY_CZASOWE = set()        # + WEZLY: tylko tu bus czeka, jeśli jest przed czasem
 OKNO = (4 * 3600 + 30 * 60, 23 * 3600 + 59 * 60)
 
 S = D['stops']; NAME2ID = {v[2]: k for k, v in S.items()}
 # przystanki istniejące, których nie ma w rozkładzie projektu (tylko główne przystanki) – dokładane w symulacji,
 # jeśli trasa linii przechodzi obok; czas przejazdu liczony proporcjonalnie do odległości
-DODATKOWE = {'prad': (50.62416, 18.87249, 'Prądy')}
+DODATKOWE = {}   # Prądy są już w rozkładzie (od 25.11.2026)
 S.update({k: list(v) for k, v in DODATKOWE.items()})
 def xy(lat, lon): return NET.convertLonLat2XY(lon, lat)
 def dist(a, b): return math.hypot(a[0] - b[0], a[1] - b[1])
@@ -77,6 +77,9 @@ def trasa(line, stops):
         for i in range(1, len(fix) - 2):
             Y, Yr = NET.getEdge(fix[i]), NET.getEdge(fix[i + 1])
             if Y.getFromNode() == Yr.getToNode() and Y.getToNode() == Yr.getFromNode():
+                # prawdziwy wjazd do pętli/stacji w środku trasy (np. linia 2 do Koszęcin PKP) – zostaw
+                if any(sumolib.geomhelper.polygonOffsetAndDistanceToPoint(xy(*S[w][:2]), Y.getLanes()[0].getShape())[1] < 60
+                       for w in stops[1:-1] if w in WEZLY): continue
                 P, Q = NET.getEdge(fix[i - 1]), NET.getEdge(fix[i + 2])
                 if Q in P.getAllowedOutgoing('bus'): wst = []
                 else:
@@ -103,7 +106,7 @@ WSTAW = {}
 STALE = {'kosr': {'-271#3': True}}    # kierunek na północ: zatoka przy placu; na południe: zatoka jak dotąd (271#5)
 BEZ_ZATOKI = set()
 DL_ZATOKI = {'kosr_-271#3': 37}          # długość zatoki przy placu [m] – ok. 3 busy
-WEZLY = {'kosr', 'kosp', 'lubpkp', 'lisp', 'kalp', 'bor', 'laz', 'pil', 'pia', 'str'}   # przystanki z zatoką / pętlą: autobus czekający nie blokuje drogi
+WEZLY = {'kosr', 'kosp', 'lubpkp', 'lisp', 'kalp', 'bor', 'laz', 'kurz', 'pil', 'pia', 'str'}   # przystanki z zatoką / pętlą: autobus czekający nie blokuje drogi
 stopdefs = {}; vehicles = []
 for line, days in R['tt'].items():
     if line not in D['lines']: continue

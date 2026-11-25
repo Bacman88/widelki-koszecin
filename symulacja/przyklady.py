@@ -7,12 +7,8 @@ Wynik: wyniki/przyklady.json i wyniki/przyklady.md
 import json, re, sys
 from collections import defaultdict
 
-NAZWY = {'bor': 'Boronów', 'borp': 'Boronów PKP', 'bru': 'Brusiek', 'buk': 'Bukowiec', 'chw': 'Chwostek',
-         'cie': 'Cieszowa', 'dol': 'Hadra', 'irk': 'Rzyce Irki', 'kalp': 'Kalety PKP', 'kosp': 'Koszęcin PKP',
-         'kosr': 'Koszęcin Rynek', 'kossz': 'Koszęcin Szkoła', 'laz': 'Łazy', 'lisp': 'Lisów PKP',
-         'lubpkp': 'Lubliniec PKP', 'moc': 'Mochała', 'pia': 'Piasek', 'pil': 'Piłka', 'prad': 'Prądy',
-         'psk': 'Płaszczymąka', 'rus': 'Rusinowice PKP', 'sad': 'Sadów', 'str': 'Strzebiń Lubliniecka',
-         'strs': 'Strzebiń Szkoła', 'wie': 'Wierzbie'}
+NAZWY = {k: v[2] for k, v in json.load(open('../out/data.json'))['stops'].items()}   # nazwy przystanków z tras (skrypty/build.py)
+NAZWY['psk'] = 'Płaszczymąka'
 MIN_PRZES = 120
 
 plan = json.load(open('plan_kursow.json'))
