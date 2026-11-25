@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Pełny rozkład – propozycja siatki busów gminy Koszęcin (nie obowiązuje)</title>
+<meta name="description" content="Pełny proponowany rozkład linii 1–4 w gminie Koszęcin: dzień roboczy, sobota i niedziela. Propozycja mieszkańców – nie obowiązujący rozkład.">
+<meta property="og:title" content="Pełny rozkład – busy gminy Koszęcin (propozycja)">
+<meta property="og:image" content="https://busy-koszecin.smart-ant.pl/og.png">
+<link rel="canonical" href="https://busy-koszecin.smart-ant.pl/rozklad/">
+<style>
+:root{--ink:#10201c;--mut:#5d665f;--paper:#f7f4ec;--rule:#e2ddd0;--g:#00704f;--warn:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
+.bar{background:var(--warn);color:#fff;text-align:center;font-weight:700;font-size:14px;padding:8px 12px}.bar a{color:#fff}
+main{max-width:1240px;margin:0 auto;padding:22px 18px 60px}
+h1{font-size:30px;line-height:1.15;margin:6px 0}
+.lead{color:var(--mut);margin:0 0 16px;max-width:900px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tabs button{font:inherit;font-weight:700;border:1px solid var(--rule);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tabs button .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+h2{font-size:20px;margin:22px 0 6px}
+.op{color:var(--mut);font-size:14px;margin:0 0 8px}
+.scroll{overflow-x:auto;background:#fff;border:1px solid var(--rule);border-radius:12px}
+table{border-collapse:collapse;font-size:14px;white-space:nowrap}
+th,td{padding:5px 8px;border-bottom:1px solid #eee9dc;text-align:center}
+th:first-child,td:first-child{position:sticky;left:0;background:#fff;text-align:left;font-weight:600;z-index:1;border-right:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+td.w{background:#fbf9f3}
+.zam{background:#fff3e2}
+.ż{color:var(--mut);font-weight:400;font-size:12px}
+.prz{display:block;font-size:11px;color:var(--mut)}
+.note{font-size:13px;color:var(--mut);margin-top:22px}
+a{color:var(--g)}
+</style>
+</head>
+<body>
+<div class="bar">⚠️ Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
+<main>
+<h1>Pełny rozkład (propozycja)</h1>
+<p class="lead">Wszystkie kursy linii 1–4 w dzień roboczy, sobotę i niedzielę. Połączenia z przesiadkami, także na pociągi, sprawdzisz w <a href="../wyszukiwarka/">wyszukiwarce połączeń</a>; rozkład do druku jest w <a href="../dokumenty/siatka-busow-koszecin.pdf">PDF</a>.</p>
+<div class="tabs" id="dni"><button data-d="wd" class="on">Dzień roboczy</button><button data-d="sat">Sobota</button><button data-d="sun">Niedziela i święta</button></div>
+<div class="tabs" id="linie"></div>
+<div id="tabele"></div>
+<p class="note">Na Koszęcin Rynek linie 2, 3 i 4 przyjeżdżają ok. :49 i odjeżdżają o :03 (w tabeli: przyjazd nad odjazdem) – w tym czasie przejeżdża linia 1, przesiadka bez długiego czekania. <span class="ż">ż</span> – przystanek na żądanie. Kolumny na jasnopomarańczowym tle – kurs na zamówienie (w weekend linie 3 i 4). Dzień roboczy sprawdzony w symulacji ruchu.</p>
+</main>
+<script>
+const KOL={'1':'#00704f','2':'#1f6fd6','3':'#cc8a00','4':'#d4473a'};
+const OPIS={'1':'Piasek – Strzebiń – Koszęcin Rynek – Wierzbie – Sadów – Lubliniec PKP','2':'Boronów – Koszęcin Rynek – Koszęcin PKP – Brusiek – Kalety PKP','3':'Lisów PKP – Cieszowa – Koszęcin Rynek – Koszęcin PKP','4':'Łazy – Strzebiń – Koszęcin PKP – Koszęcin Rynek – Wierzbie – Rusinowice PKP – Piłka'};
+let D,dz='wd',ln='1';
+const hm=m=>Math.floor(m/60)+':'+String(m%60).padStart(2,'0');
+fetch('../wyszukiwarka/dane.json').then(r=>r.json()).then(d=>{D=d;
+  document.getElementById('linie').innerHTML=['1','2','3','4'].map(l=>`<button data-l="${l}" class="${l===ln?'on':''}"><span class="sw" style="background:${KOL[l]}"></span>Linia ${l}</button>`).join('');
+  document.querySelectorAll('#linie button').forEach(b=>b.onclick=()=>{ln=b.dataset.l;rysuj()});
+  document.querySelectorAll('#dni button').forEach(b=>b.onclick=()=>{dz=b.dataset.d;rysuj()});
+  const h=new URLSearchParams(location.hash.slice(1));if(h.get('linia'))ln=h.get('linia');if(h.get('dz'))dz=h.get('dz');rysuj();});
+function rysuj(){
+  document.querySelectorAll('#linie button').forEach(b=>b.classList.toggle('on',b.dataset.l===ln));
+  document.querySelectorAll('#dni button').forEach(b=>b.classList.toggle('on',b.dataset.d===dz));
+  history.replaceState(null,'',`#linia=${ln}&dz=${dz}`);
+  const nm=id=>D.przystanki[id].n;
+  const kursy=D.dni[dz].filter(k=>k.l===ln);
+  // kierunki: od pierwszego do ostatniego przystanku
+  const kier={};
+  kursy.forEach(k=>{const key=nm(k.p[0][0])+' → '+nm(k.p[k.p.length-1][0]);(kier[key]=kier[key]||[]).push(k)});
+  let html=`<p class="op">${OPIS[ln]}</p>`;
+  if(!kursy.length)html+='<p>W tym dniu linia nie kursuje.</p>';
+  Object.entries(kier).sort((a,b)=>b[1].length-a[1].length).forEach(([key,ks])=>{
+    ks.sort((a,b)=>a.p[0][2]-b.p[0][2]);
+    // wiersze: najdłuższa sekwencja przystanków w tym kierunku
+    const wz=ks.reduce((a,k)=>k.p.length>a.p.length?k:a,ks[0]).p.map(x=>x[0]);
+    const zad=new Set();ks.forEach(k=>k.p.forEach(x=>{if(x[3])zad.add(x[0])}));
+    const zam=ks.some(k=>k.zam);
+    html+=`<h2>${key}</h2><div class="scroll"><table><tr><th>Przystanek</th>${ks.map(k=>`<th class="${k.zam?'zam':''}">${k.zam?'na zam.':''}</th>`).join('')}</tr>`;
+    wz.forEach((s,ri)=>{
+      html+=`<tr><td>${nm(s)}${zad.has(s)?' <span class="ż">ż</span>':''}</td>`;
+      ks.forEach(k=>{
+        // dopasowanie po kolejności wystąpienia przystanku
+        const nr=wz.slice(0,ri+1).filter(x=>x===s).length;let c=0,p=null;
+        for(const x of k.p){if(x[0]===s&&++c===nr){p=x;break}}
+        const t=!p?'–':(p[1]!==p[2]?`<span class="prz">${hm(p[1])}</span>${hm(p[2])}`:hm(p[2]));
+        html+=`<td class="${k.zam?'zam':''}">${t}</td>`;
+      });
+      html+='</tr>';
+    });
+    html+='</table></div>';
+  });
+  document.getElementById('tabele').innerHTML=html;
+}
+</script>
+</body>
+</html>
