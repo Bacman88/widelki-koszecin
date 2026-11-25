@@ -25,7 +25,7 @@ def build2(day,P,dem,LH=None):
         if k=='1' and day=='wd' and P and P[-1]==22: trips.append(trips_for('1',23)[1]+(False,))
         out[k]=trips
     return out
-VAR={'pelny':({'wd':list(range(6,23)),'sat':list(range(7,22,2)),'sun':[8,11,14,17,20]},{'wd':{'3':[10,20]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}},{'wd':{'3':[6,7,8,10,12,14,15,16,18,20]}}),
+VAR={'pelny':({'wd':list(range(6,23)),'sat':[8,10,12,14,16,18,20,22],'sun':[9,12,15,18,20,22]},{'wd':{'3':[10,20]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}},{'wd':{'3':[6,7,8,10,12,14,15,16,18,20]}}),
      'oszczedny':({'wd':[6,7,8,10,12,13,14,15,16,17,18,20,22],'sat':[8,10,12,14,16,18,20],'sun':[10,13,16,19]},{'wd':{'3':[18]},'sat':{'3':'all','4':'all'},'sun':{'3':'all','4':'all'}},{'wd':{'3':[6,7,8,12,14,16,18],'4':[7,8,13,14,15,16,17,18],'2':[7,8,13,14,15,16,17,18]}})}
 DH={frozenset(('Koszęcin Rynek','Kalety PKP')):22,frozenset(('Piłka','Łazy')):40}   # przejazd techniczny (min)
 def vehicles(trips,lay=3):
