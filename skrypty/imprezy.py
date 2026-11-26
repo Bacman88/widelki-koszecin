@@ -93,7 +93,7 @@ for dz, nazwa_dnia, okna, cele, powroty in DNI:
 koszt = ' – '.join(f'{round(km_dod * z, -2):,.0f}'.replace(',', ' ') + ' zł' for z in (KM_ZL[0], KM_ZL[2]))
 podsum = (f'<div class="grid"><div class="card"><div class="big">{liczby["dod"]}</div>kursów dodatkowych (dojazdy, których brakuje w zwykłym rozkładzie, i wieczorne powroty) w dwa dni imprezy</div>'
           f'<div class="card"><div class="big">ok. {round(km_dod, -1):.0f} km</div>dodatkowo, razem z dojazdami busów na początek trasy i zjazdami po ostatnim kursie</div>'
-          f'<div class="card"><div class="big">{koszt}</div>szacunkowy koszt dodatkowych kursów (przy {KM_ZL[0]}–{KM_ZL[2]} zł za km). Kursy na zamówienie, które tego dnia jadą bez zamawiania, są już w rocznym planie kilometrów siatki.</div></div>')
+          '</div>')
 
 strona = f'''<!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -134,7 +134,7 @@ a{{color:var(--g)}}
 <p class="lead">Jak to działa: obowiązuje zwykły rozkład weekendowy, ale kursy na zamówienie linii 3, 4 i 5 jadą bez zamawiania. Tam, gdzie zwykły rozkład nie dowozi na Rynek przed 13:30 albo przed 19:00, jest kurs dodatkowy. Wieczorem wszystkie linie odjeżdżają z Rynku razem o 21:15, a w sobotę także o 23:15, po nocnym zwiedzaniu, do każdej miejscowości w gminie oraz do Lublińca, Kalet i Lisowa.</p>
 {podsum}
 {''.join(sekcje)}
-<p class="note">Rozkład przykładowy, ułożony według <a href="../rozklad/">proponowanego rozkładu weekendowego</a>. Ten sam schemat, czyli wspólny wieczorny odjazd wszystkich linii z Rynku, pasuje do innych imprez: Międzynarodowego Festiwalu Folklorystycznego „Silesia” (w 2027 r. 19–25 lipca), dożynek i festynów. Koszt kursów dodatkowych można dzielić z organizatorem imprezy albo sponsorem. Liczba kilometrów jest szacunkowa (średnia prędkość linii z rozkładu dnia roboczego).</p>
+<p class="note">Rozkład przykładowy, ułożony według <a href="../rozklad/">proponowanego rozkładu weekendowego</a>. Ten sam schemat, czyli wspólny wieczorny odjazd wszystkich linii z Rynku, pasuje do innych imprez: Międzynarodowego Festiwalu Folklorystycznego „Silesia” (w 2027 r. 19–25 lipca), dożynek i festynów. Kursy dodatkowe można finansować wspólnie z organizatorem imprezy albo sponsorem. Liczba kilometrów jest przybliżona (średnia prędkość linii z rozkładu dnia roboczego).</p>
 </main></body></html>'''
 open(OUT, 'w').write(strona)
 print(OUT, liczby, f'{km_dod:.0f} km', koszt)
