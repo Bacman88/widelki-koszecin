@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<title>Ankieta: czy pojechałbyś busem? – propozycja siatki busów gminy Koszęcin</title>
+<meta name="description" content="Sprawdź swoją codzienną podróż w proponowanej siatce busów gminy Koszęcin i powiedz, czy byś z niej skorzystał. Propozycja mieszkańców – nie obowiązujący rozkład.">
+<meta property="og:title" content="Czy pojechałbyś busem? – ankieta o proponowanej siatce busów gminy Koszęcin">
+<meta property="og:image" content="https://busy-koszecin.smart-ant.pl/og.png">
+<link rel="canonical" href="https://busy-koszecin.smart-ant.pl/ankieta/">
+<style>
+:root{--ink:#10201c;--mut:#5d665f;--paper:#f7f4ec;--rule:#e2ddd0;--g:#00704f;--lime:#eef5d8;--warn:#b3261e;--or:#c56a00}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
+.bar{position:sticky;top:0;z-index:1000;background:var(--warn);color:#fff;text-align:center;font-weight:700;font-size:14px;padding:8px 12px}.bar a{color:#fff}
+main{max-width:820px;margin:0 auto;padding:22px 18px 70px}
+h1{font-size:30px;line-height:1.15;margin:6px 0}
+h2{font-size:20px;margin:0 0 10px;display:flex;gap:10px;align-items:center}
+h2 .nr{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:15px;flex:none}
+.lead{color:var(--mut);margin:0 0 18px}
+.krok{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:16px;margin:0 0 14px}
+.krok.off{opacity:.45;pointer-events:none}
+label.t{display:block;font-size:13px;font-weight:700;color:var(--mut);margin:10px 0 4px}
+select,input[type=time],textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid #cfc8b8;border-radius:10px;background:#fff;color:var(--ink)}
+textarea{min-height:70px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{display:flex;flex-wrap:wrap;gap:8px}
+.opt label{display:flex;gap:7px;align-items:center;border:1px solid #cfc8b8;border-radius:99px;padding:7px 13px;cursor:pointer;font-size:15px;background:#fff}
+.opt input{accent-color:var(--g)}
+.opt label:has(input:checked){border-color:var(--g);background:var(--lime);font-weight:600}
+.btn{font:inherit;font-weight:700;border:0;background:var(--g);color:#fff;border-radius:10px;padding:12px 22px;cursor:pointer;margin-top:12px}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--rule)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chips button{font:inherit;font-size:13px;border:1px solid var(--rule);background:var(--paper);border-radius:99px;padding:4px 10px;cursor:pointer}
+.pol{display:grid;gap:10px;margin-top:6px}
+.pol h3{font-size:15px;margin:8px 0 0;color:var(--mut)}
+.opc{border:1px solid var(--rule);border-radius:12px;padding:10px 12px}
+.opc .godz{font-size:20px;font-weight:800}
+.opc .info{color:var(--mut);font-size:14px;margin-left:8px}
+.leg{display:flex;gap:8px;align-items:baseline;font-size:14px;margin-top:4px}
+.bdg{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:22px;padding:0 5px;border-radius:6px;font-weight:800;font-size:12px;color:#fff;flex:none}
+.l1{background:#00704f}.l2{background:#1f6fd6}.l3{background:#cc8a00}.l4{background:#d4473a}.l5{background:#7c3aed}
+.lKŚ{background:#f2b705;color:#1e1d1b}.lPR{background:#7a2e8e}.lIC{background:#1d3b72}.lpi{background:#e9e5da;color:var(--ink)}
+.czek{font-size:13px;color:var(--mut);padding-left:40px}.czek.d{color:var(--or);font-weight:700}
+.brak{color:var(--warn);font-weight:600}
+.ok{background:var(--lime);border:1px solid #cfe0a4;border-radius:14px;padding:16px;font-weight:600}
+.note{font-size:13px;color:var(--mut);margin-top:18px}
+.ukr{display:none}
+a{color:var(--g)}
+@media (max-width:600px){.grid2{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="bar">⚠️ Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
+<main>
+<h1>Czy pojechałbyś busem?</h1>
+<p class="lead">Wpisz swoją codzienną podróż, np. do pracy albo szkoły. Pokażemy połączenia w <a href="../">proponowanej siatce busów</a> gminy Koszęcin (razem z pociągami), a Ty powiesz, czy byś z nich skorzystał. Ankieta jest anonimowa i zajmuje 2–3 minuty.</p>
+
+<section class="krok" id="k1">
+<h2><span class="nr">1</span> O Tobie</h2>
+<label class="t">Kim jesteś?</label>
+<div class="opt" data-name="rola"></div>
+<label class="t">Wiek</label>
+<div class="opt" data-name="wiek"></div>
+<label class="t" for="miejsc">Gdzie mieszkasz?</label>
+<select id="miejsc"></select>
+</section>
+
+<section class="krok" id="k2">
+<h2><span class="nr">2</span> Twoja podróż</h2>
+<div class="grid2">
+  <div><label class="t" for="z">Skąd (najbliższy przystanek)</label><select id="z"></select></div>
+  <div><label class="t" for="do">Dokąd</label><select id="do"></select>
+    <div class="chips" id="szybkie"></div></div>
+</div>
+<label class="t">Kiedy?</label>
+<div class="opt" data-name="dzien"></div>
+<div class="grid2">
+  <div><label class="t" for="na">Na miejscu muszę być o</label><input type="time" id="na" value="08:00"></div>
+  <div><label class="t" for="po">Wracam po (puste – nie wracam)</label><input type="time" id="po" value="16:00"></div>
+</div>
+<button class="btn" id="pokaz">Pokaż połączenia</button>
+</section>
+
+<section class="krok off" id="k3">
+<h2><span class="nr">3</span> Połączenia w proponowanej siatce</h2>
+<div class="pol" id="pol"></div>
+</section>
+
+<section class="krok off" id="k4">
+<h2><span class="nr">4</span> Czy pojechałbyś?</h2>
+<div class="opt" data-name="ocena"></div>
+<div id="powodyTak" class="ukr"><label class="t">Co nie pasuje?</label><div class="opt" data-name="powodyTak" data-multi="1"></div></div>
+<div id="powodyNie" class="ukr"><label class="t">Dlaczego nie?</label><div class="opt" data-name="powodyNie" data-multi="1"></div></div>
+<label class="t">Jak dojeżdżasz dziś?</label>
+<div class="opt" data-name="dzis" data-multi="1"></div>
+<label class="t">Ile dni w tygodniu jeździsz tą trasą?</label>
+<div class="opt" data-name="dni"></div>
+<label class="t">Bilet miesięczny za około 100 zł (w propozycji bezpłatnie dla młodzieży i seniorów) – kupiłbyś?</label>
+<div class="opt" data-name="bilet"></div>
+<label class="t">Czy dzięki takim busom Twoja rodzina mogłaby rzadziej używać auta (np. drugiego auta albo codziennego wożenia dzieci)?</label>
+<div class="opt" data-name="auto"></div>
+<label class="t" for="uwagi">Uwagi (opcjonalnie)</label>
+<textarea id="uwagi" maxlength="1000" placeholder="Np. czego brakuje, o której godzinie potrzebny jest bus…"></textarea>
+<button class="btn" id="wyslij">Wyślij odpowiedź</button>
+<div id="stan"></div>
+</section>
+<p class="note">Odpowiedzi nie zawierają danych osobowych: zapisujemy tylko miejscowość, przedział wieku, trasę, godziny i Twoje odpowiedzi. Rozkład busów to propozycja mieszkańców, pociągi według rozkładu 2026/27.</p>
+</main>
+<script>
+// === KONFIGURACJA FORMULARZA GOOGLE ===
+// adres formularza (…/viewform) i numery pól entry.XXXX – z linku „Pobierz wstępnie wypełniony link”
+const FORM = {url: '', pola: {rola:'', wiek:'', miejsc:'', skad:'', dokad:'', dzien:'', na:'', po:'', tam:'', powrot:'',
+  ocena:'', powody:'', dzis:'', dni:'', bilet:'', auto:'', uwagi:''}};
+
+const OPC = {
+  rola: ['uczeń', 'student', 'pracuję', 'emeryt / rencista', 'inne'],
+  wiek: ['do 15', '16–19', '20–26', '27–39', '40–59', '60–65', 'powyżej 65'],
+  dzien: ['dni robocze', 'sobota', 'niedziela'],
+  ocena: ['Tak, pojechałbym', 'Tak, ale coś nie pasuje', 'Nie'],
+  powodyTak: ['za długo jedzie', 'za wcześnie / za późno na miejscu', 'za długo czekam na powrót', 'przesiadka', 'za daleko na przystanek', 'inne (w uwagach)'],
+  powodyNie: ['wolę auto', 'nie pasują godziny', 'za długo jedzie', 'przesiadki', 'za daleko na przystanek', 'cena', 'zmienne godziny pracy', 'inne (w uwagach)'],
+  dzis: ['autem sam', 'ktoś mnie wozi', 'busem GTV', 'pociągiem', 'rowerem', 'pieszo', 'na stopa', 'nie jeżdżę, bo nie mam czym'],
+  dni: ['1–2', '3–4', '5', '6–7', 'rzadziej'],
+  bilet: ['tak', 'raczej tak', 'raczej nie', 'nie', 'dotyczy mnie przejazd bezpłatny'],
+  auto: ['tak', 'może', 'nie', 'nie mamy auta'],
+};
+const MIEJSC = ['Koszęcin', 'Strzebiń', 'Sadów', 'Rusinowice', 'Wierzbie', 'Rzyce', 'Piłka', 'Łazy', 'Bukowiec', 'Brusiek', 'Cieszowa', 'Prądy', 'spoza gminy'];
+const SZYBKIE = [['lubpkp', 'Lubliniec'], ['kosr', 'Koszęcin Rynek'], ['kossz', 'Koszęcin Szkoła'], ['st_Częstochowa', 'Częstochowa'], ['st_Tarnowskie Góry', 'Tarnowskie Góry'], ['st_Katowice', 'Katowice']];
+const KOL_TXT = {KŚ: 'Koleje Śląskie', PR: 'POLREGIO', IC: 'PKP Intercity'};
+const PRZES = 2;
+const $ = id => document.getElementById(id);
+const hm = m => Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0');
+let D, C = [], FP = {}, KURSY = [], wynik = {tam: '', powrot: ''};
+const nm = id => D.przystanki[id].n.replace(' – stacja kolejowa', ' (stacja)');
+
+for (const box of document.querySelectorAll('.opt')) {
+  const n = box.dataset.name, multi = box.dataset.multi;
+  box.innerHTML = OPC[n].map((o, i) => `<label><input type="${multi ? 'checkbox' : 'radio'}" name="${n}" value="${o}">${o}</label>`).join('');
+}
+$('miejsc').innerHTML = '<option value="">– wybierz –</option>' + MIEJSC.map(m => `<option>${m}</option>`).join('');
+document.querySelector('input[name=dzien]').checked = true;
+const val = n => [...document.querySelectorAll(`input[name=${n}]:checked`)].map(x => x.value).join('; ');
+document.querySelectorAll('input[name=ocena]').forEach(r => r.onchange = () => {
+  $('powodyTak').classList.toggle('ukr', r.value !== OPC.ocena[1] || !r.checked);
+  $('powodyNie').classList.toggle('ukr', r.value !== OPC.ocena[2] || !r.checked);
+});
+
+fetch('../wyszukiwarka/dane.json').then(r => r.json()).then(d => {
+  D = d;
+  D.piesze.forEach(([a, b, m]) => { (FP[a] = FP[a] || []).push([b, m]); (FP[b] = FP[b] || []).push([a, m]) });
+  const ids = Object.keys(D.przystanki);
+  const s = (a, b) => nm(a).localeCompare(nm(b), 'pl');
+  const bus = ids.filter(i => !D.przystanki[i].kolej).sort(s), blisko = ids.filter(i => D.przystanki[i].kolej && !D.przystanki[i].daleko).sort(s), dal = ids.filter(i => D.przystanki[i].daleko).sort(s);
+  const opt = i => `<option value="${i}">${nm(i)}</option>`;
+  $('z').innerHTML = `<optgroup label="Przystanki busów">${bus.map(opt).join('')}</optgroup><optgroup label="Stacje kolejowe">${blisko.map(opt).join('')}</optgroup>`;
+  $('do').innerHTML = $('z').innerHTML + `<optgroup label="Dalej koleją">${dal.map(opt).join('')}</optgroup>`;
+  $('z').value = 'str'; $('do').value = 'kosr';
+  $('szybkie').innerHTML = SZYBKIE.map(([i, t]) => `<button type="button" data-i="${i}">${t}</button>`).join('');
+  $('szybkie').querySelectorAll('button').forEach(b => b.onclick = () => { $('do').value = b.dataset.i });
+});
+
+function ustawDzien(dz) {
+  KURSY = D.dni[dz]; C = [];
+  KURSY.forEach((k, ti) => { for (let i = 0; i < k.p.length - 1; i++) { const a = k.p[i], b = k.p[i + 1]; C.push({d: a[2], a: b[1], z: a[0], do: b[0], t: ti, i}) } });
+  C.sort((x, y) => x.d - y.d || x.a - y.a);
+}
+// Connection Scan (jak w wyszukiwarce): najwcześniejszy przyjazd z jednego odjazdu startowego
+function csa(zr, t0) {
+  const A = {}, R = {}, J = {}, w = {};
+  const ustaw = (s, t, r, j) => { if (t < (A[s] ?? 1e9) || (t === A[s] && r < R[s])) { A[s] = t; R[s] = r; J[s] = j; return true } return false };
+  ustaw(zr, t0, 0, {start: 1});
+  for (const [b, m] of FP[zr] || []) ustaw(b, t0 + m, 0, {pie: zr, m});
+  for (const c of C) {
+    if (c.d < t0 || c.a < c.d) continue;
+    const a = A[c.z];
+    if (a !== undefined && a + (J[c.z].wys ? PRZES : 0) <= c.d) { const r = R[c.z] + 1, p = !!J[c.z].pie, o = w[c.t];
+      if (o === undefined || r < o.r || (r === o.r && (!p || o.p))) w[c.t] = {c, r, p} }
+    if (w[c.t] === undefined) continue;
+    if (ustaw(c.do, c.a, w[c.t].r, {wej: w[c.t].c, wys: c}))
+      for (const [b, m] of FP[c.do] || []) ustaw(b, c.a + m, w[c.t].r, {pie: c.do, m});
+  }
+  return {A, J};
+}
+function trasa(J, cel) {
+  const nogi = []; let s = cel, g = 0;
+  while (J[s] && !J[s].start && g++ < 50) {
+    const j = J[s];
+    if (j.pie !== undefined) { nogi.unshift({pie: 1, z: j.pie, do: s, m: j.m}); s = j.pie }
+    else { const k = KURSY[j.wej.t]; nogi.unshift({k, z: j.wej.z, do: j.wys.do, d: j.wej.d, a: j.wys.a}); s = j.wej.z }
+  }
+  return nogi;
+}
+function szukaj(z, cel, lo, hi) {
+  const pies = new Map([[z, 0], ...(FP[z] || [])]);
+  const kand = [...new Set(C.filter(c => pies.has(c.z)).map(c => c.d - pies.get(c.z)).filter(t => t >= lo && t <= hi))].sort((a, b) => a - b);
+  const wyn = [];
+  for (const t0 of kand) {
+    const {A, J} = csa(z, t0); if (A[cel] === undefined) continue;
+    const nogi = trasa(J, cel), jazda = nogi.filter(n => !n.pie); if (!jazda.length) continue;
+    wyn.push({odj: jazda[0].d - (nogi[0].pie ? nogi[0].m : 0), prz: A[cel], nogi});
+  }
+  const kl = new Set();
+  return wyn.filter(x => !wyn.some(y => y !== x && y.odj >= x.odj && y.prz <= x.prz && (y.odj > x.odj || y.prz < x.prz)))
+    .filter(x => { const k = x.odj + '|' + x.prz; if (kl.has(k)) return false; kl.add(k); return true });
+}
+// drugi wariant tylko, gdy nie jest dużo dłuższy od pierwszego
+const rozsadne = L => L.filter((x, i) => i === 0 || (x.prz - x.odj) <= Math.max(L[0].prz - L[0].odj + 30, 1.5 * (L[0].prz - L[0].odj)));
+function opis(o) {
+  return hm(o.odj) + '→' + hm(o.prz) + ' ' + o.nogi.filter(n => !n.pie).map(n => /^[1-5]$/.test(n.k.l) ? 'bus ' + n.k.l : n.k.l).join('+');
+}
+function karta(o) {
+  let h = `<div class="opc"><span class="godz">${hm(o.odj)} → ${hm(o.prz)}</span><span class="info">${o.prz - o.odj} min</span>`, prev = null;
+  for (const n of o.nogi) {
+    if (n.pie) { h += `<div class="leg"><span class="bdg lpi">🚶</span><span>${n.m} min pieszo do: ${nm(n.do)}</span></div>`; prev = prev !== null ? prev + n.m : null; continue }
+    if (prev !== null && n.d - prev > 0) { const c = n.d - prev; h += `<div class="czek${c >= 15 ? ' d' : ''}">przesiadka, czekanie ${c} min</div>` }
+    const bus = /^[1-5]$/.test(n.k.l);
+    h += `<div class="leg"><span class="bdg l${n.k.l}">${n.k.l}</span><span><b>${hm(n.d)}</b> ${nm(n.z)} → <b>${hm(n.a)}</b> ${nm(n.do)} <span style="color:var(--mut)">· ${bus ? 'linia ' + n.k.l : KOL_TXT[n.k.l] || n.k.l}</span></span></div>`;
+    prev = n.a;
+  }
+  return h + '</div>';
+}
+$('pokaz').onclick = () => {
+  if (!D) return;
+  const z = $('z').value, cel = $('do').value, dz = {'dni robocze': 'wd', 'sobota': 'sat', 'niedziela': 'sun'}[val('dzien')] || 'wd';
+  if (z === cel) { $('pol').innerHTML = '<p class="brak">Wybierz dwa różne miejsca.</p>'; return }
+  ustawDzien(dz);
+  const [h1, m1] = $('na').value.split(':').map(Number), T1 = h1 * 60 + m1;
+  let tam = szukaj(z, cel, T1 - 180, T1).filter(x => x.prz <= T1).sort((a, b) => b.prz - a.prz || b.odj - a.odj).slice(0, 2); tam = rozsadne(tam);
+  let html = `<h3>Tam: ${nm(z)} → ${nm(cel)}, na miejscu przed ${$('na').value}</h3>`;
+  html += tam.length ? tam.map(karta).join('') : '<p class="brak">Brak połączenia z przyjazdem w ciągu 3 godzin przed tą godziną.</p>';
+  wynik.tam = tam.length ? tam.map(opis).join(' | ') : 'brak';
+  wynik.powrot = '';
+  if ($('po').value) {
+    const [h2, m2] = $('po').value.split(':').map(Number), T2 = h2 * 60 + m2;
+    const pow = rozsadne(szukaj(cel, z, T2, T2 + 180).filter(x => x.odj >= T2).sort((a, b) => a.odj - b.odj || a.prz - b.prz).slice(0, 2));
+    html += `<h3>Powrót: ${nm(cel)} → ${nm(z)}, po ${$('po').value}</h3>`;
+    html += pow.length ? pow.map(karta).join('') : '<p class="brak">Brak połączenia w ciągu 3 godzin po tej godzinie.</p>';
+    wynik.powrot = pow.length ? pow.map(opis).join(' | ') : 'brak';
+  }
+  $('pol').innerHTML = html;
+  $('k3').classList.remove('off'); $('k4').classList.remove('off');
+  $('k3').scrollIntoView({behavior: 'smooth', block: 'start'});
+};
+$('wyslij').onclick = async () => {
+  const dane = {rola: val('rola'), wiek: val('wiek'), miejsc: $('miejsc').value, skad: D ? nm($('z').value) : '', dokad: D ? nm($('do').value) : '',
+    dzien: val('dzien'), na: $('na').value, po: $('po').value, tam: wynik.tam, powrot: wynik.powrot, ocena: val('ocena'),
+    powody: [val('powodyTak'), val('powodyNie')].filter(Boolean).join('; '), dzis: val('dzis'), dni: val('dni'), bilet: val('bilet'), auto: val('auto'), uwagi: $('uwagi').value.trim()};
+  if (!dane.ocena) { $('stan').innerHTML = '<p class="brak">Zaznacz, czy pojechałbyś busem.</p>'; return }
+  if (!FORM.url) { $('stan').innerHTML = '<p class="brak">Ankieta nie jest jeszcze uruchomiona – zbieranie odpowiedzi ruszy wkrótce.</p>'; return }
+  const fd = new FormData();
+  for (const [k, e] of Object.entries(FORM.pola)) if (e) fd.append('entry.' + e, dane[k] || '');
+  $('wyslij').disabled = true;
+  try { await fetch(FORM.url.replace(/\/viewform.*$/, '/formResponse'), {method: 'POST', mode: 'no-cors', body: fd});
+    $('stan').innerHTML = '<p class="ok">Dziękujemy! Odpowiedź zapisana. Możesz ocenić też inną podróż – zmień trasę albo godziny w kroku 2 i wyślij jeszcze raz.</p>';
+  } catch (e) { $('stan').innerHTML = '<p class="brak">Nie udało się wysłać. Spróbuj ponownie za chwilę.</p>' }
+  $('wyslij').disabled = false;
+};
+</script>
+</body>
+</html>
