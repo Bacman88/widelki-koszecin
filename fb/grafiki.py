@@ -10,16 +10,16 @@ from matplotlib import font_manager as fm
 for f in fm.findSystemFonts():
     if 'Inter' in f: fm.fontManager.addfont(f)
 plt.rcParams['font.family'] = ['Inter', 'DejaVu Sans']
-KOL = {'1': '#00704F', '2': '#1F6FD6', '3': '#CC8A00', '4': '#D4473A'}
+KOL = {'1': '#00704F', '2': '#1F6FD6', '3': '#CC8A00', '4': '#D4473A', '5': '#7C3AED'}
 TLO = '#F7F6F2'; CIEMNY = '#1E1D1B'
 OUT = '../fb'
 
-# --- zdjęcie profilowe: węzeł z 4 liniami ---
+# --- zdjęcie profilowe: węzeł z 5 liniami ---
 fig = plt.figure(figsize=(7.2, 7.2), dpi=100, facecolor=TLO)
 ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(-0.86, 0.86); ax.set_ylim(-0.86, 0.86); ax.set_aspect('equal'); ax.axis('off')
 ax.add_patch(plt.Circle((0, 0), 1, color=TLO))
-kat = {'1': 145, '2': 35, '3': 270, '4': 325}
-DY = 0.04
+kat = {'1': 126, '2': 54, '3': 270, '4': 342, '5': 198}
+DY = 0.055
 for l, a in kat.items():
     x, y = 0.56 * math.cos(math.radians(a)), 0.56 * math.sin(math.radians(a)) + DY
     ax.plot([0, x], [DY, y], color=KOL[l], lw=33, solid_capstyle='round', zorder=1)
@@ -79,15 +79,16 @@ import numpy as np
 g = fig.add_axes([AX0, 0, 0.10, 1]); g.axis('off')
 g.imshow(np.dstack([np.full((10, 100), c) for c in (0xF7 / 255, 0xF6 / 255, 0xF2 / 255)] + [np.tile(np.linspace(1, 0, 100), (10, 1))]), aspect='auto', extent=[0, 1, 0, 1])
 fx = 0.035
-fig.text(fx, 0.63, 'Busy Koszęcin', fontsize=42, fontweight='bold', color=CIEMNY)
-fig.text(fx, 0.578, 'Propozycja połączeń busów dla całej gminy', fontsize=15, color='#3A3732')
-for i, (l, t) in enumerate([('1', 'co godzinę do Lublińca'), ('2', 'Kalety – Koszęcin – Boronów'),
-                            ('3', 'Lisów – Cieszowa – Koszęcin'), ('4', 'Łazy – Strzebiń – Koszęcin – Piłka')]):
-    yy = 0.5 - i * 0.048
+fig.text(fx, 0.66, 'Busy Koszęcin', fontsize=42, fontweight='bold', color=CIEMNY)
+fig.text(fx, 0.608, 'Propozycja połączeń busów dla całej gminy', fontsize=15, color='#3A3732')
+for i, (l, t) in enumerate([('1', 'Piasek – Strzebiń – Koszęcin – Lubliniec, co godzinę'), ('2', 'Kalety – Koszęcin – Boronów'),
+                            ('3', 'Lisów – Cieszowa – Koszęcin'), ('4', 'Łazy – Strzebiń – Koszęcin, co godzinę'),
+                            ('5', 'Koszęcin – Rusinowice – Piłka – Sadów – Lubliniec')]):
+    yy = 0.53 - i * 0.048
     fig.patches.append(matplotlib.patches.Ellipse((fx + 0.008, yy + 0.014), 0.032 * H / W, 0.032, transform=fig.transFigure, color=KOL[l], figure=fig))
     fig.text(fx + 0.008, yy + 0.013, l, fontsize=10, color='white', fontweight='bold', ha='center', va='center')
     fig.text(fx + 0.02, yy + 0.003, t, fontsize=12, color='#2E2C28')
-fig.text(fx, 0.305, 'Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=11, color='#B3261E', fontweight='semibold')
-fig.text(fx, 0.272, 'busy-koszecin.smart-ant.pl', fontsize=11, color='#5E5A52')
+fig.text(fx, 0.285, 'Propozycja inicjatywy Widełki Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=11, color='#B3261E', fontweight='semibold')
+fig.text(fx, 0.252, 'busy-koszecin.smart-ant.pl', fontsize=11, color='#5E5A52')
 fig.savefig(f'{OUT}/tlo.png', dpi=100, facecolor=TLO); plt.close(fig)
 print('ok')
