@@ -66,6 +66,7 @@ a{color:var(--g)}
 <div class="opt" data-name="wiek"></div>
 <label class="t" for="miejsc">Gdzie mieszkasz?</label>
 <select id="miejsc"></select>
+<input type="text" id="miejscInna" class="ukr" maxlength="80" placeholder="Wpisz miejscowość" style="width:100%;font:inherit;padding:10px 12px;border:1px solid #cfc8b8;border-radius:10px;margin-top:8px">
 </section>
 
 <section class="krok" id="k2">
@@ -127,7 +128,7 @@ const OPC = {
   bilet: ['tak', 'raczej tak', 'raczej nie', 'nie', 'dotyczy mnie przejazd bezpłatny'],
   auto: ['tak', 'może', 'nie', 'nie mamy auta'],
 };
-const MIEJSC = [...['Koszęcin', 'Strzebiń', 'Sadów', 'Rusinowice', 'Wierzbie', 'Rzyce', 'Irki', 'Piłka', 'Łazy', 'Łazy Kurzychowe', 'Bukowiec', 'Brusiek', 'Cieszowa', 'Prądy', 'Nowy Dwór', 'Kolonia Strzebińska', 'Sadów Podlesie', 'Trójca'].sort((a, b) => a.localeCompare(b, 'pl')), 'inna miejscowość w gminie', 'spoza gminy'];
+const MIEJSC = [...['Koszęcin', 'Strzebiń', 'Sadów', 'Rusinowice', 'Wierzbie', 'Rzyce', 'Irki', 'Piłka', 'Łazy', 'Kurzychowe', 'Bukowiec', 'Brusiek', 'Cieszowa', 'Prądy', 'Nowy Dwór'].sort((a, b) => a.localeCompare(b, 'pl')), 'inna miejscowość w gminie', 'spoza gminy'];
 const SZYBKIE = [['lubpkp', 'Lubliniec'], ['kosr', 'Koszęcin Rynek'], ['kossz', 'Koszęcin Szkoła'], ['st_Częstochowa', 'Częstochowa'], ['st_Tarnowskie Góry', 'Tarnowskie Góry'], ['st_Katowice', 'Katowice']];
 const KOL_TXT = {KŚ: 'Koleje Śląskie', PR: 'POLREGIO', IC: 'PKP Intercity'};
 const PRZES = 2;
@@ -142,6 +143,8 @@ for (const box of document.querySelectorAll('.opt')) {
 }
 $('miejsc').innerHTML = '<option value="">– wybierz –</option>' + MIEJSC.map(m => `<option>${m}</option>`).join('');
 document.querySelector('input[name=dzien]').checked = true;
+$('miejsc').onchange = () => { const inna = /inna|spoza/.test($('miejsc').value); $('miejscInna').classList.toggle('ukr', !inna); if (inna) $('miejscInna').focus() };
+const miejscowosc = () => /inna|spoza/.test($('miejsc').value) && $('miejscInna').value.trim() ? $('miejsc').value + ': ' + $('miejscInna').value.trim() : $('miejsc').value;
 const val = n => [...document.querySelectorAll(`input[name=${n}]:checked`)].map(x => x.value).join('; ');
 document.querySelectorAll('input[name=ocena]').forEach(r => r.onchange = () => {
   $('powodyTak').classList.toggle('ukr', r.value !== OPC.ocena[1] || !r.checked);
@@ -245,7 +248,7 @@ $('pokaz').onclick = () => {
   $('k3').scrollIntoView({behavior: 'smooth', block: 'start'});
 };
 $('wyslij').onclick = async () => {
-  const dane = {rola: val('rola'), wiek: val('wiek'), miejsc: $('miejsc').value, skad: D ? nm($('z').value) : '', dokad: D ? nm($('do').value) : '',
+  const dane = {rola: val('rola'), wiek: val('wiek'), miejsc: miejscowosc(), skad: D ? nm($('z').value) : '', dokad: D ? nm($('do').value) : '',
     dzien: val('dzien'), na: $('na').value, po: $('po').value, tam: wynik.tam, powrot: wynik.powrot, ocena: val('ocena'),
     powody: [val('powodyTak'), val('powodyNie')].filter(Boolean).join('; '), dzis: val('dzis'), dni: val('dni'), bilet: val('bilet'), auto: val('auto'), uwagi: $('uwagi').value.trim()};
   if (!dane.ocena) { $('stan').innerHTML = '<p class="brak">Zaznacz, czy pojechałbyś busem.</p>'; return }
