@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dojazdy koleją – busy gminy Koszęcin</title>
+<meta name="description" content="Połączenia busem i pociągiem z Sadowa, Koszęcina i Strzebinia do Częstochowy, Tarnowskich Gór, Katowic i Opola – propozycja siatki busów gminy Koszęcin i rozkład kolejowy 2026/27.">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: rzeczowy rozkład, jak plakat odjazdów na stacji
+   IDEA: żółty plakat „Odjazdy” z dworca PKP – godziny zawieszone po lewej, trasa obok
+   PICTURE: sam rozkład (lista połączeń z dużymi godzinami) zaraz pod przełącznikami
+   COLOUR and TYPE: żółć plakatu #f6c700, czerń, kolory linii busów i przewoźników; Inter, cyfry tabelaryczne
+   LAYOUT: pas żółty z tytułem i wyborem, pod nim lista; na telefonie wszystko w jednej kolumnie */
+:root{color-scheme:light dark;--bg:light-dark(#fbfaf6,#14130f);--ink:light-dark(#171512,#efece4);--mut:light-dark(#5e5a52,#a9a499);--line:light-dark(#e4dfd3,#2f2c26);--card:light-dark(#fff,#1d1b17);--y:#f6c700;--yink:#171512}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif;overflow-x:clip;font-variant-numeric:tabular-nums}
+.band{padding:clamp(22px,3.4vw,44px) max(5vw,16px)}
+.top{background:var(--y);color:var(--yink)}
+.wrap{max-width:1040px;margin:0 auto}
+h1{font-size:clamp(30px,4.4vw,46px);line-height:1.05;margin:0 0 6px;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.lead{margin:0 0 18px;max-width:62ch;font-size:16px}
+.ctl{display:grid;gap:10px}
+.grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.grp>b{width:5.2em;font-size:14px;font-weight:600}
+.grp button{font:600 15px Inter,sans-serif;min-height:44px;padding:0 14px;border-radius:10px;border:2px solid var(--yink);background:transparent;color:var(--yink);cursor:pointer}
+.grp button[aria-pressed=true]{background:var(--yink);color:var(--y)}
+.grp button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.sum{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;margin:0 0 14px}
+.sum h2{font-size:24px;margin:0;font-weight:800}
+.sum span{color:var(--mut);font-size:14px}
+.row{display:grid;grid-template-columns:12.5em minmax(0,1fr);gap:4px 18px;padding:14px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.tm{font-size:28px;font-weight:800;line-height:1.1;white-space:nowrap}
+.tm small{display:block;font-size:15px;font-weight:600;color:var(--mut);margin-top:2px}
+.meta{font-size:14px;color:var(--mut);margin-bottom:6px}
+.meta b{color:var(--ink)}
+.legs{display:grid;gap:5px}
+.leg{display:flex;gap:9px;align-items:baseline;font-size:15px}
+.bd{flex:none;display:inline-grid;place-items:center;min-width:2.4em;height:1.55em;padding:0 6px;border-radius:6px;font-size:13px;font-weight:800;color:#fff;transform:translateY(-1px)}
+.b1{background:#00704f}.b2{background:#1f6fd1}.b3{background:#c98a00}.b4{background:#d4473a}.b5{background:#7c3aed}
+.bKŚ{background:#f2b705;color:#1e1d1b}.bPR{background:#7a2e8e}.bIC{background:#1d3b72}
+.t{white-space:nowrap;font-weight:600}
+.zam{font-size:12px;font-weight:600;color:#9a5b00;white-space:nowrap}
+.best .tm{color:light-dark(#0a6a3f,#6fd3a0)}
+.empty{padding:22px 0;color:var(--mut)}
+.note{font-size:13px;color:var(--mut);max-width:80ch}
+.note p{margin:6px 0}
+@media(max-width:600px){.row{grid-template-columns:1fr}.tm{font-size:24px}.tm small{display:inline;margin-left:10px}.grp>b{width:100%}}
+@media(prefers-reduced-motion:no-preference){#lista{transition:opacity .15s}}
+</style></head><body>
+<div style="background:#b3261e;color:#fff;text-align:center;font-weight:700;padding:8px 12px;font-size:14px">⚠️ To NIE jest aktualny rozkład jazdy – tylko propozycja! · <a href="../" style="color:#fff">strona główna</a> · <a href="../wyszukiwarka/" style="color:#fff">wyszukiwarka połączeń</a></div>
+<header class="band top"><div class="wrap">
+<h1>Pociągiem z Sadowa, Koszęcina i Strzebinia</h1>
+<p class="lead">Najlepsze połączenia busem i pociągiem do Częstochowy, Tarnowskich Gór, Katowic i Opola – w proponowanej siatce busów i nowym rozkładzie kolejowym od 13 grudnia 2026.</p>
+<div class="ctl">
+<div class="grp" id="g-z"><b>Skąd</b></div>
+<div class="grp" id="g-c"><b>Dokąd</b></div>
+<div class="grp" id="g-k"><b>Kierunek</b></div>
+<div class="grp" id="g-d"><b>Dzień</b></div>
+</div></div></header>
+<main class="band"><div class="wrap">
+<div class="sum"><h2 id="tyt"></h2><span id="pod"></span></div>
+<div id="lista"></div>
+<div class="note">
+<p><b>Uwaga:</b> to propozycja mieszkańców, nie obowiązujący rozkład. Busy według <a href="../">proponowanej siatki</a>, pociągi Kolei Śląskich, POLREGIO i PKP Intercity według rozkładu 2026/27 (dane PKP PLK, GTFS). Przesiadka z busa na pociąg liczona z co najmniej 4-minutowym zapasem.</p>
+<p>Kursy PKP Intercity (IC) mają osobną taryfę i rezerwację; do Opola są pokazane, bo regionalnych jest niewiele. Na innych kierunkach tylko pociągi regionalne. W weekend linie 3, 4 i 5 jeżdżą na zamówienie. Pokazane są połączenia, których nie da się zastąpić późniejszym wyjazdem z tym samym przyjazdem.</p>
+<p>Sadów: przystanek Sadów Przedszkole; Koszęcin: Rynek; Strzebiń: Strzebiń Centrum (stacja Strzebiń ok. 5 min pieszo).</p>
+</div></div></main>
+<script>
+{
+const D=__DATA__;
+const ZR=D.ZR, CE=D.CE, W=D.WYN;
+const KIER={tam:'Tam',powrot:'Z powrotem'}, DNI={wd:'Dzień roboczy',sat:'Sobota',sun:'Niedziela'};
+const PRZ={KŚ:'Koleje Śląskie',PR:'POLREGIO',IC:'PKP Intercity'};
+let st={z:'kosr',c:'st_Częstochowa',k:'tam',d:'wd'};
+try{const s=JSON.parse(localStorage.getItem('dojazdy')||'null');if(s)st={...st,...s}}catch(e){}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hm=m=>Math.floor(m/60)+':'+String(m%60).padStart(2,'0');
+const dur=m=>m<60?m+' min':Math.floor(m/60)+' h '+String(m%60).padStart(2,'0')+' min';
+function grp(id,opts,key){
+  const g=document.getElementById(id);
+  g.querySelectorAll('button').forEach(b=>b.remove());
+  for(const [v,t] of Object.entries(opts)){const b=document.createElement('button');b.type='button';b.textContent=t;b.dataset.v=v;
+    b.setAttribute('aria-pressed',st[key]===v);b.addEventListener('click',()=>{st[key]=v;draw()});g.appendChild(b)}
+}
+function draw(){
+  try{localStorage.setItem('dojazdy',JSON.stringify(st))}catch(e){}
+  grp('g-z',ZR,'z');grp('g-c',CE,'c');grp('g-k',KIER,'k');grp('g-d',DNI,'d');
+  const zr=ZR[st.z].replace(/ \(.*\)/,''), ce=CE[st.c];
+  document.getElementById('tyt').textContent=st.k==='tam'?zr+' → '+ce:ce+' → '+zr;
+  const L=(((W[st.d]||{})[st.z]||{})[st.c]||{})[st.k]||[];
+  const naj=L.length?Math.min(...L.map(x=>x.czas)):0;
+  document.getElementById('pod').textContent=DNI[st.d]+' · '+L.length+' połączeń'+(L.length?' · najszybciej '+dur(naj):'');
+  const el=document.getElementById('lista');
+  if(!L.length){el.innerHTML='<p class="empty">Brak połączeń w tym dniu.</p>';return}
+  el.innerHTML=L.map(x=>`<div class="row${x.czas===naj?' best':''}"><div class="tm">${hm(x.odj)} → ${hm(x.prz)}<small>${dur(x.czas)}</small></div>
+    <div><div class="meta">${x.przes?`<b>${x.przes}</b> ${x.przes===1?'przesiadka':'przesiadki'}`:'bez przesiadki'}${x.ic?' · z pociągiem Intercity':''}</div>
+    <div class="legs">${x.jak.map(g=>{const bus=g.t==='bus';
+      const bd=bus?`<span class="bd b${esc(g.l)}">${esc(g.l)}</span>`:`<span class="bd b${esc(g.t)}">${esc(g.t)}</span>`;
+      const co=bus?'bus':esc(PRZ[g.t]||g.t)+(g.nr?' '+esc(g.nr):'');
+      return `<div class="leg">${bd}<div><span class="t">${hm(g.zt)}</span> ${esc(g.z)} → <span class="t">${hm(g.dt)}</span> ${esc(g.do)} <span style="color:var(--mut);font-size:13px">· ${co}</span>${g.zam?' <span class="zam">na zamówienie</span>':''}</div></div>`}).join('')}</div></div></div>`).join('');
+}
+draw();
+}
+</script></body></html>

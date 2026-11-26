@@ -62,9 +62,16 @@ for s_ in stops:
         try: wsp.setdefault(n_, [round(float(s_['stop_lat']), 5), round(float(s_['stop_lon']), 5)])
         except (KeyError, ValueError): pass
 out = {'stacje': wsp, 'zrodlo': 'GTFS polish_trains (mkuran.pl), dane PKP PLK', 'pobrano': dt.date.today().isoformat(), 'dni': DNI, 'pociagi': {}}
+# dojazd do Katowic przez węzły (pociągi S8 kończą się często w Chorzowie Batorym lub Bytomiu): pociągi łączące
+# Tarnowskie Góry / Bytom / Chorzów Batory z Katowicami, bez stacji z okolicy – tylko godziny na tych stacjach
+WEZLY_KAT = {'Tarnowskie Góry', 'Bytom', 'Chorzów Batory', 'Katowice'}
+for tid, rc in sc.items():
+    if tid in st: continue
+    nz = {idc[r['stop_id']] for r in rc}
+    if 'Katowice' in nz and len(nz & WEZLY_KAT) >= 2: st[tid] = []
 for tid, rows in st.items():
     rows.sort(key=lambda r: int(r['stop_sequence']))
-    if len(rows) < 2 and not (rows and sc.get(tid)): continue   # jedna stacja z okolicy wystarczy, jeśli pociąg jedzie do stacji docelowej (np. Lubliniec – Opole)
+    if len(rows) < 2 and not sc.get(tid): continue   # jedna stacja z okolicy wystarczy, jeśli pociąg jedzie do stacji docelowej (np. Lubliniec – Opole)
     t = trips[tid]; ro = routes.get(t['route_id'], {})
     for k, d in DNI.items():
         if not aktywny(t['service_id'], d): continue
@@ -73,9 +80,10 @@ for tid, rows in st.items():
             'przewoznik': agency.get(ro.get('agency_id', ''), ro.get('agency_id', '')),
             'linia': ro.get('route_short_name', '') or ro.get('route_long_name', ''),
             'p': [[idn[r['stop_id']], mn(r['arrival_time']), mn(r['departure_time'])] for r in rows],
-            'cele': [[idc[r['stop_id']], mn(r['arrival_time']), mn(r['departure_time'])] for r in sorted(sc.get(tid, []), key=lambda r: int(r['stop_sequence']))]})
+            'cele': [[idc[r['stop_id']], mn(r['arrival_time']), mn(r['departure_time'])] for r in sorted(sc.get(tid, []), key=lambda r: int(r['stop_sequence']))
+                     if rows or idc[r['stop_id']] in WEZLY_KAT]})
 for k in DNI:
     v = out['pociagi'].get(k, [])
-    v.sort(key=lambda x: x['p'][0][2])
+    v.sort(key=lambda x: (x['p'] or x['cele'])[0][2])
     print(k, DNI[k], len(v), 'pociągów')
 json.dump(out, open('dane/kolej/pociagi.json', 'w'), ensure_ascii=False, indent=0)

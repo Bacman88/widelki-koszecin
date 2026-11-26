@@ -111,6 +111,44 @@
 "pociagi": {
 "sat": [
 {
+"nr": "40652",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+260,
+262
+],
+[
+"Katowice",
+269,
+272
+]
+]
+},
+{
+"nr": "40901",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+271,
+271
+],
+[
+"Chorzów Batory",
+278,
+279
+]
+]
+},
+{
 "nr": "40550",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -241,6 +279,44 @@
 ]
 },
 {
+"nr": "40903",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+291,
+295
+],
+[
+"Chorzów Batory",
+301,
+302
+]
+]
+},
+{
+"nr": "40950",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+312,
+313
+],
+[
+"Katowice",
+320,
+320
+]
+]
+},
+{
 "nr": "40401",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -282,6 +358,25 @@
 "Miasteczko Śląskie",
 309,
 309
+]
+]
+},
+{
+"nr": "40601",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+316,
+319
+],
+[
+"Chorzów Batory",
+326,
+327
 ]
 ]
 },
@@ -466,6 +561,44 @@
 ]
 },
 {
+"nr": "40656",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+347,
+348
+],
+[
+"Katowice",
+355,
+360
+]
+]
+},
+{
+"nr": "40905",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+347,
+349
+],
+[
+"Chorzów Batory",
+356,
+357
+]
+]
+},
+{
 "nr": "40452",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -606,6 +739,25 @@
 ]
 },
 {
+"nr": "40116 Jura",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+368,
+369
+],
+[
+"Katowice",
+376,
+392
+]
+]
+},
+{
 "nr": "40252",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -661,6 +813,25 @@
 ]
 },
 {
+"nr": "40603",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+376,
+379
+],
+[
+"Chorzów Batory",
+386,
+387
+]
+]
+},
+{
 "nr": "64530",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -707,6 +878,44 @@
 "Opole Główne",
 424,
 426
+]
+]
+},
+{
+"nr": "40660",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+392,
+393
+],
+[
+"Katowice",
+401,
+403
+]
+]
+},
+{
+"nr": "40907",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+404,
+404
+],
+[
+"Chorzów Batory",
+410,
+411
 ]
 ]
 },
@@ -916,6 +1125,25 @@
 ]
 },
 {
+"nr": "63104/5 Grottger (Px51)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+422,
+423
+],
+[
+"Katowice",
+429,
+437
+]
+]
+},
+{
 "nr": "62106/7 Łempicka (P18)",
 "kier": "Lublin Główny",
 "przewoznik": "PKP Intercity",
@@ -937,6 +1165,44 @@
 "Częstochowa Stradom",
 453,
 455
+]
+]
+},
+{
+"nr": "40118 Mitręga",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+433,
+435
+],
+[
+"Katowice",
+442,
+444
+]
+]
+},
+{
+"nr": "40605",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+435,
+437
+],
+[
+"Chorzów Batory",
+444,
+445
 ]
 ]
 },
@@ -1077,6 +1343,63 @@
 "Kluczbork",
 491,
 496
+]
+]
+},
+{
+"nr": "40662",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+455,
+457
+],
+[
+"Katowice",
+464,
+471
+]
+]
+},
+{
+"nr": "40909",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+458,
+458
+],
+[
+"Chorzów Batory",
+464,
+466
+]
+]
+},
+{
+"nr": "40952",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+468,
+469
+],
+[
+"Katowice",
+477,
+481
 ]
 ]
 },
@@ -1241,6 +1564,44 @@
 ]
 },
 {
+"nr": "42104 Jadwiga (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+487,
+488
+],
+[
+"Katowice",
+494,
+501
+]
+]
+},
+{
+"nr": "40607",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+487,
+489
+],
+[
+"Chorzów Batory",
+495,
+496
+]
+]
+},
+{
 "nr": "64542/3",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -1287,6 +1648,44 @@
 "Opole Główne",
 534,
 538
+]
+]
+},
+{
+"nr": "36106/7 Szczeliniec (P80)",
+"kier": "Jelenia Góra",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+494,
+498
+],
+[
+"Chorzów Batory",
+504,
+505
+]
+]
+},
+{
+"nr": "40664",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+497,
+499
+],
+[
+"Katowice",
+506,
+509
 ]
 ]
 },
@@ -1511,6 +1910,25 @@
 ]
 },
 {
+"nr": "40911",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+532,
+532
+],
+[
+"Chorzów Batory",
+539,
+540
+]
+]
+},
+{
 "nr": "26100/1 Stryjeńska (P18)",
 "kier": "Wrocław Główny",
 "przewoznik": "PKP Intercity",
@@ -1621,6 +2039,25 @@
 ]
 },
 {
+"nr": "40666",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+555,
+557
+],
+[
+"Katowice",
+564,
+566
+]
+]
+},
+{
 "nr": "64536",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -1701,6 +2138,30 @@
 ]
 },
 {
+"nr": "35102/3 Flisak (P47)",
+"kier": "Gdynia Główna",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Katowice",
+563,
+567
+],
+[
+"Bytom",
+582,
+583
+],
+[
+"Tarnowskie Góry",
+595,
+596
+]
+]
+},
+{
 "nr": "40256",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -1752,6 +2213,44 @@
 "Chorzów Batory",
 628,
 628
+]
+]
+},
+{
+"nr": "40609",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+572,
+574
+],
+[
+"Chorzów Batory",
+581,
+582
+]
+]
+},
+{
+"nr": "40954",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+590,
+592
+],
+[
+"Katowice",
+599,
+607
 ]
 ]
 },
@@ -1931,6 +2430,63 @@
 ]
 },
 {
+"nr": "40611",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+599,
+602
+],
+[
+"Chorzów Batory",
+609,
+610
+]
+]
+},
+{
+"nr": "83130/1 Ślązak (P40)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+607,
+610
+],
+[
+"Katowice",
+616,
+619
+]
+]
+},
+{
+"nr": "40913",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+610,
+612
+],
+[
+"Chorzów Batory",
+619,
+620
+]
+]
+},
+{
 "nr": "40507",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -1966,6 +2522,25 @@
 ]
 },
 {
+"nr": "40956",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+617,
+618
+],
+[
+"Katowice",
+625,
+625
+]
+]
+},
+{
 "nr": "46544/5",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -1987,6 +2562,25 @@
 "Kluczbork",
 665,
 680
+]
+]
+},
+{
+"nr": "40668",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+633,
+634
+],
+[
+"Katowice",
+642,
+650
 ]
 ]
 },
@@ -2026,6 +2620,25 @@
 ]
 },
 {
+"nr": "40107 Mitręga",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+642,
+644
+],
+[
+"Chorzów Batory",
+650,
+651
+]
+]
+},
+{
 "nr": "6106/7 Krasnal (Ex02)",
 "kier": "Warszawa Wschodnia",
 "przewoznik": "PKP Intercity",
@@ -2047,6 +2660,30 @@
 "Częstochowa Stradom",
 671,
 672
+]
+]
+},
+{
+"nr": "24100/1 Sztygar (P19)",
+"kier": "Katowice",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+647,
+652
+],
+[
+"Bytom",
+663,
+665
+],
+[
+"Katowice",
+683,
+683
 ]
 ]
 },
@@ -2151,6 +2788,68 @@
 ]
 },
 {
+"nr": "40670",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+669,
+670
+],
+[
+"Katowice",
+677,
+683
+]
+]
+},
+{
+"nr": "40915",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+672,
+672
+],
+[
+"Chorzów Batory",
+679,
+680
+]
+]
+},
+{
+"nr": "83156/7 Osterwa (P29)",
+"kier": "Zakopane",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+665,
+673
+],
+[
+"Bytom",
+684,
+686
+],
+[
+"Katowice",
+702,
+707
+]
+]
+},
+{
 "nr": "62104/5 Bolko (P18)",
 "kier": "Lublin Główny",
 "przewoznik": "PKP Intercity",
@@ -2172,6 +2871,25 @@
 "Częstochowa Stradom",
 703,
 705
+]
+]
+},
+{
+"nr": "40613",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+682,
+685
+],
+[
+"Chorzów Batory",
+692,
+693
 ]
 ]
 },
@@ -2231,6 +2949,25 @@
 ]
 },
 {
+"nr": "63102/3 Sudety (P80)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+701,
+702
+],
+[
+"Katowice",
+708,
+713
+]
+]
+},
+{
 "nr": "37104/5 Czarniecki (P89)",
 "kier": "Poznań Główny",
 "przewoznik": "PKP Intercity",
@@ -2257,6 +2994,44 @@
 "Kluczbork",
 738,
 739
+]
+]
+},
+{
+"nr": "40958",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+710,
+711
+],
+[
+"Katowice",
+718,
+720
+]
+]
+},
+{
+"nr": "38110/1 Kossak (P10)",
+"kier": "Kołobrzeg",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+712,
+715
+],
+[
+"Chorzów Batory",
+720,
+721
 ]
 ]
 },
@@ -2436,6 +3211,25 @@
 ]
 },
 {
+"nr": "73116/7 Fałat (P10)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+728,
+729
+],
+[
+"Katowice",
+735,
+739
+]
+]
+},
+{
 "nr": "16100/1 Orzeszkowa (P13)",
 "kier": "Szklarska Poręba Górna",
 "przewoznik": "PKP Intercity",
@@ -2462,6 +3256,25 @@
 "Opole Główne",
 777,
 778
+]
+]
+},
+{
+"nr": "40615",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+730,
+735
+],
+[
+"Chorzów Batory",
+742,
+743
 ]
 ]
 },
@@ -2522,6 +3335,49 @@
 "Olesno Śląskie",
 710,
 711
+]
+]
+},
+{
+"nr": "40960",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+738,
+739
+],
+[
+"Katowice",
+746,
+751
+]
+]
+},
+{
+"nr": "42102/3 Morcinek (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+746,
+746
+],
+[
+"Bytom",
+762,
+763
+],
+[
+"Tarnowskie Góry",
+774,
+775
 ]
 ]
 },
@@ -2607,6 +3463,44 @@
 "Kłobuck",
 781,
 782
+]
+]
+},
+{
+"nr": "40917",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+751,
+754
+],
+[
+"Chorzów Batory",
+761,
+762
+]
+]
+},
+{
+"nr": "40672",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+753,
+755
+],
+[
+"Katowice",
+762,
+767
 ]
 ]
 },
@@ -2796,6 +3690,25 @@
 ]
 },
 {
+"nr": "83114/5 Matejko (Px55)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+792,
+793
+],
+[
+"Katowice",
+799,
+803
+]
+]
+},
+{
 "nr": "54260",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -2851,6 +3764,44 @@
 ]
 },
 {
+"nr": "40962",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+809,
+810
+],
+[
+"Katowice",
+817,
+820
+]
+]
+},
+{
+"nr": "40617",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+805,
+811
+],
+[
+"Chorzów Batory",
+818,
+819
+]
+]
+},
+{
 "nr": "46546/7",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -2872,6 +3823,25 @@
 "Kluczbork",
 860,
 866
+]
+]
+},
+{
+"nr": "40674",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+821,
+822
+],
+[
+"Katowice",
+829,
+832
 ]
 ]
 },
@@ -2917,6 +3887,25 @@
 "Tarnowskie Góry",
 847,
 847
+]
+]
+},
+{
+"nr": "40964",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+833,
+834
+],
+[
+"Katowice",
+841,
+844
 ]
 ]
 },
@@ -3021,6 +4010,44 @@
 ]
 },
 {
+"nr": "40919",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+841,
+844
+],
+[
+"Chorzów Batory",
+851,
+852
+]
+]
+},
+{
+"nr": "40619",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+863,
+870
+],
+[
+"Chorzów Batory",
+877,
+878
+]
+]
+},
+{
 "nr": "45211",
 "kier": "Zduńska Wola",
 "przewoznik": "Koleje Śląskie",
@@ -3072,6 +4099,44 @@
 "Kłobuck",
 902,
 902
+]
+]
+},
+{
+"nr": "40676",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+872,
+873
+],
+[
+"Katowice",
+880,
+882
+]
+]
+},
+{
+"nr": "40921",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+876,
+881
+],
+[
+"Chorzów Batory",
+888,
+889
 ]
 ]
 },
@@ -3142,6 +4207,30 @@
 "Częstochowa Stradom",
 907,
 911
+]
+]
+},
+{
+"nr": "24102/3 Morcinek (P19)",
+"kier": "Katowice",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+884,
+885
+],
+[
+"Bytom",
+896,
+897
+],
+[
+"Katowice",
+913,
+913
 ]
 ]
 },
@@ -3271,6 +4360,25 @@
 ]
 },
 {
+"nr": "40966",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+912,
+913
+],
+[
+"Katowice",
+920,
+923
+]
+]
+},
+{
 "nr": "40511",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -3331,6 +4439,25 @@
 ]
 },
 {
+"nr": "40621",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+925,
+927
+],
+[
+"Chorzów Batory",
+934,
+935
+]
+]
+},
+{
 "nr": "46548/9",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -3387,6 +4514,25 @@
 "Częstochowa",
 973,
 973
+]
+]
+},
+{
+"nr": "40678",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+939,
+940
+],
+[
+"Katowice",
+947,
+950
 ]
 ]
 },
@@ -3501,6 +4647,25 @@
 ]
 },
 {
+"nr": "40923",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+958,
+961
+],
+[
+"Chorzów Batory",
+968,
+969
+]
+]
+},
+{
 "nr": "40423",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -3551,6 +4716,25 @@
 ]
 },
 {
+"nr": "40126 Rawa",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+961,
+962
+],
+[
+"Katowice",
+969,
+972
+]
+]
+},
+{
 "nr": "16102/3 Fredro (P13)",
 "kier": "Jelenia Góra",
 "przewoznik": "PKP Intercity",
@@ -3577,6 +4761,30 @@
 "Opole Główne",
 996,
 1003
+]
+]
+},
+{
+"nr": "38156/7 Osterwa (P29)",
+"kier": "Szczecin Główny",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Katowice",
+976,
+979
+],
+[
+"Bytom",
+995,
+998
+],
+[
+"Tarnowskie Góry",
+1010,
+1014
 ]
 ]
 },
@@ -3666,6 +4874,49 @@
 ]
 },
 {
+"nr": "40680",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+985,
+986
+],
+[
+"Katowice",
+993,
+995
+]
+]
+},
+{
+"nr": "42100/1 Sztygar (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+987,
+987
+],
+[
+"Bytom",
+1003,
+1005
+],
+[
+"Tarnowskie Góry",
+1016,
+1017
+]
+]
+},
+{
 "nr": "40213",
 "kier": "Chorzew Siemkowice",
 "przewoznik": "Koleje Śląskie",
@@ -3717,6 +4968,25 @@
 "Kłobuck",
 1020,
 1020
+]
+]
+},
+{
+"nr": "40625",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+992,
+995
+],
+[
+"Chorzów Batory",
+1002,
+1003
 ]
 ]
 },
@@ -3846,6 +5116,25 @@
 ]
 },
 {
+"nr": "83108/9 Wyczółkowski (Px55)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1017,
+1018
+],
+[
+"Katowice",
+1024,
+1027
+]
+]
+},
+{
 "nr": "64550/1",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -3867,6 +5156,25 @@
 "Olesno Śląskie",
 1003,
 1004
+]
+]
+},
+{
+"nr": "40925",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1027,
+1029
+],
+[
+"Chorzów Batory",
+1035,
+1037
 ]
 ]
 },
@@ -3976,6 +5284,44 @@
 ]
 },
 {
+"nr": "40968",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1041,
+1043
+],
+[
+"Katowice",
+1050,
+1058
+]
+]
+},
+{
+"nr": "40627",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1040,
+1044
+],
+[
+"Chorzów Batory",
+1051,
+1052
+]
+]
+},
+{
 "nr": "40568",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -4007,6 +5353,44 @@
 "Częstochowa",
 1089,
 1089
+]
+]
+},
+{
+"nr": "40927",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1059,
+1063
+],
+[
+"Chorzów Batory",
+1070,
+1071
+]
+]
+},
+{
+"nr": "40682",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1067,
+1068
+],
+[
+"Katowice",
+1075,
+1078
 ]
 ]
 },
@@ -4082,6 +5466,25 @@
 "Chorzów Batory",
 1142,
 1142
+]
+]
+},
+{
+"nr": "83106/7 Zefir (P40)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1080,
+1081
+],
+[
+"Katowice",
+1087,
+1091
 ]
 ]
 },
@@ -4162,6 +5565,44 @@
 "Miasteczko Śląskie",
 1080,
 1080
+]
+]
+},
+{
+"nr": "40970",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1094,
+1096
+],
+[
+"Katowice",
+1103,
+1103
+]
+]
+},
+{
+"nr": "40629",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1092,
+1096
+],
+[
+"Chorzów Batory",
+1103,
+1104
 ]
 ]
 },
@@ -4272,6 +5713,25 @@
 "Kłobuck",
 1138,
 1139
+]
+]
+},
+{
+"nr": "40684",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1121,
+1122
+],
+[
+"Katowice",
+1130,
+1135
 ]
 ]
 },
@@ -4481,6 +5941,25 @@
 ]
 },
 {
+"nr": "40113 Warta",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1145,
+1148
+],
+[
+"Chorzów Batory",
+1155,
+1156
+]
+]
+},
+{
 "nr": "1608/9 Estrada (Ex02)",
 "kier": "Wrocław Główny",
 "przewoznik": "PKP Intercity",
@@ -4527,6 +6006,25 @@
 "Olesno Śląskie",
 1129,
 1130
+]
+]
+},
+{
+"nr": "40686",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1158,
+1160
+],
+[
+"Katowice",
+1167,
+1169
 ]
 ]
 },
@@ -4582,6 +6080,25 @@
 "Kluczbork",
 1205,
 1206
+]
+]
+},
+{
+"nr": "40631",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1170,
+1172
+],
+[
+"Chorzów Batory",
+1179,
+1180
 ]
 ]
 },
@@ -4806,6 +6323,44 @@
 ]
 },
 {
+"nr": "40974",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1210,
+1211
+],
+[
+"Katowice",
+1218,
+1218
+]
+]
+},
+{
+"nr": "40929",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1212,
+1215
+],
+[
+"Chorzów Batory",
+1222,
+1223
+]
+]
+},
+{
 "nr": "73100/1 Pułaski (P89)",
 "kier": "Kraków Główny",
 "przewoznik": "PKP Intercity",
@@ -4981,6 +6536,44 @@
 ]
 },
 {
+"nr": "40633",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1227,
+1232
+],
+[
+"Chorzów Batory",
+1239,
+1240
+]
+]
+},
+{
+"nr": "40688",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1243,
+1244
+],
+[
+"Katowice",
+1251,
+1256
+]
+]
+},
+{
 "nr": "40572",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -5041,6 +6634,25 @@
 ]
 },
 {
+"nr": "40115 Jura",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1248,
+1251
+],
+[
+"Chorzów Batory",
+1258,
+1259
+]
+]
+},
+{
 "nr": "40482",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -5087,6 +6699,25 @@
 "Chorzów Batory",
 1316,
 1316
+]
+]
+},
+{
+"nr": "83102/3 Chełmoński (Px55)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1265,
+1266
+],
+[
+"Katowice",
+1272,
+1277
 ]
 ]
 },
@@ -5176,6 +6807,25 @@
 ]
 },
 {
+"nr": "40976",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1280,
+1281
+],
+[
+"Katowice",
+1288,
+1290
+]
+]
+},
+{
 "nr": "40268",
 "kier": "Katowice",
 "przewoznik": "Koleje Śląskie",
@@ -5236,6 +6886,25 @@
 ]
 },
 {
+"nr": "40635",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1280,
+1284
+],
+[
+"Chorzów Batory",
+1290,
+1291
+]
+]
+},
+{
 "nr": "40484",
 "kier": "Katowice",
 "przewoznik": "Koleje Śląskie",
@@ -5287,6 +6956,25 @@
 "Katowice",
 1361,
 1361
+]
+]
+},
+{
+"nr": "40690",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1304,
+1305
+],
+[
+"Katowice",
+1312,
+1314
 ]
 ]
 },
@@ -5376,6 +7064,25 @@
 ]
 },
 {
+"nr": "40978",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1311,
+1312
+],
+[
+"Katowice",
+1319,
+1319
+]
+]
+},
+{
 "nr": "40523",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -5407,6 +7114,44 @@
 "Częstochowa Stradom",
 1299,
 1299
+]
+]
+},
+{
+"nr": "83100/1 Gwarek (P40)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1323,
+1324
+],
+[
+"Katowice",
+1330,
+1338
+]
+]
+},
+{
+"nr": "40692",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1335,
+1336
+],
+[
+"Katowice",
+1343,
+1347
 ]
 ]
 },
@@ -5452,6 +7197,30 @@
 "Bytom",
 1398,
 1398
+]
+]
+},
+{
+"nr": "38174/5 Podhalanin",
+"kier": "Szczecin Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+1346,
+1350
+],
+[
+"Bytom",
+1366,
+1367
+],
+[
+"Tarnowskie Góry",
+1380,
+1381
 ]
 ]
 },
@@ -5507,6 +7276,25 @@
 "Kłobuck",
 1381,
 1382
+]
+]
+},
+{
+"nr": "40637",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1355,
+1358
+],
+[
+"Chorzów Batory",
+1364,
+1365
 ]
 ]
 },
@@ -5659,9 +7447,109 @@
 1425
 ]
 ]
+},
+{
+"nr": "40639",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1400,
+1412
+],
+[
+"Chorzów Batory",
+1419,
+1420
+]
+]
+},
+{
+"nr": "40980",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1415,
+1416
+],
+[
+"Katowice",
+1423,
+1425
+]
+]
+},
+{
+"nr": "83174/5 Podhalanin",
+"kier": "Zakopane",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+1729,
+1733
+],
+[
+"Bytom",
+1745,
+1750
+],
+[
+"Katowice",
+1767,
+1772
+]
+]
 }
 ],
 "sun": [
+{
+"nr": "40652",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+260,
+262
+],
+[
+"Katowice",
+269,
+272
+]
+]
+},
+{
+"nr": "40901",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+271,
+271
+],
+[
+"Chorzów Batory",
+278,
+279
+]
+]
+},
 {
 "nr": "40550",
 "kier": "Częstochowa",
@@ -5793,6 +7681,44 @@
 ]
 },
 {
+"nr": "40903",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+291,
+295
+],
+[
+"Chorzów Batory",
+301,
+302
+]
+]
+},
+{
+"nr": "40950",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+312,
+313
+],
+[
+"Katowice",
+320,
+320
+]
+]
+},
+{
 "nr": "40401",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -5834,6 +7760,25 @@
 "Miasteczko Śląskie",
 309,
 309
+]
+]
+},
+{
+"nr": "40601",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+316,
+319
+],
+[
+"Chorzów Batory",
+326,
+327
 ]
 ]
 },
@@ -6018,6 +7963,44 @@
 ]
 },
 {
+"nr": "40656",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+347,
+348
+],
+[
+"Katowice",
+355,
+360
+]
+]
+},
+{
+"nr": "40905",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+347,
+349
+],
+[
+"Chorzów Batory",
+356,
+357
+]
+]
+},
+{
 "nr": "40452",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -6158,6 +8141,25 @@
 ]
 },
 {
+"nr": "40116 Jura",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+368,
+369
+],
+[
+"Katowice",
+376,
+392
+]
+]
+},
+{
 "nr": "40252",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -6213,6 +8215,25 @@
 ]
 },
 {
+"nr": "40603",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+376,
+379
+],
+[
+"Chorzów Batory",
+386,
+387
+]
+]
+},
+{
 "nr": "64530",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -6234,6 +8255,44 @@
 "Olesno Śląskie",
 354,
 354
+]
+]
+},
+{
+"nr": "40660",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+392,
+393
+],
+[
+"Katowice",
+401,
+403
+]
+]
+},
+{
+"nr": "40907",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+404,
+404
+],
+[
+"Chorzów Batory",
+410,
+411
 ]
 ]
 },
@@ -6443,6 +8502,25 @@
 ]
 },
 {
+"nr": "63104/5 Grottger (Px51)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+422,
+423
+],
+[
+"Katowice",
+429,
+437
+]
+]
+},
+{
 "nr": "62106/7 Łempicka (P18)",
 "kier": "Lublin Główny",
 "przewoznik": "PKP Intercity",
@@ -6464,6 +8542,44 @@
 "Częstochowa Stradom",
 453,
 455
+]
+]
+},
+{
+"nr": "40118 Mitręga",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+433,
+435
+],
+[
+"Katowice",
+442,
+444
+]
+]
+},
+{
+"nr": "40605",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+435,
+437
+],
+[
+"Chorzów Batory",
+444,
+445
 ]
 ]
 },
@@ -6604,6 +8720,63 @@
 "Kluczbork",
 491,
 496
+]
+]
+},
+{
+"nr": "40662",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+455,
+457
+],
+[
+"Katowice",
+464,
+471
+]
+]
+},
+{
+"nr": "40909",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+458,
+458
+],
+[
+"Chorzów Batory",
+464,
+466
+]
+]
+},
+{
+"nr": "40952",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+468,
+469
+],
+[
+"Katowice",
+477,
+481
 ]
 ]
 },
@@ -6768,6 +8941,44 @@
 ]
 },
 {
+"nr": "42104 Jadwiga (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+487,
+488
+],
+[
+"Katowice",
+494,
+501
+]
+]
+},
+{
+"nr": "40607",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+487,
+489
+],
+[
+"Chorzów Batory",
+495,
+496
+]
+]
+},
+{
 "nr": "64542/3",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -6814,6 +9025,44 @@
 "Opole Główne",
 534,
 538
+]
+]
+},
+{
+"nr": "36106/7 Szczeliniec (P80)",
+"kier": "Jelenia Góra",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+494,
+498
+],
+[
+"Chorzów Batory",
+504,
+505
+]
+]
+},
+{
+"nr": "40664",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+497,
+499
+],
+[
+"Katowice",
+506,
+509
 ]
 ]
 },
@@ -7038,6 +9287,25 @@
 ]
 },
 {
+"nr": "40911",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+532,
+532
+],
+[
+"Chorzów Batory",
+539,
+540
+]
+]
+},
+{
 "nr": "26100/1 Stryjeńska (P18)",
 "kier": "Wrocław Główny",
 "przewoznik": "PKP Intercity",
@@ -7148,6 +9416,25 @@
 ]
 },
 {
+"nr": "40666",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+555,
+557
+],
+[
+"Katowice",
+564,
+566
+]
+]
+},
+{
 "nr": "64536",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -7228,6 +9515,30 @@
 ]
 },
 {
+"nr": "35102/3 Flisak (P47)",
+"kier": "Gdynia Główna",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Katowice",
+563,
+567
+],
+[
+"Bytom",
+582,
+583
+],
+[
+"Tarnowskie Góry",
+595,
+596
+]
+]
+},
+{
 "nr": "40256",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -7283,6 +9594,25 @@
 ]
 },
 {
+"nr": "40609",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+572,
+574
+],
+[
+"Chorzów Batory",
+581,
+582
+]
+]
+},
+{
 "nr": "64130 Pielgrzym",
 "kier": "Częstochowa",
 "przewoznik": "PolRegio",
@@ -7314,6 +9644,25 @@
 "Częstochowa",
 616,
 616
+]
+]
+},
+{
+"nr": "40954",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+590,
+592
+],
+[
+"Katowice",
+599,
+607
 ]
 ]
 },
@@ -7493,6 +9842,63 @@
 ]
 },
 {
+"nr": "40611",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+599,
+602
+],
+[
+"Chorzów Batory",
+609,
+610
+]
+]
+},
+{
+"nr": "83130/1 Ślązak (P40)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+607,
+610
+],
+[
+"Katowice",
+616,
+619
+]
+]
+},
+{
+"nr": "40913",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+610,
+612
+],
+[
+"Chorzów Batory",
+619,
+620
+]
+]
+},
+{
 "nr": "40507",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -7528,6 +9934,25 @@
 ]
 },
 {
+"nr": "40956",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+617,
+618
+],
+[
+"Katowice",
+625,
+625
+]
+]
+},
+{
 "nr": "46544/5",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -7549,6 +9974,25 @@
 "Kluczbork",
 665,
 680
+]
+]
+},
+{
+"nr": "40668",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+633,
+634
+],
+[
+"Katowice",
+642,
+650
 ]
 ]
 },
@@ -7588,6 +10032,25 @@
 ]
 },
 {
+"nr": "40107 Mitręga",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+642,
+644
+],
+[
+"Chorzów Batory",
+650,
+651
+]
+]
+},
+{
 "nr": "6106/7 Krasnal (Ex02)",
 "kier": "Warszawa Wschodnia",
 "przewoznik": "PKP Intercity",
@@ -7609,6 +10072,30 @@
 "Częstochowa Stradom",
 671,
 672
+]
+]
+},
+{
+"nr": "24100/1 Sztygar (P19)",
+"kier": "Katowice",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+647,
+652
+],
+[
+"Bytom",
+663,
+665
+],
+[
+"Katowice",
+683,
+683
 ]
 ]
 },
@@ -7713,6 +10200,68 @@
 ]
 },
 {
+"nr": "40670",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+669,
+670
+],
+[
+"Katowice",
+677,
+683
+]
+]
+},
+{
+"nr": "40915",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+672,
+672
+],
+[
+"Chorzów Batory",
+679,
+680
+]
+]
+},
+{
+"nr": "83156/7 Osterwa (P29)",
+"kier": "Zakopane",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+665,
+673
+],
+[
+"Bytom",
+684,
+686
+],
+[
+"Katowice",
+702,
+707
+]
+]
+},
+{
 "nr": "62104/5 Bolko (P18)",
 "kier": "Lublin Główny",
 "przewoznik": "PKP Intercity",
@@ -7734,6 +10283,25 @@
 "Częstochowa Stradom",
 703,
 705
+]
+]
+},
+{
+"nr": "40613",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+682,
+685
+],
+[
+"Chorzów Batory",
+692,
+693
 ]
 ]
 },
@@ -7793,6 +10361,25 @@
 ]
 },
 {
+"nr": "63102/3 Sudety (P80)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+701,
+702
+],
+[
+"Katowice",
+708,
+713
+]
+]
+},
+{
 "nr": "37104/5 Czarniecki (P89)",
 "kier": "Poznań Główny",
 "przewoznik": "PKP Intercity",
@@ -7819,6 +10406,44 @@
 "Kluczbork",
 738,
 739
+]
+]
+},
+{
+"nr": "40958",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+710,
+711
+],
+[
+"Katowice",
+718,
+720
+]
+]
+},
+{
+"nr": "38110/1 Kossak (P10)",
+"kier": "Kołobrzeg",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+712,
+715
+],
+[
+"Chorzów Batory",
+720,
+721
 ]
 ]
 },
@@ -7998,6 +10623,25 @@
 ]
 },
 {
+"nr": "73116/7 Fałat (P10)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+728,
+729
+],
+[
+"Katowice",
+735,
+739
+]
+]
+},
+{
 "nr": "16100/1 Orzeszkowa (P13)",
 "kier": "Szklarska Poręba Górna",
 "przewoznik": "PKP Intercity",
@@ -8024,6 +10668,25 @@
 "Opole Główne",
 777,
 778
+]
+]
+},
+{
+"nr": "40615",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+730,
+735
+],
+[
+"Chorzów Batory",
+742,
+743
 ]
 ]
 },
@@ -8084,6 +10747,49 @@
 "Olesno Śląskie",
 710,
 711
+]
+]
+},
+{
+"nr": "40960",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+738,
+739
+],
+[
+"Katowice",
+746,
+751
+]
+]
+},
+{
+"nr": "42102/3 Morcinek (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+746,
+746
+],
+[
+"Bytom",
+762,
+763
+],
+[
+"Tarnowskie Góry",
+774,
+775
 ]
 ]
 },
@@ -8169,6 +10875,44 @@
 "Kłobuck",
 781,
 782
+]
+]
+},
+{
+"nr": "40917",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+751,
+754
+],
+[
+"Chorzów Batory",
+761,
+762
+]
+]
+},
+{
+"nr": "40672",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+753,
+755
+],
+[
+"Katowice",
+762,
+767
 ]
 ]
 },
@@ -8358,6 +11102,25 @@
 ]
 },
 {
+"nr": "83114/5 Matejko (Px55)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+792,
+793
+],
+[
+"Katowice",
+799,
+803
+]
+]
+},
+{
 "nr": "54260",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -8413,6 +11176,44 @@
 ]
 },
 {
+"nr": "40962",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+809,
+810
+],
+[
+"Katowice",
+817,
+820
+]
+]
+},
+{
+"nr": "40617",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+805,
+811
+],
+[
+"Chorzów Batory",
+818,
+819
+]
+]
+},
+{
 "nr": "46546/7",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -8434,6 +11235,25 @@
 "Kluczbork",
 860,
 866
+]
+]
+},
+{
+"nr": "40674",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+821,
+822
+],
+[
+"Katowice",
+829,
+832
 ]
 ]
 },
@@ -8479,6 +11299,25 @@
 "Tarnowskie Góry",
 847,
 847
+]
+]
+},
+{
+"nr": "40964",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+833,
+834
+],
+[
+"Katowice",
+841,
+844
 ]
 ]
 },
@@ -8583,6 +11422,44 @@
 ]
 },
 {
+"nr": "40919",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+841,
+844
+],
+[
+"Chorzów Batory",
+851,
+852
+]
+]
+},
+{
+"nr": "40619",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+863,
+870
+],
+[
+"Chorzów Batory",
+877,
+878
+]
+]
+},
+{
 "nr": "45211",
 "kier": "Zduńska Wola",
 "przewoznik": "Koleje Śląskie",
@@ -8634,6 +11511,44 @@
 "Kłobuck",
 902,
 902
+]
+]
+},
+{
+"nr": "40676",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+872,
+873
+],
+[
+"Katowice",
+880,
+882
+]
+]
+},
+{
+"nr": "40921",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+876,
+881
+],
+[
+"Chorzów Batory",
+888,
+889
 ]
 ]
 },
@@ -8704,6 +11619,30 @@
 "Częstochowa Stradom",
 907,
 911
+]
+]
+},
+{
+"nr": "24102/3 Morcinek (P19)",
+"kier": "Katowice",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+884,
+885
+],
+[
+"Bytom",
+896,
+897
+],
+[
+"Katowice",
+913,
+913
 ]
 ]
 },
@@ -8833,6 +11772,25 @@
 ]
 },
 {
+"nr": "40966",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+912,
+913
+],
+[
+"Katowice",
+920,
+923
+]
+]
+},
+{
 "nr": "40511",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -8893,6 +11851,25 @@
 ]
 },
 {
+"nr": "40621",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+925,
+927
+],
+[
+"Chorzów Batory",
+934,
+935
+]
+]
+},
+{
 "nr": "46548/9",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -8949,6 +11926,25 @@
 "Częstochowa",
 973,
 973
+]
+]
+},
+{
+"nr": "40678",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+939,
+940
+],
+[
+"Katowice",
+947,
+950
 ]
 ]
 },
@@ -9063,6 +12059,25 @@
 ]
 },
 {
+"nr": "40923",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+958,
+961
+],
+[
+"Chorzów Batory",
+968,
+969
+]
+]
+},
+{
 "nr": "40423",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -9109,6 +12124,25 @@
 "Miasteczko Śląskie",
 955,
 956
+]
+]
+},
+{
+"nr": "40126 Rawa",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+961,
+962
+],
+[
+"Katowice",
+969,
+972
 ]
 ]
 },
@@ -9174,6 +12208,30 @@
 "Opole Główne",
 1023,
 1023
+]
+]
+},
+{
+"nr": "38156/7 Osterwa (P29)",
+"kier": "Szczecin Główny",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Katowice",
+976,
+979
+],
+[
+"Bytom",
+995,
+998
+],
+[
+"Tarnowskie Góry",
+1010,
+1014
 ]
 ]
 },
@@ -9263,6 +12321,49 @@
 ]
 },
 {
+"nr": "40680",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+985,
+986
+],
+[
+"Katowice",
+993,
+995
+]
+]
+},
+{
+"nr": "42100/1 Sztygar (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+987,
+987
+],
+[
+"Bytom",
+1003,
+1005
+],
+[
+"Tarnowskie Góry",
+1016,
+1017
+]
+]
+},
+{
 "nr": "40213",
 "kier": "Chorzew Siemkowice",
 "przewoznik": "Koleje Śląskie",
@@ -9314,6 +12415,25 @@
 "Kłobuck",
 1020,
 1020
+]
+]
+},
+{
+"nr": "40625",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+992,
+995
+],
+[
+"Chorzów Batory",
+1002,
+1003
 ]
 ]
 },
@@ -9443,6 +12563,25 @@
 ]
 },
 {
+"nr": "83108/9 Wyczółkowski (Px55)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1017,
+1018
+],
+[
+"Katowice",
+1024,
+1027
+]
+]
+},
+{
 "nr": "64550/1",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -9464,6 +12603,25 @@
 "Olesno Śląskie",
 1003,
 1004
+]
+]
+},
+{
+"nr": "40925",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1027,
+1029
+],
+[
+"Chorzów Batory",
+1035,
+1037
 ]
 ]
 },
@@ -9573,6 +12731,44 @@
 ]
 },
 {
+"nr": "40968",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1041,
+1043
+],
+[
+"Katowice",
+1050,
+1058
+]
+]
+},
+{
+"nr": "40627",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1040,
+1044
+],
+[
+"Chorzów Batory",
+1051,
+1052
+]
+]
+},
+{
 "nr": "40568",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -9604,6 +12800,44 @@
 "Częstochowa",
 1089,
 1089
+]
+]
+},
+{
+"nr": "40927",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1059,
+1063
+],
+[
+"Chorzów Batory",
+1070,
+1071
+]
+]
+},
+{
+"nr": "40682",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1067,
+1068
+],
+[
+"Katowice",
+1075,
+1078
 ]
 ]
 },
@@ -9679,6 +12913,25 @@
 "Chorzów Batory",
 1142,
 1142
+]
+]
+},
+{
+"nr": "83106/7 Zefir (P40)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1080,
+1081
+],
+[
+"Katowice",
+1087,
+1091
 ]
 ]
 },
@@ -9759,6 +13012,44 @@
 "Miasteczko Śląskie",
 1080,
 1080
+]
+]
+},
+{
+"nr": "40970",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1094,
+1096
+],
+[
+"Katowice",
+1103,
+1103
+]
+]
+},
+{
+"nr": "40629",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1092,
+1096
+],
+[
+"Chorzów Batory",
+1103,
+1104
 ]
 ]
 },
@@ -9869,6 +13160,25 @@
 "Kłobuck",
 1138,
 1139
+]
+]
+},
+{
+"nr": "40684",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1121,
+1122
+],
+[
+"Katowice",
+1130,
+1135
 ]
 ]
 },
@@ -10078,6 +13388,25 @@
 ]
 },
 {
+"nr": "40113 Warta",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1145,
+1148
+],
+[
+"Chorzów Batory",
+1155,
+1156
+]
+]
+},
+{
 "nr": "1608/9 Estrada (Ex02)",
 "kier": "Wrocław Główny",
 "przewoznik": "PKP Intercity",
@@ -10124,6 +13453,25 @@
 "Olesno Śląskie",
 1129,
 1130
+]
+]
+},
+{
+"nr": "40686",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1158,
+1160
+],
+[
+"Katowice",
+1167,
+1169
 ]
 ]
 },
@@ -10179,6 +13527,25 @@
 "Kluczbork",
 1205,
 1206
+]
+]
+},
+{
+"nr": "40631",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1170,
+1172
+],
+[
+"Chorzów Batory",
+1179,
+1180
 ]
 ]
 },
@@ -10403,6 +13770,44 @@
 ]
 },
 {
+"nr": "40974",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1210,
+1211
+],
+[
+"Katowice",
+1218,
+1218
+]
+]
+},
+{
+"nr": "40929",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1212,
+1215
+],
+[
+"Chorzów Batory",
+1222,
+1223
+]
+]
+},
+{
 "nr": "73100/1 Pułaski (P89)",
 "kier": "Kraków Główny",
 "przewoznik": "PKP Intercity",
@@ -10578,6 +13983,44 @@
 ]
 },
 {
+"nr": "40633",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1227,
+1232
+],
+[
+"Chorzów Batory",
+1239,
+1240
+]
+]
+},
+{
+"nr": "40688",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1243,
+1244
+],
+[
+"Katowice",
+1251,
+1256
+]
+]
+},
+{
 "nr": "40572",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -10638,6 +14081,25 @@
 ]
 },
 {
+"nr": "40115 Jura",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1248,
+1251
+],
+[
+"Chorzów Batory",
+1258,
+1259
+]
+]
+},
+{
 "nr": "40482",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -10684,6 +14146,25 @@
 "Chorzów Batory",
 1316,
 1316
+]
+]
+},
+{
+"nr": "83102/3 Chełmoński (Px55)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1265,
+1266
+],
+[
+"Katowice",
+1272,
+1277
 ]
 ]
 },
@@ -10773,6 +14254,25 @@
 ]
 },
 {
+"nr": "40976",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1280,
+1281
+],
+[
+"Katowice",
+1288,
+1290
+]
+]
+},
+{
 "nr": "40268",
 "kier": "Katowice",
 "przewoznik": "Koleje Śląskie",
@@ -10829,6 +14329,25 @@
 "Katowice",
 1350,
 1350
+]
+]
+},
+{
+"nr": "40635",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1280,
+1284
+],
+[
+"Chorzów Batory",
+1290,
+1291
 ]
 ]
 },
@@ -10913,6 +14432,25 @@
 ]
 },
 {
+"nr": "40690",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1304,
+1305
+],
+[
+"Katowice",
+1312,
+1314
+]
+]
+},
+{
 "nr": "40435",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -10998,6 +14536,25 @@
 ]
 },
 {
+"nr": "40978",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1311,
+1312
+],
+[
+"Katowice",
+1319,
+1319
+]
+]
+},
+{
 "nr": "40523",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -11029,6 +14586,44 @@
 "Częstochowa Stradom",
 1299,
 1299
+]
+]
+},
+{
+"nr": "83100/1 Gwarek (P40)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1323,
+1324
+],
+[
+"Katowice",
+1330,
+1338
+]
+]
+},
+{
+"nr": "40692",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1335,
+1336
+],
+[
+"Katowice",
+1343,
+1347
 ]
 ]
 },
@@ -11074,6 +14669,30 @@
 "Bytom",
 1398,
 1398
+]
+]
+},
+{
+"nr": "38174/5 Podhalanin",
+"kier": "Szczecin Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+1346,
+1350
+],
+[
+"Bytom",
+1366,
+1367
+],
+[
+"Tarnowskie Góry",
+1380,
+1381
 ]
 ]
 },
@@ -11129,6 +14748,25 @@
 "Kłobuck",
 1381,
 1382
+]
+]
+},
+{
+"nr": "40637",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1355,
+1358
+],
+[
+"Chorzów Batory",
+1364,
+1365
 ]
 ]
 },
@@ -11281,9 +14919,109 @@
 1425
 ]
 ]
+},
+{
+"nr": "40639",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1400,
+1412
+],
+[
+"Chorzów Batory",
+1419,
+1420
+]
+]
+},
+{
+"nr": "40980",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1415,
+1416
+],
+[
+"Katowice",
+1423,
+1425
+]
+]
+},
+{
+"nr": "83174/5 Podhalanin",
+"kier": "Zakopane",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+1729,
+1733
+],
+[
+"Bytom",
+1745,
+1750
+],
+[
+"Katowice",
+1767,
+1772
+]
+]
 }
 ],
 "wd": [
+{
+"nr": "40652",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+260,
+262
+],
+[
+"Katowice",
+269,
+272
+]
+]
+},
+{
+"nr": "40901",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+271,
+271
+],
+[
+"Chorzów Batory",
+278,
+279
+]
+]
+},
 {
 "nr": "40550",
 "kier": "Częstochowa",
@@ -11415,6 +15153,25 @@
 ]
 },
 {
+"nr": "40903",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+291,
+295
+],
+[
+"Chorzów Batory",
+301,
+302
+]
+]
+},
+{
 "nr": "40401",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -11456,6 +15213,44 @@
 "Miasteczko Śląskie",
 304,
 304
+]
+]
+},
+{
+"nr": "40654",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+312,
+313
+],
+[
+"Katowice",
+320,
+322
+]
+]
+},
+{
+"nr": "40601",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+316,
+319
+],
+[
+"Chorzów Batory",
+326,
+327
 ]
 ]
 },
@@ -11695,6 +15490,44 @@
 ]
 },
 {
+"nr": "40656",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+347,
+348
+],
+[
+"Katowice",
+355,
+360
+]
+]
+},
+{
+"nr": "40905",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+347,
+349
+],
+[
+"Chorzów Batory",
+356,
+357
+]
+]
+},
+{
 "nr": "40501",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -11785,6 +15618,25 @@
 ]
 },
 {
+"nr": "40116 Jura",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+368,
+369
+],
+[
+"Katowice",
+376,
+392
+]
+]
+},
+{
 "nr": "40252",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -11840,6 +15692,25 @@
 ]
 },
 {
+"nr": "40603",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+376,
+379
+],
+[
+"Chorzów Batory",
+386,
+387
+]
+]
+},
+{
 "nr": "64532",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -11886,6 +15757,25 @@
 "Opole Główne",
 424,
 426
+]
+]
+},
+{
+"nr": "40660",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+392,
+393
+],
+[
+"Katowice",
+401,
+403
 ]
 ]
 },
@@ -11996,6 +15886,25 @@
 "Częstochowa",
 446,
 446
+]
+]
+},
+{
+"nr": "40101 Kłodnica",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+406,
+412
+],
+[
+"Chorzów Batory",
+418,
+419
 ]
 ]
 },
@@ -12200,6 +16109,44 @@
 ]
 },
 {
+"nr": "40118 Mitręga",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+433,
+435
+],
+[
+"Katowice",
+442,
+444
+]
+]
+},
+{
+"nr": "40605",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+435,
+437
+],
+[
+"Chorzów Batory",
+444,
+445
+]
+]
+},
+{
 "nr": "40254",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -12390,6 +16337,63 @@
 ]
 },
 {
+"nr": "40662",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+455,
+457
+],
+[
+"Katowice",
+464,
+471
+]
+]
+},
+{
+"nr": "40103 Rawa",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+462,
+466
+],
+[
+"Chorzów Batory",
+473,
+482
+]
+]
+},
+{
+"nr": "40952",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+468,
+469
+],
+[
+"Katowice",
+477,
+481
+]
+]
+},
+{
 "nr": "61106/7 Konopnicka (P13)",
 "kier": "Warszawa Wschodnia",
 "przewoznik": "PKP Intercity",
@@ -12555,6 +16559,44 @@
 ]
 },
 {
+"nr": "42104 Jadwiga (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+487,
+488
+],
+[
+"Katowice",
+494,
+501
+]
+]
+},
+{
+"nr": "40607",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+487,
+489
+],
+[
+"Chorzów Batory",
+495,
+496
+]
+]
+},
+{
 "nr": "64542/3",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -12601,6 +16643,44 @@
 "Opole Główne",
 534,
 538
+]
+]
+},
+{
+"nr": "36106/7 Szczeliniec (P80)",
+"kier": "Jelenia Góra",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+494,
+498
+],
+[
+"Chorzów Batory",
+504,
+505
+]
+]
+},
+{
+"nr": "40664",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+497,
+499
+],
+[
+"Katowice",
+506,
+509
 ]
 ]
 },
@@ -12746,6 +16826,25 @@
 "Kłobuck",
 542,
 542
+]
+]
+},
+{
+"nr": "40105 Brynica",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+513,
+517
+],
+[
+"Chorzów Batory",
+524,
+525
 ]
 ]
 },
@@ -12935,6 +17034,25 @@
 ]
 },
 {
+"nr": "40666",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+555,
+557
+],
+[
+"Katowice",
+564,
+566
+]
+]
+},
+{
 "nr": "64534",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -13011,6 +17129,30 @@
 "Kłobuck",
 591,
 592
+]
+]
+},
+{
+"nr": "35102/3 Flisak (P47)",
+"kier": "Gdynia Główna",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Katowice",
+563,
+567
+],
+[
+"Bytom",
+582,
+583
+],
+[
+"Tarnowskie Góry",
+595,
+596
 ]
 ]
 },
@@ -13111,6 +17253,44 @@
 "Chorzów Batory",
 628,
 628
+]
+]
+},
+{
+"nr": "40609",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+572,
+574
+],
+[
+"Chorzów Batory",
+581,
+582
+]
+]
+},
+{
+"nr": "40954",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+590,
+592
+],
+[
+"Katowice",
+599,
+607
 ]
 ]
 },
@@ -13290,6 +17470,63 @@
 ]
 },
 {
+"nr": "40611",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+599,
+602
+],
+[
+"Chorzów Batory",
+609,
+610
+]
+]
+},
+{
+"nr": "83130/1 Ślązak (P40)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+607,
+610
+],
+[
+"Katowice",
+616,
+619
+]
+]
+},
+{
+"nr": "40913",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+610,
+612
+],
+[
+"Chorzów Batory",
+619,
+620
+]
+]
+},
+{
 "nr": "40507",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -13325,6 +17562,25 @@
 ]
 },
 {
+"nr": "40956",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+617,
+618
+],
+[
+"Katowice",
+625,
+625
+]
+]
+},
+{
 "nr": "46544/5",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -13346,6 +17602,25 @@
 "Kluczbork",
 665,
 680
+]
+]
+},
+{
+"nr": "40668",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+633,
+634
+],
+[
+"Katowice",
+642,
+650
 ]
 ]
 },
@@ -13385,6 +17660,25 @@
 ]
 },
 {
+"nr": "40107 Mitręga",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+642,
+644
+],
+[
+"Chorzów Batory",
+650,
+651
+]
+]
+},
+{
 "nr": "6106/7 Krasnal (Ex02)",
 "kier": "Warszawa Wschodnia",
 "przewoznik": "PKP Intercity",
@@ -13406,6 +17700,30 @@
 "Częstochowa Stradom",
 671,
 672
+]
+]
+},
+{
+"nr": "24100/1 Sztygar (P19)",
+"kier": "Katowice",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+647,
+652
+],
+[
+"Bytom",
+663,
+665
+],
+[
+"Katowice",
+683,
+683
 ]
 ]
 },
@@ -13510,6 +17828,68 @@
 ]
 },
 {
+"nr": "40670",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+669,
+670
+],
+[
+"Katowice",
+677,
+683
+]
+]
+},
+{
+"nr": "40915",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+672,
+672
+],
+[
+"Chorzów Batory",
+679,
+680
+]
+]
+},
+{
+"nr": "83126/7 Osterwa (P29)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+665,
+673
+],
+[
+"Bytom",
+684,
+686
+],
+[
+"Katowice",
+702,
+707
+]
+]
+},
+{
 "nr": "62104/5 Bolko (P18)",
 "kier": "Lublin Główny",
 "przewoznik": "PKP Intercity",
@@ -13531,6 +17911,25 @@
 "Częstochowa Stradom",
 703,
 705
+]
+]
+},
+{
+"nr": "40613",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+682,
+685
+],
+[
+"Chorzów Batory",
+692,
+693
 ]
 ]
 },
@@ -13635,6 +18034,25 @@
 ]
 },
 {
+"nr": "63102/3 Sudety (P80)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+701,
+702
+],
+[
+"Katowice",
+708,
+713
+]
+]
+},
+{
 "nr": "37104/5 Czarniecki (P89)",
 "kier": "Poznań Główny",
 "przewoznik": "PKP Intercity",
@@ -13661,6 +18079,44 @@
 "Kluczbork",
 738,
 739
+]
+]
+},
+{
+"nr": "40958",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+710,
+711
+],
+[
+"Katowice",
+718,
+720
+]
+]
+},
+{
+"nr": "38110/1 Kossak (P10)",
+"kier": "Kołobrzeg",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+712,
+715
+],
+[
+"Chorzów Batory",
+720,
+721
 ]
 ]
 },
@@ -13795,6 +18251,25 @@
 ]
 },
 {
+"nr": "73116/7 Fałat (P10)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+728,
+729
+],
+[
+"Katowice",
+735,
+739
+]
+]
+},
+{
 "nr": "16100/1 Orzeszkowa (P13)",
 "kier": "Szklarska Poręba Górna",
 "przewoznik": "PKP Intercity",
@@ -13821,6 +18296,25 @@
 "Opole Główne",
 777,
 778
+]
+]
+},
+{
+"nr": "40615",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+730,
+735
+],
+[
+"Chorzów Batory",
+742,
+743
 ]
 ]
 },
@@ -13881,6 +18375,49 @@
 "Olesno Śląskie",
 710,
 711
+]
+]
+},
+{
+"nr": "40960",
+"kier": "Dąbrowa Górnicza Ząbkowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+738,
+739
+],
+[
+"Katowice",
+746,
+751
+]
+]
+},
+{
+"nr": "42102/3 Morcinek (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+746,
+746
+],
+[
+"Bytom",
+762,
+763
+],
+[
+"Tarnowskie Góry",
+774,
+775
 ]
 ]
 },
@@ -13966,6 +18503,44 @@
 "Kłobuck",
 781,
 782
+]
+]
+},
+{
+"nr": "40917",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+751,
+754
+],
+[
+"Chorzów Batory",
+761,
+762
+]
+]
+},
+{
+"nr": "40672",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+753,
+755
+],
+[
+"Katowice",
+762,
+767
 ]
 ]
 },
@@ -14200,6 +18775,25 @@
 ]
 },
 {
+"nr": "83114/5 Matejko (Px55)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+792,
+793
+],
+[
+"Katowice",
+799,
+803
+]
+]
+},
+{
 "nr": "54260",
 "kier": "Chorzów Batory",
 "przewoznik": "Koleje Śląskie",
@@ -14305,6 +18899,44 @@
 ]
 },
 {
+"nr": "40120 Pogoria",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+809,
+810
+],
+[
+"Katowice",
+817,
+820
+]
+]
+},
+{
+"nr": "40617",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+805,
+811
+],
+[
+"Chorzów Batory",
+818,
+819
+]
+]
+},
+{
 "nr": "46546/7",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -14326,6 +18958,44 @@
 "Kluczbork",
 860,
 866
+]
+]
+},
+{
+"nr": "40674",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+821,
+822
+],
+[
+"Katowice",
+829,
+832
+]
+]
+},
+{
+"nr": "40122 Przemsza",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+833,
+834
+],
+[
+"Katowice",
+841,
+844
 ]
 ]
 },
@@ -14430,6 +19100,25 @@
 ]
 },
 {
+"nr": "40919",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+841,
+844
+],
+[
+"Chorzów Batory",
+851,
+852
+]
+]
+},
+{
 "nr": "44310",
 "kier": "Częstochowa",
 "przewoznik": "PolRegio",
@@ -14461,6 +19150,25 @@
 "Częstochowa",
 906,
 906
+]
+]
+},
+{
+"nr": "40619",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+863,
+870
+],
+[
+"Chorzów Batory",
+877,
+878
 ]
 ]
 },
@@ -14516,6 +19224,44 @@
 "Kłobuck",
 902,
 902
+]
+]
+},
+{
+"nr": "40676",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+872,
+873
+],
+[
+"Katowice",
+880,
+882
+]
+]
+},
+{
+"nr": "40921",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+876,
+881
+],
+[
+"Chorzów Batory",
+888,
+889
 ]
 ]
 },
@@ -14586,6 +19332,30 @@
 "Częstochowa Stradom",
 907,
 911
+]
+]
+},
+{
+"nr": "24102/3 Morcinek (P19)",
+"kier": "Katowice",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+884,
+885
+],
+[
+"Bytom",
+896,
+897
+],
+[
+"Katowice",
+913,
+913
 ]
 ]
 },
@@ -14760,6 +19530,25 @@
 ]
 },
 {
+"nr": "40124 Brynica",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+912,
+913
+],
+[
+"Katowice",
+920,
+923
+]
+]
+},
+{
 "nr": "40511",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -14820,6 +19609,25 @@
 ]
 },
 {
+"nr": "40621",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+925,
+927
+],
+[
+"Chorzów Batory",
+934,
+935
+]
+]
+},
+{
 "nr": "46548/9",
 "kier": "Wrocław Główny",
 "przewoznik": "PolRegio",
@@ -14876,6 +19684,25 @@
 "Częstochowa",
 973,
 973
+]
+]
+},
+{
+"nr": "40678",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+939,
+940
+],
+[
+"Katowice",
+947,
+950
 ]
 ]
 },
@@ -15030,6 +19857,25 @@
 ]
 },
 {
+"nr": "40623",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+958,
+961
+],
+[
+"Chorzów Batory",
+968,
+969
+]
+]
+},
+{
 "nr": "40423",
 "kier": "Lubliniec",
 "przewoznik": "Koleje Śląskie",
@@ -15076,6 +19922,25 @@
 "Miasteczko Śląskie",
 955,
 956
+]
+]
+},
+{
+"nr": "40126 Rawa",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+961,
+962
+],
+[
+"Katowice",
+969,
+972
 ]
 ]
 },
@@ -15141,6 +20006,30 @@
 "Częstochowa Stradom",
 954,
 954
+]
+]
+},
+{
+"nr": "38126/7 Osterwa (P29)",
+"kier": "Szczecin Główny",
+"przewoznik": "PKP Intercity",
+"linia": "TLK",
+"p": [],
+"cele": [
+[
+"Katowice",
+976,
+979
+],
+[
+"Bytom",
+995,
+998
+],
+[
+"Tarnowskie Góry",
+1010,
+1014
 ]
 ]
 },
@@ -15230,6 +20119,49 @@
 ]
 },
 {
+"nr": "40680",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+985,
+986
+],
+[
+"Katowice",
+993,
+995
+]
+]
+},
+{
+"nr": "42100/1 Sztygar (P19)",
+"kier": "Kielce Główne",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+987,
+987
+],
+[
+"Bytom",
+1003,
+1005
+],
+[
+"Tarnowskie Góry",
+1016,
+1017
+]
+]
+},
+{
 "nr": "40213",
 "kier": "Chorzew Siemkowice",
 "przewoznik": "Koleje Śląskie",
@@ -15281,6 +20213,25 @@
 "Kłobuck",
 1020,
 1020
+]
+]
+},
+{
+"nr": "40625",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+992,
+995
+],
+[
+"Chorzów Batory",
+1002,
+1003
 ]
 ]
 },
@@ -15485,6 +20436,25 @@
 ]
 },
 {
+"nr": "83108/9 Wyczółkowski (Px55)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1017,
+1018
+],
+[
+"Katowice",
+1024,
+1027
+]
+]
+},
+{
 "nr": "64550/1",
 "kier": "Lubliniec",
 "przewoznik": "PolRegio",
@@ -15506,6 +20476,25 @@
 "Olesno Śląskie",
 1003,
 1004
+]
+]
+},
+{
+"nr": "40109 Przemsza",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1027,
+1029
+],
+[
+"Chorzów Batory",
+1035,
+1037
 ]
 ]
 },
@@ -15615,6 +20604,44 @@
 ]
 },
 {
+"nr": "40968",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1041,
+1043
+],
+[
+"Katowice",
+1050,
+1058
+]
+]
+},
+{
+"nr": "40627",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1040,
+1044
+],
+[
+"Chorzów Batory",
+1051,
+1052
+]
+]
+},
+{
 "nr": "40568",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -15695,6 +20722,44 @@
 ]
 },
 {
+"nr": "40111 Pogoria",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1059,
+1063
+],
+[
+"Chorzów Batory",
+1070,
+1071
+]
+]
+},
+{
+"nr": "40682",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1067,
+1068
+],
+[
+"Katowice",
+1075,
+1078
+]
+]
+},
+{
 "nr": "46551",
 "kier": "Namysłów",
 "przewoznik": "PolRegio",
@@ -15766,6 +20831,25 @@
 "Chorzów Batory",
 1142,
 1142
+]
+]
+},
+{
+"nr": "83106/7 Zefir (P40)",
+"kier": "Przemyśl Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1080,
+1081
+],
+[
+"Katowice",
+1087,
+1091
 ]
 ]
 },
@@ -15846,6 +20930,44 @@
 "Miasteczko Śląskie",
 1080,
 1080
+]
+]
+},
+{
+"nr": "40128 Kłodnica",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1094,
+1096
+],
+[
+"Katowice",
+1103,
+1109
+]
+]
+},
+{
+"nr": "40629",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1092,
+1096
+],
+[
+"Chorzów Batory",
+1103,
+1104
 ]
 ]
 },
@@ -15956,6 +21078,25 @@
 "Kłobuck",
 1138,
 1139
+]
+]
+},
+{
+"nr": "40684",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1121,
+1122
+],
+[
+"Katowice",
+1130,
+1135
 ]
 ]
 },
@@ -16165,6 +21306,25 @@
 ]
 },
 {
+"nr": "40113 Warta",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1145,
+1148
+],
+[
+"Chorzów Batory",
+1155,
+1156
+]
+]
+},
+{
 "nr": "1608/9 Estrada (Ex02)",
 "kier": "Wrocław Główny",
 "przewoznik": "PKP Intercity",
@@ -16211,6 +21371,25 @@
 "Olesno Śląskie",
 1129,
 1130
+]
+]
+},
+{
+"nr": "40686",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1158,
+1160
+],
+[
+"Katowice",
+1167,
+1169
 ]
 ]
 },
@@ -16266,6 +21445,25 @@
 "Kluczbork",
 1205,
 1206
+]
+]
+},
+{
+"nr": "40631",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1170,
+1172
+],
+[
+"Chorzów Batory",
+1179,
+1180
 ]
 ]
 },
@@ -16460,6 +21658,25 @@
 ]
 },
 {
+"nr": "40974",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1210,
+1211
+],
+[
+"Katowice",
+1218,
+1218
+]
+]
+},
+{
 "nr": "61110/1 Śnieżka (P13)",
 "kier": "Warszawa Wschodnia",
 "przewoznik": "PKP Intercity",
@@ -16521,6 +21738,25 @@
 "Częstochowa Stradom",
 1193,
 1193
+]
+]
+},
+{
+"nr": "40929",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1212,
+1215
+],
+[
+"Chorzów Batory",
+1222,
+1223
 ]
 ]
 },
@@ -16665,6 +21901,25 @@
 ]
 },
 {
+"nr": "40633",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1227,
+1232
+],
+[
+"Chorzów Batory",
+1239,
+1240
+]
+]
+},
+{
 "nr": "40572",
 "kier": "Częstochowa",
 "przewoznik": "Koleje Śląskie",
@@ -16700,6 +21955,25 @@
 ]
 },
 {
+"nr": "40688",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1243,
+1244
+],
+[
+"Katowice",
+1251,
+1256
+]
+]
+},
+{
 "nr": "26106/7 Łempicka (P18)",
 "kier": "Wrocław Główny",
 "przewoznik": "PKP Intercity",
@@ -16721,6 +21995,25 @@
 "Opole Główne",
 1280,
 1287
+]
+]
+},
+{
+"nr": "40933",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1251,
+1251
+],
+[
+"Chorzów Batory",
+1258,
+1259
 ]
 ]
 },
@@ -16771,6 +22064,25 @@
 "Chorzów Batory",
 1316,
 1316
+]
+]
+},
+{
+"nr": "83102/3 Chełmoński (Px55)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1265,
+1266
+],
+[
+"Katowice",
+1272,
+1277
 ]
 ]
 },
@@ -16860,6 +22172,25 @@
 ]
 },
 {
+"nr": "40976",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1280,
+1281
+],
+[
+"Katowice",
+1288,
+1290
+]
+]
+},
+{
 "nr": "40268",
 "kier": "Katowice",
 "przewoznik": "Koleje Śląskie",
@@ -16920,6 +22251,25 @@
 ]
 },
 {
+"nr": "40635",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1280,
+1284
+],
+[
+"Chorzów Batory",
+1290,
+1291
+]
+]
+},
+{
 "nr": "40484",
 "kier": "Katowice",
 "przewoznik": "Koleje Śląskie",
@@ -16971,6 +22321,25 @@
 "Katowice",
 1368,
 1368
+]
+]
+},
+{
+"nr": "40690",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1304,
+1305
+],
+[
+"Katowice",
+1312,
+1314
 ]
 ]
 },
@@ -17095,6 +22464,44 @@
 ]
 },
 {
+"nr": "83100/1 Gwarek (P40)",
+"kier": "Kraków Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1323,
+1324
+],
+[
+"Katowice",
+1330,
+1338
+]
+]
+},
+{
+"nr": "40692",
+"kier": "Częstochowa",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1335,
+1336
+],
+[
+"Katowice",
+1343,
+1347
+]
+]
+},
+{
 "nr": "40486",
 "kier": "Bytom",
 "przewoznik": "Koleje Śląskie",
@@ -17136,6 +22543,49 @@
 "Bytom",
 1398,
 1398
+]
+]
+},
+{
+"nr": "38174/5 Podhalanin",
+"kier": "Szczecin Główny",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Katowice",
+1346,
+1350
+],
+[
+"Bytom",
+1366,
+1367
+],
+[
+"Tarnowskie Góry",
+1380,
+1381
+]
+]
+},
+{
+"nr": "40978",
+"kier": "Katowice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1349,
+1350
+],
+[
+"Katowice",
+1357,
+1357
 ]
 ]
 },
@@ -17191,6 +22641,25 @@
 "Kłobuck",
 1381,
 1382
+]
+]
+},
+{
+"nr": "40637",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1355,
+1358
+],
+[
+"Chorzów Batory",
+1364,
+1365
 ]
 ]
 },
@@ -17341,6 +22810,68 @@
 "Opole Główne",
 1424,
 1425
+]
+]
+},
+{
+"nr": "40980",
+"kier": "Zawiercie",
+"przewoznik": "Koleje Śląskie",
+"linia": "ZKA S1",
+"p": [],
+"cele": [
+[
+"Chorzów Batory",
+1411,
+1411
+],
+[
+"Katowice",
+1423,
+1424
+]
+]
+},
+{
+"nr": "40639",
+"kier": "Gliwice",
+"przewoznik": "Koleje Śląskie",
+"linia": "ZKA S1",
+"p": [],
+"cele": [
+[
+"Katowice",
+1420,
+1421
+],
+[
+"Chorzów Batory",
+1431,
+1431
+]
+]
+},
+{
+"nr": "83174/5 Podhalanin",
+"kier": "Zakopane",
+"przewoznik": "PKP Intercity",
+"linia": "IC",
+"p": [],
+"cele": [
+[
+"Tarnowskie Góry",
+1729,
+1733
+],
+[
+"Bytom",
+1745,
+1750
+],
+[
+"Katowice",
+1767,
+1772
 ]
 ]
 }
