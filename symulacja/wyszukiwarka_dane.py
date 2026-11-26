@@ -27,6 +27,11 @@ def m(a, b):   # metry
 stops = {}   # id → {n: nazwa, lat, lon}
 for k, n in NAZWY.items(): stops[k] = {'n': n, 'lat': S[k][0], 'lon': S[k][1]}
 for st, (p, _) in STACJE.items(): stops['st_' + st] = {'n': f'{st} – stacja kolejowa', 'lat': p[0], 'lon': p[1], 'kolej': 1}
+# stacje poza gminą (tylko kolej): współrzędne z GTFS
+_kol = json.load(open('../dane/kolej/pociagi.json'))
+for st, (la, lo) in _kol.get('stacje', {}).items():
+    if st not in STACJE and st != 'Częstochowa Stradom' and any(c[0] == st for lst in _kol['pociagi'].values() for x in lst for c in x.get('cele', [])):
+        stops['st_' + st] = {'n': f'{st} – stacja kolejowa', 'lat': la, 'lon': lo, 'kolej': 1, 'daleko': 1}
 for k, g in GDZIE.items(): stops[k]['g'] = g
 
 piesze = []   # [a, b, minuty] w obie strony
@@ -73,11 +78,14 @@ for dz in ('sat', 'sun'):
 kol = json.load(open('../dane/kolej/pociagi.json'))
 for dz, lst in kol['pociagi'].items():
     for x in lst:
-        prz = 'KŚ' if 'Śląskie' in x['przewoznik'] else 'PR'
+        prz = 'KŚ' if 'Śląskie' in x['przewoznik'] else ('IC' if 'Intercity' in x['przewoznik'] else 'PR')
+        # stacje docelowe dalej od gminy (Częstochowa, Tarnowskie Góry, Katowice, Opole…) – w kolejności czasu
+        pp = sorted([(a, b, s) for s, a, b in x['p']] + [(a, b, s) for s, a, b in x.get('cele', [])
+                    if s not in ('Częstochowa Stradom',)], key=lambda q: (q[1], q[0]))
         dni[dz].append({'l': prz, 'nr': f"{x['linia']} {x['nr']}".strip(), 'k': x['kier'],
-                        'p': [['st_' + s, a, b, 0] for s, a, b in x['p']]})
+                        'p': [['st_' + s, a, b, 0] for a, b, s in pp]})
 for dz, v in dni.items(): v.sort(key=lambda k: k['p'][0][2])
-out = {'opis': 'Propozycja siatki busów gminy Koszęcin. Pociągi KŚ i POLREGIO wg rozkładu 2026/27 (GTFS, dni: ' + ', '.join(kol['dni'].values()) + '). Nie obowiązuje.',
+out = {'opis': 'Propozycja siatki busów gminy Koszęcin. Pociągi KŚ, POLREGIO i PKP Intercity wg rozkładu 2026/27 (GTFS, dni: ' + ', '.join(kol['dni'].values()) + '). Nie obowiązuje.',
        'przystanki': stops, 'piesze': piesze, 'dni': dni}
 dst = sys.argv[1] if len(sys.argv) > 1 else '../strona/wyszukiwarka/dane.json'
 import os; os.makedirs(os.path.dirname(dst), exist_ok=True)
