@@ -10,6 +10,8 @@ import csv, io, json, sys, zipfile, datetime as dt
 ZIP = sys.argv[1]
 DNI = {'wd': sys.argv[2], 'sat': sys.argv[3], 'sun': sys.argv[4]}
 STACJE = ['Lubliniec', 'Kochanowice', 'Lisów', 'Rusinowice', 'Koszęcin', 'Strzebiń', 'Boronów', 'Kalety']
+# stacje docelowe dalej od gminy: dla pociągów z wycinka zapisujemy też godziny na nich (pole 'cele')
+CELE = ['Częstochowa', 'Częstochowa Stradom', 'Herby Nowe', 'Tarnowskie Góry', 'Katowice', 'Opole Główne', 'Kłobuck', 'Bytom']
 z = zipfile.ZipFile(ZIP)
 
 def rd(n):
@@ -18,8 +20,11 @@ def rd(n):
 
 stops = rd('stops.txt')
 idn = {s['stop_id']: s['stop_name'].strip() for s in stops if s['stop_name'].strip() in STACJE}
+idc = {s['stop_id']: s['stop_name'].strip() for s in stops if s['stop_name'].strip() in CELE}
 for s in stops:   # perony / tory z polem parent_station
     if s.get('parent_station') in idn: idn[s['stop_id']] = idn[s['parent_station']]
+    if s.get('parent_station') in idc: idc[s['stop_id']] = idc[s['parent_station']]
+print('cele:', sorted(set(idc.values())))
 print('stacje:', sorted(set(idn.values())), len(idn), 'id')
 
 cal = {r['service_id']: r for r in rd('calendar.txt')}
@@ -40,8 +45,9 @@ def aktywny(sid, d):
 routes = {r['route_id']: r for r in rd('routes.txt')}
 agency = {r['agency_id']: r['agency_name'] for r in rd('agency.txt')}
 trips = {t['trip_id']: t for t in rd('trips.txt')}
-st = {}
+st = {}; sc = {}
 for r in rd('stop_times.txt'):
+    if r['stop_id'] in idc: sc.setdefault(r['trip_id'], []).append(r)
     if r['stop_id'] in idn and not (r.get('pickup_type', '0') == '1' and r.get('drop_off_type', '0') == '1'):
         st.setdefault(r['trip_id'], []).append(r)
 
@@ -59,7 +65,8 @@ for tid, rows in st.items():
             'nr': t.get('trip_short_name', ''), 'kier': t.get('trip_headsign', ''),
             'przewoznik': agency.get(ro.get('agency_id', ''), ro.get('agency_id', '')),
             'linia': ro.get('route_short_name', '') or ro.get('route_long_name', ''),
-            'p': [[idn[r['stop_id']], mn(r['arrival_time']), mn(r['departure_time'])] for r in rows]})
+            'p': [[idn[r['stop_id']], mn(r['arrival_time']), mn(r['departure_time'])] for r in rows],
+            'cele': [[idc[r['stop_id']], mn(r['arrival_time']), mn(r['departure_time'])] for r in sorted(sc.get(tid, []), key=lambda r: int(r['stop_sequence']))]})
 for k in DNI:
     v = out['pociagi'].get(k, [])
     v.sort(key=lambda x: x['p'][0][2])
