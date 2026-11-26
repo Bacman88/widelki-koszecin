@@ -11,7 +11,8 @@ ZIP = sys.argv[1]
 DNI = {'wd': sys.argv[2], 'sat': sys.argv[3], 'sun': sys.argv[4]}
 STACJE = ['Lubliniec', 'Kochanowice', 'Lisów', 'Rusinowice', 'Koszęcin', 'Strzebiń', 'Boronów', 'Kalety']
 # stacje docelowe dalej od gminy: dla pociągów z wycinka zapisujemy też godziny na nich (pole 'cele')
-CELE = ['Częstochowa', 'Częstochowa Stradom', 'Herby Nowe', 'Tarnowskie Góry', 'Katowice', 'Opole Główne', 'Kłobuck', 'Bytom']
+CELE = ['Częstochowa', 'Częstochowa Stradom', 'Herby Nowe', 'Kłobuck', 'Wieluń Dąbrowa', 'Tarnowskie Góry', 'Bytom', 'Chorzów Batory',
+        'Katowice', 'Gliwice', 'Opole Główne', 'Kluczbork', 'Olesno Śląskie', 'Fosowskie', 'Zawadzkie', 'Strzelce Opolskie', 'Kalety Drutarnia', 'Miasteczko Śląskie']
 z = zipfile.ZipFile(ZIP)
 
 def rd(n):
@@ -54,7 +55,13 @@ for r in rd('stop_times.txt'):
 def mn(t):
     h, m, *_ = map(int, t.split(':')); return h * 60 + m
 
-out = {'zrodlo': 'GTFS polish_trains (mkuran.pl), dane PKP PLK', 'pobrano': dt.date.today().isoformat(), 'dni': DNI, 'pociagi': {}}
+wsp = {}
+for s_ in stops:
+    n_ = s_['stop_name'].strip()
+    if n_ in STACJE or n_ in CELE:
+        try: wsp.setdefault(n_, [round(float(s_['stop_lat']), 5), round(float(s_['stop_lon']), 5)])
+        except (KeyError, ValueError): pass
+out = {'stacje': wsp, 'zrodlo': 'GTFS polish_trains (mkuran.pl), dane PKP PLK', 'pobrano': dt.date.today().isoformat(), 'dni': DNI, 'pociagi': {}}
 for tid, rows in st.items():
     rows.sort(key=lambda r: int(r['stop_sequence']))
     if len(rows) < 2: continue
