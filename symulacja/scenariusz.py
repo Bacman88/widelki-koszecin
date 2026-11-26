@@ -53,9 +53,11 @@ def odcinek(P, a, b):
 
 def trasa(line, stops):
     P = [xy(*q) for q in D['lines'][line]['path']]
+    P1P = [xy(*q) for q in D['lines']['1P']['path']] if '1P' in D['lines'] else None
     tr = []
     for a, b in zip(stops, stops[1:]):
-        seg = odcinek(P, a, b)
+        # linia 1 – kursy szkolne przez Psary: odcinki Płaszczymąka – Psary Główna – Piasek po trasie 1P
+        seg = odcinek(P1P if (line == '1' and 'psy' in (a, b) and P1P) else P, a, b)
         tr += seg if not tr else seg[1:]
     edges = mapTrace(tr, NET, 30, vClass='bus', fillGaps=600)
     out = []

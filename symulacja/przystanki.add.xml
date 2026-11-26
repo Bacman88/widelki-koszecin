@@ -49,12 +49,16 @@
   <busStop id="moc_-2222" lane="-2222_0" startPos="1249.8" endPos="1261.8" name="Mochała" friendlyPos="true"/>
   <busStop id="moc_2754#1" lane="2754#1_0" startPos="71.2" endPos="83.2" name="Mochała" friendlyPos="true"/>
   <busStop id="pia_-3533#1" lane="-3533#1_0" startPos="0.0" endPos="45.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
+  <busStop id="pia_-3546#0" lane="-3546#0_0" startPos="169.2" endPos="214.2" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pia_3533#1" lane="3533#1_0" startPos="242.0" endPos="287.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
+  <busStop id="pia_3546#0" lane="3546#0_0" startPos="0.0" endPos="45.0" name="Piasek" friendlyPos="true" parkingLength="120"/>
   <busStop id="pil_-727#0" lane="-727#0_0" startPos="56.9" endPos="101.9" name="Piłka" friendlyPos="true" parkingLength="120"/>
   <busStop id="prad_-700" lane="-700_0" startPos="1250.2" endPos="1262.2" name="Prądy" friendlyPos="true"/>
   <busStop id="prad_700" lane="700_0" startPos="0.0" endPos="12.0" name="Prądy" friendlyPos="true"/>
   <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="74.0" endPos="86.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
   <busStop id="psk_3555#3" lane="3555#3_0" startPos="741.0" endPos="753.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
+  <busStop id="psy_-3502" lane="-3502_0" startPos="0.0" endPos="12.0" name="Psary Główna" friendlyPos="true"/>
+  <busStop id="psy_3536" lane="3536_0" startPos="1209.8" endPos="1221.8" name="Psary Główna" friendlyPos="true"/>
   <busStop id="rus_-2390" lane="-2390_0" startPos="0.0" endPos="12.0" name="Rusinowice PKP" friendlyPos="true"/>
   <busStop id="rus_2390" lane="2390_0" startPos="94.5" endPos="106.5" name="Rusinowice PKP" friendlyPos="true"/>
   <busStop id="rusp_-293#1" lane="-293#1_0" startPos="0.0" endPos="12.0" name="Rusinowice Straż" friendlyPos="true"/>

@@ -1,7 +1,7 @@
 # ---------- Page 5: why routes + realism
 head('Dlaczego takie trasy i czy czasy są realne')
 why=[Paragraph('Dlaczego takie trasy',H2)]
-txt={'1':'Linia przelotowa: ze Strzebinia do Lublińca bez przesiadki w 38 minut, bez czekania na Rynku – pozostałe linie dowożą do niej o czasie. Z Piasku najkrótszą drogą przez Płaszczymąkę (Psary obsługuje gmina Woźniki: busy GTV z Piasku, linia powiatowa 69). 2 busy, co godzinę. Przed Lublińcem 3 minuty zapasu na zamknięty przejazd kolejowy: w Lublińcu przyjazd :22, odjazd :33. W dni robocze ostatni kurs z Lublińca o 22:33 (Strzebiń Centrum 23:12).',
+txt={'1':'Linia przelotowa: ze Strzebinia do Lublińca bez przesiadki w 38 minut, bez czekania na Rynku – pozostałe linie dowożą do niej o czasie. Z Piasku najkrótszą drogą przez Płaszczymąkę (Psary obsługuje gmina Woźniki: busy GTV z Piasku, linia powiatowa 69). 2 busy, co godzinę. Przed Lublińcem 3 minuty zapasu na zamknięty przejazd kolejowy: w Lublińcu przyjazd :22, odjazd :33. W dni robocze ostatni kurs z Lublińca o 22:33 (Strzebiń Centrum 23:12). W dni nauki cztery kursy jadą przez Psary (Psary Główna, ok. 650 m do szkoły): z Koszęcina 7:00 i 8:00 (Psary 7:23, 8:23), z Psar 14:31 i 15:31 (Koszęcin 14:53, 15:53).',
 '2':'Oś północ–południe przez stacje Boronów, Koszęcin PKP i Kalety oraz węzeł na Rynku. W Boronowie przesiadka na Częstochowę, w Bruśku dowóz z gminy Tworóg, w Kaletach pociągi w czterech kierunkach. 2 busy, co 2 godziny w każdą stronę; do Koszęcin Szkoła z Bruśka i Kalet 7:48, z Boronowa 7:04.',
 '3':'Północ gminy (Cieszowa, Hadra, Mochała, Chwostek) do Rynku i stacji Koszęcin PKP, z drugiej strony pętla przy stacji Lisów PKP – stamtąd pociąg do Częstochowy 26 minut (Lisów to gmina Herby). Co 2 godziny, w szczytach szkolnych co godzinę.',
 '4':'Łazy, Stary Strzebiń i Strzebiń do Koszęcina (stacja, szkoła, Rynek). 1 bus, co godzinę. W szczytach w pulsie: z Łaz :34, Strzebiń Centrum :41 (przesiadka na linię 1 do Lublińca :44), Koszęcin PKP :54, Rynek :58; z Rynku :03 (po linii 1 z Lublińca) przez Koszęcin PKP (do :11) do Łaz :31. Poza szczytem 15 minut później, żeby nie jechać razem z linią 1: Strzebiń ma wtedy dwa różne odjazdy do Koszęcina w godzinie. Łazy → Strzebiń Szkoła 7:34 → 7:40. Propozycja 4S: kursy szkolne Łazy – Strzebiń – Bukowiec – Psary (do uzgodnienia z gminą Woźniki).',
@@ -73,6 +73,7 @@ EXR=[['Skąd → dokąd','Jak jechać','Wyjazd','Przyjazd','Dziś'],
 ['Sadów → Koszęcin Rynek (urząd, ośrodek zdrowia)','linia 1','7:45','8:00',''],
 ['Łazy → Koszęcin Rynek','linia 4, przez Koszęcin PKP','7:34','7:58','co godzinę'],
 ['Łazy → Strzebiń Szkoła (lekcje 8:00)','linia 4','7:34','7:40',''],
+['Koszęcin Rynek → Psary Główna (szkoła ok. 650 m)','linia 1, w dni nauki przez Psary','7:00','7:23','albo 8:00 → 8:23'],
 ['Piłka → Rusinowice, szkoła','linia 5','7:27','7:31',''],
 ['Wierzbie → Sadów Szkoła','linia 5, przez Rusinowice','7:22','7:44',''],
 ['Irki → Koszęcin Szkoła','linia 5','6:44','6:50','albo 7:44 → 7:50'],

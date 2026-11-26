@@ -254,17 +254,17 @@
     {
      "pociag_przyjazd": "11:39",
      "bus_odjazd": "11:56",
-     "bus_przyjazd": "11:34"
+     "bus_przyjazd": "11:35"
     },
     {
      "pociag_przyjazd": "12:48",
      "bus_odjazd": null,
-     "bus_przyjazd": "12:39"
+     "bus_przyjazd": "12:40"
     },
     {
      "pociag_przyjazd": "13:17",
      "bus_odjazd": null,
-     "bus_przyjazd": "13:06"
+     "bus_przyjazd": "13:05"
     },
     {
      "pociag_przyjazd": "14:52",
@@ -341,7 +341,7 @@
     {
      "pociag_przyjazd": "11:44",
      "bus_odjazd": "11:56",
-     "bus_przyjazd": "11:34"
+     "bus_przyjazd": "11:35"
     },
     {
      "pociag_przyjazd": "12:35",
@@ -611,7 +611,7 @@
     {
      "pociag_przyjazd": "12:44",
      "bus_odjazd": null,
-     "bus_przyjazd": "12:38"
+     "bus_przyjazd": "12:39"
     },
     {
      "pociag_przyjazd": "13:13",
@@ -626,12 +626,12 @@
     {
      "pociag_przyjazd": "16:21",
      "bus_odjazd": "16:39",
-     "bus_przyjazd": "16:09"
+     "bus_przyjazd": "16:10"
     },
     {
      "pociag_przyjazd": "16:43",
      "bus_odjazd": null,
-     "bus_przyjazd": "16:39"
+     "bus_przyjazd": "16:38"
     },
     {
      "pociag_przyjazd": "17:21",
@@ -717,7 +717,7 @@
     },
     {
      "pociag_przyjazd": "15:50",
-     "bus_odjazd": "16:09",
+     "bus_odjazd": "16:10",
      "bus_przyjazd": null
     },
     {
@@ -821,7 +821,7 @@
     },
     {
      "pociag_przyjazd": "16:59",
-     "bus_odjazd": "17:16",
+     "bus_odjazd": "17:17",
      "bus_przyjazd": null
     },
     {
@@ -923,7 +923,7 @@
     },
     {
      "pociag_przyjazd": "17:06",
-     "bus_odjazd": "17:16",
+     "bus_odjazd": "17:17",
      "bus_przyjazd": null
     },
     {
@@ -1032,7 +1032,7 @@
     },
     {
      "pociag_przyjazd": "18:02",
-     "bus_odjazd": "18:12",
+     "bus_odjazd": "18:09",
      "bus_przyjazd": "17:49"
     },
     {
@@ -1100,7 +1100,7 @@
     {
      "pociag_przyjazd": "15:20",
      "bus_odjazd": "15:33",
-     "bus_przyjazd": "15:08"
+     "bus_przyjazd": "15:09"
     },
     {
      "pociag_przyjazd": "16:22",
@@ -1110,7 +1110,7 @@
     {
      "pociag_przyjazd": "17:21",
      "bus_odjazd": "17:33",
-     "bus_przyjazd": "17:09"
+     "bus_przyjazd": "17:08"
     },
     {
      "pociag_przyjazd": "18:53",

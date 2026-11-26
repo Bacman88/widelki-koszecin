@@ -142,6 +142,27 @@ for dz in ND:
     for name, v in tt['5'][dz].items():
         s_=_sA if v['stops'][0]=='Lubliniec PKP' else _sB
         for tr in v['trips']: tr[0]=[x+s_ for x in tr[0]]
+# 26.11.2026: linia 1 w dni nauki przez Psary (przystanek Psary Główna przy ul. Głównej, ok. 650 m do szkoły):
+# Płaszczymąka – DW905 Poznańska – Psary Główna – Powstańców – Strażacka – Piasek (+2,5 km, +5 min).
+# Rano kursy do Piasku (Psary ok. 7:23 i 8:23), po południu z Piasku 5 min wcześniej (Psary ok. 14:32 i 15:32).
+PSARY_DO = {6*60+33, 7*60+33}          # odjazd z Lublińca
+PSARY_Z = {14*60+33, 15*60+33}         # planowy odjazd z Piasku
+for name, v in list(tt['1']['wd'].items()):
+    st = v['stops']
+    if st[0] == 'Lubliniec PKP':
+        i = st.index('Płaszczymąka (Psary Skrzyżowanie)'); wyb = [t for t in v['trips'] if t[0][0] in PSARY_DO]
+        if not wyb: continue
+        v['trips'] = [t for t in v['trips'] if t[0][0] not in PSARY_DO]
+        nst = st[:i+1] + ['Psary Główna'] + st[i+1:]
+        ntr = [[t[0][:i+1] + [t[0][i] + 3] + [t[0][i] + 7], t[1]] for t in wyb]
+        tt['1']['wd'][name + ' (przez Psary)'] = {**{k: x for k, x in v.items() if k not in ('stops', 'trips')}, 'stops': nst, 'trips': ntr}
+    elif st[0] == 'Piasek':
+        i = st.index('Płaszczymąka (Psary Skrzyżowanie)'); wyb = [t for t in v['trips'] if t[0][0] in PSARY_Z]
+        if not wyb: continue
+        v['trips'] = [t for t in v['trips'] if t[0][0] not in PSARY_Z]
+        nst = ['Piasek', 'Psary Główna'] + st[i:]
+        ntr = [[[t[0][i] - 7, t[0][i] - 4] + t[0][i:], t[1]] for t in wyb]
+        tt['1']['wd'][name + ' (przez Psary)'] = {**{k: x for k, x in v.items() if k not in ('stops', 'trips')}, 'stops': nst, 'trips': ntr}
 # zestawienie wariantu pełnego po poprawkach (kursy, km, busy) – z gotowego rozkładu
 _BASE=json.load(open('out/rozklad_base.json'));_S={};_tot=0;_fl=0
 for k in tt:
