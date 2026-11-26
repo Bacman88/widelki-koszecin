@@ -99,6 +99,13 @@ strona = f'''<!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>Busami na Święto Śląska – przykładowy rozkład okolicznościowy (propozycja)</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Busami na Święto Śląska – przykładowy rozkład okolicznościowy (propozycja)">
+<meta property="og:description" content="Przykładowy rozkład busów na Święto Śląska w Koszęcinie: dojazdy z całej gminy i wieczorne powroty z Rynku. Propozycja mieszkańców – nie obowiązujący rozkład.">
+<meta property="og:url" content="https://busy-koszecin.smart-ant.pl/imprezy/">
+<meta property="og:image" content="https://busy-koszecin.smart-ant.pl/og-siatka.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="description" content="Przykładowy rozkład busów na Święto Śląska w Koszęcinie: dojazdy z całej gminy i wieczorne powroty z Rynku. Propozycja mieszkańców – nie obowiązujący rozkład.">
 <link rel="canonical" href="https://busy-koszecin.smart-ant.pl/imprezy/">
 <style>
