@@ -3,12 +3,12 @@
   "przesiadka": "Strzebiń: linia 4 z Łaz → linia 1 do Lublińca",
   "kursy": 7,
   "udane": 7,
-  "min_zapas_min": 3.4
+  "min_zapas_min": 3.3
  },
  {
   "przesiadka": "Strzebiń: linia 1 z Lublińca → linia 4 do Łaz",
   "kursy": 7,
   "udane": 7,
-  "min_zapas_min": 17.7
+  "min_zapas_min": 17.9
  }
 ]

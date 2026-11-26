@@ -40,8 +40,8 @@
   <busStop id="kost_2181#1" lane="2181#1_0" startPos="46.8" endPos="58.8" name="Koszęcin Święta Trójca" friendlyPos="true"/>
   <busStop id="laz_-3162" lane="-3162_0" startPos="0.0" endPos="45.0" name="Łazy" friendlyPos="true" parkingLength="120"/>
   <busStop id="laz_3162" lane="3162_0" startPos="316.5" endPos="361.5" name="Łazy" friendlyPos="true" parkingLength="120"/>
-  <busStop id="lisp_-2365" lane="-2365_0" startPos="223.0" endPos="268.0" name="Lisów PKP" friendlyPos="true" parkingLength="120"/>
-  <busStop id="lisp_37#1" lane="37#1_0" startPos="61.2" endPos="106.2" name="Lisów PKP" friendlyPos="true" parkingLength="120"/>
+  <busStop id="lisp_-2365" lane="-2365_0" startPos="223.1" endPos="268.1" name="Lisów PKP" friendlyPos="true" parkingLength="120"/>
+  <busStop id="lisp_37#1" lane="37#1_0" startPos="61.3" endPos="106.3" name="Lisów PKP" friendlyPos="true" parkingLength="120"/>
   <busStop id="lubp1_-275#11" lane="-275#11_0" startPos="56.9" endPos="68.9" name="Lubliniec Powstańców Śląskich" friendlyPos="true"/>
   <busStop id="lubp1_275#10" lane="275#10_0" startPos="8.6" endPos="20.6" name="Lubliniec Powstańców Śląskich" friendlyPos="true"/>
   <busStop id="lubpkp_-572#1" lane="-572#1_0" startPos="133.8" endPos="178.8" name="Lubliniec PKP" friendlyPos="true" parkingLength="120"/>
@@ -55,8 +55,8 @@
   <busStop id="pil_-727#0" lane="-727#0_0" startPos="56.9" endPos="101.9" name="Piłka" friendlyPos="true" parkingLength="120"/>
   <busStop id="prad_-700" lane="-700_0" startPos="1250.2" endPos="1262.2" name="Prądy" friendlyPos="true"/>
   <busStop id="prad_700" lane="700_0" startPos="0.0" endPos="12.0" name="Prądy" friendlyPos="true"/>
-  <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="74.0" endPos="86.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
-  <busStop id="psk_3555#3" lane="3555#3_0" startPos="741.0" endPos="753.0" name="Płaszczymąka (Psary Skrzyżowanie)" friendlyPos="true"/>
+  <busStop id="psk_-3555#3" lane="-3555#3_0" startPos="74.0" endPos="86.0" name="Płaszczymąka" friendlyPos="true"/>
+  <busStop id="psk_3555#3" lane="3555#3_0" startPos="741.0" endPos="753.0" name="Płaszczymąka" friendlyPos="true"/>
   <busStop id="psy_-3502" lane="-3502_0" startPos="0.0" endPos="12.0" name="Psary Główna" friendlyPos="true"/>
   <busStop id="psy_3536" lane="3536_0" startPos="1209.8" endPos="1221.8" name="Psary Główna" friendlyPos="true"/>
   <busStop id="rus_-2390" lane="-2390_0" startPos="0.0" endPos="12.0" name="Rusinowice PKP" friendlyPos="true"/>

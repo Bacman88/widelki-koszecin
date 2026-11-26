@@ -60,7 +60,7 @@ def route(pts):
 RAW=[]
 S={ 'lubpkp':(50.6726,18.6910,'Lubliniec PKP','hubz'),'lisp':(50.7211,18.7922,'Lisów PKP','hubz'),'chw':(50.7185,18.8069,'Chwostek','ist'),'moc':(50.7037,18.8211,'Mochała','nowy'),'dol':(50.6949,18.8349,'Hadra','ist'),'sad':(50.6718,18.7409,'Sadów Przedszkole','ist'),'wie':(50.6654,18.7749,'Wierzbie','ist'),
 'irk':(50.6502,18.8107,'Rzyce Irki','ist'),'kosr':(50.6362,18.8411,'Koszęcin Rynek','hub'),'kosp':(50.62285,18.83705,'Koszęcin PKP','nowy'),'kossz':(50.6321,18.84156,'Koszęcin Szkoła','ist'),'str':(50.6150,18.9007,'Strzebiń Centrum','ist'),'strs':(50.61755,18.90364,'Strzebiń Szkoła','ist'),
-'buk':(50.6071,18.9408,'Bukowiec','ist'),'psk':(50.6018,18.9541,'Płaszczymąka (Psary Skrzyżowanie)','ist'),'pia':(50.5950,18.9675,'Piasek','hubz'),'bor':(50.6739,18.9038,'Boronów','hubz'),'borp':(50.6654,18.9014,'Boronów PKP','nowy'),'bru':(50.5856,18.8115,'Brusiek','hubz'),'kalp':(50.5642,18.8860,'Kalety PKP','hubz'),
+'buk':(50.6071,18.9408,'Bukowiec','ist'),'psk':(50.6018,18.9541,'Płaszczymąka','ist'),'pia':(50.5950,18.9675,'Piasek','hubz'),'bor':(50.6739,18.9038,'Boronów','hubz'),'borp':(50.6654,18.9014,'Boronów PKP','nowy'),'bru':(50.5856,18.8115,'Brusiek','hubz'),'kalp':(50.5642,18.8860,'Kalety PKP','hubz'),
 'cie':(50.6712,18.8362,'Cieszowa','ist'),'rus':(50.6494,18.7637,'Rusinowice PKP','ist'),'pil':(50.6275,18.7585,'Piłka','ist'),'laz':(50.6355,18.9270,'Łazy','ist'),'psy':(50.61288,18.96686,'Psary Główna','ist'),
 # przystanki dodane 25.11.2026 wg wskazań mieszkańca (dane/przystanki_uzupelnienia.json); typ 'zad' = na żądanie
 'kurz':(50.6413,18.9232,'Łazy Kurzychowe','ist'),'strst':(50.6150,18.9208,'Stary Strzebiń','nowy'),'strb':(50.6173,18.8901,'Strzebiń Ligonia','ist'),

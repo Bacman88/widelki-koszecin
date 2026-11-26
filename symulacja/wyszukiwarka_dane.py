@@ -10,9 +10,9 @@ sys.path.insert(0, '../skrypty')
 
 plan = json.load(open('plan_kursow.json'))
 NAZWY = {k: v[2] for k, v in json.load(open('../out/data.json'))['stops'].items()}   # nazwy przystanków z tras (skrypty/build.py)
-NAZWY['psk'] = 'Płaszczymąka (Psary Skrzyżowanie)'
+NAZWY['psk'] = 'Płaszczymąka'
 # miejscowość / gmina do podpowiedzi w polu wyszukiwania
-GDZIE = {'lubpkp': 'Lubliniec', 'kalp': 'Kalety', 'lisp': 'Lisów, gm. Herby', 'psk': 'Psary', 'bru': 'gm. Koszęcin'}
+GDZIE = {'lubpkp': 'Lubliniec', 'kalp': 'Kalety', 'lisp': 'Lisów, gm. Herby', 'bru': 'gm. Koszęcin'}
 POSTOJ_RYNEK = 14 * 60
 S = {k: (float(a), float(b)) for k, a, b in re.findall(r"'(\w+)':\(([\d.]+),([\d.]+),'", open('../skrypty/build.py').read())}
 S['prad'] = (50.62416, 18.87249)   # Prądy: przystanek dodany w symulacji (scenariusz.py)

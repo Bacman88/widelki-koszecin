@@ -150,19 +150,32 @@ PSARY_Z = {14*60+33, 15*60+33}         # planowy odjazd z Piasku
 for name, v in list(tt['1']['wd'].items()):
     st = v['stops']
     if st[0] == 'Lubliniec PKP':
-        i = st.index('Płaszczymąka (Psary Skrzyżowanie)'); wyb = [t for t in v['trips'] if t[0][0] in PSARY_DO]
+        i = st.index('Płaszczymąka'); wyb = [t for t in v['trips'] if t[0][0] in PSARY_DO]
         if not wyb: continue
         v['trips'] = [t for t in v['trips'] if t[0][0] not in PSARY_DO]
         nst = st[:i+1] + ['Psary Główna'] + st[i+1:]
         ntr = [[t[0][:i+1] + [t[0][i] + 3] + [t[0][i] + 7], t[1]] for t in wyb]
         tt['1']['wd'][name + ' (przez Psary)'] = {**{k: x for k, x in v.items() if k not in ('stops', 'trips')}, 'stops': nst, 'trips': ntr}
     elif st[0] == 'Piasek':
-        i = st.index('Płaszczymąka (Psary Skrzyżowanie)'); wyb = [t for t in v['trips'] if t[0][0] in PSARY_Z]
+        i = st.index('Płaszczymąka'); wyb = [t for t in v['trips'] if t[0][0] in PSARY_Z]
         if not wyb: continue
         v['trips'] = [t for t in v['trips'] if t[0][0] not in PSARY_Z]
         nst = ['Piasek', 'Psary Główna'] + st[i:]
         ntr = [[[t[0][i] - 7, t[0][i] - 4] + t[0][i:], t[1]] for t in wyb]
         tt['1']['wd'][name + ' (przez Psary)'] = {**{k: x for k, x in v.items() if k not in ('stops', 'trips')}, 'stops': nst, 'trips': ntr}
+# 26.11.2026: wieczorne kursy linii 1 z Koszęcina Rynku w stronę Piasku o :15 zamiast o pełnej (od 21:00) – +15 min;
+# w dni robocze także ostatni kurs z Piasku (21:33 → 21:48), żeby te same 2 busy obsłużyły obieg
+for dz in ('wd', 'sat', 'sun'):
+    for name, v in tt['1'][dz].items():
+        st = v['stops']
+        if 'Psary' in name: continue
+        if st[0] == 'Lubliniec PKP':
+            i = st.index('Koszęcin Rynek')
+            for tr in v['trips']:
+                if tr[0][i] >= 21*60: tr[0] = [x + 15 for x in tr[0]]
+        elif st[0] == 'Piasek' and dz == 'wd':
+            for tr in v['trips']:
+                if tr[0][0] == 21*60+33: tr[0] = [x + 15 for x in tr[0]]
 # zestawienie wariantu pełnego po poprawkach (kursy, km, busy) – z gotowego rozkładu
 _BASE=json.load(open('out/rozklad_base.json'));_S={};_tot=0;_fl=0
 for k in tt:
