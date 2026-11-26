@@ -5,7 +5,7 @@ a brakujące dojazdy na Rynek i wieczorne powroty z Rynku są dodane jako kursy 
 przejazdu co w zwykłym rozkładzie). Wynik: strona HTML (ścieżka w argumencie, domyślnie out/imprezy.html).
 Uruchom z katalogu repozytorium: python3 skrypty/imprezy.py [plik.html]
 """
-import json, sys, html
+import json, sys, html, os
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'out/imprezy.html'
 D = json.load(open('out/rozklad_data.json'))
@@ -135,6 +135,6 @@ a{{color:var(--g)}}
 {podsum}
 {''.join(sekcje)}
 <p class="note">Rozkład przykładowy, ułożony według <a href="../rozklad/">proponowanego rozkładu weekendowego</a>. Ten sam schemat, czyli wspólny wieczorny odjazd wszystkich linii z Rynku, pasuje do innych imprez: Międzynarodowego Festiwalu Folklorystycznego „Silesia” (w 2027 r. 19–25 lipca), dożynek i festynów. Kursy dodatkowe można finansować wspólnie z organizatorem imprezy albo sponsorem. Liczba kilometrów jest przybliżona (średnia prędkość linii z rozkładu dnia roboczego).</p>
-</main></body></html>'''
+</main>'''+open(os.path.join(os.path.dirname(__file__),'ankieta_przycisk.html')).read()+'''</body></html>'''
 open(OUT, 'w').write(strona)
 print(OUT, liczby, f'{km_dod:.0f} km', koszt)
