@@ -1,4 +1,4 @@
-"""Rozkład dojazdów koleją: Sadów, Rusinowice, Koszęcin, Strzebiń ⇄ Lubliniec, Częstochowa, Tarnowskie Góry, Katowice, Opole.
+"""Rozkład dojazdów koleją: stacje Rusinowice, Koszęcin, Strzebiń ⇄ Lubliniec, Częstochowa, Tarnowskie Góry, Katowice, Opole.
 Na podstawie danych wyszukiwarki (busy z proponowanego rozkładu + pociągi z GTFS). Uruchom z katalogu symulacja/.
 Wynik: ../strona/dojazdy/index.html (z szablonu ../strona/dojazdy/szablon.html).
 """
@@ -47,7 +47,7 @@ def opis(legs):
         out.append({'t':'bus' if bus else k['l'],'l':k['l'] if bus else (k.get('nr','').split(' ')[0] if k['l']!='IC' else 'IC'),
                     'nr':'' if bus else k.get('nr',''),'z':NM[bx],'zt':bd,'do':NM[ay],'dt':a,'zam':bool(zam)})
     return out
-ZR={'sad':'Sadów','rus':'Rusinowice (stacja)','kosr':'Koszęcin (Rynek)','str':'Strzebiń (Centrum)'}
+ZR={'st_Rusinowice':'Rusinowice','st_Koszęcin':'Koszęcin','st_Strzebiń':'Strzebiń'}
 CE={'st_Lubliniec':'Lubliniec','st_Częstochowa':'Częstochowa','st_Tarnowskie Góry':'Tarnowskie Góry','st_Katowice':'Katowice','st_Opole Główne':'Opole Główne'}
 WYN={}
 for dz in ('wd','sat','sun'):

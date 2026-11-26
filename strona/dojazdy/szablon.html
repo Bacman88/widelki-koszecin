@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dojazdy koleją – busy gminy Koszęcin</title>
-<meta name="description" content="Połączenia busem i pociągiem z Sadowa, Rusinowic, Koszęcina i Strzebinia do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – propozycja siatki busów gminy Koszęcin i rozkład kolejowy 2026/27.">
+<meta name="description" content="Połączenia busem i pociągiem ze stacji Rusinowice, Koszęcin i Strzebiń do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – propozycja siatki busów gminy Koszęcin i rozkład kolejowy 2026/27.">
 <link rel="icon" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -51,7 +51,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.05;margin:0 0 6px;font-weight:
 <div style="position:sticky;top:0;z-index:1000;background:#b3261e;color:#fff;text-align:center;font-weight:700;padding:8px 12px;font-size:14px">⚠️ To NIE jest aktualny rozkład jazdy – tylko propozycja! · <a href="../" style="color:#fff">strona główna</a> · <a href="../wyszukiwarka/" style="color:#fff">wyszukiwarka połączeń</a></div>
 <header class="band top"><div class="wrap">
 <h1>Dojazdy koleją z gminy Koszęcin</h1>
-<p class="lead">Najlepsze połączenia busem i pociągiem z Sadowa, Rusinowic, Koszęcina i Strzebinia do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – w proponowanej siatce busów i nowym rozkładzie kolejowym od 13 grudnia 2026.</p>
+<p class="lead">Najlepsze połączenia busem i pociągiem ze stacji Rusinowice, Koszęcin i Strzebiń do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – w proponowanej siatce busów i nowym rozkładzie kolejowym od 13 grudnia 2026.</p>
 <div class="ctl">
 <div class="grp" id="g-z"><b>Skąd</b></div>
 <div class="grp" id="g-c"><b>Dokąd</b></div>
@@ -64,7 +64,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.05;margin:0 0 6px;font-weight:
 <div class="note">
 <p><b>Uwaga:</b> to propozycja mieszkańców, nie obowiązujący rozkład. Busy według <a href="../">proponowanej siatki</a>, pociągi Kolei Śląskich, POLREGIO i PKP Intercity według rozkładu 2026/27 (dane PKP PLK, GTFS). Przesiadka z busa na pociąg liczona z co najmniej 4-minutowym zapasem.</p>
 <p>Kursy PKP Intercity (IC) mają osobną taryfę i rezerwację; do Opola są pokazane, bo regionalnych jest niewiele. Na innych kierunkach tylko pociągi regionalne. W weekend linie 3, 4 i 5 jeżdżą na zamówienie. Pokazane są połączenia, których nie da się zastąpić późniejszym wyjazdem z tym samym przyjazdem.</p>
-<p>Sadów: przystanek Sadów Przedszkole (najbliższa stacja to Rusinowice albo Lubliniec); Rusinowice: przystanek przy stacji; Koszęcin: Rynek; Strzebiń: Strzebiń Centrum (stacja Strzebiń ok. 5 min pieszo).</p>
+<p>Start i powrót: stacje kolejowe w Rusinowicach, Koszęcinie i Strzebiniu. Tam, gdzie szybciej jest busem (np. ze Strzebinia linią 1 do Lublińca albo w powrocie z Częstochowy przez Lisów i linię 3), pokazane jest połączenie z busem.</p>
 </div></div></main>
 <script>
 {
@@ -72,8 +72,9 @@ const D=__DATA__;
 const ZR=D.ZR, CE=D.CE, W=D.WYN;
 const KIER={tam:'Tam',powrot:'Z powrotem'}, DNI={wd:'Dzień roboczy',sat:'Sobota',sun:'Niedziela'};
 const PRZ={KŚ:'Koleje Śląskie',PR:'POLREGIO',IC:'PKP Intercity'};
-let st={z:'kosr',c:'st_Częstochowa',k:'tam',d:'wd'};
+let st={z:'st_Koszęcin',c:'st_Częstochowa',k:'tam',d:'wd'};
 try{const s=JSON.parse(localStorage.getItem('dojazdy')||'null');if(s)st={...st,...s}}catch(e){}
+if(!ZR[st.z])st.z='st_Koszęcin';if(!CE[st.c])st.c='st_Częstochowa';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const hm=m=>Math.floor(m/60)+':'+String(m%60).padStart(2,'0');
 const dur=m=>m<60?m+' min':Math.floor(m/60)+' h '+String(m%60).padStart(2,'0')+' min';
