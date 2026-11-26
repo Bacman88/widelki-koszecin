@@ -64,7 +64,7 @@ for s_ in stops:
 out = {'stacje': wsp, 'zrodlo': 'GTFS polish_trains (mkuran.pl), dane PKP PLK', 'pobrano': dt.date.today().isoformat(), 'dni': DNI, 'pociagi': {}}
 for tid, rows in st.items():
     rows.sort(key=lambda r: int(r['stop_sequence']))
-    if len(rows) < 2: continue
+    if len(rows) < 2 and not (rows and sc.get(tid)): continue   # jedna stacja z okolicy wystarczy, jeśli pociąg jedzie do stacji docelowej (np. Lubliniec – Opole)
     t = trips[tid]; ro = routes.get(t['route_id'], {})
     for k, d in DNI.items():
         if not aktywny(t['service_id'], d): continue
