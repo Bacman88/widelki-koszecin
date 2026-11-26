@@ -62,7 +62,7 @@ def opis(legs):
     return out
 TRYBY={'kolej':{'st_Rusinowice':'Rusinowice','st_Koszęcin':'Koszęcin','st_Strzebiń':'Strzebiń','st_Lubliniec':'Lubliniec'},
        'bus':{'kosr':'Koszęcin (Rynek)','str':'Strzebiń (Centrum)','rus':'Rusinowice','sad':'Sadów','wie':'Wierzbie','pil':'Piłka',
-              'cie':'Cieszowa','laz':'Łazy','buk':'Bukowiec','lubpkp':'Lubliniec'}}
+              'cie':'Cieszowa','laz':'Łazy','buk':'Bukowiec','pia':'Piasek','bor':'Boronów','bru':'Brusiek','lubpkp':'Lubliniec'}}
 CE={'st_Lubliniec':'Lubliniec','st_Częstochowa':'Częstochowa','st_Tarnowskie Góry':'Tarnowskie Góry','st_Katowice':'Katowice','st_Opole Główne':'Opole Główne'}
 CEL={'st_Koszęcin':'Koszęcin','st_Strzebiń':'Strzebiń','st_Rusinowice':'Rusinowice','st_Boronów':'Boronów','st_Kalety':'Kalety',
      'st_Lisów':'Lisów','st_Kochanowice':'Kochanowice','st_Herby Stare':'Herby Stare','st_Herby Nowe':'Herby Nowe'}
