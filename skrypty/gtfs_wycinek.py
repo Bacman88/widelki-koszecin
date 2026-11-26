@@ -11,7 +11,7 @@ ZIP = sys.argv[1]
 DNI = {'wd': sys.argv[2], 'sat': sys.argv[3], 'sun': sys.argv[4]}
 STACJE = ['Lubliniec', 'Kochanowice', 'Lisów', 'Rusinowice', 'Koszęcin', 'Strzebiń', 'Boronów', 'Kalety']
 # stacje docelowe dalej od gminy: dla pociągów z wycinka zapisujemy też godziny na nich (pole 'cele')
-CELE = ['Częstochowa', 'Częstochowa Stradom', 'Herby Nowe', 'Kłobuck', 'Wieluń Dąbrowa', 'Tarnowskie Góry', 'Bytom', 'Chorzów Batory',
+CELE = ['Częstochowa', 'Częstochowa Stradom', 'Herby Nowe', 'Herby Stare', 'Kłobuck', 'Wieluń Dąbrowa', 'Tarnowskie Góry', 'Bytom', 'Chorzów Batory',
         'Katowice', 'Gliwice', 'Opole Główne', 'Kluczbork', 'Olesno Śląskie', 'Fosowskie', 'Zawadzkie', 'Strzelce Opolskie', 'Kalety Drutarnia', 'Miasteczko Śląskie']
 z = zipfile.ZipFile(ZIP)
 
