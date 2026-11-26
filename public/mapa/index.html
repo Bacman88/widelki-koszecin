@@ -108,6 +108,11 @@ pil:'<b>Piłka</b><br>Linia 5 wjeżdża do Piłki i wraca do Rusinowic (odnoga).
 
 bru:'<b>Brusiek – węzeł na styku z Tworogiem</b><br>Tu gmina Tworóg może dowęzłować swoje linie do linii 2 (Koszęcin, Kalety, Boronów).',
 laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 co godzinę przez cały rok, przez Strzebiń do Koszęcina PKP i na Rynek. Łazy Kurzychowe (ok. 300 m dalej) – opcja na kursy szkolne.'};
+const STI={
+'Herby Stare':'<b>Herby Stare</b><br>Stacja na linii Lubliniec – Częstochowa. Tu zmienia kierunek pociąg POLREGIO Lubliniec – Lisów – Herby Stare – Boronów – Strzebiń – Kalety – Tarnowskie Góry (44312, w dni robocze: Lubliniec 7:22, postój w Herbach 7:39–7:49, Strzebiń 8:03) i powrotny 44351 (Strzebiń 13:35, Herby 13:49–13:59, Lubliniec 14:16). Jedyny bezpośredni pociąg Lubliniec ⇄ Strzebiń.',
+'Herby Nowe':'<b>Herby Nowe</b><br>Stacja na Magistrali Węglowej (Tarnowskie Góry – Kalety – Strzebiń – Boronów – Herby Nowe – Wieluń / Kłobuck).',
+'Kochanowice':'<b>Kochanowice</b><br>Stacja na linii Lubliniec – Lisów – Częstochowa (pociągi Kolei Śląskich i POLREGIO).',
+'Strzebiń':'<b>Strzebiń – przystanek kolejowy</b><br>Pociągi do Tarnowskich Gór / Bytomia (przez Kalety) i do Herb Nowych / Wielunia. Do Lublińca koleją z przesiadką w Kaletach, raz dziennie bezpośrednio przez Herby Stare (13:35). Ok. 300 m od przystanku Strzebiń Centrum (linia 1 i 4).'};
 const map=L.map('map',{zoomControl:true,attributionControl:true,minZoom:10,maxZoom:16,zoomSnap:.25});
 map.attributionControl.setPrefix(false).addAttribution('© OpenStreetMap');
 const lineLayers={};
@@ -125,7 +130,7 @@ Promise.all([fetch('baza.json').then(r=>r.json()),fetch('data.json').then(r=>r.j
  L.polyline(D.rails,{pane:'rail',color:'#222',weight:4}).addTo(map);
  L.polyline(D.rails,{pane:'rail',color:'#fff',weight:2,dashArray:'7 7'}).addTo(map);
  const stopNames=Object.values(D.stops).map(x=>x[2]);
- for(const [la,lo,t0] of D.stations){if(['Koszęcin','Lubliniec','Boronów','Kalety','Rusinowice','Lisów'].includes(t0))continue;const t=t0==='Strzebiń'?'Strzebiń – obecny przystanek kolejowy':t0;L.circleMarker([la,lo],{pane:'stops',radius:5,color:'#222',weight:3,fillColor:'#fff',fillOpacity:1}).addTo(map).bindTooltip(t0==='Strzebiń'?t:t+' (stacja)',{permanent:true,direction:'right',offset:[6,0],className:'lbl'});}
+ for(const [la,lo,t0] of D.stations){if(['Koszęcin','Lubliniec','Boronów','Kalety','Rusinowice','Lisów'].includes(t0))continue;const t=t0==='Strzebiń'?'Strzebiń – obecny przystanek kolejowy':t0;const mk=L.circleMarker([la,lo],{pane:'stops',radius:5,color:'#222',weight:3,fillColor:'#fff',fillOpacity:1}).addTo(map).bindTooltip(t0==='Strzebiń'?t:t+' (stacja)',{permanent:true,direction:'right',offset:[6,0],className:'lbl'});if(STI[t0])mk.bindPopup(STI[t0]);}
  const nm=L.layerGroup().addTo(map);
  const used=new Set(Object.values(D.stops).map(s=>s[2].split(' ')[0]));
  for(const [la,lo,t,r] of B.nazwy){if(r>3||used.has(t))continue;nm.addLayer(L.marker([la,lo],{icon:L.divIcon({className:'',html:'',iconSize:[0,0]}),interactive:false}).bindTooltip(t,{permanent:true,direction:'center',className:'pl'+(r===1?' t1':'')}));}
