@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mapa siatki busów Koszęcin</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Propozycja (nie obowiązuje) – Mapa siatki busów Koszęcin</title>
 <link rel="stylesheet" href="leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +21,8 @@
 *{box-sizing:border-box;min-width:0}
 html,body{height:100%;margin:0}
 body{font:15px/1.45 Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper)}
-#map{position:absolute;inset:0;background:var(--paper)}
-.panel{position:absolute;z-index:1000;top:12px;left:12px;width:min(340px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.12);padding:14px 16px}
+#map{position:absolute;inset:34px 0 0 0;background:var(--paper)}
+.panel{position:absolute;z-index:1000;top:46px;left:12px;width:min(340px,calc(100% - 24px));max-height:calc(100% - 58px);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.12);padding:14px 16px}
 .panel h1{font:800 22px/1.1 "Inter Tight",sans-serif;letter-spacing:-.02em;margin:0 0 6px}
 .panel p{margin:6px 0;font-size:14px;color:var(--mut)}
 .ln{display:flex;align-items:center;gap:10px;min-height:40px;cursor:pointer;border-top:1px solid var(--rule);padding:4px 0}
@@ -52,10 +55,12 @@ body{font:15px/1.45 Inter,system-ui,sans-serif;color:var(--ink);background:var(-
 </style>
 </head>
 <body>
+<div style="position:fixed;top:0;left:0;right:0;z-index:2000;background:#b3261e;color:#fff;text-align:center;font:700 14px/1.3 system-ui,sans-serif;padding:8px 12px">⚠️ Propozycja – nie obowiązujące trasy · <a href="../" style="color:#fff">strona główna</a></div>
 <div id="map" aria-label="Mapa proponowanej siatki busów gminy Koszęcin"></div>
 <div class="panel" id="panel">
 <h1>Propozycja siatki: Koszęcin Rynek jako główny węzeł</h1>
-<p>Linie poprowadzone po prawdziwych drogach z OpenStreetMap. Wszystkie spotykają się na Rynku, linie 2 i 3 dojeżdżają też do stacji Koszęcin PKP. Na obrzeżach są węzły zewnętrzne: Lubliniec, Piasek, Boronów i Kalety. Kliknij linię albo przystanek, żeby zobaczyć szczegóły.</p>
+<p style="color:#b3261e;font-weight:700;margin:4px 0 8px">Nie obowiązuje – to propozycja, nie aktualne trasy.</p>
+<p>Linie poprowadzone po prawdziwych drogach z OpenStreetMap. Wszystkie spotykają się na Rynku, linie 2, 3, 4 i 5 dojeżdżają też do stacji Koszęcin PKP. Na obrzeżach są węzły zewnętrzne: Lubliniec, Piasek, Boronów i Kalety. Kliknij linię albo przystanek, żeby zobaczyć szczegóły.</p>
 <button class="tog" id="tog" type="button" aria-expanded="false">Linie i legenda</button>
 <div class="more">
 <div id="lines"></div>
@@ -103,6 +108,11 @@ pil:'<b>Piłka</b><br>Linia 5 wjeżdża do Piłki i wraca do Rusinowic (odnoga).
 
 bru:'<b>Brusiek – węzeł na styku z Tworogiem</b><br>Tu gmina Tworóg może dowęzłować swoje linie do linii 2 (Koszęcin, Kalety, Boronów).',
 laz:'<b>Łazy</b><br>Dziś kursy tylko w dni nauki szkolnej. W propozycji linia 4 co godzinę przez cały rok, przez Strzebiń do Koszęcina PKP i na Rynek. Łazy Kurzychowe (ok. 300 m dalej) – opcja na kursy szkolne.'};
+const STI={
+'Herby Stare':'<b>Herby Stare</b><br>Stacja na linii Lubliniec – Częstochowa. Tu zmienia kierunek pociąg POLREGIO Lubliniec – Lisów – Herby Stare – Boronów – Strzebiń – Kalety – Tarnowskie Góry (44312, w dni robocze: Lubliniec 7:22, postój w Herbach 7:39–7:49, Strzebiń 8:03) i powrotny 44351 (Strzebiń 13:35, Herby 13:49–13:59, Lubliniec 14:16). Jedyny bezpośredni pociąg Lubliniec ⇄ Strzebiń.',
+'Herby Nowe':'<b>Herby Nowe</b><br>Stacja na Magistrali Węglowej (Tarnowskie Góry – Kalety – Strzebiń – Boronów – Herby Nowe – Wieluń / Kłobuck).',
+'Kochanowice':'<b>Kochanowice</b><br>Stacja na linii Lubliniec – Lisów – Częstochowa (pociągi Kolei Śląskich i POLREGIO).',
+'Strzebiń':'<b>Strzebiń – przystanek kolejowy</b><br>Pociągi do Tarnowskich Gór / Bytomia (przez Kalety) i do Herb Nowych / Wielunia. Do Lublińca koleją z przesiadką w Kaletach, raz dziennie bezpośrednio przez Herby Stare (13:35). Ok. 300 m od przystanku Strzebiń Centrum (linia 1 i 4).'};
 const map=L.map('map',{zoomControl:true,attributionControl:true,minZoom:10,maxZoom:16,zoomSnap:.25});
 map.attributionControl.setPrefix(false).addAttribution('© OpenStreetMap');
 const lineLayers={};
@@ -120,7 +130,7 @@ Promise.all([fetch('baza.json').then(r=>r.json()),fetch('data.json').then(r=>r.j
  L.polyline(D.rails,{pane:'rail',color:'#222',weight:4}).addTo(map);
  L.polyline(D.rails,{pane:'rail',color:'#fff',weight:2,dashArray:'7 7'}).addTo(map);
  const stopNames=Object.values(D.stops).map(x=>x[2]);
- for(const [la,lo,t0] of D.stations){if(['Koszęcin','Lubliniec','Boronów','Kalety','Rusinowice','Lisów'].includes(t0))continue;const t=t0==='Strzebiń'?'Strzebiń – obecny przystanek kolejowy':t0;L.circleMarker([la,lo],{pane:'stops',radius:5,color:'#222',weight:3,fillColor:'#fff',fillOpacity:1}).addTo(map).bindTooltip(t0==='Strzebiń'?t:t+' (stacja)',{permanent:true,direction:'right',offset:[6,0],className:'lbl'});}
+ for(const [la,lo,t0] of D.stations){if(['Koszęcin','Lubliniec','Boronów','Kalety','Rusinowice','Lisów'].includes(t0))continue;const t=t0==='Strzebiń'?'Strzebiń – obecny przystanek kolejowy':t0;const mk=L.circleMarker([la,lo],{pane:'stops',radius:5,color:'#222',weight:3,fillColor:'#fff',fillOpacity:1}).addTo(map).bindTooltip(t0==='Strzebiń'?t:t+' (stacja)',{permanent:true,direction:'right',offset:[6,0],className:'lbl'});if(STI[t0])mk.bindPopup(STI[t0]);}
  const nm=L.layerGroup().addTo(map);
  const used=new Set(Object.values(D.stops).map(s=>s[2].split(' ')[0]));
  for(const [la,lo,t,r] of B.nazwy){if(r>3||used.has(t))continue;nm.addLayer(L.marker([la,lo],{icon:L.divIcon({className:'',html:'',iconSize:[0,0]}),interactive:false}).bindTooltip(t,{permanent:true,direction:'center',className:'pl'+(r===1?' t1':'')}));}

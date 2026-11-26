@@ -1,4 +1,4 @@
-"""Rozkład dojazdów koleją: Sadów, Koszęcin, Strzebiń ⇄ Częstochowa, Tarnowskie Góry, Katowice, Opole.
+"""Rozkład dojazdów koleją: Sadów, Rusinowice, Koszęcin, Strzebiń ⇄ Lubliniec, Częstochowa, Tarnowskie Góry, Katowice, Opole.
 Na podstawie danych wyszukiwarki (busy z proponowanego rozkładu + pociągi z GTFS). Uruchom z katalogu symulacja/.
 Wynik: ../strona/dojazdy/index.html (z szablonu ../strona/dojazdy/szablon.html).
 """
@@ -47,8 +47,8 @@ def opis(legs):
         out.append({'t':'bus' if bus else k['l'],'l':k['l'] if bus else (k.get('nr','').split(' ')[0] if k['l']!='IC' else 'IC'),
                     'nr':'' if bus else k.get('nr',''),'z':NM[bx],'zt':bd,'do':NM[ay],'dt':a,'zam':bool(zam)})
     return out
-ZR={'sad':'Sadów','kosr':'Koszęcin (Rynek)','str':'Strzebiń (Centrum)'}
-CE={'st_Częstochowa':'Częstochowa','st_Tarnowskie Góry':'Tarnowskie Góry','st_Katowice':'Katowice','st_Opole Główne':'Opole Główne'}
+ZR={'sad':'Sadów','rus':'Rusinowice (stacja)','kosr':'Koszęcin (Rynek)','str':'Strzebiń (Centrum)'}
+CE={'st_Lubliniec':'Lubliniec','st_Częstochowa':'Częstochowa','st_Tarnowskie Góry':'Tarnowskie Góry','st_Katowice':'Katowice','st_Opole Główne':'Opole Główne'}
 WYN={}
 for dz in ('wd','sat','sun'):
     csa_r=run(dz); csa_ic=run(dz,False)
@@ -69,7 +69,7 @@ for dz in ('wd','sat','sun'):
                 fin=[x for x in lst if not any(y[0]>=x[0] and y[1]<=x[1] and y!=x for y in lst)]
                 if fin:
                     mn=min(x[1]-x[0] for x in fin)
-                    fin=[x for x in fin if x[1]-x[0]<=max(mn+60, mn*1.7)]
+                    fin=[x for x in fin if x[1]-x[0]<=(max(mn+25, mn*2) if 'st_Lubliniec' in (A,B) else max(mn+60, mn*1.7))]   # do Lublińca blisko: bez objazdów
                 WYN.setdefault(dz,{}).setdefault(z,{}).setdefault(c,{})[kier]=[{'odj':x[0],'prz':x[1],'czas':x[1]-x[0],'przes':len(x[2])-1,'ic':any(l[0]['l']=='IC' for l in x[2]),'jak':opis(x[2])} for x in fin]
 _dane=json.dumps({'ZR':ZR,'CE':CE,'WYN':WYN},ensure_ascii=False,separators=(',',':'))
 open('../strona/dojazdy/index.html','w').write(open('../strona/dojazdy/szablon.html').read().replace('__DATA__',_dane))

@@ -89,6 +89,9 @@ for m in re.finditer(r'<vehicle id="L(\d)[^"]*".*?edges="([^"]+)"', open('busy.r
 trasy_pts = {l: [[P(*net.convertXY2LonLat(x, y)) for x, y in net.getEdge(e).getShape()] for e in set(es)] for l, es in trasy.items()}
 allpts = [p for l in trasy_pts.values() for seg in l for p in seg]
 xs = [p[0] for p in allpts]; ys = [p[1] for p in allpts]
+if not PION:   # poziomy kadr obejmuje też Herby (zmiana kierunku pociągów) i całą stację Kalety
+    for lon, lat in ((18.8545, 50.7570), (18.8821, 50.7575), (18.8885, 50.5590)):
+        x_, y_ = P(lon, lat); xs.append(x_); ys.append(y_)
 cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
 axw, axh = AX[2] * W, AX[3] * H
 span = max(max(xs) - min(xs), (max(ys) - min(ys)) * axw / axh) / 2 * (1.13 if PION else 1.10)
@@ -105,13 +108,22 @@ lc_korki = LineCollection([], linewidths=3.2, zorder=4, capstyle='round'); ax.ad
 for k, nm in NAZWY.items():
     lat, lon, _ = S[k]; x, y = P(lon, lat)
     ax.text(x, y + 0.0042, nm, fontsize=12 if PION else 8.5, color='#5E5A52', ha='center', va='bottom', zorder=5, fontweight='semibold')
+STACJE_POC = {'Herby Stare': (18.8821, 50.7477), 'Herby Nowe': (18.8545, 50.7473), 'Kochanowice': (18.7486, 50.6995)}
+x0_, x1_ = ax.get_xlim(); y0_, y1_ = ax.get_ylim()
+for nm, (lon, lat) in STACJE_POC.items():
+    x, y = P(lon, lat)
+    if not (x0_ < x < x1_ and y0_ < y + 0.004 < y1_): continue
+    ax.plot([x], [y], marker='o', ms=4 if not PION else 6, mfc='white', mec='#6B675F', mew=1.2, zorder=4)
+    ax.text(x + (0.0035 if nm != 'Herby Nowe' else -0.0035), y + 0.0015, nm, fontsize=11 if PION else 7.5, color='#77736A',
+            ha='left' if nm != 'Herby Nowe' else 'right', va='bottom', zorder=5, style='italic')
 SK = 1.5 if PION else 1.0
 bus_sc = ax.scatter([], [], s=150 * SK * SK, zorder=7, edgecolors='white', linewidths=1.2)
 poc_sc = ax.scatter([], [], s=16 * (2 if PION else 1), marker='s', c='#8A857B', zorder=6, edgecolors='white', linewidths=0.4)   # towarowe
-KOL_POC = {'K': '#F2B705', 'P': '#7A2E8E'}     # Koleje Śląskie / POLREGIO
+KOL_POC = {'K': '#F2B705', 'P': '#7A2E8E', 'I': '#1F3A93'}     # Koleje Śląskie / POLREGIO / PKP Intercity
+ETYK = {'K': 'KŚ', 'P': 'PR', 'I': 'IC'}
 pas_sc = ax.scatter([], [], s=230 * SK * SK, marker='s', zorder=6.5, edgecolors='#1E1D1B', linewidths=0.8)
-pas_txt = [ax.text(0, 0, '', fontsize=6.3 * SK, ha='center', va='center', zorder=6.6, fontweight='bold', visible=False) for _ in range(30)]
-bus_txt = [ax.text(0, 0, '', fontsize=7.5 * SK, color='white', ha='center', va='center', zorder=8, fontweight='bold', visible=False)
+pas_txt = [ax.text(0, 0, '', fontsize=6.3 * SK, ha='center', va='center', zorder=6.6, fontweight='bold', visible=False, clip_on=True) for _ in range(30)]
+bus_txt = [ax.text(0, 0, '', fontsize=7.5 * SK, color='white', ha='center', va='center', zorder=8, fontweight='bold', visible=False, clip_on=True)
            for _ in range(40)]
 
 # panel boczny
@@ -128,9 +140,9 @@ if not PION:
         fig.patches.append(matplotlib.patches.Ellipse((px + 0.012, ly + 0.012), 0.022 * H / W, 0.022, transform=fig.transFigure, color=KOL[l], figure=fig))
         fig.text(px + 0.012, ly + 0.012, l, fontsize=8, color='white', ha='center', va='center', fontweight='bold')
         fig.text(px + 0.032, ly + 0.003, nazwa, fontsize=10, color='#2E2C28'); ly -= 0.045
-    for k, nazwa in (('K', 'pociąg Kolei Śląskich (rozkład 2026/27)'), ('P', 'pociąg POLREGIO (rozkład 2026/27)')):
+    for k, nazwa in (('K', 'pociąg Kolei Śląskich (rozkład 2026/27)'), ('P', 'pociąg POLREGIO (rozkład 2026/27)'), ('I', 'pociąg PKP Intercity (bez postoju w gminie)')):
         fig.patches.append(plt.Rectangle((px + 0.003, ly + 0.002), 0.019, 0.02, transform=fig.transFigure, facecolor=KOL_POC[k], edgecolor='#1E1D1B', lw=0.8, figure=fig))
-        fig.text(px + 0.0125, ly + 0.012, 'KŚ' if k == 'K' else 'PR', fontsize=6, ha='center', va='center', fontweight='bold', color='#1E1D1B' if k == 'K' else 'white')
+        fig.text(px + 0.0125, ly + 0.012, ETYK[k], fontsize=6, ha='center', va='center', fontweight='bold', color='#1E1D1B' if k == 'K' else 'white')
         fig.text(px + 0.032, ly + 0.003, nazwa, fontsize=10, color='#2E2C28'); ly -= 0.045
     fig.patches.append(plt.Rectangle((px + 0.008, ly + 0.007), 0.009, 0.01, transform=fig.transFigure, color='#8A857B', figure=fig))
     fig.text(px + 0.032, ly + 0.003, 'pociąg towarowy (przybliżony)', fontsize=10, color='#2E2C28'); ly -= 0.045
@@ -154,9 +166,9 @@ else:
         fig.text(fx + 0.016, ly + 0.006, l, fontsize=13, color='white', ha='center', va='center', fontweight='bold')
         fig.text(fx + 0.045, ly + 0.001, nazwa, fontsize=15, color='#2E2C28'); ly -= 0.0245
     px2, ly = 0.56, 0.348
-    for k, nazwa in (('K', 'Koleje Śląskie'), ('P', 'POLREGIO')):
+    for k, nazwa in (('K', 'Koleje Śląskie'), ('P', 'POLREGIO'), ('I', 'PKP Intercity')):
         fig.patches.append(plt.Rectangle((px2, ly - 0.004), 0.05, 0.02, transform=fig.transFigure, facecolor=KOL_POC[k], edgecolor='#1E1D1B', lw=1, figure=fig))
-        fig.text(px2 + 0.025, ly + 0.006, 'KŚ' if k == 'K' else 'PR', fontsize=11, ha='center', va='center', fontweight='bold', color='#1E1D1B' if k == 'K' else 'white')
+        fig.text(px2 + 0.025, ly + 0.006, ETYK[k], fontsize=11, ha='center', va='center', fontweight='bold', color='#1E1D1B' if k == 'K' else 'white')
         fig.text(px2 + 0.065, ly + 0.001, nazwa, fontsize=15, color='#2E2C28'); ly -= 0.026
     fig.patches.append(plt.Rectangle((px2 + 0.015, ly), 0.02, 0.011, transform=fig.transFigure, color='#8A857B', figure=fig))
     fig.text(px2 + 0.065, ly + 0.001, 'pociąg towarowy', fontsize=15, color='#2E2C28'); ly -= 0.026
@@ -215,12 +227,12 @@ def klatka(t):
     for vid, lon, lat, v in pozycje(t):
         if vid.startswith('L'):
             b.append(P(lon, lat)); kol.append(KOL[vid[1]]); tx.append(vid[1])
-        elif '_p' in vid: pp.append(P(lon, lat)); pk.append(vid[-1])
+        elif '_p' in vid or '_x' in vid: pp.append(P(lon, lat)); pk.append(vid[-1])
         else: p.append(P(lon, lat))
     pas_sc.set_offsets(pp if pp else [[None, None]]); pas_sc.set_color([KOL_POC[k] for k in pk] if pk else ['none']); pas_sc.set_edgecolor('#1E1D1B')
     for i, txt in enumerate(pas_txt):
         if i < len(pp):
-            txt.set_position(pp[i]); txt.set_text('KŚ' if pk[i] == 'K' else 'PR'); txt.set_color('#1E1D1B' if pk[i] == 'K' else 'white'); txt.set_visible(True)
+            txt.set_position(pp[i]); txt.set_text(ETYK[pk[i]]); txt.set_color('#1E1D1B' if pk[i] == 'K' else 'white'); txt.set_visible(True)
         else: txt.set_visible(False)
     # busy stojące razem (np. przesiadka na Rynku) rozsuwamy w kółko, żeby było widać każdy
     gr = []

@@ -26,6 +26,16 @@ for f in g['features']:
     elif t == 'Point' and p.get('railway') == 'level_crossing':
         x, y = f['geometry']['coordinates']
         k = (round(x, 7), round(y, 7)); ntag[k] = {'railway': 'level_crossing'}
+# Druga runda: same tory w szerszym obszarze (stacja Kalety, Herby) – dopisywane na końcu,
+# żeby numery istniejących węzłów i dróg (używane w poprawkach ręcznych) się nie zmieniły.
+BBOX2 = (18.66, 50.548, 18.99, 50.765)
+def w2(lon, lat): return BBOX2[0] <= lon <= BBOX2[2] and BBOX2[1] <= lat <= BBOX2[3]
+for f in g['features']:
+    p = f.get('properties', {})
+    if f['geometry']['type'] != 'LineString' or p.get('railway') != 'rail': continue
+    cs = f['geometry']['coordinates']
+    if any(w(x, y) for x, y in cs) or not any(w2(x, y) for x, y in cs): continue
+    ways.append(([node(x, y) for x, y in cs], {k: v for k, v in p.items() if k in TAGI}))
 inv = {v: k for k, v in nid.items()}
 with open(OUT, 'w') as o:
     o.write('<?xml version="1.0" encoding="UTF-8"?>\n<osm version="0.6" generator="widelki-koszecin">\n')

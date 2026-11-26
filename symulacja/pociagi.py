@@ -22,9 +22,9 @@ STACJE = {'Herby': None, 'Boronów': (18.9014, 50.6654), 'Strzebiń': (18.9000, 
           'Koszęcin': (18.8359, 50.6230), 'Kochanowice': (18.7486, 50.6995), 'Lisów': (18.7911, 50.7208)}
 # linia: punkty po kolei (lon, lat) – brzeg mapy, stacje, brzeg mapy; nazwy z STACJE oznaczają postój pasażerskich
 LINIE = {
-    '131': [(18.8497, 50.7557), 'Boronów', 'Strzebiń', (18.8885, 50.6007)],
-    '143': [(18.6335, 50.7507), 'Kochcice-Glinica', 'Lubliniec', 'Rusinowice', 'Koszęcin', (18.8852, 50.5740)],
-    '61':  ['Lubliniec', 'Kochanowice', 'Lisów', (18.9553, 50.7695)],
+    '131': [(18.8497, 50.7557), 'Boronów', 'Strzebiń', 'Kalety', (18.8927, 50.5530)],
+    '143': [(18.6335, 50.7507), 'Kochcice-Glinica', 'Lubliniec', 'Rusinowice', 'Koszęcin', 'Kalety', (18.8927, 50.5530)],
+    '61':  ['Lubliniec', 'Kochanowice', 'Lisów', 'Herby Stare', (18.9553, 50.7695)],
     '152': ['Lubliniec', (18.6269, 50.5685)],
 }
 # towarowe na godzinę w każdą stronę – szacunek (brak publicznych rozkładów towarowych)
@@ -46,36 +46,51 @@ PR = {('131', 'a'): '04:58 06:58 08:03 10:00 12:50 13:35 14:54 16:49 17:26',
       ('131', 'b'): '07:03 09:38 11:46 14:49 15:48 17:41 19:08',
       ('61', 'a'): '14:38 16:46', ('61', 'b'): '06:59 07:32 14:05 16:16'}
 # Nowy rozkład 2026/27 z GTFS (dane/kolej/pociagi.json – akcja GitHub „Rozkład kolejowy”): nadpisuje tablice powyżej.
-# Pociąg dzielony na odcinki linii (np. POLREGIO Lubliniec – Lisów – Herby – Boronów – Strzebiń to 61a + 131a).
-LINIE_ST = {'131': ['Boronów', 'Strzebiń', 'Kalety'], '143': ['Lubliniec', 'Rusinowice', 'Koszęcin', 'Kalety'],
-            '61': ['Lubliniec', 'Kochanowice', 'Lisów']}
-REF = {'131': 'Strzebiń', '143': 'Koszęcin', '61': 'Lisów'}
+# Każdy pociąg pasażerski jedzie swoją trasą z prawdziwymi godzinami (postój do godziny odjazdu z rozkładu).
+# Pociąg zmieniający kierunek (POLREGIO Lubliniec – Lisów – Herby Stare – Boronów – Strzebiń – Kalety) to dwa
+# przejazdy: do Herb Starych i – po postoju – z Herb Starych na Boronów.
+STACJE.update({'Herby Stare': (18.8821, 50.7477), 'Herby Nowe': (18.8545, 50.7473), 'Kalety': (18.8885, 50.5663)})
+POLUDNIE, CZESTOCHOWA, WIELUN = (18.8927, 50.5530), (18.9553, 50.7695), (18.8497, 50.7557)
+WYJAZD = {**{s: POLUDNIE for s in ('Miasteczko Śląskie', 'Tarnowskie Góry', 'Bytom', 'Chorzów Batory', 'Katowice', 'Gliwice', 'Kalety Drutarnia')},
+          'Częstochowa': CZESTOCHOWA, 'Częstochowa Stradom': CZESTOCHOWA, 'Kłobuck': WIELUN, 'Wieluń Dąbrowa': WIELUN}
+NA_MAPIE = {'Lubliniec', 'Kochanowice', 'Lisów', 'Herby Stare', 'Herby Nowe', 'Rusinowice', 'Koszęcin', 'Boronów', 'Strzebiń', 'Kalety'}
+LINIE_ST = {'143': ['Lubliniec', 'Rusinowice', 'Koszęcin', 'Kalety'], '131': ['Herby Nowe', 'Boronów', 'Strzebiń', 'Kalety'],
+            '61': ['Lubliniec', 'Kochanowice', 'Lisów', 'Herby Stare']}
+def klucz(nazwy, wyj=None):
+    """Linia i kierunek (jak w LINIE) – do nazwy pojazdu (przesiadki_kolej.py)."""
+    for lin in ('143', '131', '61'):
+        lst = [x for x in nazwy if x in LINIE_ST[lin]]
+        if lin == '143' and not set(lst) & {'Rusinowice', 'Koszęcin'}: continue
+        if lin == '131' and not set(lst) & {'Boronów', 'Strzebiń'}: continue
+        if lin == '61' and not lst: continue
+        if len(lst) >= 2: return lin + ('a' if LINIE_ST[lin].index(lst[0]) < LINIE_ST[lin].index(lst[1]) else 'b')
+        return lin + ('a' if wyj == CZESTOCHOWA else 'b')
+    return None
 def z_gtfs(plik='../dane/kolej/pociagi.json', dzien='wd'):
+    """Lista przejazdów: (klucz, nr, przewoźnik K/P/I, punkt wjazdu, [(stacja, przyjazd, odjazd) min], punkt wyjazdu)."""
     import json
-    pas, pr = {}, {}
+    wyn = []
     for x in json.load(open(plik))['pociagi'][dzien]:
-        st = [(s, b) for s, a, b in x['p']]
-        i = 0
-        while i < len(st):
-            # najdłuższy ciąg kolejnych stacji należących do jednej linii (z co najmniej dwiema stacjami)
-            best = None
-            for lin, lst in LINIE_ST.items():
-                j = i
-                while j < len(st) and st[j][0] in lst: j += 1
-                if j - i >= 2 and (best is None or j - i > best[1] - i): best = (lin, j)
-            if not best: i += 1; continue
-            lin, j = best; odc = st[i:j]; lst = LINIE_ST[lin]
-            kier = 'a' if lst.index(odc[0][0]) < lst.index(odc[1][0]) else 'b'
-            t = dict(odc).get(REF[lin])
-            if t is not None:
-                g = f'{t // 60:02d}:{t % 60:02d}'
-                pas.setdefault((lin, kier), set()).add(g)
-                if 'PolRegio' in x['przewoznik'] or 'POLREGIO' in x['przewoznik'].upper(): pr.setdefault((lin, kier), set()).add(g)
-            i = j
-    return ({k: (REF[k[0]], ' '.join(sorted(v))) for k, v in pas.items()}, {k: ' '.join(sorted(v)) for k, v in pr.items()})
-PASAZERSKIE, PR = z_gtfs()
-# pociągi S8 (Koleje Śląskie) kończą bieg w Lublińcu – pasażerskie na 143 jeżdżą Lubliniec ↔ Kalety
-TRASA_PAS = {'143': ['Lubliniec', 'Rusinowice', 'Koszęcin', (18.8852, 50.5740)]}
+        st = sorted([tuple(q) for q in x['p']] + [tuple(q) for q in x['cele'] if q[0] in NA_MAPIE], key=lambda q: (q[1], q[2]))
+        if not st: continue
+        przed = [q for q in x['cele'] if q[2] <= st[0][1] and q[0] not in NA_MAPIE]
+        po = [q for q in x['cele'] if q[1] >= st[-1][2] and q[0] not in NA_MAPIE]
+        wj = WYJAZD.get(max(przed, key=lambda q: q[2])[0]) if przed else None
+        wy = WYJAZD.get(min(po, key=lambda q: q[1])[0]) if po else None
+        if len(st) == 1 and not (wj or wy): continue          # np. Lubliniec – Opole: poza mapą
+        pz = x['przewoznik'].upper()
+        k = 'P' if 'POLREGIO' in pz else 'I' if 'INTERCITY' in pz or x.get('linia', '').startswith(('IC', 'TLK', 'EIP')) else 'K'
+        nazwy = [q[0] for q in st]
+        # zmiana kierunku w Herbach Starych (linia 61 ↔ 131)
+        if 'Herby Stare' in nazwy and 0 < nazwy.index('Herby Stare') < len(nazwy) - 1:
+            i = nazwy.index('Herby Stare'); a, b = st[:i + 1], st[i:]
+            if {'Boronów', 'Strzebiń', 'Herby Nowe'} & {q[0] for q in a + b} and {'Lisów', 'Kochanowice'} & {q[0] for q in a + b}:
+                a[-1] = (a[-1][0], a[-1][1], a[-1][2] - 2)   # pierwszy przejazd znika chwilę przed odjazdem drugiego
+                wyn.append((klucz([q[0] for q in a]), x['nr'], k, wj, a, None))
+                wyn.append((klucz([q[0] for q in b]), x['nr'] + 'z', k, None, b, wy)); continue
+        wyn.append((klucz(nazwy, wy), x['nr'], k, wj, st, wy))
+    return wyn
+POCIAGI = z_gtfs()
 
 def kandydaci(lon, lat, r=400):
     """Krawędzie torów przy punkcie (oba kierunki, wszystkie tory szlaku)."""
@@ -86,13 +101,14 @@ def kandydaci(lon, lat, r=400):
     d0 = kand[0][0]
     return [e for d, e in kand if d < d0 + 30][:8]
 
-import heapq
+import heapq, collections
 UZYTE = set()   # krawędzie już użyte przez trasy w jakimś kierunku – jazda „pod prąd” po nich jest karana
 def bidi(e):
     return [o for o in e.getToNode().getOutgoing() if o.getToNode() == e.getFromNode() and o in RAILSET]
 RAILSET = set(RAIL)
+KARA = [25]
 def koszt(e):
-    return e.getLength() * (25 if any(b in UZYTE for b in bidi(e)) else 1)
+    return e.getLength() * (KARA[0] if any(b in UZYTE for b in bidi(e)) else 1)
 def droga(a, b):
     """Dijkstra po torach; tor używany już w przeciwnym kierunku jest drogi (dwutorowe szlaki: każdy kierunek swoim torem)."""
     if a == b: return [a], 0
@@ -110,7 +126,17 @@ def droga(a, b):
     while p[-1] != a: p.append(prev[p[-1]])
     return p[::-1], dist[b]
 
+_TR = {}
 def trasa(punkty):
+    """Jak trasa0, ale bez długich objazdów: jeśli kara za jazdę „pod prąd” wydłuża trasę o ponad 10 %, bierzemy najkrótszą."""
+    k = tuple(punkty)
+    if k in _TR: return _TR[k]
+    ed, kr = trasa0(punkty)
+    dl = sum(e.getLength() for e in ed)
+    KARA[0] = 1; ed2, kr2 = trasa0(punkty, zapisz=False); KARA[0] = 25
+    if dl > 1.1 * sum(e.getLength() for e in ed2): ed, kr = ed2, kr2
+    _TR[k] = (ed, kr); return ed, kr
+def trasa0(punkty, zapisz=True):
     """Najkrótszy przejazd przez kolejne punkty (programowanie dynamiczne po kandydatach) – bez zawracania."""
     C = [kandydaci(*(STACJE[p] if isinstance(p, str) else p)) for p in punkty]
     best = {e: (0.0, [e]) for e in C[0]}
@@ -127,7 +153,7 @@ def trasa(punkty):
         if not nowe: raise SystemExit('brak przejazdu po torach')
         best = nowe
     _, ed = min(best.values(), key=lambda o: o[0])
-    UZYTE.update(ed)
+    if zapisz: UZYTE.update(ed)
     kr = []
     for warstwa in C:
         kr.append(next((e for e in ed if e in warstwa), warstwa[0]))
@@ -164,22 +190,23 @@ for linia, pkt in LINIE.items():
         co = int(3600 / TOWAROWE[linia]); off = random.randrange(0, co, 60)
         for i, t in enumerate(range(4 * 3600 + off, 23 * 3600, co)):
             v.append((t, f'poc{linia}{kier}_t{i:02d}', ids, 'towarowy', []))
-        # pasażerskie wg rozkładu
-        if (linia, kier) not in PASAZERSKIE: continue
-        ref, godz = PASAZERSKIE[(linia, kier)]
-        pp = TRASA_PAS.get(linia, pkt); pp = pp if kier == 'a' else odwrotna(pp)
-        ed, _ = trasa(pp); ids = [e.getID() for e in ed]
-        postoje, t_ref = [], None
-        for p in pp:
-            if not isinstance(p, str): continue
-            sid, e2, poz = peron(p, ed)
-            if p == ref: t_ref = czas_do(ed, e2, poz, len(postoje))
-            postoje.append(sid)
-        for i, g in enumerate(godz.split()):
-            dep = hm(g) - 30 - t_ref           # odjazd ze stacji odniesienia = przyjazd + 30 s postoju
-            prz = 'P' if g in PR.get((linia, kier), '').split() else 'K'
-            v.append((max(0, round(dep)), f'poc{linia}{kier}_p{i:02d}{prz}', ids, 'pociag', postoje))
-        print(f'linia {linia}{kier}: {len(godz.split())} pasażerskich wg rozkładu (stacja {ref}, dojazd z początku trasy {t_ref/60:.1f} min), towarowe co {co//60} min')
+
+# pasażerskie wg rozkładu – każdy pociąg osobno
+licz = collections.Counter()
+for kl, nr, prz, wj, st, wy in POCIAGI:
+    pkt = ([wj] if wj else []) + [q[0] for q in st] + ([wy] if wy else [])
+    try: ed, _ = trasa(pkt)
+    except SystemExit as e: print('pomijam', nr, pkt, e); continue
+    ids = [e.getID() for e in ed]
+    postoje = []
+    for j, (p, a_, d_) in enumerate(st):
+        sid, e2, poz = peron(p, ed)
+        if j == 0: t0 = czas_do(ed, e2, poz, 0) if wj else 0
+        postoje.append((sid, d_ * 60))
+    dep = st[0][1] * 60 - t0 - 30 if wj else st[0][2] * 60 - 60
+    licz[kl] += 1
+    v.append((max(0, round(dep)), f'poc{kl}_{"x" if prz == "I" else "p"}{licz[kl]:02d}{prz}', ids, 'pociag', postoje))
+print('pasażerskie:', dict(licz))
 
 with open('stacje.add.xml', 'w') as o:
     o.write('<additional>\n')
@@ -191,6 +218,6 @@ with open('pociagi.rou.xml', 'w') as o:
     o.write('  <vType id="towarowy" vClass="rail" length="600" maxSpeed="16.7" accel="0.25" decel="0.5" guiShape="rail/cargo" color="40,40,40"/>\n')
     for dep, vid, ed, typ, st in sorted(v):
         o.write(f'  <vehicle id="{vid}" type="{typ}" depart="{dep}" departLane="best" insertionChecks="collision"><route edges="{" ".join(ed)}"/>')
-        o.write(''.join(f'<stop trainStop="{s}" duration="30"/>' for s in st) + '</vehicle>\n')
+        o.write(''.join(f'<stop trainStop="{s}" duration="20" until="{u}"/>' for s, u in st) + '</vehicle>\n')
     o.write('</routes>\n')
 print('pociągów:', len(v), '| stacji:', len(stacje_def))

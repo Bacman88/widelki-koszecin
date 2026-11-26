@@ -1,17 +1,27 @@
 <additional>
   <trainStop id="st_Boronów_-3062#0" lane="-3062#0_0" startPos="124.8" endPos="204.8" name="Boronów" friendlyPos="true"/>
   <trainStop id="st_Boronów_-3063#1" lane="-3063#1_0" startPos="272.7" endPos="352.7" name="Boronów" friendlyPos="true"/>
-  <trainStop id="st_Kochanowice_-2085#2" lane="-2085#2_0" startPos="308.8" endPos="388.8" name="Kochanowice" friendlyPos="true"/>
-  <trainStop id="st_Kochanowice_2824#3" lane="2824#3_0" startPos="374.9" endPos="454.9" name="Kochanowice" friendlyPos="true"/>
-  <trainStop id="st_Koszęcin_1268" lane="1268_0" startPos="171.8" endPos="251.8" name="Koszęcin" friendlyPos="true"/>
+  <trainStop id="st_HerbyNowe_-2559#0" lane="-2559#0_0" startPos="153.9" endPos="233.9" name="Herby Nowe" friendlyPos="true"/>
+  <trainStop id="st_HerbyNowe_-3612#0" lane="-3612#0_0" startPos="1062.4" endPos="1142.4" name="Herby Nowe" friendlyPos="true"/>
+  <trainStop id="st_HerbyNowe_-46#2" lane="-46#2_0" startPos="76.7" endPos="156.7" name="Herby Nowe" friendlyPos="true"/>
+  <trainStop id="st_HerbyStare_-2788#1" lane="-2788#1_0" startPos="277.3" endPos="357.3" name="Herby Stare" friendlyPos="true"/>
+  <trainStop id="st_HerbyStare_1164#1" lane="1164#1_0" startPos="724.5" endPos="804.5" name="Herby Stare" friendlyPos="true"/>
+  <trainStop id="st_HerbyStare_2787#1" lane="2787#1_0" startPos="743.4" endPos="823.4" name="Herby Stare" friendlyPos="true"/>
+  <trainStop id="st_Kalety_-3630#5" lane="-3630#5_0" startPos="662.6" endPos="742.6" name="Kalety" friendlyPos="true"/>
+  <trainStop id="st_Kalety_-3637#1" lane="-3637#1_0" startPos="281.3" endPos="361.3" name="Kalety" friendlyPos="true"/>
+  <trainStop id="st_Kalety_-3638#2" lane="-3638#2_0" startPos="296.6" endPos="376.6" name="Kalety" friendlyPos="true"/>
+  <trainStop id="st_Kalety_3637#1" lane="3637#1_0" startPos="727.3" endPos="807.3" name="Kalety" friendlyPos="true"/>
+  <trainStop id="st_Kochanowice_-2087#1" lane="-2087#1_0" startPos="302.5" endPos="382.5" name="Kochanowice" friendlyPos="true"/>
+  <trainStop id="st_Kochanowice_-2827#0" lane="-2827#0_0" startPos="401.4" endPos="481.4" name="Kochanowice" friendlyPos="true"/>
+  <trainStop id="st_Koszęcin_-2215#4" lane="-2215#4_0" startPos="200.2" endPos="280.2" name="Koszęcin" friendlyPos="true"/>
   <trainStop id="st_Koszęcin_2215#4" lane="2215#4_0" startPos="512.8" endPos="592.8" name="Koszęcin" friendlyPos="true"/>
-  <trainStop id="st_Lisów_-1508#2" lane="-1508#2_0" startPos="360.2" endPos="440.2" name="Lisów" friendlyPos="true"/>
-  <trainStop id="st_Lisów_1507#0" lane="1507#0_0" startPos="290.2" endPos="370.2" name="Lisów" friendlyPos="true"/>
-  <trainStop id="st_Lubliniec_-50" lane="-50_0" startPos="659.7" endPos="739.7" name="Lubliniec" friendlyPos="true"/>
-  <trainStop id="st_Lubliniec_2551#3" lane="2551#3_0" startPos="283.1" endPos="363.1" name="Lubliniec" friendlyPos="true"/>
-  <trainStop id="st_Lubliniec_2777" lane="2777_0" startPos="686.2" endPos="766.2" name="Lubliniec" friendlyPos="true"/>
-  <trainStop id="st_Rusinowice_-1566#2" lane="-1566#2_0" startPos="521.2" endPos="601.2" name="Rusinowice" friendlyPos="true"/>
+  <trainStop id="st_Lisów_-1507#0" lane="-1507#0_0" startPos="296.4" endPos="376.4" name="Lisów" friendlyPos="true"/>
+  <trainStop id="st_Lisów_1508#2" lane="1508#2_0" startPos="288.2" endPos="368.2" name="Lisów" friendlyPos="true"/>
+  <trainStop id="st_Lubliniec_-1284" lane="-1284_0" startPos="621.5" endPos="701.5" name="Lubliniec" friendlyPos="true"/>
+  <trainStop id="st_Lubliniec_-2797" lane="-2797_0" startPos="251.7" endPos="331.7" name="Lubliniec" friendlyPos="true"/>
+  <trainStop id="st_Lubliniec_2549" lane="2549_0" startPos="643.9" endPos="723.9" name="Lubliniec" friendlyPos="true"/>
+  <trainStop id="st_Rusinowice_-1567#2" lane="-1567#2_0" startPos="521.2" endPos="601.2" name="Rusinowice" friendlyPos="true"/>
   <trainStop id="st_Rusinowice_1567#2" lane="1567#2_0" startPos="0.0" endPos="80.0" name="Rusinowice" friendlyPos="true"/>
-  <trainStop id="st_Strzebiń_3094#2" lane="3094#2_0" startPos="824.5" endPos="904.5" name="Strzebiń" friendlyPos="true"/>
-  <trainStop id="st_Strzebiń_3361" lane="3361_0" startPos="5061.9" endPos="5141.9" name="Strzebiń" friendlyPos="true"/>
+  <trainStop id="st_Strzebiń_-3071#0" lane="-3071#0_0" startPos="800.5" endPos="880.5" name="Strzebiń" friendlyPos="true"/>
+  <trainStop id="st_Strzebiń_3467" lane="3467_0" startPos="5002.7" endPos="5082.7" name="Strzebiń" friendlyPos="true"/>
 </additional>
