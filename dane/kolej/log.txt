@@ -1,3 +1,4 @@
+cele: ['Bytom', 'Częstochowa', 'Częstochowa Stradom', 'Herby Nowe', 'Katowice', 'Kłobuck', 'Opole Główne', 'Tarnowskie Góry']
 stacje: ['Boronów', 'Kalety', 'Kochanowice', 'Koszęcin', 'Lisów', 'Lubliniec', 'Rusinowice', 'Strzebiń'] 34 id
 zakres dat w GTFS: 20261122 … 20261224
 wd 20261214 100 pociągów
