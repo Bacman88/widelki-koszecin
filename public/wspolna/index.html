@@ -107,7 +107,7 @@ h2{font-size:21px;margin:30px 0 10px}
     </div>
 
     <div data-dla="linia godzina" hidden>
-      <label>Której linii dotyczy<select name="linia"><option value="1">1 – Piasek – Koszęcin – Lubliniec</option><option value="2">2 – Boronów – Koszęcin – Kalety</option><option value="3">3 – Lisów – Koszęcin</option><option value="4">4 – Łazy – Koszęcin – Piłka</option><option value="1L">1L – wzmocnienie do Lublińca</option><option value="4S">4S – kursy szkolne do Psar</option><option value="4P">4P – pętla Łazy – Psary</option><option value="nowa">nowa linia</option></select></label>
+      <label>Której linii dotyczy<select name="linia"><option value="1">1 – Piasek – Koszęcin – Lubliniec</option><option value="2">2 – Boronów – Koszęcin – Kalety</option><option value="3">3 – Lisów – Koszęcin</option><option value="4">4 – Łazy – Strzebiń – Koszęcin</option><option value="5">5 – Koszęcin – Rusinowice – Piłka – Lubliniec</option><option value="nowa">nowa linia</option></select></label>
     </div>
 
     <div id="pinbox" data-dla="przystanek linia uwaga" hidden><div class="pin no" id="pin">Kliknij mapę, żeby wskazać miejsce<span data-dla="linia uwaga"> (nieobowiązkowe)</span>.</div></div>
@@ -155,14 +155,14 @@ $('dokad').onchange = () => $('dokad_inne').hidden = $('dokad').value !== '__inn
 // ---- mapa: OpenStreetMap + proponowane linie (z mapy projektu) ----
 const map = L.map('map', {zoomSnap: .5}).setView([50.635, 18.84], 11);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '© OpenStreetMap'}).addTo(map);
-const KOL = {'1':'#00704f','2':'#1f6fd6','3':'#cc8a00','4':'#d4473a','1L':'#00704f','4S':'#d4473a','4P':'#8e3a9d'};
+const KOL = {'1':'#00704f','2':'#1f6fd6','3':'#cc8a00','4':'#d4473a','5':'#7c3aed','1P':'#00704f'};
 const PROP = L.layerGroup().addTo(map);
 fetch('../mapa/data.json').then(r => r.json()).then(D => {
-  const ORD = ['1L','4S','4P','3','2','4','1'];
+  const ORD = ['1P','5','3','2','4','1'];
   for (const [k, l] of Object.entries(D.lines).sort((a, b) => ORD.indexOf(a[0]) - ORD.indexOf(b[0]))) {
-    const dash = ['1L','4S','4P'].includes(k) ? '7 7' : null;
+    const dash = k === '1P' ? '7 7' : null;
     L.polyline(l.geom, {color: '#fff', weight: k === '1' ? 9 : 6, opacity: .8, interactive: false}).addTo(map);
-    L.polyline(l.geom, {color: KOL[k] || '#555', weight: k === '1' ? 6 : 3.5, dashArray: dash}).bindTooltip('linia ' + k + ' (propozycja)', {sticky: true}).addTo(map);
+    L.polyline(l.geom, {color: KOL[k] || '#555', weight: k === '1' ? 6 : 3.5, dashArray: dash}).bindTooltip((k === '1P' ? 'linia 1 przez Psary (dni nauki)' : 'linia ' + k) + ' (propozycja)', {sticky: true}).addTo(map);
   }
   for (const s of Object.values(D.stops)) L.circleMarker([s[0], s[1]], {radius: s[3] === 'hub' ? 8 : 4.5, color: '#10201c', weight: 2, fillColor: '#fff', fillOpacity: 1}).bindTooltip(s[2]).addTo(map);
 }).catch(() => {});
