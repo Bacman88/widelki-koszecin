@@ -1,4 +1,106 @@
 {
+"stacje": {
+"Wieluń Dąbrowa": [
+51.2395,
+18.55061
+],
+"Opole Główne": [
+50.66165,
+17.92718
+],
+"Kluczbork": [
+50.97092,
+18.20112
+],
+"Fosowskie": [
+50.66047,
+18.3592
+],
+"Zawadzkie": [
+50.60897,
+18.47355
+],
+"Strzelce Opolskie": [
+50.51671,
+18.3066
+],
+"Częstochowa": [
+50.80864,
+19.12098
+],
+"Częstochowa Stradom": [
+50.79721,
+19.10763
+],
+"Gliwice": [
+50.3011,
+18.67723
+],
+"Tarnowskie Góry": [
+50.44607,
+18.86443
+],
+"Miasteczko Śląskie": [
+50.49739,
+18.90022
+],
+"Lubliniec": [
+50.67289,
+18.69053
+],
+"Olesno Śląskie": [
+50.88216,
+18.42472
+],
+"Kochanowice": [
+50.69944,
+18.74846
+],
+"Lisów": [
+50.72088,
+18.79122
+],
+"Herby Nowe": [
+50.74755,
+18.85441
+],
+"Kłobuck": [
+50.90854,
+18.92346
+],
+"Boronów": [
+50.66577,
+18.90109
+],
+"Kalety": [
+50.566,
+18.88848
+],
+"Koszęcin": [
+50.62277,
+18.83631
+],
+"Rusinowice": [
+50.64904,
+18.7637
+],
+"Strzebiń": [
+50.61816,
+18.89993
+],
+"Bytom": [
+50.34298,
+18.91514
+],
+"Chorzów Batory": [
+50.27841,
+18.9447
+],
+"Katowice": [
+50.25761,
+19.01741
+]
+},
 "zrodlo": "GTFS polish_trains (mkuran.pl), dane PKP PLK",
 "pobrano": "2026-11-26",
 "dni": {
@@ -72,6 +174,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+316,
+316
+],
+[
 "Tarnowskie Góry",
 322,
 324
@@ -80,6 +187,11 @@
 "Bytom",
 342,
 343
+],
+[
+"Chorzów Batory",
+355,
+355
 ]
 ]
 },
@@ -107,9 +219,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+223,
+223
+],
+[
 "Herby Nowe",
 284,
 285
+],
+[
+"Miasteczko Śląskie",
+310,
+310
 ],
 [
 "Tarnowskie Góry",
@@ -155,6 +277,11 @@
 "Tarnowskie Góry",
 297,
 299
+],
+[
+"Miasteczko Śląskie",
+304,
+304
 ]
 ]
 },
@@ -192,6 +319,11 @@
 327
 ],
 [
+"Miasteczko Śląskie",
+350,
+351
+],
+[
 "Tarnowskie Góry",
 356,
 358
@@ -200,6 +332,11 @@
 "Bytom",
 374,
 375
+],
+[
+"Chorzów Batory",
+387,
+387
 ]
 ]
 },
@@ -232,6 +369,11 @@
 286
 ],
 [
+"Chorzów Batory",
+292,
+293
+],
+[
 "Bytom",
 305,
 306
@@ -240,6 +382,11 @@
 "Tarnowskie Góry",
 323,
 325
+],
+[
+"Miasteczko Śląskie",
+330,
+331
 ],
 [
 "Herby Nowe",
@@ -282,6 +429,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+361,
+361
+],
+[
 "Tarnowskie Góry",
 367,
 369
@@ -290,6 +442,11 @@
 "Bytom",
 387,
 388
+],
+[
+"Chorzów Batory",
+400,
+401
 ],
 [
 "Katowice",
@@ -402,6 +559,11 @@
 309
 ],
 [
+"Chorzów Batory",
+318,
+319
+],
+[
 "Bytom",
 331,
 332
@@ -410,6 +572,11 @@
 "Tarnowskie Góry",
 351,
 353
+],
+[
+"Miasteczko Śląskie",
+358,
+359
 ]
 ]
 },
@@ -447,6 +614,11 @@
 370
 ],
 [
+"Miasteczko Śląskie",
+393,
+394
+],
+[
 "Tarnowskie Góry",
 399,
 401
@@ -455,6 +627,11 @@
 "Bytom",
 417,
 418
+],
+[
+"Chorzów Batory",
+430,
+430
 ]
 ]
 },
@@ -487,6 +664,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+366,
+366
+],
+[
 "Bytom",
 378,
 379
@@ -495,6 +677,11 @@
 "Tarnowskie Góry",
 397,
 399
+],
+[
+"Miasteczko Śląskie",
+404,
+404
 ]
 ]
 },
@@ -557,9 +744,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+344,
+344
+],
+[
 "Herby Nowe",
 405,
 406
+],
+[
+"Miasteczko Śląskie",
+431,
+431
 ],
 [
 "Tarnowskie Góry",
@@ -597,6 +794,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+438,
+438
+],
+[
 "Tarnowskie Góry",
 444,
 446
@@ -605,6 +807,11 @@
 "Bytom",
 464,
 465
+],
+[
+"Chorzów Batory",
+477,
+477
 ]
 ]
 },
@@ -637,9 +844,19 @@
 405
 ],
 [
+"Miasteczko Śląskie",
+410,
+411
+],
+[
 "Herby Nowe",
 436,
 436
+],
+[
+"Wieluń Dąbrowa",
+497,
+497
 ]
 ]
 },
@@ -712,6 +929,11 @@
 433
 ],
 [
+"Miasteczko Śląskie",
+455,
+456
+],
+[
 "Tarnowskie Góry",
 461,
 463
@@ -720,6 +942,11 @@
 "Bytom",
 479,
 480
+],
+[
+"Chorzów Batory",
+493,
+493
 ]
 ]
 },
@@ -747,6 +974,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+397,
+397
+],
+[
 "Bytom",
 409,
 410
@@ -755,6 +987,11 @@
 "Tarnowskie Góry",
 428,
 430
+],
+[
+"Miasteczko Śląskie",
+435,
+435
 ],
 [
 "Herby Nowe",
@@ -807,6 +1044,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+495,
+495
+],
+[
 "Tarnowskie Góry",
 501,
 501
@@ -847,6 +1089,11 @@
 419
 ],
 [
+"Chorzów Batory",
+428,
+429
+],
+[
 "Bytom",
 441,
 442
@@ -855,6 +1102,11 @@
 "Tarnowskie Góry",
 460,
 462
+],
+[
+"Miasteczko Śląskie",
+468,
+468
 ]
 ]
 },
@@ -887,6 +1139,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+502,
+502
+],
+[
 "Tarnowskie Góry",
 508,
 510
@@ -895,6 +1152,11 @@
 "Bytom",
 528,
 529
+],
+[
+"Chorzów Batory",
+541,
+541
 ]
 ]
 },
@@ -957,6 +1219,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+469,
+469
+],
+[
 "Bytom",
 481,
 482
@@ -965,6 +1232,11 @@
 "Tarnowskie Góry",
 499,
 501
+],
+[
+"Miasteczko Śląskie",
+506,
+507
 ],
 [
 "Herby Nowe",
@@ -1007,6 +1279,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+487,
+487
+],
+[
 "Bytom",
 499,
 500
@@ -1015,6 +1292,11 @@
 "Tarnowskie Góry",
 518,
 520
+],
+[
+"Miasteczko Śląskie",
+525,
+526
 ]
 ]
 },
@@ -1082,6 +1364,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+566,
+566
+],
+[
 "Tarnowskie Góry",
 572,
 574
@@ -1090,6 +1377,11 @@
 "Bytom",
 592,
 593
+],
+[
+"Chorzów Batory",
+605,
+605
 ]
 ]
 },
@@ -1117,6 +1409,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+517,
+517
+],
+[
 "Bytom",
 529,
 530
@@ -1125,6 +1422,11 @@
 "Tarnowskie Góry",
 547,
 549
+],
+[
+"Miasteczko Śląskie",
+555,
+555
 ],
 [
 "Herby Nowe",
@@ -1167,9 +1469,19 @@
 560
 ],
 [
+"Miasteczko Śląskie",
+565,
+566
+],
+[
 "Herby Nowe",
 591,
 591
+],
+[
+"Wieluń Dąbrowa",
+655,
+655
 ]
 ]
 },
@@ -1207,6 +1519,11 @@
 567
 ],
 [
+"Miasteczko Śląskie",
+590,
+591
+],
+[
 "Tarnowskie Góry",
 596,
 598
@@ -1215,6 +1532,11 @@
 "Bytom",
 615,
 616
+],
+[
+"Chorzów Batory",
+628,
+628
 ]
 ]
 },
@@ -1242,9 +1564,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+518,
+518
+],
+[
 "Herby Nowe",
 586,
 587
+],
+[
+"Miasteczko Śląskie",
+612,
+612
 ],
 [
 "Tarnowskie Góry",
@@ -1282,6 +1614,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+551,
+551
+],
+[
 "Bytom",
 563,
 564
@@ -1290,6 +1627,11 @@
 "Tarnowskie Góry",
 582,
 584
+],
+[
+"Miasteczko Śląskie",
+589,
+590
 ]
 ]
 },
@@ -1322,6 +1664,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+624,
+624
+],
+[
 "Tarnowskie Góry",
 630,
 632
@@ -1330,6 +1677,11 @@
 "Bytom",
 650,
 651
+],
+[
+"Chorzów Batory",
+663,
+663
 ]
 ]
 },
@@ -1432,6 +1784,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+677,
+677
+],
+[
 "Tarnowskie Góry",
 683,
 685
@@ -1440,6 +1797,11 @@
 "Bytom",
 703,
 704
+],
+[
+"Chorzów Batory",
+716,
+716
 ]
 ]
 },
@@ -1472,6 +1834,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+615,
+615
+],
+[
 "Bytom",
 627,
 628
@@ -1480,6 +1847,11 @@
 "Tarnowskie Góry",
 646,
 648
+],
+[
+"Miasteczko Śląskie",
+653,
+654
 ]
 ]
 },
@@ -1517,6 +1889,11 @@
 690
 ],
 [
+"Miasteczko Śląskie",
+712,
+713
+],
+[
 "Tarnowskie Góry",
 718,
 720
@@ -1525,6 +1902,11 @@
 "Bytom",
 736,
 737
+],
+[
+"Chorzów Batory",
+749,
+749
 ]
 ]
 },
@@ -1557,9 +1939,19 @@
 688
 ],
 [
+"Miasteczko Śląskie",
+693,
+694
+],
+[
 "Herby Nowe",
 718,
 719
+],
+[
+"Wieluń Dąbrowa",
+781,
+781
 ]
 ]
 },
@@ -1592,6 +1984,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+740,
+740
+],
+[
 "Tarnowskie Góry",
 746,
 748
@@ -1600,6 +1997,11 @@
 "Bytom",
 766,
 767
+],
+[
+"Chorzów Batory",
+779,
+779
 ]
 ]
 },
@@ -1632,6 +2034,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+673,
+673
+],
+[
 "Bytom",
 685,
 686
@@ -1640,6 +2047,11 @@
 "Tarnowskie Góry",
 704,
 706
+],
+[
+"Miasteczko Śląskie",
+711,
+712
 ]
 ]
 },
@@ -1702,6 +2114,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+705,
+705
+],
+[
 "Bytom",
 717,
 721
@@ -1710,6 +2127,11 @@
 "Tarnowskie Góry",
 738,
 740
+],
+[
+"Miasteczko Śląskie",
+745,
+745
 ],
 [
 "Herby Nowe",
@@ -1782,9 +2204,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+691,
+691
+],
+[
 "Herby Nowe",
 756,
 757
+],
+[
+"Miasteczko Śląskie",
+782,
+782
 ],
 [
 "Tarnowskie Góry",
@@ -1822,6 +2254,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+788,
+788
+],
+[
 "Tarnowskie Góry",
 794,
 796
@@ -1830,6 +2267,11 @@
 "Bytom",
 814,
 815
+],
+[
+"Chorzów Batory",
+827,
+827
 ]
 ]
 },
@@ -1862,6 +2304,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+726,
+726
+],
+[
 "Bytom",
 738,
 739
@@ -1870,6 +2317,11 @@
 "Tarnowskie Góry",
 757,
 759
+],
+[
+"Miasteczko Śląskie",
+764,
+764
 ]
 ]
 },
@@ -1907,6 +2359,11 @@
 787
 ],
 [
+"Miasteczko Śląskie",
+810,
+811
+],
+[
 "Tarnowskie Góry",
 816,
 823
@@ -1915,6 +2372,11 @@
 "Bytom",
 840,
 845
+],
+[
+"Chorzów Batory",
+857,
+857
 ]
 ]
 },
@@ -1960,6 +2422,11 @@
 "Tarnowskie Góry",
 798,
 798
+],
+[
+"Miasteczko Śląskie",
+803,
+803
 ]
 ]
 },
@@ -1992,6 +2459,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+861,
+861
+],
+[
 "Tarnowskie Góry",
 867,
 869
@@ -2000,6 +2472,11 @@
 "Bytom",
 887,
 888
+],
+[
+"Chorzów Batory",
+900,
+900
 ]
 ]
 },
@@ -2032,6 +2509,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+797,
+797
+],
+[
 "Bytom",
 809,
 810
@@ -2040,6 +2522,11 @@
 "Tarnowskie Góry",
 828,
 830
+],
+[
+"Miasteczko Śląskie",
+835,
+836
 ]
 ]
 },
@@ -2102,6 +2589,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+825,
+825
+],
+[
 "Bytom",
 837,
 842
@@ -2110,6 +2602,11 @@
 "Tarnowskie Góry",
 859,
 860
+],
+[
+"Miasteczko Śląskie",
+865,
+866
 ],
 [
 "Herby Nowe",
@@ -2152,9 +2649,19 @@
 871
 ],
 [
+"Miasteczko Śląskie",
+876,
+877
+],
+[
 "Herby Nowe",
 902,
 902
+],
+[
+"Wieluń Dąbrowa",
+963,
+963
 ]
 ]
 },
@@ -2182,9 +2689,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+818,
+818
+],
+[
 "Herby Nowe",
 879,
 880
+],
+[
+"Miasteczko Śląskie",
+906,
+906
 ],
 [
 "Tarnowskie Góry",
@@ -2222,6 +2739,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+914,
+914
+],
+[
 "Tarnowskie Góry",
 920,
 922
@@ -2230,6 +2752,11 @@
 "Bytom",
 940,
 941
+],
+[
+"Chorzów Batory",
+953,
+953
 ]
 ]
 },
@@ -2262,6 +2789,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+856,
+856
+],
+[
 "Bytom",
 868,
 869
@@ -2270,6 +2802,11 @@
 "Tarnowskie Góry",
 887,
 889
+],
+[
+"Miasteczko Śląskie",
+894,
+894
 ]
 ]
 },
@@ -2372,6 +2909,11 @@
 930
 ],
 [
+"Miasteczko Śląskie",
+935,
+936
+],
+[
 "Herby Nowe",
 961,
 961
@@ -2407,6 +2949,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+974,
+974
+],
+[
 "Tarnowskie Góry",
 980,
 982
@@ -2415,6 +2962,11 @@
 "Bytom",
 1000,
 1001
+],
+[
+"Chorzów Batory",
+1013,
+1013
 ]
 ]
 },
@@ -2447,6 +2999,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+917,
+917
+],
+[
 "Bytom",
 929,
 930
@@ -2455,6 +3012,11 @@
 "Tarnowskie Góry",
 948,
 950
+],
+[
+"Miasteczko Śląskie",
+955,
+956
 ]
 ]
 },
@@ -2527,6 +3089,11 @@
 974
 ],
 [
+"Miasteczko Śląskie",
+997,
+998
+],
+[
 "Tarnowskie Góry",
 1003,
 1005
@@ -2535,6 +3102,11 @@
 "Bytom",
 1021,
 1023
+],
+[
+"Chorzów Batory",
+1035,
+1035
 ]
 ]
 },
@@ -2562,6 +3134,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+939,
+939
+],
+[
 "Bytom",
 950,
 959
@@ -2570,6 +3147,11 @@
 "Tarnowskie Góry",
 976,
 978
+],
+[
+"Miasteczko Śląskie",
+983,
+984
 ],
 [
 "Herby Nowe",
@@ -2647,6 +3229,11 @@
 997
 ],
 [
+"Miasteczko Śląskie",
+1021,
+1022
+],
+[
 "Tarnowskie Góry",
 1028,
 1028
@@ -2682,6 +3269,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1037,
+1037
+],
+[
 "Tarnowskie Góry",
 1043,
 1045
@@ -2690,6 +3282,11 @@
 "Bytom",
 1063,
 1064
+],
+[
+"Chorzów Batory",
+1076,
+1076
 ]
 ]
 },
@@ -2722,6 +3319,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+973,
+973
+],
+[
 "Bytom",
 985,
 986
@@ -2730,6 +3332,11 @@
 "Tarnowskie Góry",
 1004,
 1005
+],
+[
+"Miasteczko Śląskie",
+1010,
+1011
 ]
 ]
 },
@@ -2792,9 +3399,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+971,
+971
+],
+[
 "Herby Nowe",
 1032,
 1033
+],
+[
+"Miasteczko Śląskie",
+1058,
+1058
 ],
 [
 "Tarnowskie Góry",
@@ -2867,9 +3484,19 @@
 1043
 ],
 [
+"Miasteczko Śląskie",
+1048,
+1049
+],
+[
 "Herby Nowe",
 1074,
 1075
+],
+[
+"Wieluń Dąbrowa",
+1141,
+1141
 ]
 ]
 },
@@ -2902,6 +3529,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1104,
+1104
+],
+[
 "Tarnowskie Góry",
 1110,
 1111
@@ -2910,6 +3542,11 @@
 "Bytom",
 1129,
 1130
+],
+[
+"Chorzów Batory",
+1142,
+1142
 ]
 ]
 },
@@ -2942,6 +3579,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1041,
+1041
+],
+[
 "Bytom",
 1053,
 1054
@@ -2950,6 +3592,11 @@
 "Tarnowskie Góry",
 1071,
 1075
+],
+[
+"Miasteczko Śląskie",
+1080,
+1080
 ]
 ]
 },
@@ -2987,6 +3634,11 @@
 1092
 ],
 [
+"Miasteczko Śląskie",
+1114,
+1115
+],
+[
 "Tarnowskie Góry",
 1120,
 1122
@@ -2995,6 +3647,11 @@
 "Bytom",
 1139,
 1140
+],
+[
+"Chorzów Batory",
+1152,
+1152
 ]
 ]
 },
@@ -3022,6 +3679,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1059,
+1059
+],
+[
 "Bytom",
 1071,
 1078
@@ -3030,6 +3692,11 @@
 "Tarnowskie Góry",
 1095,
 1097
+],
+[
+"Miasteczko Śląskie",
+1102,
+1103
 ],
 [
 "Herby Nowe",
@@ -3107,6 +3774,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1086,
+1086
+],
+[
 "Bytom",
 1098,
 1099
@@ -3115,6 +3787,11 @@
 "Tarnowskie Góry",
 1117,
 1119
+],
+[
+"Miasteczko Śląskie",
+1124,
+1125
 ]
 ]
 },
@@ -3147,6 +3824,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1165,
+1165
+],
+[
 "Tarnowskie Góry",
 1171,
 1173
@@ -3155,6 +3837,11 @@
 "Bytom",
 1191,
 1192
+],
+[
+"Chorzów Batory",
+1204,
+1204
 ]
 ]
 },
@@ -3187,9 +3874,19 @@
 1130
 ],
 [
+"Miasteczko Śląskie",
+1135,
+1136
+],
+[
 "Herby Nowe",
 1161,
 1161
+],
+[
+"Wieluń Dąbrowa",
+1222,
+1222
 ]
 ]
 },
@@ -3257,6 +3954,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1217,
+1217
+],
+[
 "Tarnowskie Góry",
 1223,
 1225
@@ -3265,6 +3967,11 @@
 "Bytom",
 1242,
 1243
+],
+[
+"Chorzów Batory",
+1255,
+1255
 ]
 ]
 },
@@ -3297,6 +4004,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1165,
+1165
+],
+[
 "Bytom",
 1177,
 1178
@@ -3305,6 +4017,11 @@
 "Tarnowskie Góry",
 1196,
 1198
+],
+[
+"Miasteczko Śląskie",
+1203,
+1204
 ]
 ]
 },
@@ -3367,6 +4084,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1185,
+1185
+],
+[
 "Bytom",
 1197,
 1198
@@ -3375,6 +4097,11 @@
 "Tarnowskie Góry",
 1215,
 1217
+],
+[
+"Miasteczko Śląskie",
+1222,
+1223
 ],
 [
 "Herby Nowe",
@@ -3422,6 +4149,11 @@
 1225
 ],
 [
+"Miasteczko Śląskie",
+1247,
+1247
+],
+[
 "Tarnowskie Góry",
 1253,
 1255
@@ -3430,6 +4162,11 @@
 "Bytom",
 1272,
 1273
+],
+[
+"Chorzów Batory",
+1285,
+1285
 ]
 ]
 },
@@ -3497,6 +4234,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1277,
+1277
+],
+[
 "Tarnowskie Góry",
 1283,
 1285
@@ -3505,6 +4247,11 @@
 "Bytom",
 1303,
 1304
+],
+[
+"Chorzów Batory",
+1316,
+1316
 ]
 ]
 },
@@ -3572,6 +4319,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1227,
+1227
+],
+[
 "Bytom",
 1239,
 1240
@@ -3580,6 +4332,11 @@
 "Tarnowskie Góry",
 1258,
 1259
+],
+[
+"Miasteczko Śląskie",
+1264,
+1265
 ]
 ]
 },
@@ -3617,6 +4374,11 @@
 1277
 ],
 [
+"Miasteczko Śląskie",
+1299,
+1300
+],
+[
 "Tarnowskie Góry",
 1305,
 1312
@@ -3625,6 +4387,11 @@
 "Bytom",
 1328,
 1329
+],
+[
+"Chorzów Batory",
+1341,
+1343
 ],
 [
 "Katowice",
@@ -3662,6 +4429,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1318,
+1318
+],
+[
 "Tarnowskie Góry",
 1324,
 1325
@@ -3670,6 +4442,11 @@
 "Bytom",
 1341,
 1344
+],
+[
+"Chorzów Batory",
+1360,
+1361
 ],
 [
 "Katowice",
@@ -3707,6 +4484,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1265,
+1265
+],
+[
 "Bytom",
 1277,
 1278
@@ -3715,6 +4497,11 @@
 "Tarnowskie Góry",
 1296,
 1298
+],
+[
+"Miasteczko Śląskie",
+1303,
+1304
 ]
 ]
 },
@@ -3817,6 +4604,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1371,
+1371
+],
+[
 "Tarnowskie Góry",
 1377,
 1379
@@ -3852,6 +4644,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1298,
+1298
+],
+[
 "Bytom",
 1310,
 1321
@@ -3860,6 +4657,11 @@
 "Tarnowskie Góry",
 1338,
 1340
+],
+[
+"Miasteczko Śląskie",
+1345,
+1346
 ],
 [
 "Herby Nowe",
@@ -3902,6 +4704,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1326,
+1326
+],
+[
 "Bytom",
 1338,
 1339
@@ -3910,6 +4717,11 @@
 "Tarnowskie Góry",
 1357,
 1359
+],
+[
+"Miasteczko Śląskie",
+1364,
+1365
 ]
 ]
 },
@@ -4014,6 +4826,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+316,
+316
+],
+[
 "Tarnowskie Góry",
 322,
 324
@@ -4022,6 +4839,11 @@
 "Bytom",
 342,
 343
+],
+[
+"Chorzów Batory",
+355,
+355
 ]
 ]
 },
@@ -4049,9 +4871,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+223,
+223
+],
+[
 "Herby Nowe",
 284,
 285
+],
+[
+"Miasteczko Śląskie",
+310,
+310
 ],
 [
 "Tarnowskie Góry",
@@ -4097,6 +4929,11 @@
 "Tarnowskie Góry",
 302,
 304
+],
+[
+"Miasteczko Śląskie",
+309,
+309
 ]
 ]
 },
@@ -4134,6 +4971,11 @@
 327
 ],
 [
+"Miasteczko Śląskie",
+350,
+351
+],
+[
 "Tarnowskie Góry",
 356,
 358
@@ -4142,6 +4984,11 @@
 "Bytom",
 374,
 375
+],
+[
+"Chorzów Batory",
+387,
+387
 ]
 ]
 },
@@ -4174,6 +5021,11 @@
 286
 ],
 [
+"Chorzów Batory",
+292,
+293
+],
+[
 "Bytom",
 305,
 306
@@ -4182,6 +5034,11 @@
 "Tarnowskie Góry",
 323,
 325
+],
+[
+"Miasteczko Śląskie",
+330,
+331
 ],
 [
 "Herby Nowe",
@@ -4259,6 +5116,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+376,
+376
+],
+[
 "Tarnowskie Góry",
 382,
 384
@@ -4267,6 +5129,11 @@
 "Bytom",
 402,
 403
+],
+[
+"Chorzów Batory",
+415,
+415
 ]
 ]
 },
@@ -4339,6 +5206,11 @@
 309
 ],
 [
+"Chorzów Batory",
+318,
+319
+],
+[
 "Bytom",
 331,
 332
@@ -4347,6 +5219,11 @@
 "Tarnowskie Góry",
 351,
 353
+],
+[
+"Miasteczko Śląskie",
+358,
+359
 ]
 ]
 },
@@ -4384,6 +5261,11 @@
 370
 ],
 [
+"Miasteczko Śląskie",
+393,
+394
+],
+[
 "Tarnowskie Góry",
 399,
 401
@@ -4392,6 +5274,11 @@
 "Bytom",
 417,
 418
+],
+[
+"Chorzów Batory",
+430,
+430
 ]
 ]
 },
@@ -4424,6 +5311,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+366,
+366
+],
+[
 "Bytom",
 378,
 379
@@ -4432,6 +5324,11 @@
 "Tarnowskie Góry",
 397,
 399
+],
+[
+"Miasteczko Śląskie",
+404,
+404
 ]
 ]
 },
@@ -4499,6 +5396,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+438,
+438
+],
+[
 "Tarnowskie Góry",
 444,
 446
@@ -4507,6 +5409,11 @@
 "Bytom",
 464,
 465
+],
+[
+"Chorzów Batory",
+477,
+477
 ]
 ]
 },
@@ -4539,9 +5446,19 @@
 405
 ],
 [
+"Miasteczko Śląskie",
+410,
+411
+],
+[
 "Herby Nowe",
 436,
 436
+],
+[
+"Wieluń Dąbrowa",
+497,
+497
 ]
 ]
 },
@@ -4579,6 +5496,11 @@
 433
 ],
 [
+"Miasteczko Śląskie",
+455,
+456
+],
+[
 "Tarnowskie Góry",
 461,
 463
@@ -4587,6 +5509,11 @@
 "Bytom",
 479,
 480
+],
+[
+"Chorzów Batory",
+493,
+493
 ]
 ]
 },
@@ -4614,6 +5541,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+397,
+397
+],
+[
 "Bytom",
 409,
 410
@@ -4622,6 +5554,11 @@
 "Tarnowskie Góry",
 428,
 430
+],
+[
+"Miasteczko Śląskie",
+435,
+435
 ],
 [
 "Herby Nowe",
@@ -4664,6 +5601,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+425,
+425
+],
+[
 "Bytom",
 437,
 438
@@ -4672,6 +5614,11 @@
 "Tarnowskie Góry",
 456,
 458
+],
+[
+"Miasteczko Śląskie",
+463,
+464
 ]
 ]
 },
@@ -4704,6 +5651,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+502,
+502
+],
+[
 "Tarnowskie Góry",
 508,
 510
@@ -4712,6 +5664,11 @@
 "Bytom",
 528,
 529
+],
+[
+"Chorzów Batory",
+541,
+541
 ]
 ]
 },
@@ -4774,6 +5731,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+469,
+469
+],
+[
 "Bytom",
 481,
 482
@@ -4782,6 +5744,11 @@
 "Tarnowskie Góry",
 499,
 501
+],
+[
+"Miasteczko Śląskie",
+506,
+507
 ],
 [
 "Herby Nowe",
@@ -4824,6 +5791,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+487,
+487
+],
+[
 "Bytom",
 499,
 500
@@ -4832,6 +5804,11 @@
 "Tarnowskie Góry",
 518,
 520
+],
+[
+"Miasteczko Śląskie",
+525,
+526
 ]
 ]
 },
@@ -4899,6 +5876,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+566,
+566
+],
+[
 "Tarnowskie Góry",
 572,
 574
@@ -4907,6 +5889,11 @@
 "Bytom",
 592,
 593
+],
+[
+"Chorzów Batory",
+605,
+605
 ]
 ]
 },
@@ -4934,6 +5921,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+517,
+517
+],
+[
 "Bytom",
 529,
 530
@@ -4942,6 +5934,11 @@
 "Tarnowskie Góry",
 547,
 549
+],
+[
+"Miasteczko Śląskie",
+555,
+555
 ],
 [
 "Herby Nowe",
@@ -4989,6 +5986,11 @@
 567
 ],
 [
+"Miasteczko Śląskie",
+590,
+591
+],
+[
 "Tarnowskie Góry",
 596,
 598
@@ -4997,6 +5999,11 @@
 "Bytom",
 615,
 616
+],
+[
+"Chorzów Batory",
+628,
+628
 ]
 ]
 },
@@ -5024,9 +6031,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+518,
+518
+],
+[
 "Herby Nowe",
 586,
 587
+],
+[
+"Miasteczko Śląskie",
+612,
+612
 ],
 [
 "Tarnowskie Góry",
@@ -5064,6 +6081,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+551,
+551
+],
+[
 "Bytom",
 563,
 564
@@ -5072,6 +6094,11 @@
 "Tarnowskie Góry",
 582,
 584
+],
+[
+"Miasteczko Śląskie",
+589,
+590
 ]
 ]
 },
@@ -5104,6 +6131,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+624,
+624
+],
+[
 "Tarnowskie Góry",
 630,
 632
@@ -5112,6 +6144,11 @@
 "Bytom",
 650,
 651
+],
+[
+"Chorzów Batory",
+663,
+663
 ]
 ]
 },
@@ -5214,6 +6251,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+677,
+677
+],
+[
 "Tarnowskie Góry",
 683,
 685
@@ -5222,6 +6264,11 @@
 "Bytom",
 703,
 704
+],
+[
+"Chorzów Batory",
+716,
+716
 ]
 ]
 },
@@ -5254,6 +6301,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+615,
+615
+],
+[
 "Bytom",
 627,
 628
@@ -5262,6 +6314,11 @@
 "Tarnowskie Góry",
 646,
 648
+],
+[
+"Miasteczko Śląskie",
+653,
+654
 ]
 ]
 },
@@ -5299,6 +6356,11 @@
 690
 ],
 [
+"Miasteczko Śląskie",
+712,
+713
+],
+[
 "Tarnowskie Góry",
 718,
 720
@@ -5307,6 +6369,11 @@
 "Bytom",
 736,
 737
+],
+[
+"Chorzów Batory",
+749,
+749
 ]
 ]
 },
@@ -5339,6 +6406,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+740,
+740
+],
+[
 "Tarnowskie Góry",
 746,
 748
@@ -5347,6 +6419,11 @@
 "Bytom",
 766,
 767
+],
+[
+"Chorzów Batory",
+779,
+779
 ]
 ]
 },
@@ -5379,6 +6456,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+673,
+673
+],
+[
 "Bytom",
 685,
 686
@@ -5387,6 +6469,11 @@
 "Tarnowskie Góry",
 704,
 706
+],
+[
+"Miasteczko Śląskie",
+711,
+712
 ]
 ]
 },
@@ -5417,6 +6504,11 @@
 "Tarnowskie Góry",
 712,
 712
+],
+[
+"Miasteczko Śląskie",
+717,
+718
 ],
 [
 "Częstochowa Stradom",
@@ -5489,6 +6581,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+705,
+705
+],
+[
 "Bytom",
 717,
 721
@@ -5497,6 +6594,11 @@
 "Tarnowskie Góry",
 738,
 740
+],
+[
+"Miasteczko Śląskie",
+745,
+745
 ],
 [
 "Herby Nowe",
@@ -5574,6 +6676,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+788,
+788
+],
+[
 "Tarnowskie Góry",
 794,
 796
@@ -5582,6 +6689,11 @@
 "Bytom",
 814,
 815
+],
+[
+"Chorzów Batory",
+827,
+827
 ]
 ]
 },
@@ -5614,6 +6726,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+726,
+726
+],
+[
 "Bytom",
 738,
 739
@@ -5622,6 +6739,11 @@
 "Tarnowskie Góry",
 757,
 759
+],
+[
+"Miasteczko Śląskie",
+764,
+764
 ]
 ]
 },
@@ -5659,6 +6781,11 @@
 787
 ],
 [
+"Miasteczko Śląskie",
+810,
+811
+],
+[
 "Tarnowskie Góry",
 816,
 823
@@ -5667,6 +6794,11 @@
 "Bytom",
 840,
 845
+],
+[
+"Chorzów Batory",
+857,
+857
 ]
 ]
 },
@@ -5704,6 +6836,11 @@
 799
 ],
 [
+"Miasteczko Śląskie",
+841,
+841
+],
+[
 "Tarnowskie Góry",
 847,
 847
@@ -5739,6 +6876,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+861,
+861
+],
+[
 "Tarnowskie Góry",
 867,
 869
@@ -5747,6 +6889,11 @@
 "Bytom",
 887,
 888
+],
+[
+"Chorzów Batory",
+900,
+900
 ]
 ]
 },
@@ -5779,6 +6926,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+797,
+797
+],
+[
 "Bytom",
 809,
 810
@@ -5787,6 +6939,11 @@
 "Tarnowskie Góry",
 828,
 830
+],
+[
+"Miasteczko Śląskie",
+835,
+836
 ]
 ]
 },
@@ -5814,6 +6971,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+825,
+825
+],
+[
 "Bytom",
 837,
 842
@@ -5822,6 +6984,11 @@
 "Tarnowskie Góry",
 859,
 860
+],
+[
+"Miasteczko Śląskie",
+865,
+866
 ],
 [
 "Herby Nowe",
@@ -5864,9 +7031,19 @@
 871
 ],
 [
+"Miasteczko Śląskie",
+876,
+877
+],
+[
 "Herby Nowe",
 902,
 902
+],
+[
+"Wieluń Dąbrowa",
+963,
+963
 ]
 ]
 },
@@ -5899,6 +7076,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+914,
+914
+],
+[
 "Tarnowskie Góry",
 920,
 922
@@ -5907,6 +7089,11 @@
 "Bytom",
 940,
 941
+],
+[
+"Chorzów Batory",
+953,
+953
 ]
 ]
 },
@@ -5939,6 +7126,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+856,
+856
+],
+[
 "Bytom",
 868,
 869
@@ -5947,6 +7139,11 @@
 "Tarnowskie Góry",
 887,
 889
+],
+[
+"Miasteczko Śląskie",
+894,
+894
 ]
 ]
 },
@@ -6049,6 +7246,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+974,
+974
+],
+[
 "Tarnowskie Góry",
 980,
 982
@@ -6057,6 +7259,11 @@
 "Bytom",
 1000,
 1001
+],
+[
+"Chorzów Batory",
+1013,
+1013
 ]
 ]
 },
@@ -6089,6 +7296,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+917,
+917
+],
+[
 "Bytom",
 929,
 930
@@ -6097,6 +7309,11 @@
 "Tarnowskie Góry",
 948,
 950
+],
+[
+"Miasteczko Śląskie",
+955,
+956
 ]
 ]
 },
@@ -6134,6 +7351,11 @@
 974
 ],
 [
+"Miasteczko Śląskie",
+997,
+998
+],
+[
 "Tarnowskie Góry",
 1003,
 1005
@@ -6142,6 +7364,11 @@
 "Bytom",
 1021,
 1023
+],
+[
+"Chorzów Batory",
+1035,
+1035
 ]
 ]
 },
@@ -6169,6 +7396,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+939,
+939
+],
+[
 "Bytom",
 950,
 959
@@ -6177,6 +7409,11 @@
 "Tarnowskie Góry",
 976,
 978
+],
+[
+"Miasteczko Śląskie",
+983,
+984
 ],
 [
 "Herby Nowe",
@@ -6219,6 +7456,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1037,
+1037
+],
+[
 "Tarnowskie Góry",
 1043,
 1045
@@ -6227,6 +7469,11 @@
 "Bytom",
 1063,
 1064
+],
+[
+"Chorzów Batory",
+1076,
+1076
 ]
 ]
 },
@@ -6259,6 +7506,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+973,
+973
+],
+[
 "Bytom",
 985,
 986
@@ -6267,6 +7519,11 @@
 "Tarnowskie Góry",
 1004,
 1005
+],
+[
+"Miasteczko Śląskie",
+1010,
+1011
 ]
 ]
 },
@@ -6329,9 +7586,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+971,
+971
+],
+[
 "Herby Nowe",
 1032,
 1033
+],
+[
+"Miasteczko Śląskie",
+1058,
+1058
 ],
 [
 "Tarnowskie Góry",
@@ -6404,6 +7671,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1104,
+1104
+],
+[
 "Tarnowskie Góry",
 1110,
 1111
@@ -6412,6 +7684,11 @@
 "Bytom",
 1129,
 1130
+],
+[
+"Chorzów Batory",
+1142,
+1142
 ]
 ]
 },
@@ -6444,6 +7721,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1041,
+1041
+],
+[
 "Bytom",
 1053,
 1054
@@ -6452,6 +7734,11 @@
 "Tarnowskie Góry",
 1071,
 1075
+],
+[
+"Miasteczko Śląskie",
+1080,
+1080
 ]
 ]
 },
@@ -6489,6 +7776,11 @@
 1092
 ],
 [
+"Miasteczko Śląskie",
+1114,
+1115
+],
+[
 "Tarnowskie Góry",
 1120,
 1122
@@ -6497,6 +7789,11 @@
 "Bytom",
 1139,
 1140
+],
+[
+"Chorzów Batory",
+1152,
+1152
 ]
 ]
 },
@@ -6524,6 +7821,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1059,
+1059
+],
+[
 "Bytom",
 1071,
 1078
@@ -6532,6 +7834,11 @@
 "Tarnowskie Góry",
 1095,
 1097
+],
+[
+"Miasteczko Śląskie",
+1102,
+1103
 ],
 [
 "Herby Nowe",
@@ -6609,6 +7916,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1086,
+1086
+],
+[
 "Bytom",
 1098,
 1099
@@ -6617,6 +7929,11 @@
 "Tarnowskie Góry",
 1117,
 1119
+],
+[
+"Miasteczko Śląskie",
+1124,
+1125
 ]
 ]
 },
@@ -6649,6 +7966,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1165,
+1165
+],
+[
 "Tarnowskie Góry",
 1171,
 1173
@@ -6657,6 +7979,11 @@
 "Bytom",
 1191,
 1192
+],
+[
+"Chorzów Batory",
+1204,
+1204
 ]
 ]
 },
@@ -6689,9 +8016,19 @@
 1130
 ],
 [
+"Miasteczko Śląskie",
+1135,
+1136
+],
+[
 "Herby Nowe",
 1161,
 1161
+],
+[
+"Wieluń Dąbrowa",
+1222,
+1222
 ]
 ]
 },
@@ -6759,6 +8096,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1217,
+1217
+],
+[
 "Tarnowskie Góry",
 1223,
 1225
@@ -6767,6 +8109,11 @@
 "Bytom",
 1242,
 1243
+],
+[
+"Chorzów Batory",
+1255,
+1255
 ]
 ]
 },
@@ -6799,6 +8146,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1165,
+1165
+],
+[
 "Bytom",
 1177,
 1178
@@ -6807,6 +8159,11 @@
 "Tarnowskie Góry",
 1196,
 1198
+],
+[
+"Miasteczko Śląskie",
+1203,
+1204
 ]
 ]
 },
@@ -6869,6 +8226,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1185,
+1185
+],
+[
 "Bytom",
 1197,
 1198
@@ -6877,6 +8239,11 @@
 "Tarnowskie Góry",
 1215,
 1217
+],
+[
+"Miasteczko Śląskie",
+1222,
+1223
 ],
 [
 "Herby Nowe",
@@ -6924,6 +8291,11 @@
 1225
 ],
 [
+"Miasteczko Śląskie",
+1247,
+1247
+],
+[
 "Tarnowskie Góry",
 1253,
 1255
@@ -6932,6 +8304,11 @@
 "Bytom",
 1272,
 1273
+],
+[
+"Chorzów Batory",
+1285,
+1285
 ]
 ]
 },
@@ -6999,6 +8376,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1277,
+1277
+],
+[
 "Tarnowskie Góry",
 1283,
 1285
@@ -7007,6 +8389,11 @@
 "Bytom",
 1303,
 1304
+],
+[
+"Chorzów Batory",
+1316,
+1316
 ]
 ]
 },
@@ -7074,6 +8461,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1227,
+1227
+],
+[
 "Bytom",
 1239,
 1240
@@ -7082,6 +8474,11 @@
 "Tarnowskie Góry",
 1258,
 1259
+],
+[
+"Miasteczko Śląskie",
+1264,
+1265
 ]
 ]
 },
@@ -7119,6 +8516,11 @@
 1277
 ],
 [
+"Miasteczko Śląskie",
+1299,
+1300
+],
+[
 "Tarnowskie Góry",
 1305,
 1312
@@ -7127,6 +8529,11 @@
 "Bytom",
 1328,
 1329
+],
+[
+"Chorzów Batory",
+1341,
+1343
 ],
 [
 "Katowice",
@@ -7164,6 +8571,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1318,
+1318
+],
+[
 "Tarnowskie Góry",
 1324,
 1325
@@ -7172,6 +8584,11 @@
 "Bytom",
 1341,
 1342
+],
+[
+"Chorzów Batory",
+1353,
+1354
 ],
 [
 "Katowice",
@@ -7209,6 +8626,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1265,
+1265
+],
+[
 "Bytom",
 1277,
 1278
@@ -7217,6 +8639,11 @@
 "Tarnowskie Góry",
 1296,
 1298
+],
+[
+"Miasteczko Śląskie",
+1303,
+1304
 ]
 ]
 },
@@ -7319,6 +8746,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1371,
+1371
+],
+[
 "Tarnowskie Góry",
 1377,
 1379
@@ -7354,6 +8786,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1298,
+1298
+],
+[
 "Bytom",
 1310,
 1321
@@ -7362,6 +8799,11 @@
 "Tarnowskie Góry",
 1338,
 1340
+],
+[
+"Miasteczko Śląskie",
+1345,
+1346
 ],
 [
 "Herby Nowe",
@@ -7404,6 +8846,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1326,
+1326
+],
+[
 "Bytom",
 1338,
 1339
@@ -7412,6 +8859,11 @@
 "Tarnowskie Góry",
 1357,
 1359
+],
+[
+"Miasteczko Śląskie",
+1364,
+1365
 ]
 ]
 },
@@ -7516,6 +8968,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+316,
+316
+],
+[
 "Tarnowskie Góry",
 322,
 324
@@ -7524,6 +8981,11 @@
 "Bytom",
 342,
 343
+],
+[
+"Chorzów Batory",
+355,
+355
 ]
 ]
 },
@@ -7551,9 +9013,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+223,
+223
+],
+[
 "Herby Nowe",
 284,
 285
+],
+[
+"Miasteczko Śląskie",
+310,
+310
 ],
 [
 "Tarnowskie Góry",
@@ -7599,6 +9071,11 @@
 "Tarnowskie Góry",
 302,
 304
+],
+[
+"Miasteczko Śląskie",
+309,
+309
 ]
 ]
 },
@@ -7636,6 +9113,11 @@
 327
 ],
 [
+"Miasteczko Śląskie",
+350,
+351
+],
+[
 "Tarnowskie Góry",
 356,
 358
@@ -7644,6 +9126,11 @@
 "Bytom",
 374,
 375
+],
+[
+"Chorzów Batory",
+387,
+387
 ]
 ]
 },
@@ -7676,6 +9163,11 @@
 286
 ],
 [
+"Chorzów Batory",
+292,
+293
+],
+[
 "Bytom",
 305,
 306
@@ -7684,6 +9176,11 @@
 "Tarnowskie Góry",
 323,
 325
+],
+[
+"Miasteczko Śląskie",
+330,
+331
 ],
 [
 "Herby Nowe",
@@ -7761,6 +9258,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+376,
+376
+],
+[
 "Tarnowskie Góry",
 382,
 384
@@ -7769,6 +9271,11 @@
 "Bytom",
 402,
 403
+],
+[
+"Chorzów Batory",
+415,
+415
 ]
 ]
 },
@@ -7841,6 +9348,11 @@
 309
 ],
 [
+"Chorzów Batory",
+318,
+319
+],
+[
 "Bytom",
 331,
 332
@@ -7849,6 +9361,11 @@
 "Tarnowskie Góry",
 351,
 353
+],
+[
+"Miasteczko Śląskie",
+358,
+359
 ]
 ]
 },
@@ -7886,6 +9403,11 @@
 370
 ],
 [
+"Miasteczko Śląskie",
+393,
+394
+],
+[
 "Tarnowskie Góry",
 399,
 401
@@ -7894,6 +9416,11 @@
 "Bytom",
 417,
 418
+],
+[
+"Chorzów Batory",
+430,
+430
 ]
 ]
 },
@@ -7926,6 +9453,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+366,
+366
+],
+[
 "Bytom",
 378,
 379
@@ -7934,6 +9466,11 @@
 "Tarnowskie Góry",
 397,
 399
+],
+[
+"Miasteczko Śląskie",
+404,
+404
 ]
 ]
 },
@@ -8001,6 +9538,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+438,
+438
+],
+[
 "Tarnowskie Góry",
 444,
 446
@@ -8009,6 +9551,11 @@
 "Bytom",
 464,
 465
+],
+[
+"Chorzów Batory",
+477,
+477
 ]
 ]
 },
@@ -8041,9 +9588,19 @@
 405
 ],
 [
+"Miasteczko Śląskie",
+410,
+411
+],
+[
 "Herby Nowe",
 436,
 436
+],
+[
+"Wieluń Dąbrowa",
+497,
+497
 ]
 ]
 },
@@ -8081,6 +9638,11 @@
 433
 ],
 [
+"Miasteczko Śląskie",
+455,
+456
+],
+[
 "Tarnowskie Góry",
 461,
 463
@@ -8089,6 +9651,11 @@
 "Bytom",
 479,
 480
+],
+[
+"Chorzów Batory",
+493,
+493
 ]
 ]
 },
@@ -8116,6 +9683,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+397,
+397
+],
+[
 "Bytom",
 409,
 410
@@ -8124,6 +9696,11 @@
 "Tarnowskie Góry",
 428,
 430
+],
+[
+"Miasteczko Śląskie",
+435,
+435
 ],
 [
 "Herby Nowe",
@@ -8166,6 +9743,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+425,
+425
+],
+[
 "Bytom",
 437,
 438
@@ -8174,6 +9756,11 @@
 "Tarnowskie Góry",
 456,
 458
+],
+[
+"Miasteczko Śląskie",
+463,
+464
 ]
 ]
 },
@@ -8206,6 +9793,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+502,
+502
+],
+[
 "Tarnowskie Góry",
 508,
 510
@@ -8214,6 +9806,11 @@
 "Bytom",
 528,
 529
+],
+[
+"Chorzów Batory",
+541,
+541
 ]
 ]
 },
@@ -8276,6 +9873,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+469,
+469
+],
+[
 "Bytom",
 481,
 482
@@ -8284,6 +9886,11 @@
 "Tarnowskie Góry",
 499,
 501
+],
+[
+"Miasteczko Śląskie",
+506,
+507
 ],
 [
 "Herby Nowe",
@@ -8326,6 +9933,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+487,
+487
+],
+[
 "Bytom",
 499,
 500
@@ -8334,6 +9946,11 @@
 "Tarnowskie Góry",
 518,
 520
+],
+[
+"Miasteczko Śląskie",
+525,
+526
 ]
 ]
 },
@@ -8401,6 +10018,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+566,
+566
+],
+[
 "Tarnowskie Góry",
 572,
 574
@@ -8409,6 +10031,11 @@
 "Bytom",
 592,
 593
+],
+[
+"Chorzów Batory",
+605,
+605
 ]
 ]
 },
@@ -8436,6 +10063,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+517,
+517
+],
+[
 "Bytom",
 529,
 530
@@ -8444,6 +10076,11 @@
 "Tarnowskie Góry",
 547,
 549
+],
+[
+"Miasteczko Śląskie",
+555,
+555
 ],
 [
 "Herby Nowe",
@@ -8491,6 +10128,11 @@
 567
 ],
 [
+"Miasteczko Śląskie",
+590,
+591
+],
+[
 "Tarnowskie Góry",
 596,
 598
@@ -8499,6 +10141,11 @@
 "Bytom",
 615,
 616
+],
+[
+"Chorzów Batory",
+628,
+628
 ]
 ]
 },
@@ -8526,9 +10173,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+518,
+518
+],
+[
 "Herby Nowe",
 586,
 587
+],
+[
+"Miasteczko Śląskie",
+612,
+612
 ],
 [
 "Tarnowskie Góry",
@@ -8566,6 +10223,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+551,
+551
+],
+[
 "Bytom",
 563,
 564
@@ -8574,6 +10236,11 @@
 "Tarnowskie Góry",
 582,
 584
+],
+[
+"Miasteczko Śląskie",
+589,
+590
 ]
 ]
 },
@@ -8606,6 +10273,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+624,
+624
+],
+[
 "Tarnowskie Góry",
 630,
 632
@@ -8614,6 +10286,11 @@
 "Bytom",
 650,
 651
+],
+[
+"Chorzów Batory",
+663,
+663
 ]
 ]
 },
@@ -8716,6 +10393,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+677,
+677
+],
+[
 "Tarnowskie Góry",
 683,
 685
@@ -8724,6 +10406,11 @@
 "Bytom",
 703,
 704
+],
+[
+"Chorzów Batory",
+716,
+716
 ]
 ]
 },
@@ -8756,6 +10443,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+615,
+615
+],
+[
 "Bytom",
 627,
 628
@@ -8764,6 +10456,11 @@
 "Tarnowskie Góry",
 646,
 648
+],
+[
+"Miasteczko Śląskie",
+653,
+654
 ]
 ]
 },
@@ -8801,6 +10498,11 @@
 690
 ],
 [
+"Miasteczko Śląskie",
+712,
+713
+],
+[
 "Tarnowskie Góry",
 718,
 720
@@ -8809,6 +10511,11 @@
 "Bytom",
 736,
 737
+],
+[
+"Chorzów Batory",
+749,
+749
 ]
 ]
 },
@@ -8841,6 +10548,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+740,
+740
+],
+[
 "Tarnowskie Góry",
 746,
 748
@@ -8849,6 +10561,11 @@
 "Bytom",
 766,
 767
+],
+[
+"Chorzów Batory",
+779,
+779
 ]
 ]
 },
@@ -8881,6 +10598,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+673,
+673
+],
+[
 "Bytom",
 685,
 686
@@ -8889,6 +10611,11 @@
 "Tarnowskie Góry",
 704,
 706
+],
+[
+"Miasteczko Śląskie",
+711,
+712
 ]
 ]
 },
@@ -8919,6 +10646,11 @@
 "Tarnowskie Góry",
 712,
 712
+],
+[
+"Miasteczko Śląskie",
+717,
+718
 ],
 [
 "Częstochowa Stradom",
@@ -8991,6 +10723,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+705,
+705
+],
+[
 "Bytom",
 717,
 721
@@ -8999,6 +10736,11 @@
 "Tarnowskie Góry",
 738,
 740
+],
+[
+"Miasteczko Śląskie",
+745,
+745
 ],
 [
 "Herby Nowe",
@@ -9076,6 +10818,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+788,
+788
+],
+[
 "Tarnowskie Góry",
 794,
 796
@@ -9084,6 +10831,11 @@
 "Bytom",
 814,
 815
+],
+[
+"Chorzów Batory",
+827,
+827
 ]
 ]
 },
@@ -9116,6 +10868,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+726,
+726
+],
+[
 "Bytom",
 738,
 739
@@ -9124,6 +10881,11 @@
 "Tarnowskie Góry",
 757,
 759
+],
+[
+"Miasteczko Śląskie",
+764,
+764
 ]
 ]
 },
@@ -9161,6 +10923,11 @@
 787
 ],
 [
+"Miasteczko Śląskie",
+810,
+811
+],
+[
 "Tarnowskie Góry",
 816,
 823
@@ -9169,6 +10936,11 @@
 "Bytom",
 840,
 845
+],
+[
+"Chorzów Batory",
+857,
+857
 ]
 ]
 },
@@ -9206,6 +10978,11 @@
 799
 ],
 [
+"Miasteczko Śląskie",
+841,
+841
+],
+[
 "Tarnowskie Góry",
 847,
 847
@@ -9241,6 +11018,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+861,
+861
+],
+[
 "Tarnowskie Góry",
 867,
 869
@@ -9249,6 +11031,11 @@
 "Bytom",
 887,
 888
+],
+[
+"Chorzów Batory",
+900,
+900
 ]
 ]
 },
@@ -9281,6 +11068,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+797,
+797
+],
+[
 "Bytom",
 809,
 810
@@ -9289,6 +11081,11 @@
 "Tarnowskie Góry",
 828,
 830
+],
+[
+"Miasteczko Śląskie",
+835,
+836
 ]
 ]
 },
@@ -9316,6 +11113,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+825,
+825
+],
+[
 "Bytom",
 837,
 842
@@ -9324,6 +11126,11 @@
 "Tarnowskie Góry",
 859,
 860
+],
+[
+"Miasteczko Śląskie",
+865,
+866
 ],
 [
 "Herby Nowe",
@@ -9366,9 +11173,19 @@
 871
 ],
 [
+"Miasteczko Śląskie",
+876,
+877
+],
+[
 "Herby Nowe",
 902,
 902
+],
+[
+"Wieluń Dąbrowa",
+963,
+963
 ]
 ]
 },
@@ -9401,6 +11218,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+914,
+914
+],
+[
 "Tarnowskie Góry",
 920,
 922
@@ -9409,6 +11231,11 @@
 "Bytom",
 940,
 941
+],
+[
+"Chorzów Batory",
+953,
+953
 ]
 ]
 },
@@ -9441,6 +11268,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+856,
+856
+],
+[
 "Bytom",
 868,
 869
@@ -9449,6 +11281,11 @@
 "Tarnowskie Góry",
 887,
 889
+],
+[
+"Miasteczko Śląskie",
+894,
+894
 ]
 ]
 },
@@ -9551,6 +11388,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+974,
+974
+],
+[
 "Tarnowskie Góry",
 980,
 982
@@ -9559,6 +11401,11 @@
 "Bytom",
 1000,
 1001
+],
+[
+"Chorzów Batory",
+1013,
+1013
 ]
 ]
 },
@@ -9591,6 +11438,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+917,
+917
+],
+[
 "Bytom",
 929,
 930
@@ -9599,6 +11451,11 @@
 "Tarnowskie Góry",
 948,
 950
+],
+[
+"Miasteczko Śląskie",
+955,
+956
 ]
 ]
 },
@@ -9636,6 +11493,11 @@
 974
 ],
 [
+"Miasteczko Śląskie",
+997,
+998
+],
+[
 "Tarnowskie Góry",
 1003,
 1005
@@ -9644,6 +11506,11 @@
 "Bytom",
 1021,
 1023
+],
+[
+"Chorzów Batory",
+1035,
+1035
 ]
 ]
 },
@@ -9671,6 +11538,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+939,
+939
+],
+[
 "Bytom",
 950,
 959
@@ -9679,6 +11551,11 @@
 "Tarnowskie Góry",
 976,
 978
+],
+[
+"Miasteczko Śląskie",
+983,
+984
 ],
 [
 "Herby Nowe",
@@ -9721,6 +11598,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1037,
+1037
+],
+[
 "Tarnowskie Góry",
 1043,
 1045
@@ -9729,6 +11611,11 @@
 "Bytom",
 1063,
 1064
+],
+[
+"Chorzów Batory",
+1076,
+1076
 ]
 ]
 },
@@ -9761,6 +11648,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+973,
+973
+],
+[
 "Bytom",
 985,
 986
@@ -9769,6 +11661,11 @@
 "Tarnowskie Góry",
 1004,
 1005
+],
+[
+"Miasteczko Śląskie",
+1010,
+1011
 ]
 ]
 },
@@ -9831,9 +11728,19 @@
 ],
 "cele": [
 [
+"Wieluń Dąbrowa",
+971,
+971
+],
+[
 "Herby Nowe",
 1032,
 1033
+],
+[
+"Miasteczko Śląskie",
+1058,
+1058
 ],
 [
 "Tarnowskie Góry",
@@ -9906,6 +11813,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1104,
+1104
+],
+[
 "Tarnowskie Góry",
 1110,
 1111
@@ -9914,6 +11826,11 @@
 "Bytom",
 1129,
 1130
+],
+[
+"Chorzów Batory",
+1142,
+1142
 ]
 ]
 },
@@ -9946,6 +11863,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1041,
+1041
+],
+[
 "Bytom",
 1053,
 1054
@@ -9954,6 +11876,11 @@
 "Tarnowskie Góry",
 1071,
 1075
+],
+[
+"Miasteczko Śląskie",
+1080,
+1080
 ]
 ]
 },
@@ -9991,6 +11918,11 @@
 1092
 ],
 [
+"Miasteczko Śląskie",
+1114,
+1115
+],
+[
 "Tarnowskie Góry",
 1120,
 1122
@@ -9999,6 +11931,11 @@
 "Bytom",
 1139,
 1140
+],
+[
+"Chorzów Batory",
+1152,
+1152
 ]
 ]
 },
@@ -10026,6 +11963,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1059,
+1059
+],
+[
 "Bytom",
 1071,
 1078
@@ -10034,6 +11976,11 @@
 "Tarnowskie Góry",
 1095,
 1097
+],
+[
+"Miasteczko Śląskie",
+1102,
+1103
 ],
 [
 "Herby Nowe",
@@ -10111,6 +12058,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1086,
+1086
+],
+[
 "Bytom",
 1098,
 1099
@@ -10119,6 +12071,11 @@
 "Tarnowskie Góry",
 1117,
 1119
+],
+[
+"Miasteczko Śląskie",
+1124,
+1125
 ]
 ]
 },
@@ -10151,6 +12108,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1165,
+1165
+],
+[
 "Tarnowskie Góry",
 1171,
 1173
@@ -10159,6 +12121,11 @@
 "Bytom",
 1191,
 1192
+],
+[
+"Chorzów Batory",
+1204,
+1204
 ]
 ]
 },
@@ -10191,9 +12158,19 @@
 1130
 ],
 [
+"Miasteczko Śląskie",
+1135,
+1136
+],
+[
 "Herby Nowe",
 1161,
 1161
+],
+[
+"Wieluń Dąbrowa",
+1222,
+1222
 ]
 ]
 },
@@ -10261,6 +12238,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1217,
+1217
+],
+[
 "Tarnowskie Góry",
 1223,
 1225
@@ -10269,6 +12251,11 @@
 "Bytom",
 1242,
 1243
+],
+[
+"Chorzów Batory",
+1255,
+1255
 ]
 ]
 },
@@ -10301,6 +12288,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1165,
+1165
+],
+[
 "Bytom",
 1177,
 1178
@@ -10309,6 +12301,11 @@
 "Tarnowskie Góry",
 1196,
 1198
+],
+[
+"Miasteczko Śląskie",
+1203,
+1204
 ]
 ]
 },
@@ -10371,6 +12368,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1185,
+1185
+],
+[
 "Bytom",
 1197,
 1198
@@ -10379,6 +12381,11 @@
 "Tarnowskie Góry",
 1215,
 1217
+],
+[
+"Miasteczko Śląskie",
+1222,
+1223
 ],
 [
 "Herby Nowe",
@@ -10426,6 +12433,11 @@
 1225
 ],
 [
+"Miasteczko Śląskie",
+1247,
+1247
+],
+[
 "Tarnowskie Góry",
 1253,
 1255
@@ -10434,6 +12446,11 @@
 "Bytom",
 1272,
 1273
+],
+[
+"Chorzów Batory",
+1285,
+1285
 ]
 ]
 },
@@ -10501,6 +12518,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1277,
+1277
+],
+[
 "Tarnowskie Góry",
 1283,
 1285
@@ -10509,6 +12531,11 @@
 "Bytom",
 1303,
 1304
+],
+[
+"Chorzów Batory",
+1316,
+1316
 ]
 ]
 },
@@ -10576,6 +12603,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1227,
+1227
+],
+[
 "Bytom",
 1239,
 1240
@@ -10584,6 +12616,11 @@
 "Tarnowskie Góry",
 1258,
 1259
+],
+[
+"Miasteczko Śląskie",
+1264,
+1265
 ]
 ]
 },
@@ -10621,6 +12658,11 @@
 1277
 ],
 [
+"Miasteczko Śląskie",
+1299,
+1300
+],
+[
 "Tarnowskie Góry",
 1305,
 1312
@@ -10629,6 +12671,11 @@
 "Bytom",
 1328,
 1329
+],
+[
+"Chorzów Batory",
+1341,
+1343
 ],
 [
 "Katowice",
@@ -10666,6 +12713,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1318,
+1318
+],
+[
 "Tarnowskie Góry",
 1324,
 1325
@@ -10674,6 +12726,11 @@
 "Bytom",
 1341,
 1342
+],
+[
+"Chorzów Batory",
+1353,
+1354
 ],
 [
 "Katowice",
@@ -10711,6 +12768,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1265,
+1265
+],
+[
 "Bytom",
 1277,
 1278
@@ -10719,6 +12781,11 @@
 "Tarnowskie Góry",
 1296,
 1298
+],
+[
+"Miasteczko Śląskie",
+1303,
+1304
 ]
 ]
 },
@@ -10821,6 +12888,11 @@
 ],
 "cele": [
 [
+"Miasteczko Śląskie",
+1371,
+1371
+],
+[
 "Tarnowskie Góry",
 1377,
 1379
@@ -10856,6 +12928,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1298,
+1298
+],
+[
 "Bytom",
 1310,
 1321
@@ -10864,6 +12941,11 @@
 "Tarnowskie Góry",
 1338,
 1340
+],
+[
+"Miasteczko Śląskie",
+1345,
+1346
 ],
 [
 "Herby Nowe",
@@ -10906,6 +12988,11 @@
 ],
 "cele": [
 [
+"Chorzów Batory",
+1326,
+1326
+],
+[
 "Bytom",
 1338,
 1339
@@ -10914,6 +13001,11 @@
 "Tarnowskie Góry",
 1357,
 1359
+],
+[
+"Miasteczko Śląskie",
+1364,
+1365
 ]
 ]
 },
