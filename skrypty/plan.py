@@ -116,8 +116,8 @@ d4.update(nowe)
 # żeby nie jechać razem z linią 1. Wariant A: poza szczytem co godzinę, B: co ok. 2 h.
 WAR = os.environ.get('WARIANT', 'A')
 hm = lambda x: int(x.split(':')[0])*60 + int(x.split(':')[1])
-L4_WD = {'A': ('5:34 6:34 7:34 8:49 9:49 10:49 11:49 13:34 14:34 15:34 16:34 17:49 18:49 19:49',
-               '6:03 7:03 8:03 9:18 10:18 11:18 12:18 14:03 15:03 16:03 17:03 18:18 19:18 20:18'),
+L4_WD = {'A': ('5:34 6:34 7:34 8:49 9:49 10:49 11:49 13:34 14:34 15:34 16:34 17:49 18:49 19:49 20:49 21:49',
+               '6:03 7:03 8:03 9:18 10:18 11:18 12:18 14:03 15:03 16:03 17:03 18:18 19:18 20:18 21:18 22:18'),
          'B': ('5:34 6:34 7:34 8:49 10:49 13:34 14:34 15:34 16:34 17:49 19:49',
                '6:03 7:03 8:03 10:18 12:18 14:03 15:03 16:03 17:03 18:18 20:18')}[WAR]
 def l4_set(dz, eastbound, starts):
@@ -134,6 +134,7 @@ for dz in ('sat', 'sun'):          # weekend: linia 4 15 min później
 # bez późnych wieczornych kursów linii 4 i 5 (odjazd po 20:30) – 25.11.2026
 for dz in ('wd', 'sat', 'sun'):
   for ln in ('4', '5'):
+    if ln == '4' and dz == 'wd': continue   # 26.11.2026: linia 4 w dni robocze z Rynku jeszcze o 21:18 i 22:18 (powrót z pracy)
     for name, v in tt[ln][dz].items():
         v['trips'] = [tr for tr in v['trips'] if tr[0][0] < 20*60+30]
 # linia 5: przesunięcie kursów (L5_SA – z Lublińca do Koszęcina, L5_SB – z Koszęcina do Lublińca), np. dłuższy postój na Koszęcinie PKP
@@ -163,19 +164,6 @@ for name, v in list(tt['1']['wd'].items()):
         nst = ['Piasek', 'Psary Główna'] + st[i:]
         ntr = [[[t[0][i] - 7, t[0][i] - 4] + t[0][i:], t[1]] for t in wyb]
         tt['1']['wd'][name + ' (przez Psary)'] = {**{k: x for k, x in v.items() if k not in ('stops', 'trips')}, 'stops': nst, 'trips': ntr}
-# 26.11.2026: wieczorne kursy linii 1 z Koszęcina Rynku w stronę Piasku o :15 zamiast o pełnej (od 21:00) – +15 min;
-# w dni robocze także ostatni kurs z Piasku (21:33 → 21:48), żeby te same 2 busy obsłużyły obieg
-for dz in ('wd', 'sat', 'sun'):
-    for name, v in tt['1'][dz].items():
-        st = v['stops']
-        if 'Psary' in name: continue
-        if st[0] == 'Lubliniec PKP':
-            i = st.index('Koszęcin Rynek')
-            for tr in v['trips']:
-                if tr[0][i] >= 21*60: tr[0] = [x + 15 for x in tr[0]]
-        elif st[0] == 'Piasek' and dz == 'wd':
-            for tr in v['trips']:
-                if tr[0][0] == 21*60+33: tr[0] = [x + 15 for x in tr[0]]
 # zestawienie wariantu pełnego po poprawkach (kursy, km, busy) – z gotowego rozkładu
 _BASE=json.load(open('out/rozklad_base.json'));_S={};_tot=0;_fl=0
 for k in tt:
