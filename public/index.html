@@ -55,13 +55,17 @@ html,body{overflow-x:hidden}
 .note{color:var(--mut);font-size:14px}
 footer{max-width:1240px;margin:auto;padding:24px 20px 40px;color:var(--mut);font-size:13px;border-top:1px solid var(--rule)}
 footer a{color:var(--mut)}
-.warnbar{position:sticky;top:0;z-index:10;background:#b3261e;color:#fff;text-align:center;font-weight:700;padding:10px 14px;font-size:15px;line-height:1.35}
+.warnbar{position:relative;z-index:10;background:#b3261e;color:#fff;text-align:center;font-weight:700;padding:10px 14px;font-size:15px;line-height:1.35}
 .warnbar span{font-weight:400;opacity:.92}
 .warnbox{border:2px solid #b3261e;background:#fdecea;color:#5c1410;border-radius:12px;padding:16px 18px;margin:18px 0}
 .warnbox b{color:#b3261e}
 .warn-inline{display:inline-block;background:#fdecea;color:#b3261e;border:1px solid #f1b8b3;font-weight:700;font-size:13px;padding:3px 10px;border-radius:99px;margin-bottom:8px}
 .sch{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:10px}
 .sch img{width:100%;display:block}
+.leg-m{display:none;flex-wrap:wrap;gap:6px 14px;margin:10px 2px 0;font-size:13px;color:var(--ink)}
+.leg-m span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.leg-m i{display:inline-block;width:22px;height:5px;border-radius:3px}
+.leg-m i.d{height:0;border-top:3px dashed #00704f;background:none}
 .sister{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:16px;text-decoration:none;color:var(--ink)}
 .sister .ico{font-size:30px}
 .sister b{display:block}
@@ -70,11 +74,12 @@ td.how{white-space:normal;color:var(--mut);font-size:14px}
 .m{display:none}
 .hint{display:none;text-align:center;color:var(--mut);font-size:13px;margin:6px 0 0}
 @media (max-width:640px){
- .warnbar{position:sticky;font-size:14px;padding:8px 10px}
+ .warnbar{font-size:14px;padding:8px 10px}
  .warnbar span{display:none}
  header{padding-top:24px}
  .sch{padding:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
- .sch-in{width:900px;padding:6px}
+ .sch-in{width:1050px;padding:6px}
+ .leg-m{display:flex}
  .hint{display:block}
  table{font-size:14px}
  th,td{padding:7px 6px}
@@ -182,9 +187,11 @@ section{scroll-margin-top:60px}
 <section id="schemat">
 <h2>Schemat linii</h2>
 <div class="warn-inline">Proponowany – nie obowiązuje</div>
-<div class="sch" id="schwrap"><div class="sch-in"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek" onclick="lupa()" style="cursor:zoom-in"></div><button class="zoombtn" type="button" onclick="lupa()">🔍 Powiększ schemat</button></div>
+<div class="sch" id="schwrap"><div class="sch-in"><picture><source media="(max-width:700px)" srcset="schemat-m.svg"><img src="schemat.svg" alt="Schemat proponowanych linii busów z węzłem Koszęcin Rynek" onclick="lupa()" style="cursor:zoom-in"></picture></div><button class="zoombtn" type="button" onclick="lupa()">🔍 Powiększ schemat</button></div>
+<div class="leg-m" aria-hidden="true"><span><i style="background:#00704f;height:7px"></i>1 Piasek – Lubliniec</span><span><i style="background:#1f6fd1"></i>2 Boronów – Kalety</span><span><i style="background:#c98a00"></i>3 Lisów – Koszęcin</span><span><i style="background:#d4473a"></i>4 Łazy – Koszęcin</span><span><i style="background:#7c3aed"></i>5 Koszęcin – Piłka – Lubliniec</span><span><i class="d"></i>1 przez Psary w dni nauki</span><span><i style="background:#8a8a8a;height:3px"></i>kolej</span></div>
 <p class="hint">← przesuń schemat palcem →</p>
-<p class="note">Schemat, nie mapa w skali. Gruba linia: co godzinę, cienka: co 2 godziny, przerywana: propozycje poza siatką podstawową. Strzałki: dokąd można jechać dalej z końców linii. Kliknij schemat, żeby go powiększyć, albo <a href="dokumenty/schemat-linii.pdf">pobierz w PDF</a>.</p>
+<script>(function(){var w=document.getElementById("schwrap");function c(){if(window.innerWidth<=700&&w.scrollWidth>w.clientWidth){w.scrollLeft=Math.max(0,w.scrollWidth*0.55-w.clientWidth/2)}}if(document.readyState==="complete")c();else window.addEventListener("load",c)})();</script>
+<p class="note">Schemat, nie mapa w skali. Gruba linia: linia 1 (co godzinę), przerywana: linia 1 przez Psary w dni nauki. Strzałki: dokąd można jechać dalej z końców linii. Kliknij schemat, żeby go powiększyć, albo <a href="dokumenty/schemat-linii.pdf">pobierz w PDF</a>.</p>
 </section>
 
 <section id="linie">
