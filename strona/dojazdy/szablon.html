@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dojazdy koleją – busy gminy Koszęcin</title>
-<meta name="description" content="Połączenia busem i pociągiem ze stacji Rusinowice, Koszęcin i Strzebiń do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – propozycja siatki busów gminy Koszęcin i rozkład kolejowy 2026/27.">
+<meta name="description" content="Dojazdy koleją z gminy Koszęcin – sama kolej albo z proponowanymi busami – do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – propozycja siatki busów gminy Koszęcin i rozkład kolejowy 2026/27.">
 <link rel="icon" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -21,7 +21,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.05;margin:0 0 6px;font-weight:
 .lead{margin:0 0 18px;max-width:62ch;font-size:16px}
 .ctl{display:grid;gap:10px}
 .grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.grp>b{width:5.2em;font-size:14px;font-weight:600}
+.grp>b{width:5.2em;line-height:1.15;font-size:14px;font-weight:600}
 .grp button{font:600 15px Inter,sans-serif;min-height:44px;padding:0 14px;border-radius:10px;border:2px solid var(--yink);background:transparent;color:var(--yink);cursor:pointer}
 .grp button[aria-pressed=true]{background:var(--yink);color:var(--y)}
 .grp button:focus-visible{outline:3px solid #fff;outline-offset:2px}
@@ -51,10 +51,12 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.05;margin:0 0 6px;font-weight:
 <div style="position:sticky;top:0;z-index:1000;background:#b3261e;color:#fff;text-align:center;font-weight:700;padding:8px 12px;font-size:14px">⚠️ To NIE jest aktualny rozkład jazdy – tylko propozycja! · <a href="../" style="color:#fff">strona główna</a> · <a href="../wyszukiwarka/" style="color:#fff">wyszukiwarka połączeń</a></div>
 <header class="band top"><div class="wrap">
 <h1>Dojazdy koleją z gminy Koszęcin</h1>
-<p class="lead">Najlepsze połączenia busem i pociągiem ze stacji Rusinowice, Koszęcin i Strzebiń do Lublińca, Częstochowy, Tarnowskich Gór, Katowic i Opola – w proponowanej siatce busów i nowym rozkładzie kolejowym od 13 grudnia 2026.</p>
+<p class="lead">Połączenia do Lublińca, Częstochowy, Tarnowskich Gór, Katowic, Opola i stacji w okolicy według rozkładu kolejowego od 13 grudnia 2026. Porównaj: <b>sama kolej</b> ze stacji Rusinowice, Koszęcin, Strzebiń i Lubliniec albo <b>z proponowanymi busami</b> – prosto z Sadowa, Wierzbia, Piłki, Cieszowej, Łaz, Bukowca i innych miejscowości.</p>
 <div class="ctl">
+<div class="grp" id="g-t"><b>Rozkład</b></div>
 <div class="grp" id="g-z"><b>Skąd</b></div>
 <div class="grp" id="g-c"><b>Dokąd</b></div>
+<div class="grp" id="g-c2"><b>Stacje w okolicy</b></div>
 <div class="grp" id="g-k"><b>Kierunek</b></div>
 <div class="grp" id="g-d"><b>Dzień</b></div>
 </div></div></header>
@@ -64,19 +66,25 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.05;margin:0 0 6px;font-weight:
 <div class="note">
 <p><b>Uwaga:</b> to propozycja mieszkańców, nie obowiązujący rozkład. Busy według <a href="../">proponowanej siatki</a>, pociągi Kolei Śląskich, POLREGIO i PKP Intercity według rozkładu 2026/27 (dane PKP PLK, GTFS). Przesiadka z busa na pociąg liczona z co najmniej 4-minutowym zapasem.</p>
 <p>Kursy PKP Intercity (IC) mają osobną taryfę i rezerwację; do Opola są pokazane, bo regionalnych jest niewiele. Na innych kierunkach tylko pociągi regionalne. W weekend linie 3, 4 i 5 jeżdżą na zamówienie. Pokazane są połączenia, których nie da się zastąpić późniejszym wyjazdem z tym samym przyjazdem.</p>
-<p>Start i powrót: stacje kolejowe w Rusinowicach, Koszęcinie i Strzebiniu. Tam, gdzie szybciej jest busem (np. ze Strzebinia linią 1 do Lublińca albo w powrocie z Częstochowy przez Lisów i linię 3), pokazane jest połączenie z busem.</p>
+<p><b>Sama kolej:</b> tylko pociągi, start i powrót na stacji (Rusinowice, Koszęcin, Strzebiń, Lubliniec). <b>Z busami:</b> proponowane busy i pociągi, start z przystanku w miejscowości (Koszęcin – Rynek, Strzebiń – Centrum, Sadów – Przedszkole, Lubliniec – dworzec PKP). Tam, gdzie bus jest szybszy od pociągu (np. Strzebiń → Lubliniec linią 1), wynik pokazuje bus.</p>
 </div></div></main>
 <script>
 {
 const D=__DATA__;
-const ZR=D.ZR, CE=D.CE, W=D.WYN;
+const TR=D.TRYBY, CE0=D.CE, CEL0=D.CEL, WW=D.WYN;
+const TRN={kolej:'Sama kolej',bus:'Z proponowanymi busami'};
+const ODP={st_Koszęcin:'kosr',st_Strzebiń:'str',st_Rusinowice:'rus',st_Lubliniec:'lubpkp'};const ODW=Object.fromEntries(Object.entries(ODP).map(([a,b])=>[b,a]));
+const TEN=new Set(['kosr|st_Koszęcin','str|st_Strzebiń','rus|st_Rusinowice','lubpkp|st_Lubliniec']);
+const ok=c=>c!==st.z&&!TEN.has(st.z+'|'+c);
+let ZR,CE,CEL,W;
 const KIER={tam:'Tam',powrot:'Z powrotem'}, DNI={wd:'Dzień roboczy',sat:'Sobota',sun:'Niedziela'};
 const PRZ={KŚ:'Koleje Śląskie',PR:'POLREGIO',IC:'PKP Intercity'};
-let st={z:'st_Koszęcin',c:'st_Częstochowa',k:'tam',d:'wd'};
+let st={t:'bus',z:'kosr',c:'st_Częstochowa',k:'tam',d:'wd'};
 try{const s=JSON.parse(localStorage.getItem('dojazdy')||'null');if(s)st={...st,...s}}catch(e){}
-if(!ZR[st.z])st.z='st_Koszęcin';if(!CE[st.c])st.c='st_Częstochowa';
+
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const hm=m=>Math.floor(m/60)+':'+String(m%60).padStart(2,'0');
+const pl=n=>n+' '+(n===1?'połączenie':(n%10>=2&&n%10<=4&&!(n%100>=12&&n%100<=14))?'połączenia':'połączeń');
 const dur=m=>m<60?m+' min':Math.floor(m/60)+' h '+String(m%60).padStart(2,'0')+' min';
 function grp(id,opts,key){
   const g=document.getElementById(id);
@@ -86,12 +94,21 @@ function grp(id,opts,key){
 }
 function draw(){
   try{localStorage.setItem('dojazdy',JSON.stringify(st))}catch(e){}
-  grp('g-z',ZR,'z');grp('g-c',CE,'c');grp('g-k',KIER,'k');grp('g-d',DNI,'d');
-  const zr=ZR[st.z].replace(/ \(.*\)/,''), ce=CE[st.c];
+  if(!TR[st.t])st.t='bus';
+  ZR=TR[st.t];W=WW[st.t];
+  if(!ZR[st.z])st.z=(st.t==='bus'?ODP[st.z]:ODW[st.z])||(st.t==='bus'?'kosr':'st_Koszęcin');
+  CE=Object.fromEntries(Object.entries(CE0).filter(([k])=>ok(k)));CEL=Object.fromEntries(Object.entries(CEL0).filter(([k])=>ok(k)));
+  if(!CE[st.c]&&!CEL[st.c])st.c='st_Częstochowa';
+  grp('g-t',TRN,'t');grp('g-z',ZR,'z');grp('g-c',CE,'c');grp('g-c2',CEL,'c');grp('g-k',KIER,'k');grp('g-d',DNI,'d');
+  const zr=ZR[st.z].replace(/ \(.*\)/,''), ce=CE[st.c]||CEL[st.c];
   document.getElementById('tyt').textContent=st.k==='tam'?zr+' → '+ce:ce+' → '+zr;
   const L=(((W[st.d]||{})[st.z]||{})[st.c]||{})[st.k]||[];
   const naj=L.length?Math.min(...L.map(x=>x.czas)):0;
-  document.getElementById('pod').textContent=DNI[st.d]+' · '+L.length+' połączeń'+(L.length?' · najszybciej '+dur(naj):'');
+  let por='';
+  const alt=st.t==='bus'?ODW[st.z]:ODP[st.z];
+  if(alt){const L2=(((WW[st.t==='bus'?'kolej':'bus'][st.d]||{})[alt]||{})[st.c]||{})[st.k]||[];
+    por=' · '+(st.t==='bus'?'sama kolej ze stacji: ':'z busami: ')+pl(L2.length)+(L2.length?', najszybciej '+dur(Math.min(...L2.map(x=>x.czas))):'');}
+  document.getElementById('pod').textContent=DNI[st.d]+' · '+pl(L.length)+(L.length?' · najszybciej '+dur(naj):'')+por;
   const el=document.getElementById('lista');
   if(!L.length){el.innerHTML='<p class="empty">Brak połączeń w tym dniu.</p>';return}
   el.innerHTML=L.map(x=>`<div class="row${x.czas===naj?' best':''}"><div class="tm">${hm(x.odj)} → ${hm(x.prz)}<small>${dur(x.czas)}</small></div>
