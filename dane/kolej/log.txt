@@ -1,4 +1,4 @@
-cele: ['Bytom', 'Chorzów Batory', 'Częstochowa', 'Częstochowa Stradom', 'Fosowskie', 'Gliwice', 'Herby Nowe', 'Katowice', 'Kluczbork', 'Kłobuck', 'Miasteczko Śląskie', 'Olesno Śląskie', 'Opole Główne', 'Strzelce Opolskie', 'Tarnowskie Góry', 'Wieluń Dąbrowa', 'Zawadzkie']
+cele: ['Bytom', 'Chorzów Batory', 'Częstochowa', 'Częstochowa Stradom', 'Fosowskie', 'Gliwice', 'Herby Nowe', 'Herby Stare', 'Katowice', 'Kluczbork', 'Kłobuck', 'Miasteczko Śląskie', 'Olesno Śląskie', 'Opole Główne', 'Strzelce Opolskie', 'Tarnowskie Góry', 'Wieluń Dąbrowa', 'Zawadzkie']
 stacje: ['Boronów', 'Kalety', 'Kochanowice', 'Koszęcin', 'Lisów', 'Lubliniec', 'Rusinowice', 'Strzebiń'] 34 id
 zakres dat w GTFS: 20261122 … 20261224
 wd 20261214 246 pociągów
