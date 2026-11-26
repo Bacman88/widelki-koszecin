@@ -83,8 +83,6 @@ const LN={
 '4':{c:'#d4473a',n:'Łazy – Stary Strzebiń – Strzebiń – Koszęcin PKP – Koszęcin Szkoła – Koszęcin Rynek',f:'co godzinę, 1 bus; w szczytach w pulsie (przesiadka do Lublińca w Strzebiniu), poza szczytem 15 min później',o:6},
 '5':{c:'#7c3aed',n:'Koszęcin PKP – Koszęcin Rynek – Irki – Wierzbie – Rusinowice PKP – Piłka – Sadów – Lubliniec PKP',f:'co 2 h, w szczytach co godzinę; Piłka → Lubliniec 22 min, na Koszęcinie PKP postój pod pociągi (:54–:06)',o:-6}};
 LN['1P']={c:'#00704f',n:'Linia 1 w dni nauki przez Psary: Płaszczymąka – Psary Główna – Powstańców – Piasek',f:'kursy szkolne: rano z Koszęcina 7:00 i 8:00 (Psary Główna 7:23 i 8:23), po południu z Piasku 14:28 i 15:28 (Psary Główna 14:31 i 15:31, Koszęcin 14:53 i 15:53); do szkoły ok. 650 m pieszo',o:-6,d:'8 6'};
-LN['4S']={c:'#d4473a',n:'Propozycja 4S (poza siatką podstawową): kursy szkolne Łazy – Strzebiń Szkoła – Bukowiec – Płaszczymąka – Psary',f:'z Łazów przez Strzebiń Szkoła do Strzebinia Centrum po trasie linii 4, dalej (przerywana) przez Bukowiec i Płaszczymąkę do Psar; Łazy → Psary 19 min, w dni nauki',o:0,d:'7 7'};
-LN['4P']={c:'#8e3b8a',n:'Propozycja 4P (poza siatką podstawową): pętla Strzebiń Szkoła – Łazy – Psary – Płaszczymąka – Bukowiec – Strzebiń',f:'po utwardzeniu ok. 1,4 km drogi Łazy – ul. Poznańska (gm. Woźniki); kółko 25 min, Łazy → Psary 6 min',o:0,d:'2 7'};
 LN['4k']={c:'#d4473a',n:'Linia 4 – zjazd do Koszęcina PKP w czasie postoju na Rynku',f:'',o:6,hide:1};
 LN['4e']=Object.assign({},LN['4'],{hide:1});LN['4r']=Object.assign({},LN['4'],{hide:1,o:-LN['4'].o});LN['3r']=Object.assign({},LN['3'],{hide:1,o:-LN['3'].o});
 const INFO={
@@ -92,7 +90,7 @@ kosr:'<b>Koszęcin Rynek – główny węzeł</b><br>Linia 1 Piasek – Lublinie
 kosp:'<b>Koszęcin PKP</b><br>Proponowany przystanek przy stacji. Pętla linii 3 i 5 (linia 5 stoi :54–:06 pod pociągi), linia 2 jedzie dalej do Bruśka i Kalet, linia 4 przejeżdża w drodze Strzebiń – Rynek. Pociągi Kolei Śląskich do Lublińca i Tarnowskich Gór/Bytomia.',
 str:'<b>Strzebiń Centrum</b><br>Linia 1 i linia 4, przystanek przy ul. Lublinieckiej w miejscu obecnego; obsługuje też stację Strzebiń (ok. 300 m). Do Rynku 9 min, do Lublińca PKP 38 min.',
 strs:'<b>Strzebiń Szkoła</b><br>Linia 4 Łazy – Koszęcin jedzie przez szkołę, tak jak dziś, a potem przez Strzebiń Centrum na Rynek. Do stacji Strzebiń podobnie blisko jak ze Strzebinia Centrum.',
-psy:'<b>Psary Główna</b><br>Przystanek przy ul. Głównej (ok. 650 m do szkoły). W dni nauki linia 1 jedzie przez Psary: rano z Koszęcina i Strzebinia (Psary 7:23 i 8:23), po południu do Strzebinia i Koszęcina (Psary 14:31 i 15:31). Propozycja 4S z Łazów też kończy się tutaj. Psary leżą w gminie Woźniki.',
+psy:'<b>Psary Główna</b><br>Przystanek przy ul. Głównej (ok. 650 m do szkoły). W dni nauki linia 1 jedzie przez Psary: rano z Koszęcina i Strzebinia (Psary 7:23 i 8:23), po południu do Strzebinia i Koszęcina (Psary 14:31 i 15:31). Psary leżą w gminie Woźniki.',
 lisp:'<b>Lisów PKP – przesiadka na Częstochowę</b><br>Pętla linii 3 przy stacji w Lisowie (do centrum wsi ok. 10 min pieszo, busy gminy Herby). Pociągi Kolei Śląskich do Częstochowy (26 min) – te same, które jadą z Lublińca, tylko bliżej. Z Rynku 20 min.',
 borp:'<b>Boronów PKP</b><br>Proponowany przystanek przy stacji. Linia 2.',
 kalp:'<b>Kalety PKP – węzeł zewnętrzny</b><br>Stacja, na której spotykają się obie linie kolejowe. Pociągi do Tarnowskich Gór i Bytomia, komunikacja Kalet. Pętla linii 2.',
