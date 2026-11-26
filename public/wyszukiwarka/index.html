@@ -47,7 +47,7 @@ select,input[type=time]{width:100%;font:inherit;padding:10px 12px;border:1px sol
 .leg:first-of-type{border-top:0}
 .bdg{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:26px;padding:0 6px;border-radius:7px;font-weight:800;font-size:13px;color:#fff}
 .l1{background:#00704f}.l2{background:#1f6fd6}.l3{background:#cc8a00}.l4{background:#d4473a}.l5{background:#7c3aed}
-.lKŚ{background:#f2b705;color:#1e1d1b}.lPR{background:#7a2e8e}.lpi{background:#e9e5da;color:var(--ink)}
+.lKŚ{background:#f2b705;color:#1e1d1b}.lPR{background:#7a2e8e}.lIC{background:#1d3b72}.lpi{background:#e9e5da;color:var(--ink)}
 .leg .t{font-weight:700}
 .leg .s{color:var(--mut);font-size:14px}
 .czek{font-size:14px;padding:4px 0 4px 64px;color:var(--mut)}
@@ -62,7 +62,7 @@ a{color:var(--g)}
 <div class="bar">⚠️ Propozycja mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
 <main>
 <h1>Wyszukiwarka połączeń</h1>
-<p class="lead">Skąd, dokąd i o której – połączenie w proponowanej siatce busów gminy Koszęcin, z przesiadkami na pociągi Kolei Śląskich i POLREGIO – w dzień roboczy, sobotę i niedzielę.</p>
+<p class="lead">Skąd, dokąd i o której – połączenie w proponowanej siatce busów gminy Koszęcin, z przesiadkami na pociągi Kolei Śląskich, POLREGIO i PKP Intercity – w dzień roboczy, także do Częstochowy, Tarnowskich Gór, Katowic, Opola i innych stacji docelowych, sobotę i niedzielę.</p>
 <div class="form">
   <div class="row">
     <div><label for="z">Skąd</label><select id="z"></select></div>
@@ -89,7 +89,7 @@ a{color:var(--g)}
 <p class="note">Busy: proponowany rozkład; dzień roboczy sprawdzony w symulacji ruchu, w weekend linie 3, 4 i 5 jeżdżą na zamówienie. Pociągi KŚ i POLREGIO: nowy rozkład 2026/27 (od 13.12.2026, dane PKP PLK przez GTFS) na stacjach Lubliniec, Kochanowice, Lisów, Rusinowice, Koszęcin, Strzebiń, Boronów i Kalety – przed podróżą sprawdź rozkład przewoźnika. Przesiadka bus–bus co najmniej 2 minuty, przejście na peron wliczone. Propozycje przerywane (1L, 4L, 4S, 4P) nie są uwzględnione. <a href="../">Więcej o propozycji</a>.</p>
 </main>
 <script>
-const KOL_TXT={KŚ:'pociąg Kolei Śląskich',PR:'pociąg POLREGIO'};
+const KOL_TXT={KŚ:'pociąg Kolei Śląskich',PR:'pociąg POLREGIO',IC:'pociąg PKP Intercity (osobna taryfa, rezerwacja)'};
 const PRZES=2, OKNO=240;
 let D,C=[],FP={},tryb='o',dz='wd',KURSY=[];
 const $=id=>document.getElementById(id);
