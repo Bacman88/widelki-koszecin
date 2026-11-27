@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Dziś i w propozycji – porównanie kursów busów w gminie Koszęcin</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dziś i w propozycji – busy w gminie Koszęcin">
+<meta property="og:description" content="Ten sam dzień, dwa rozkłady: obecne kursy GTV obok proponowanej siatki busów.">
+<meta property="og:url" content="https://busy-koszecin.smart-ant.pl/porownanie/">
+<meta property="og:image" content="https://busy-koszecin.smart-ant.pl/og-porownanie.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="description" content="Ten sam dzień, dwa rozkłady: obecne kursy GTV przez gminę Koszęcin obok proponowanej siatki busów – liczby, wykres i film z symulacji.">
+<link rel="canonical" href="https://busy-koszecin.smart-ant.pl/porownanie/">
+<style>
+:root{--ink:#10201c;--mut:#5d665f;--paper:#f7f4ec;--rule:#e2ddd0;--g:#00704f;--warn:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
+.bar{position:sticky;top:0;z-index:1000;background:var(--warn);color:#fff;text-align:center;font-weight:700;font-size:14px;padding:8px 12px}.bar a{color:#fff}
+main{max-width:1100px;margin:0 auto;padding:22px 18px 60px}
+h1{font-size:30px;line-height:1.15;margin:6px 0}
+.lead{margin:0 0 14px;max-width:860px}
+h2{font-size:24px;margin:34px 0 4px;border-top:2px solid var(--ink);padding-top:14px}
+h3{font-size:18px;margin:22px 0 4px;display:flex;gap:8px;align-items:center}
+.bd{display:inline-grid;place-items:center;min-width:1.8em;height:1.5em;border-radius:6px;color:#fff;font-size:14px;font-weight:800}
+.op{color:var(--mut);font-size:14px;margin:10px 0 4px}
+.scroll{overflow-x:auto;background:#fff;border:1px solid var(--rule);border-radius:12px}
+table{border-collapse:collapse;font-size:14px;white-space:nowrap}
+th,td{padding:5px 10px;border-bottom:1px solid #eee9dc;text-align:center}
+th{font-size:12px;color:var(--mut);font-weight:600}
+th:first-child,td:first-child{position:sticky;left:0;background:#fff;text-align:left;font-weight:600;border-right:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0}
+.card{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:16px}
+.card .big{font-size:26px;font-weight:700;color:var(--g)}
+.free{background:#eef5d8;border:1px solid #cfe0a4;border-radius:12px;padding:12px 16px;font-weight:600}
+.note{font-size:13px;color:var(--mut);margin-top:24px;max-width:860px}
+a{color:var(--g)}
+.p{background:#eef6f1;font-weight:700;color:#00704f}
+th.p{color:#00704f}
+.dz{display:inline-block;width:12px;height:12px;border-radius:3px;background:#4B5563;vertical-align:-1px}
+.pr{display:inline-block;width:12px;height:12px;border-radius:3px;background:#00704F;vertical-align:-1px}
+.vid{width:100%;border-radius:12px;border:1px solid var(--rule);background:#fff;display:block}
+.vid.pion{display:none;max-width:420px;margin:0 auto}
+@media (max-width:700px){.vid.poz{display:none}.vid.pion{display:block}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.two .card h3{margin:0 0 6px}
+@media (max-width:600px){.two{grid-template-columns:1fr}}
+</style></head><body>
+<div class="bar">⚠️ Po prawej propozycja inicjatywy Widełki Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
+<main>
+<h1>Dziś i w propozycji</h1>
+<p class="lead">Ten sam dzień roboczy, dwa rozkłady. <span class="dz"></span> <b>Dziś</b> – wszystkie kursy GTV przejeżdżające przez gminę Koszęcin według rozkładu na poniedziałek 30 listopada 2026 (dzień z lekcjami, razem z kursami szkolnymi). <span class="pr"></span> <b>Propozycja</b> – proponowana siatka 5 linii z przesiadkami na Rynku w Koszęcinie.</p>
+
+<video class="vid poz" src="../symulacja/porownanie.mp4" poster="../symulacja/porownanie_kadr.jpg" controls muted playsinline preload="none"></video>
+<video class="vid pion" src="../symulacja/porownanie_pion.mp4" poster="../symulacja/porownanie_pion_kadr.jpg" controls muted playsinline preload="none"></video>
+<p class="op">Film z symulacji ruchu (5:00–21:30, 1 s filmu = 20 min): po lewej (na telefonie u góry) dzisiejsze kursy, po prawej (na dole) propozycja. Busy jadą po prawdziwych drogach, razem z samochodami i pociągami. <a href="../#jak-liczona">Jak liczona jest symulacja</a>.</p>
+
+<h2>W liczbach</h2>
+<div class="grid">
+<div class="card"><div class="op">Kursy przez gminę w dzień roboczy</div><div class="big"><span style="color:#4B5563">96</span> → 124</div></div>
+<div class="card"><div class="op">Ostatni odjazd</div><div class="big"><span style="color:#4B5563">19:05</span> → 22:33</div></div>
+<div class="card"><div class="op">Kursy po 19:00</div><div class="big"><span style="color:#4B5563">2</span> → 19</div></div>
+<div class="card"><div class="op">Rozkład w ciągu dnia</div><div style="font-weight:600">dziś: szczyty rano i po lekcjach<br>propozycja: podobnie przez cały dzień</div></div>
+</div>
+
+<h3>Kursy w każdej godzinie <small style="font-weight:400;color:var(--mut)">(<span class="dz"></span> dziś, <span class="pr"></span> propozycja; według godziny rozpoczęcia kursu)</small></h3>
+<div class="card"><svg viewBox="0 0 760 240" role="img" aria-label="Kursy w każdej godzinie: dziś i w propozycji" style="width:100%;height:auto;max-width:760px"><line x1="34" x2="750" y1="210.0" y2="210.0" stroke="#ece7da"/><text x="28" y="214.0" font-size="11" text-anchor="end" fill="#5d665f">0</text><line x1="34" x2="750" y1="179.8" y2="179.8" stroke="#ece7da"/><text x="28" y="183.8" font-size="11" text-anchor="end" fill="#5d665f">2</text><line x1="34" x2="750" y1="149.7" y2="149.7" stroke="#ece7da"/><text x="28" y="153.7" font-size="11" text-anchor="end" fill="#5d665f">4</text><line x1="34" x2="750" y1="119.5" y2="119.5" stroke="#ece7da"/><text x="28" y="123.5" font-size="11" text-anchor="end" fill="#5d665f">6</text><line x1="34" x2="750" y1="89.4" y2="89.4" stroke="#ece7da"/><text x="28" y="93.4" font-size="11" text-anchor="end" fill="#5d665f">8</text><line x1="34" x2="750" y1="59.2" y2="59.2" stroke="#ece7da"/><text x="28" y="63.2" font-size="11" text-anchor="end" fill="#5d665f">10</text><line x1="34" x2="750" y1="29.1" y2="29.1" stroke="#ece7da"/><text x="28" y="33.1" font-size="11" text-anchor="end" fill="#5d665f">12</text><rect x="37.0" y="149.7" width="15.9" height="60.3" rx="2" fill="#4B5563"><title>5:00 – dziś: 4</title></rect><rect x="53.9" y="104.5" width="15.9" height="105.5" rx="2" fill="#00704F"><title>5:00 – propozycja: 7</title></rect><text x="53.9" y="226" font-size="11" text-anchor="middle" fill="#5d665f">5</text><rect x="76.8" y="29.1" width="15.9" height="180.9" rx="2" fill="#4B5563"><title>6:00 – dziś: 12</title></rect><rect x="93.7" y="59.2" width="15.9" height="150.8" rx="2" fill="#00704F"><title>6:00 – propozycja: 10</title></rect><text x="93.7" y="226" font-size="11" text-anchor="middle" fill="#5d665f">6</text><rect x="116.6" y="74.3" width="15.9" height="135.7" rx="2" fill="#4B5563"><title>7:00 – dziś: 9</title></rect><rect x="133.4" y="74.3" width="15.9" height="135.7" rx="2" fill="#00704F"><title>7:00 – propozycja: 9</title></rect><text x="133.4" y="226" font-size="11" text-anchor="middle" fill="#5d665f">7</text><rect x="156.3" y="134.6" width="15.9" height="75.4" rx="2" fill="#4B5563"><title>8:00 – dziś: 5</title></rect><rect x="173.2" y="119.5" width="15.9" height="90.5" rx="2" fill="#00704F"><title>8:00 – propozycja: 6</title></rect><text x="173.2" y="226" font-size="11" text-anchor="middle" fill="#5d665f">8</text><rect x="196.1" y="149.7" width="15.9" height="60.3" rx="2" fill="#4B5563"><title>9:00 – dziś: 4</title></rect><rect x="213.0" y="119.5" width="15.9" height="90.5" rx="2" fill="#00704F"><title>9:00 – propozycja: 6</title></rect><text x="213.0" y="226" font-size="11" text-anchor="middle" fill="#5d665f">9</text><rect x="235.9" y="119.5" width="15.9" height="90.5" rx="2" fill="#4B5563"><title>10:00 – dziś: 6</title></rect><rect x="252.8" y="119.5" width="15.9" height="90.5" rx="2" fill="#00704F"><title>10:00 – propozycja: 6</title></rect><text x="252.8" y="226" font-size="11" text-anchor="middle" fill="#5d665f">10</text><rect x="275.7" y="164.8" width="15.9" height="45.2" rx="2" fill="#4B5563"><title>11:00 – dziś: 3</title></rect><rect x="292.6" y="89.4" width="15.9" height="120.6" rx="2" fill="#00704F"><title>11:00 – propozycja: 8</title></rect><text x="292.6" y="226" font-size="11" text-anchor="middle" fill="#5d665f">11</text><rect x="315.4" y="89.4" width="15.9" height="120.6" rx="2" fill="#4B5563"><title>12:00 – dziś: 8</title></rect><rect x="332.3" y="134.6" width="15.9" height="75.4" rx="2" fill="#00704F"><title>12:00 – propozycja: 5</title></rect><text x="332.3" y="226" font-size="11" text-anchor="middle" fill="#5d665f">12</text><rect x="355.2" y="89.4" width="15.9" height="120.6" rx="2" fill="#4B5563"><title>13:00 – dziś: 8</title></rect><rect x="372.1" y="104.5" width="15.9" height="105.5" rx="2" fill="#00704F"><title>13:00 – propozycja: 7</title></rect><text x="372.1" y="226" font-size="11" text-anchor="middle" fill="#5d665f">13</text><rect x="395.0" y="14.0" width="15.9" height="196.0" rx="2" fill="#4B5563"><title>14:00 – dziś: 13</title></rect><rect x="411.9" y="74.3" width="15.9" height="135.7" rx="2" fill="#00704F"><title>14:00 – propozycja: 9</title></rect><text x="411.9" y="226" font-size="11" text-anchor="middle" fill="#5d665f">14</text><rect x="434.8" y="59.2" width="15.9" height="150.8" rx="2" fill="#4B5563"><title>15:00 – dziś: 10</title></rect><rect x="451.7" y="74.3" width="15.9" height="135.7" rx="2" fill="#00704F"><title>15:00 – propozycja: 9</title></rect><text x="451.7" y="226" font-size="11" text-anchor="middle" fill="#5d665f">15</text><rect x="474.6" y="104.5" width="15.9" height="105.5" rx="2" fill="#4B5563"><title>16:00 – dziś: 7</title></rect><rect x="491.4" y="89.4" width="15.9" height="120.6" rx="2" fill="#00704F"><title>16:00 – propozycja: 8</title></rect><text x="491.4" y="226" font-size="11" text-anchor="middle" fill="#5d665f">16</text><rect x="514.3" y="164.8" width="15.9" height="45.2" rx="2" fill="#4B5563"><title>17:00 – dziś: 3</title></rect><rect x="531.2" y="74.3" width="15.9" height="135.7" rx="2" fill="#00704F"><title>17:00 – propozycja: 9</title></rect><text x="531.2" y="226" font-size="11" text-anchor="middle" fill="#5d665f">17</text><rect x="554.1" y="179.8" width="15.9" height="30.2" rx="2" fill="#4B5563"><title>18:00 – dziś: 2</title></rect><rect x="571.0" y="119.5" width="15.9" height="90.5" rx="2" fill="#00704F"><title>18:00 – propozycja: 6</title></rect><text x="571.0" y="226" font-size="11" text-anchor="middle" fill="#5d665f">18</text><rect x="593.9" y="179.8" width="15.9" height="30.2" rx="2" fill="#4B5563"><title>19:00 – dziś: 2</title></rect><rect x="610.8" y="119.5" width="15.9" height="90.5" rx="2" fill="#00704F"><title>19:00 – propozycja: 6</title></rect><text x="610.8" y="226" font-size="11" text-anchor="middle" fill="#5d665f">19</text><rect x="633.7" y="210.0" width="15.9" height="0.0" rx="2" fill="#4B5563"><title>20:00 – dziś: 0</title></rect><rect x="650.6" y="119.5" width="15.9" height="90.5" rx="2" fill="#00704F"><title>20:00 – propozycja: 6</title></rect><text x="650.6" y="226" font-size="11" text-anchor="middle" fill="#5d665f">20</text><rect x="673.4" y="210.0" width="15.9" height="0.0" rx="2" fill="#4B5563"><title>21:00 – dziś: 0</title></rect><rect x="690.3" y="134.6" width="15.9" height="75.4" rx="2" fill="#00704F"><title>21:00 – propozycja: 5</title></rect><text x="690.3" y="226" font-size="11" text-anchor="middle" fill="#5d665f">21</text><rect x="713.2" y="210.0" width="15.9" height="0.0" rx="2" fill="#4B5563"><title>22:00 – dziś: 0</title></rect><rect x="730.1" y="179.8" width="15.9" height="30.2" rx="2" fill="#00704F"><title>22:00 – propozycja: 2</title></rect><text x="730.1" y="226" font-size="11" text-anchor="middle" fill="#5d665f">22</text></svg></div>
+
+<h2>Dojazd do Koszęcina i powrót</h2>
+<p class="op">Ile kursów dziennie dojeżdża z danej miejscowości do centrum Koszęcina (Rynek, Ligonia, Szkoła, Lubliniecka), ile wraca i o której jest ostatni powrót z Koszęcina. Dzień roboczy.</p>
+<div class="scroll"><table>
+<tr><th rowspan="2">Miejscowość</th><th colspan="2">do Koszęcina</th><th colspan="2">z Koszęcina</th><th colspan="2">ostatni powrót</th></tr>
+<tr><th>dziś</th><th class="p">propozycja</th><th>dziś</th><th class="p">propozycja</th><th>dziś</th><th class="p">propozycja</th></tr>
+<tr><td>Strzebiń</td><td>14</td><td class="p">33</td><td>15</td><td class="p">34</td><td>19:05</td><td class="p">23:03</td></tr><tr><td>Prądy</td><td>14</td><td class="p">33</td><td>14</td><td class="p">34</td><td>19:05</td><td class="p">23:03</td></tr><tr><td>Łazy</td><td>4</td><td class="p">16</td><td>4</td><td class="p">16</td><td>12:01</td><td class="p">22:30</td></tr><tr><td>Bukowiec</td><td>11</td><td class="p">17</td><td>10</td><td class="p">18</td><td>19:05</td><td class="p">23:03</td></tr><tr><td>Piasek</td><td>8</td><td class="p">17</td><td>9</td><td class="p">18</td><td>19:05</td><td class="p">23:03</td></tr><tr><td>Psary</td><td>8</td><td class="p">2</td><td>9</td><td class="p">2</td><td>19:05</td><td class="p">8:03</td></tr><tr><td>Sadów</td><td>34</td><td class="p">29</td><td>35</td><td class="p">28</td><td>18:40</td><td class="p">21:57</td></tr><tr><td>Wierzbie</td><td>34</td><td class="p">29</td><td>35</td><td class="p">28</td><td>18:40</td><td class="p">21:57</td></tr><tr><td>Rzyce</td><td>37</td><td class="p">29</td><td>37</td><td class="p">28</td><td>18:40</td><td class="p">21:57</td></tr><tr><td>Rusinowice</td><td>13</td><td class="p">11</td><td>10</td><td class="p">11</td><td>18:40</td><td class="p">20:13</td></tr><tr><td>Piłka</td><td>9</td><td class="p">11</td><td>7</td><td class="p">11</td><td>18:40</td><td class="p">20:13</td></tr><tr><td>Cieszowa</td><td>17</td><td class="p">8</td><td>17</td><td class="p">8</td><td>18:26</td><td class="p">18:03</td></tr><tr><td>Brusiek</td><td>7</td><td class="p">10</td><td>7</td><td class="p">9</td><td>16:39</td><td class="p">21:04</td></tr><tr><td>Boronów</td><td>12</td><td class="p">8</td><td>11</td><td class="p">9</td><td>19:28</td><td class="p">21:49</td></tr><tr><td>Kalety</td><td>7</td><td class="p">10</td><td>6</td><td class="p">9</td><td>14:48</td><td class="p">21:04</td></tr><tr><td>Lubliniec</td><td>20</td><td class="p">29</td><td>21</td><td class="p">28</td><td>18:15</td><td class="p">21:57</td></tr>
+</table></div>
+
+<p class="note"><b>Skąd dane.</b> Dziś: rozkład przewoźnika GTV z serwisu gtvbus.kiedyprzyjedzie.pl na 30.11.2026, wszystkie kursy przejeżdżające przez gminę Koszęcin – także linie, których organizatorem nie jest gmina, i krótkie kursy szkolne. Propozycja: rozkład dnia roboczego z tej strony, bez kursów na zamówienie. Liczby mogą się różnić od rozkładów na przystankach w dniach wolnych od nauki. Propozycja inicjatywy Widełki Koszęcin i mieszkańców – <b>to nie jest obowiązujący rozkład jazdy</b>.</p>
+</main><footer style="max-width:900px;margin:30px auto 90px;padding:16px 18px;border-top:1px solid #e2ddd0;font:13px/1.55 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#5d665f">Stronę prowadzi inicjatywa <b>Widełki Koszęcin</b>. Siatka busów to propozycja przygotowana przez Widełki Koszęcin i mieszkańców, do dyskusji – <b>to nie jest obowiązujący rozkład jazdy</b>. Facebook: <a href="https://www.facebook.com/profile.php?id=61596843062847" target="_blank" rel="noopener" style="color:#00704f">Busy Koszęcin – propozycja połączeń</a> · <a href="/" style="color:#00704f">strona główna</a></footer>
+
+<!-- ankieta: stały przycisk w prawym dolnym rogu -->
+<style>
+.ank-fab{position:fixed;right:16px;bottom:calc(16px + var(--ank-off,0px));z-index:3500;display:flex;align-items:center;gap:10px;background:#00704f;color:#fff!important;text-decoration:none!important;font:700 15px/1.25 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:12px 18px 12px 14px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.28);max-width:calc(100vw - 32px)}
+.ank-fab .ank-i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:#00704f;font-size:17px;flex:none}
+.ank-fab small{display:block;font-weight:500;font-size:12px;opacity:.9}
+.ank-fab:hover{background:#005a3f}
+.ank-fab::after{content:"";position:absolute;inset:-4px;border-radius:999px;border:3px solid #f6c700;animation:ank-puls 1.8s ease-out infinite;pointer-events:none}
+@keyframes ank-puls{0%{opacity:.95;transform:scale(1)}80%,100%{opacity:0;transform:scale(1.15)}}
+@media (prefers-reduced-motion:reduce){.ank-fab::after{animation:none;opacity:.9}}
+@media (max-width:600px){.ank-fab{right:10px;bottom:calc(10px + var(--ank-off,0px));font-size:14px;padding:10px 14px 10px 10px}.ank-fab small{display:none}}
+@media print{.ank-fab{display:none}}
+</style>
+<a class="ank-fab" href="/ankieta/"><span class="ank-i">✓</span><span>Pojechałbyś busem? Wypełnij ankietę<small>Sprawdź swoją trasę · 2–3 minuty</small></span></a>
+</body></html>
