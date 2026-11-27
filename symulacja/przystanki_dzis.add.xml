@@ -1,0 +1,113 @@
+<additional>
+  <busStop id="G176_3239" lane="3239_0" startPos="948.0" endPos="960.0" name="Korzonek" friendlyPos="true"/>
+  <busStop id="G177_-2877" lane="-2877_0" startPos="2501.7" endPos="2513.7" name="Korzonek" friendlyPos="true"/>
+  <busStop id="G178_-2877" lane="-2877_0" startPos="1599.8" endPos="1611.8" name="Korzonek I" friendlyPos="true"/>
+  <busStop id="G179_3239" lane="3239_0" startPos="1848.8" endPos="1860.8" name="Korzonek I" friendlyPos="true"/>
+  <busStop id="G180_3239" lane="3239_0" startPos="2350.9" endPos="2362.9" name="Jamki" friendlyPos="true"/>
+  <busStop id="G181_-2877" lane="-2877_0" startPos="1078.5" endPos="1090.5" name="Jamki" friendlyPos="true"/>
+  <busStop id="G377_-2995#1" lane="-2995#1_0" startPos="47.9" endPos="59.9" name="Boronów, Wojska Polskiego DW 907 - RSP" friendlyPos="true"/>
+  <busStop id="G378_2995#1" lane="2995#1_0" startPos="69.3" endPos="81.3" name="Boronów, Wojska Polskiego DW 907 - RSP" friendlyPos="true"/>
+  <busStop id="G379_-2883#0" lane="-2883#0_0" startPos="60.8" endPos="72.8" name="Boronów, Poznańska DW 905 - szkoła" friendlyPos="true"/>
+  <busStop id="G380_2883#0" lane="2883#0_0" startPos="119.6" endPos="131.6" name="Boronów, Poznańska DW 905 - szkoła" friendlyPos="true"/>
+  <busStop id="G381_-3110#0" lane="-3110#0_0" startPos="1.0" endPos="13.0" name="Dębowa Góra I - 907" friendlyPos="true"/>
+  <busStop id="G382_-276#0" lane="-276#0_0" startPos="663.3" endPos="675.3" name="Boronów, Koszęcińska" friendlyPos="true"/>
+  <busStop id="G383_1079#1" lane="1079#1_0" startPos="2235.0" endPos="2247.0" name="Boronów, Koszęcińska" friendlyPos="true"/>
+  <busStop id="G4206_-319#1" lane="-319#1_0" startPos="214.9" endPos="226.9" name="Koszęcin, Krokusowa" friendlyPos="true"/>
+  <busStop id="G4206_319#1" lane="319#1_0" startPos="1.0" endPos="13.0" name="Koszęcin, Krokusowa" friendlyPos="true"/>
+  <busStop id="G4207_749" lane="749_0" startPos="165.8" endPos="177.8" name="Rzyce, Centrum" friendlyPos="true"/>
+  <busStop id="G4208_304#3" lane="304#3_0" startPos="5.2" endPos="17.2" name="Rusinowice 1 Maja" friendlyPos="true"/>
+  <busStop id="G4209_-2258#8" lane="-2258#8_0" startPos="0.0" endPos="-0.3" name="Piłka Podleska" friendlyPos="true"/>
+  <busStop id="G4210_-663#4" lane="-663#4_0" startPos="50.3" endPos="62.3" name="Sadów, Podlesie" friendlyPos="true"/>
+  <busStop id="G4210_663#4" lane="663#4_0" startPos="38.6" endPos="50.6" name="Sadów, Podlesie" friendlyPos="true"/>
+  <busStop id="G4211_2390" lane="2390_0" startPos="68.7" endPos="80.7" name="Rusinowice PKP" friendlyPos="true"/>
+  <busStop id="G4212_-2390" lane="-2390_0" startPos="6.1" endPos="18.1" name="Rusinowice PKP" friendlyPos="true"/>
+  <busStop id="G4212_-286#0" lane="-286#0_0" startPos="3.2" endPos="15.2" name="Rusinowice PKP" friendlyPos="true"/>
+  <busStop id="G4213_-3457#1" lane="-3457#1_0" startPos="31.6" endPos="43.6" name="Brusiek Kościelna" friendlyPos="true"/>
+  <busStop id="G4213_3457#1" lane="3457#1_0" startPos="1.0" endPos="13.0" name="Brusiek Kościelna" friendlyPos="true"/>
+  <busStop id="G4217_-2669" lane="-2669_0" startPos="170.2" endPos="182.2" name="Sadów, Spółdzielcza" friendlyPos="true"/>
+  <busStop id="G4217_800" lane="800_0" startPos="52.6" endPos="64.6" name="Sadów, Spółdzielcza" friendlyPos="true"/>
+  <busStop id="G4268_-2877" lane="-2877_0" startPos="3454.3" endPos="3466.3" name="Leśniaki" friendlyPos="true"/>
+  <busStop id="G4269_3108" lane="3108_0" startPos="1401.1" endPos="1413.1" name="Leśniaki" friendlyPos="true"/>
+  <busStop id="G576_-3584" lane="-3584_0" startPos="94.9" endPos="106.9" name="Woźniki, Sośnica" friendlyPos="true"/>
+  <busStop id="G577_3558" lane="3558_0" startPos="3.3" endPos="15.3" name="Woźniki, Sośnica" friendlyPos="true"/>
+  <busStop id="G578_3537" lane="3537_0" startPos="9.8" endPos="21.8" name="Piasek" friendlyPos="true"/>
+  <busStop id="G619_3037#4" lane="3037#4_0" startPos="71.4" endPos="83.4" name="Psary, skrzyżowanie" friendlyPos="true"/>
+  <busStop id="G620_-3037#4" lane="-3037#4_0" startPos="552.6" endPos="564.6" name="Psary, skrzyżowanie" friendlyPos="true"/>
+  <busStop id="G621_-1687" lane="-1687_0" startPos="45.7" endPos="57.7" name="Strzebiń, Prądy" friendlyPos="true"/>
+  <busStop id="G622_1067" lane="1067_0" startPos="885.5" endPos="897.5" name="Strzebiń, Prądy" friendlyPos="true"/>
+  <busStop id="G623_703#0" lane="703#0_0" startPos="1.0" endPos="13.0" name="Strzebiń" friendlyPos="true"/>
+  <busStop id="G624_-703#0" lane="-703#0_0" startPos="287.1" endPos="299.1" name="Strzebiń" friendlyPos="true"/>
+  <busStop id="G625_2875#2" lane="2875#2_0" startPos="92.3" endPos="104.3" name="Strzebiń, Za wiaduktem" friendlyPos="true"/>
+  <busStop id="G626_-2875#2" lane="-2875#2_0" startPos="36.6" endPos="48.6" name="Strzebiń, Za wiaduktem" friendlyPos="true"/>
+  <busStop id="G627_-2875#8" lane="-2875#8_0" startPos="30.0" endPos="42.0" name="Strzebiń Stary" friendlyPos="true"/>
+  <busStop id="G628_2875#8" lane="2875#8_0" startPos="223.1" endPos="235.1" name="Strzebiń Stary" friendlyPos="true"/>
+  <busStop id="G629_-3555#0" lane="-3555#0_0" startPos="341.4" endPos="353.4" name="Strzebiń Bukowiec N/Ż" friendlyPos="true"/>
+  <busStop id="G630_3569" lane="3569_0" startPos="237.5" endPos="249.5" name="Strzebiń Bukowiec N/Ż" friendlyPos="true"/>
+  <busStop id="G631_-3555#2" lane="-3555#2_0" startPos="206.6" endPos="218.6" name="Strzebiń Bukowiec" friendlyPos="true"/>
+  <busStop id="G632_3555#2" lane="3555#2_0" startPos="78.8" endPos="90.8" name="Strzebiń Bukowiec" friendlyPos="true"/>
+  <busStop id="G633_-271#3" lane="-271#3_0" startPos="1.0" endPos="13.0" name="Koszęcin, Rynek" friendlyPos="true"/>
+  <busStop id="G633_271#3" lane="271#3_0" startPos="1.0" endPos="13.0" name="Koszęcin, Rynek" friendlyPos="true"/>
+  <busStop id="G634_-357#0" lane="-357#0_0" startPos="58.1" endPos="70.1" name="Koszęcin, Ligonia" friendlyPos="true"/>
+  <busStop id="G635_357#0" lane="357#0_0" startPos="26.2" endPos="38.2" name="Koszęcin, Ligonia" friendlyPos="true"/>
+  <busStop id="G636_835" lane="835_0" startPos="67.5" endPos="79.5" name="Koszęcin, Lubliniecka" friendlyPos="true"/>
+  <busStop id="G637_-835" lane="-835_0" startPos="398.8" endPos="410.8" name="Koszęcin, Lubliniecka" friendlyPos="true"/>
+  <busStop id="G638_2206" lane="2206_0" startPos="435.5" endPos="447.5" name="Rzyce Irki" friendlyPos="true"/>
+  <busStop id="G639_-2193" lane="-2193_0" startPos="650.6" endPos="662.6" name="Rzyce Irki" friendlyPos="true"/>
+  <busStop id="G640_2209#3" lane="2209#3_0" startPos="955.1" endPos="967.1" name="Wierzbie, Las" friendlyPos="true"/>
+  <busStop id="G641_-564" lane="-564_0" startPos="630.4" endPos="642.4" name="Wierzbie, Las" friendlyPos="true"/>
+  <busStop id="G642_-533#2" lane="-533#2_0" startPos="1.0" endPos="13.0" name="Wierzbie" friendlyPos="true"/>
+  <busStop id="G643_533#2" lane="533#2_0" startPos="95.5" endPos="107.5" name="Wierzbie" friendlyPos="true"/>
+  <busStop id="G644_-565" lane="-565_0" startPos="225.9" endPos="237.9" name="Sadów, skrzyżowanie" friendlyPos="true"/>
+  <busStop id="G645_565" lane="565_0" startPos="222.4" endPos="234.4" name="Sadów, skrzyżowanie" friendlyPos="true"/>
+  <busStop id="G647_-988#13" lane="-988#13_0" startPos="12.4" endPos="24.4" name="Sadów, Szkoła" friendlyPos="true"/>
+  <busStop id="G648_988#13" lane="988#13_0" startPos="513.0" endPos="525.0" name="Sadów, Szkoła" friendlyPos="true"/>
+  <busStop id="G649_988#6" lane="988#6_0" startPos="66.1" endPos="78.1" name="Sadów, Przedszkole" friendlyPos="true"/>
+  <busStop id="G650_-988#6" lane="-988#6_0" startPos="80.9" endPos="92.9" name="Sadów, Przedszkole" friendlyPos="true"/>
+  <busStop id="G651_293#1" lane="293#1_0" startPos="64.8" endPos="76.8" name="Rusinowice" friendlyPos="true"/>
+  <busStop id="G652_-293#1" lane="-293#1_0" startPos="1.0" endPos="13.0" name="Rusinowice" friendlyPos="true"/>
+  <busStop id="G653_-727#0" lane="-727#0_0" startPos="90.4" endPos="102.4" name="Piłka" friendlyPos="true"/>
+  <busStop id="G653_727#0" lane="727#0_0" startPos="1.0" endPos="13.0" name="Piłka" friendlyPos="true"/>
+  <busStop id="G654_1847#4" lane="1847#4_0" startPos="1.0" endPos="13.0" name="Cieszowa" friendlyPos="true"/>
+  <busStop id="G655_359#0" lane="359#0_0" startPos="57.6" endPos="69.6" name="Koszęcin, szkoła" friendlyPos="true"/>
+  <busStop id="G656_-359#0" lane="-359#0_0" startPos="1.2" endPos="13.2" name="Koszęcin, szkoła" friendlyPos="true"/>
+  <busStop id="G656_359#0" lane="359#0_0" startPos="72.4" endPos="84.4" name="Koszęcin, szkoła" friendlyPos="true"/>
+  <busStop id="G657_2394" lane="2394_0" startPos="1.0" endPos="13.0" name="Koszęcin, Dworcowa" friendlyPos="true"/>
+  <busStop id="G658_-2395" lane="-2395_0" startPos="191.1" endPos="203.1" name="Koszęcin, Dworcowa" friendlyPos="true"/>
+  <busStop id="G659_2405" lane="2405_0" startPos="44.9" endPos="56.9" name="Koszęcin, Kolejowa" friendlyPos="true"/>
+  <busStop id="G660_-1115" lane="-1115_0" startPos="158.8" endPos="170.8" name="Koszęcin, Kolejowa" friendlyPos="true"/>
+  <busStop id="G661_323" lane="323_0" startPos="157.4" endPos="169.4" name="Koszęcin, Św. Trójca" friendlyPos="true"/>
+  <busStop id="G662_-323" lane="-323_0" startPos="69.1" endPos="81.1" name="Koszęcin, Św. Trójca" friendlyPos="true"/>
+  <busStop id="G663_3363#1" lane="3363#1_0" startPos="9.2" endPos="21.2" name="Brusiek" friendlyPos="true"/>
+  <busStop id="G663_3466#1" lane="3466#1_0" startPos="0.0" endPos="7.9" name="Brusiek" friendlyPos="true"/>
+  <busStop id="G726_3110#0" lane="3110#0_0" startPos="162.8" endPos="174.8" name="Dębowa Góra I - 907" friendlyPos="true"/>
+  <busStop id="G727_-988#0" lane="-988#0_0" startPos="72.7" endPos="84.7" name="Sadów, Kopce" friendlyPos="true"/>
+  <busStop id="G728_988#0" lane="988#0_0" startPos="13.8" endPos="25.8" name="Sadów, Kopce" friendlyPos="true"/>
+  <busStop id="G729_-275#11" lane="-275#11_0" startPos="46.0" endPos="58.0" name="Lubliniec, Powstańców 1" friendlyPos="true"/>
+  <busStop id="G730_275#10" lane="275#10_0" startPos="5.3" endPos="17.3" name="Lubliniec, Powstańców 1" friendlyPos="true"/>
+  <busStop id="G731_2145#0" lane="2145#0_0" startPos="43.4" endPos="55.4" name="Lubliniec, Przedszkole" friendlyPos="true"/>
+  <busStop id="G732_660#0" lane="660#0_0" startPos="1.0" endPos="13.0" name="Lubliniec, Liceum" friendlyPos="true"/>
+  <busStop id="G733_429#2" lane="429#2_0" startPos="85.3" endPos="97.3" name="Lubliniec, Liceum" friendlyPos="true"/>
+  <busStop id="G734_1700#0" lane="1700#0_0" startPos="28.6" endPos="40.6" name="Lubliniec, Niepodległości" friendlyPos="true"/>
+  <busStop id="G735_-425#2" lane="-425#2_0" startPos="0.0" endPos="10.4" name="Lubliniec, Grunwaldzka N/Ż" friendlyPos="true"/>
+  <busStop id="G736_425#2" lane="425#2_0" startPos="0.0" endPos="10.4" name="Lubliniec, Grunwaldzka N/Ż" friendlyPos="true"/>
+  <busStop id="G737_-2122" lane="-2122_0" startPos="0.0" endPos="7.2" name="Lubliniec, Aleja Solidarności 2" friendlyPos="true"/>
+  <busStop id="G738_2124" lane="2124_0" startPos="0.0" endPos="3.6" name="Lubliniec, Aleja Solidarności 1" friendlyPos="true"/>
+  <busStop id="G739_1495" lane="1495_0" startPos="0.7" endPos="12.7" name="Lubliniec, Rondo Władysława Opolczyka" friendlyPos="true"/>
+  <busStop id="G740_454" lane="454_0" startPos="16.1" endPos="28.1" name="Lubliniec, Rondo Władysława Opolczyka" friendlyPos="true"/>
+  <busStop id="G741_2144#2" lane="2144#2_0" startPos="0.0" endPos="-0.3" name="Lubliniec, Plebiscytowa" friendlyPos="true"/>
+  <busStop id="G774_3500#0" lane="3500#0_0" startPos="0.0" endPos="11.0" name="Psary, skrzyżowanie" friendlyPos="true"/>
+  <busStop id="G775_-3555#3" lane="-3555#3_0" startPos="100.8" endPos="112.8" name="Psary, skrzyżowanie" friendlyPos="true"/>
+  <busStop id="G805_-1847#7" lane="-1847#7_0" startPos="1015.6" endPos="1027.6" name="Rzyce" friendlyPos="true"/>
+  <busStop id="G805_1847#7" lane="1847#7_0" startPos="1444.4" endPos="1456.4" name="Rzyce" friendlyPos="true"/>
+  <busStop id="G806_-2946#3" lane="-2946#3_0" startPos="56.8" endPos="68.8" name="Strzebiń Szkoła" friendlyPos="true"/>
+  <busStop id="G806_2946#3" lane="2946#3_0" startPos="39.6" endPos="51.6" name="Strzebiń Szkoła" friendlyPos="true"/>
+  <busStop id="G807_2936#5" lane="2936#5_0" startPos="128.7" endPos="140.7" name="Strzebiń Przedszkole" friendlyPos="true"/>
+  <busStop id="G808_-2936#5" lane="-2936#5_0" startPos="395.2" endPos="407.2" name="Strzebiń Przedszkole" friendlyPos="true"/>
+  <busStop id="G809_3162" lane="3162_0" startPos="263.5" endPos="275.5" name="Łazy Miodowa" friendlyPos="true"/>
+  <busStop id="G810_-3054" lane="-3054_0" startPos="69.3" endPos="81.3" name="Łazy" friendlyPos="true"/>
+  <busStop id="G811_3054" lane="3054_0" startPos="367.7" endPos="379.7" name="Łazy" friendlyPos="true"/>
+  <busStop id="G812_-2927#0" lane="-2927#0_0" startPos="1.0" endPos="13.0" name="Łazy Drzymały" friendlyPos="true"/>
+  <busStop id="G812_-3096" lane="-3096_0" startPos="395.9" endPos="407.9" name="Łazy Drzymały" friendlyPos="true"/>
+  <busStop id="G812_2927#1" lane="2927#1_0" startPos="8.8" endPos="20.8" name="Łazy Drzymały" friendlyPos="true"/>
+  <busStop id="G813_-3162" lane="-3162_0" startPos="71.6" endPos="83.6" name="Łazy Miodowa" friendlyPos="true"/>
+</additional>
