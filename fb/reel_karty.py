@@ -39,7 +39,7 @@ ax.text(90, 1450, 'Pojechałbyś', fontsize=92, fontweight='bold', color=CIEMNY,
 ax.text(90, 1310, 'busem?', fontsize=92, fontweight='bold', color=CIEMNY, va='center')
 ax.text(90, 1080, 'Zobacz przykładowe połączenia\nw proponowanej siatce busów\ngminy Koszęcin', fontsize=34, color='#3A3732', va='center', linespacing=1.4)
 pigulka(ax, 90, 900, 'symulacja ruchu · dzień roboczy', '#EAE7DF', '#3A3732', 26)
-ax.text(90, 440, 'Propozycja inicjatywy Szprychy Koszęcin i mieszkańców –\nto nie jest obowiązujący rozkład jazdy', fontsize=22, color=CZERW, fontweight='bold', va='center', linespacing=1.4)
+ax.text(90, 440, 'Propozycja inicjatywy Widełki Koszęcin i mieszkańców –\nto nie jest obowiązujący rozkład jazdy', fontsize=22, color=CZERW, fontweight='bold', va='center', linespacing=1.4)
 fig.savefig('reel_start.png', dpi=100, facecolor=TLO); plt.close(fig)
 
 # --- końcowa: ankieta ---
@@ -54,6 +54,6 @@ pigulka(ax, 130, 785, '✓  Tak, pojechałbym', '#E7F2D8', ZIEL, 28)
 pigulka(ax, 560, 785, 'Nie, bo…', '#F1EFEA', CIEMNY, 28)
 ax.text(90, 630, 'busy-koszecin.smart-ant.pl/ankieta', fontsize=36, fontweight='bold', color=ZIEL, va='center')
 ax.text(90, 555, 'Liczy się też głos osób, które dziś busem nie jeżdżą.', fontsize=26, color='#3A3732', va='center')
-ax.text(90, 440, 'Propozycja inicjatywy Szprychy Koszęcin i mieszkańców –\nto nie jest obowiązujący rozkład jazdy', fontsize=22, color=CZERW, fontweight='bold', va='center', linespacing=1.4)
+ax.text(90, 440, 'Propozycja inicjatywy Widełki Koszęcin i mieszkańców –\nto nie jest obowiązujący rozkład jazdy', fontsize=22, color=CZERW, fontweight='bold', va='center', linespacing=1.4)
 fig.savefig('reel_ankieta.png', dpi=100, facecolor=TLO); plt.close(fig)
 print('ok')

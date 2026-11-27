@@ -17,7 +17,7 @@ def baza():
     im = Image.new('RGB', (W, H), TLO); d = ImageDraw.Draw(im)
     for i, c in enumerate(KOL): d.rounded_rectangle((80 + i * 56, 70, 80 + i * 56 + 44, 80), 5, fill=c)
     d.text((80, H - 118), 'busy-koszecin.smart-ant.pl/ankieta', font=font('Bold', 34), fill=ZIEL)
-    d.text((80, H - 66), 'Propozycja inicjatywy Szprychy Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy', font=font('SemiBold', 19), fill=CZERW)
+    d.text((80, H - 66), 'Propozycja inicjatywy Widełki Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy', font=font('SemiBold', 19), fill=CZERW)
     return im, d
 
 

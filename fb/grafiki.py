@@ -88,7 +88,7 @@ for i, (l, t) in enumerate([('1', 'Piasek – Strzebiń – Koszęcin – Lublin
     fig.patches.append(matplotlib.patches.Ellipse((fx + 0.008, yy + 0.014), 0.032 * H / W, 0.032, transform=fig.transFigure, color=KOL[l], figure=fig))
     fig.text(fx + 0.008, yy + 0.013, l, fontsize=10, color='white', fontweight='bold', ha='center', va='center')
     fig.text(fx + 0.02, yy + 0.003, t, fontsize=12, color='#2E2C28')
-fig.text(fx, 0.285, 'Propozycja inicjatywy Szprychy Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=11, color='#B3261E', fontweight='semibold')
+fig.text(fx, 0.285, 'Propozycja inicjatywy Widełki Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy', fontsize=11, color='#B3261E', fontweight='semibold')
 fig.text(fx, 0.252, 'busy-koszecin.smart-ant.pl', fontsize=11, color='#5E5A52')
 fig.savefig(f'{OUT}/tlo.png', dpi=100, facecolor=TLO); plt.close(fig)
 print('ok')

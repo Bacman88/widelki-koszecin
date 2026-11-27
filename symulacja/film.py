@@ -150,7 +150,7 @@ if not PION:
     fig.lines.append(plt.Line2D([px + 0.003, px + 0.022], [ly + 0.012, ly + 0.012], transform=fig.transFigure, color='#D6452F', lw=3.5, figure=fig))
     fig.text(px + 0.032, ly + 0.003, 'wolny ruch / korek', fontsize=10, color='#2E2C28')
     fig.text(px, 0.135, 'To NIE jest aktualny rozkład jazdy.', fontsize=11.5, fontweight='bold', color='#B3261E')
-    fig.text(px, 0.098, 'Propozycja Szprych Koszęcin i mieszkańców; ruch aut wg pomiarów GPR 2020/21,', fontsize=9, color='#5E5A52')
+    fig.text(px, 0.098, 'Propozycja Widełek Koszęcin i mieszkańców; ruch aut wg pomiarów GPR 2020/21,', fontsize=9, color='#5E5A52')
     fig.text(px, 0.072, 'pociągi towarowe i rogatki w przybliżeniu.', fontsize=9, color='#5E5A52')
     fig.text(px, 0.03, 'busy-koszecin.smart-ant.pl', fontsize=9.5, color='#3D6B4F', fontweight='semibold')
 else:
@@ -175,7 +175,7 @@ else:
     fig.text(px2 + 0.065, ly + 0.001, 'pociąg towarowy', fontsize=15, color='#2E2C28'); ly -= 0.026
     fig.lines.append(plt.Line2D([px2, px2 + 0.05], [ly + 0.006, ly + 0.006], transform=fig.transFigure, color='#D6452F', lw=5, figure=fig))
     fig.text(px2 + 0.065, ly + 0.001, 'wolny ruch / korek', fontsize=15, color='#2E2C28')
-    fig.text(fx, 0.215, 'To NIE jest aktualny rozkład jazdy – propozycja Szprych Koszęcin i mieszkańców.', fontsize=13.5, fontweight='bold', color='#B3261E')
+    fig.text(fx, 0.215, 'To NIE jest aktualny rozkład jazdy – propozycja Widełek Koszęcin i mieszkańców.', fontsize=13.5, fontweight='bold', color='#B3261E')
     # ciemne pasy na dole i u góry: Facebook kładzie tam biały opis rolki i białe ikonki
     import numpy as np
     for y0, hgt, kier in ((0.0, 0.165, 1), (0.955, 0.045, -1)):

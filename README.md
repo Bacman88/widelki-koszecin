@@ -1,4 +1,4 @@
-# Szprychy Koszęcin – siatka busów gminy Koszęcin
+# Widełki Koszęcin – siatka busów gminy Koszęcin
 
 Oddolna **propozycja nowej siatki busów gminy Koszęcin** (GTV) z węzłem przesiadkowym na **Koszęcin Rynek** i przesiadkami na kolej, a w kolejnym kroku **aplikacja „skąd – dokąd” dla mieszkańców** (busy gminne + Koleje Śląskie, PolRegio, PKP Intercity).
 

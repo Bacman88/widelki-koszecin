@@ -133,7 +133,7 @@ tr:last-child td{{border-bottom:0}}
 .note{{font-size:13px;color:var(--mut);margin-top:24px;max-width:860px}}
 a{{color:var(--g)}}
 </style></head><body>
-<div class="bar">⚠️ Propozycja inicjatywy Szprychy Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
+<div class="bar">⚠️ Propozycja inicjatywy Widełki Koszęcin i mieszkańców – to nie jest obowiązujący rozkład jazdy · <a href="../">strona główna</a></div>
 <main>
 <h1>Busami na Święto Śląska</h1>
 <p class="lead">Przykład, jak siatka busów może obsłużyć dużą imprezę w Koszęcinie. Wzorem jest tegoroczne Święto Śląska (27–28 czerwca 2026, siedziba Zespołu „Śląsk”, ul. Zamkowa 3, kilka minut pieszo od Rynku). Termin na 2027 rok nie jest jeszcze ogłoszony, więc przyjęto pierwszy weekend wakacji, 26–27 czerwca 2027, a godziny powrotów dobrano do zeszłorocznego programu: koncert Zespołu „Śląsk” o 19:00 i nocne zwiedzanie pałacu do 23:00.</p>
@@ -142,7 +142,7 @@ a{{color:var(--g)}}
 {podsum}
 {''.join(sekcje)}
 <p class="note">Rozkład przykładowy, ułożony według <a href="../rozklad/">proponowanego rozkładu weekendowego</a>. Ten sam schemat, czyli wspólny wieczorny odjazd wszystkich linii z Rynku, pasuje do innych imprez: Międzynarodowego Festiwalu Folklorystycznego „Silesia” (w 2027 r. 19–25 lipca), dożynek i festynów. Kursy dodatkowe można finansować wspólnie z organizatorem imprezy albo sponsorem. Liczba kilometrów jest przybliżona (średnia prędkość linii z rozkładu dnia roboczego).</p>
-</main><footer style="max-width:900px;margin:30px auto 90px;padding:16px 18px;border-top:1px solid #e2ddd0;font:13px/1.55 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#5d665f">Stronę prowadzi inicjatywa <b>Szprychy Koszęcin</b>. Siatka busów to propozycja przygotowana przez Szprychy Koszęcin i mieszkańców, do dyskusji – <b>to nie jest obowiązujący rozkład jazdy</b>. Facebook: <a href="https://www.facebook.com/profile.php?id=61596843062847" target="_blank" rel="noopener" style="color:#00704f">Busy Koszęcin – propozycja połączeń</a> · <a href="/" style="color:#00704f">strona główna</a></footer>
+</main><footer style="max-width:900px;margin:30px auto 90px;padding:16px 18px;border-top:1px solid #e2ddd0;font:13px/1.55 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#5d665f">Stronę prowadzi inicjatywa <b>Widełki Koszęcin</b>. Siatka busów to propozycja przygotowana przez Widełki Koszęcin i mieszkańców, do dyskusji – <b>to nie jest obowiązujący rozkład jazdy</b>. Facebook: <a href="https://www.facebook.com/profile.php?id=61596843062847" target="_blank" rel="noopener" style="color:#00704f">Busy Koszęcin – propozycja połączeń</a> · <a href="/" style="color:#00704f">strona główna</a></footer>
 
 '''+open(os.path.join(os.path.dirname(__file__),'ankieta_przycisk.html')).read()+'''</body></html>'''
 open(OUT, 'w').write(strona)
