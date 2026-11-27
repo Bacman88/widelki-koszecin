@@ -120,7 +120,7 @@ a{color:var(--g)}
 // === KONFIGURACJA FORMULARZA GOOGLE ===
 // adres formularza (…/viewform) i numery pól entry.XXXX – z linku „Pobierz wstępnie wypełniony link”
 const FORM = {url: 'https://docs.google.com/forms/d/e/1FAIpQLScZdto7wM5V6QaMOJcL6WsHpEnNtwb0IPOL79mE9rAcWEdtZA/viewform',
-  pola: {"rola":"252090170","wiek":"1223184692","miejsc":"2103101989","skad":"651359107","dokad":"332961307","dzien":"636530186","na":"1327349274","po":"1914308774","tam":"264900941","powrot":"929421745","ocena":"432149569","powody":"98179116","dzis":"711733736","dni":"167625968","bilet":"578662544","auto":"1210806298","uwagi":"1466142604","id":"1639585113","czas":"198459664","kontrola":"747354447"}};
+  pola: {"rola":"252090170","wiek":"1223184692","miejsc":"2103101989","skad":"651359107","dokad":"332961307","dzien":"636530186","na":"1327349274","po":"1914308774","tam":"264900941","powrot":"929421745","ocena":"432149569","powody":"98179116","dzis":"711733736","dni":"167625968","bilet":"578662544","auto":"1210806298","uwagi":"1466142604","id":"778037865","czas":"835361357","kontrola":"1454690116"}};
 
 const OPC = {
   rola: ['uczeń', 'student', 'pracuję', 'emeryt / rencista', 'inne'],
@@ -262,6 +262,7 @@ $('pokaz').onclick = () => {
   $('k3').classList.remove('off'); $('k4').classList.remove('off');
   $('k3').scrollIntoView({behavior: 'smooth', block: 'start'});
 };
+let OSTATNIO = '';
 $('wyslij').onclick = async () => {
   const dane = {rola: val('rola'), wiek: val('wiek'), miejsc: miejscowosc(), skad: D ? nm($('z').value) : '', dokad: D ? nm($('do').value) : '',
     dzien: val('dzien'), na: $('na').value, po: $('po').value, tam: wynik.tam, powrot: wynik.powrot, ocena: val('ocena'),
@@ -269,10 +270,14 @@ $('wyslij').onclick = async () => {
     id: ID_URZ, czas: String(Math.round((Date.now() - START) / 1000)), kontrola: $('www').value ? 'BOT: ' + $('www').value.slice(0, 50) : 'ok'};
   if (!dane.ocena) { $('stan').innerHTML = '<p class="brak">Zaznacz, czy pojechałbyś busem.</p>'; return }
   if (!FORM.url) { $('stan').innerHTML = '<p class="brak">Ankieta nie jest jeszcze uruchomiona – zbieranie odpowiedzi ruszy wkrótce.</p>'; return }
+  // ta sama odpowiedź drugi raz (wielokrotne kliknięcie) – nie wysyłamy ponownie
+  const odcisk = JSON.stringify({...dane, czas: ''});
+  if (odcisk === OSTATNIO) { $('stan').innerHTML = '<p class="ok">Ta odpowiedź jest już zapisana – dziękujemy! Żeby ocenić inną podróż, zmień trasę albo godziny w kroku 2.</p>'; return }
   const fd = new FormData();
   for (const [k, e] of Object.entries(FORM.pola)) if (e) fd.append('entry.' + e, dane[k] || '');
   $('wyslij').disabled = true;
   try { await fetch(FORM.url.replace(/\/viewform.*$/, '/formResponse'), {method: 'POST', mode: 'no-cors', body: fd});
+    OSTATNIO = odcisk;
     $('stan').innerHTML = '<p class="ok">Dziękujemy! Odpowiedź zapisana. Możesz ocenić też inną podróż – zmień trasę albo godziny w kroku 2 i wyślij jeszcze raz.</p>';
   } catch (e) { $('stan').innerHTML = '<p class="brak">Nie udało się wysłać. Spróbuj ponownie za chwilę.</p>' }
   $('wyslij').disabled = false;
