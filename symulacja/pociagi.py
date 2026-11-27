@@ -9,7 +9,7 @@ Mapa kończy się tuż przed Kaletami i na zachód od Lublińca, więc tam poci�
 Pasażerskie wg rozkładu 2026/27 (patrz PASAZERSKIE), towarowe – szacunek. Pasażerskie stają na każdej stacji na 30 s,
 towarowe przejeżdżają bez zatrzymania. Wynik: pociagi.rou.xml + stacje.add.xml.
 """
-import os, sys, random
+import os, sys, random, json
 SUMO_HOME = os.environ.get('SUMO_HOME') or __import__('sumo').SUMO_HOME
 sys.path.append(os.path.join(SUMO_HOME, 'tools'))
 import sumolib
@@ -192,6 +192,8 @@ for linia, pkt in LINIE.items():
             v.append((t, f'poc{linia}{kier}_t{i:02d}', ids, 'towarowy', []))
 
 # pasażerskie wg rozkładu – każdy pociąg osobno
+NR_LINIA = {x['nr']: x.get('linia', '') for x in json.load(open('../dane/kolej/pociagi.json'))['pociagi']['wd']}
+ETYK_LINII = {}   # numer linii na filmach (S1, S13, S8, S82, IC, TLK, EIC; POLREGIO bez numeru → PR)
 licz = collections.Counter()
 for kl, nr, prz, wj, st, wy in POCIAGI:
     pkt = ([wj] if wj else []) + [q[0] for q in st] + ([wy] if wy else [])
@@ -205,7 +207,10 @@ for kl, nr, prz, wj, st, wy in POCIAGI:
         postoje.append((sid, d_ * 60))
     dep = st[0][1] * 60 - t0 - 30 if wj else st[0][2] * 60 - 60
     licz[kl] += 1
-    v.append((max(0, round(dep)), f'poc{kl}_{"x" if prz == "I" else "p"}{licz[kl]:02d}{prz}', ids, 'pociag', postoje))
+    vid = f'poc{kl}_{"x" if prz == "I" else "p"}{licz[kl]:02d}{prz}'
+    lin = NR_LINIA.get(nr.rstrip('z'), '')
+    ETYK_LINII[vid] = 'PR' if prz == 'P' else (lin.replace('ZKA ', '') or ('IC' if prz == 'I' else 'KŚ'))
+    v.append((max(0, round(dep)), vid, ids, 'pociag', postoje))
 print('pasażerskie:', dict(licz))
 
 with open('stacje.add.xml', 'w') as o:
@@ -220,4 +225,5 @@ with open('pociagi.rou.xml', 'w') as o:
         o.write(f'  <vehicle id="{vid}" type="{typ}" depart="{dep}" departLane="best" insertionChecks="collision"><route edges="{" ".join(ed)}"/>')
         o.write(''.join(f'<stop trainStop="{s}" duration="20" until="{u}"/>' for s, u in st) + '</vehicle>\n')
     o.write('</routes>\n')
+json.dump(ETYK_LINII, open('pociagi_linie.json', 'w'), ensure_ascii=False, indent=0)
 print('pociągów:', len(v), '| stacji:', len(stacje_def))

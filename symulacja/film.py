@@ -122,6 +122,7 @@ poc_sc = ax.scatter([], [], s=16 * (2 if PION else 1), marker='s', c='#8A857B', 
 KOL_POC = {'K': '#F2B705', 'P': '#7A2E8E', 'I': '#1F3A93'}     # Koleje Śląskie / POLREGIO / PKP Intercity
 ETYK = {'K': 'KŚ', 'P': 'PR', 'I': 'IC'}
 pas_sc = ax.scatter([], [], s=230 * SK * SK, marker='s', zorder=6.5, edgecolors='#1E1D1B', linewidths=0.8)
+LIN_POC = json.load(open('pociagi_linie.json')) if os.path.exists('pociagi_linie.json') else {}   # numer linii na pociągu (S8, S13, IC…)
 pas_txt = [ax.text(0, 0, '', fontsize=6.3 * SK, ha='center', va='center', zorder=6.6, fontweight='bold', visible=False, clip_on=True) for _ in range(30)]
 bus_txt = [ax.text(0, 0, '', fontsize=7.5 * SK, color='white', ha='center', va='center', zorder=8, fontweight='bold', visible=False, clip_on=True)
            for _ in range(40)]
@@ -223,16 +224,17 @@ def pozycje(t):
         out.append((vid, lon + (n[1] - lon) * w, lat + (n[2] - lat) * w, v) if n else (vid, lon, lat, v))
     return out
 def klatka(t):
-    b, p, kol, tx, pp, pk = [], [], [], [], [], []
+    b, p, kol, tx, pp, pk, pv = [], [], [], [], [], [], []
     for vid, lon, lat, v in pozycje(t):
         if vid.startswith('L'):
             b.append(P(lon, lat)); kol.append(KOL[vid[1]]); tx.append(vid[1])
-        elif '_p' in vid or '_x' in vid: pp.append(P(lon, lat)); pk.append(vid[-1])
+        elif '_p' in vid or '_x' in vid: pp.append(P(lon, lat)); pk.append(vid[-1]); pv.append(vid)
         else: p.append(P(lon, lat))
-    pas_sc.set_offsets(pp if pp else [[None, None]]); pas_sc.set_color([KOL_POC[k] for k in pk] if pk else ['none']); pas_sc.set_edgecolor('#1E1D1B')
+    pas_sc.set_offsets([[None, None]])   # pociąg = etykieta z numerem linii w kolorze przewoźnika (szerokość dopasowana do tekstu)
     for i, txt in enumerate(pas_txt):
         if i < len(pp):
-            txt.set_position(pp[i]); txt.set_text(ETYK[pk[i]]); txt.set_color('#1E1D1B' if pk[i] == 'K' else 'white'); txt.set_visible(True)
+            txt.set_position(pp[i]); txt.set_text(LIN_POC.get(pv[i], ETYK[pk[i]])); txt.set_color('#1E1D1B' if pk[i] == 'K' else 'white')
+            txt.set_bbox(dict(boxstyle='round,pad=0.3,rounding_size=0.15', fc=KOL_POC[pk[i]], ec='#1E1D1B', lw=0.8)); txt.set_visible(True)
         else: txt.set_visible(False)
     # busy stojące razem (np. przesiadka na Rynku) rozsuwamy w kółko, żeby było widać każdy
     gr = []
@@ -284,6 +286,7 @@ if PODROZ:
     o = PODROZ['odcinki'][0]; ustaw_odcinek(o); klatka((o['od'] + o['do']) / 2)
 else: klatka((OD // 3600 + 2) * 3600 + 50 * 60)
 fig.savefig(f'wyniki/{NAZWA}_kadr.png', dpi=DPI, facecolor=TLO)
+if os.environ.get('TYLKO_KADR'): sys.exit(0)
 wr = FFMpegWriter(fps=30, codec='libx264', extra_args=['-preset', 'veryfast', '-crf', '26', '-pix_fmt', 'yuv420p', '-movflags', '+faststart'])
 n = 0
 with wr.saving(fig, f'wyniki/{NAZWA}.mp4', DPI):
