@@ -25,6 +25,13 @@ PODROZE = {
         ('RANO · z Piłki do szkoły w Lublińcu', 'pil', 'lubpkp', 7.4 * H, 7.6 * H, None),
         ('PO POŁUDNIU · z Lublińca do Boronowa', 'lubpkp', 'bor', 15.4 * H, 15.7 * H, 'kosr'),
         ('WIECZOREM · z pracy w Koszęcinie do Łaz', 'kosr', 'laz', 21.2 * H, 21.4 * H, None)]),
+    'ankieta2': ('Przykładowe połączenia – a Twoja trasa?', [
+        ('RANO · z Piłki do pracy w Lublińcu na 7:00', 'pil', 'lubp1', 6.5 * H, 6.6 * H, None),
+        ('RANO · ze Strzebinia do Lublińca', 'str', 'lubpkp', 6.7 * H, 6.8 * H, None),
+        ('PRZED POŁUDNIEM · z Piasku do Koszęcina', 'pia', 'kosr', 8.5 * H, 8.6 * H, None),
+        ('NA 14:00 · do pracy w Koszęcinie', 'str', 'kosr', 13.7 * H, 13.75 * H, None),
+        ('PO PRACY DO 14:00 · z Koszęcina do Strzebinia', 'kosl', 'str', 14.2 * H, 14.3 * H, None),
+        ('Z KOSZĘCINA DO CZĘSTOCHOWY · przez Lisów', 'kosr', 'lisp', 14.0 * H, 14.1 * H, None)]),
     'boronow': ('Boronów ⇄ Lubliniec – przez węzeł Koszęcin Rynek', [
         ('RANO · z Boronowa do Lublińca', 'bor', 'lubpkp', 6.5 * H, 6.7 * H, 'kosr'),
         ('PO POŁUDNIU · z Lublińca do Boronowa', 'lubpkp', 'bor', 15.5 * H, 15.6 * H, 'kosr')]),
