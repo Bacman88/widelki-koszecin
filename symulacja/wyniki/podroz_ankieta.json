@@ -1,0 +1,123 @@
+{
+ "tytul": "Przykładowe połączenia – a Twoja trasa?",
+ "odcinki": [
+  {
+   "naglowek": "RANO · z Piasku do Lublińca",
+   "opis": "linia 1: Piasek 6:33 → Lubliniec PKP 7:22\n49 min, bez przesiadki",
+   "kursy": [
+    [
+     "L1_Piasek_01_393",
+     23580.0,
+     25755.0
+    ]
+   ],
+   "od": 23340.0,
+   "do": 25845.0,
+   "nazwy": [
+    "Piasek",
+    "Lubliniec PKP"
+   ],
+   "punkty": [
+    [
+     18.966351,
+     50.595345
+    ],
+    [
+     18.690536,
+     50.672101
+    ]
+   ]
+  },
+  {
+   "naglowek": "RANO · z Piłki do szkoły w Lublińcu",
+   "opis": "linia 5: Piłka 7:33 → Lubliniec PKP 7:55\n22 min, bez przesiadki",
+   "kursy": [
+    [
+     "L5_KoszęcinPKP_01_426",
+     27180.0,
+     28041.0
+    ]
+   ],
+   "od": 26940.0,
+   "do": 28131.0,
+   "nazwy": [
+    "Piłka",
+    "Lubliniec PKP"
+   ],
+   "punkty": [
+    [
+     18.758726,
+     50.627663
+    ],
+    [
+     18.690491,
+     50.672096
+    ]
+   ]
+  },
+  {
+   "naglowek": "PO POŁUDNIU · z Lublińca do Boronowa",
+   "opis": "linia 1: Lubliniec PKP 15:33 → Koszęcin Rynek 16:00\nprzesiadka Koszęcin Rynek (3 min)\nlinia 2: Koszęcin Rynek 16:03 → Boronów 16:15\nrazem 42 min",
+   "kursy": [
+    [
+     "L1_LubliniecPK_08_933",
+     55980.0,
+     56924.0
+    ],
+    [
+     "L2_KaletyPKP_05_922",
+     57788.0,
+     58303.0
+    ]
+   ],
+   "od": 55740.0,
+   "do": 58393.0,
+   "nazwy": [
+    "Lubliniec PKP",
+    "Koszęcin Rynek",
+    "Boronów"
+   ],
+   "punkty": [
+    [
+     18.690551,
+     50.671693
+    ],
+    [
+     18.841068,
+     50.635624
+    ],
+    [
+     18.90521,
+     50.674815
+    ]
+   ]
+  },
+  {
+   "naglowek": "WIECZOREM · z pracy w Koszęcinie do Łaz",
+   "opis": "linia 4: Koszęcin Rynek 21:18 → Łazy 21:46\n28 min, bez przesiadki",
+   "kursy": [
+    [
+     "L4_KoszęcinRyn_14_1278",
+     76680.0,
+     78318.0
+    ]
+   ],
+   "od": 76440.0,
+   "do": 78408.0,
+   "nazwy": [
+    "Koszęcin Rynek",
+    "Łazy"
+   ],
+   "punkty": [
+    [
+     18.841078,
+     50.635444
+    ],
+    [
+     18.927633,
+     50.636623
+    ]
+   ]
+  }
+ ]
+}

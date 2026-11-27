@@ -20,6 +20,11 @@ PODROZE = {
     'pilka': ('Piłka ⇄ Lubliniec – przesiadka w Wierzbiu', [
         ('RANO · z Piłki do Lublińca', 'pil', 'lubpkp', 6.4 * H, 6.6 * H, 'wie'),
         ('PO POŁUDNIU · z Lublińca do Piłki', 'lubpkp', 'pil', 15.5 * H, 15.6 * H, 'wie')]),
+    'ankieta': ('Przykładowe połączenia – a Twoja trasa?', [
+        ('RANO · z Piasku do Lublińca', 'pia', 'lubpkp', 6.4 * H, 6.6 * H, None),
+        ('RANO · z Piłki do szkoły w Lublińcu', 'pil', 'lubpkp', 7.4 * H, 7.6 * H, None),
+        ('PO POŁUDNIU · z Lublińca do Boronowa', 'lubpkp', 'bor', 15.4 * H, 15.7 * H, 'kosr'),
+        ('WIECZOREM · z pracy w Koszęcinie do Łaz', 'kosr', 'laz', 21.2 * H, 21.4 * H, None)]),
     'boronow': ('Boronów ⇄ Lubliniec – przez węzeł Koszęcin Rynek', [
         ('RANO · z Boronowa do Lublińca', 'bor', 'lubpkp', 6.5 * H, 6.7 * H, 'kosr'),
         ('PO POŁUDNIU · z Lublińca do Boronowa', 'lubpkp', 'bor', 15.5 * H, 15.6 * H, 'kosr')]),
