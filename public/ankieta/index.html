@@ -134,7 +134,10 @@ const OPC = {
   bilet: ['tak', 'raczej tak', 'raczej nie', 'nie', 'dotyczy mnie przejazd bezpłatny'],
   auto: ['tak', 'może', 'nie', 'nie mamy auta'],
 };
-const MIEJSC = [...['Koszęcin', 'Strzebiń', 'Sadów', 'Rusinowice', 'Wierzbie', 'Rzyce', 'Irki', 'Piłka', 'Łazy', 'Kurzychowe', 'Bukowiec', 'Brusiek', 'Cieszowa', 'Prądy', 'Nowy Dwór'].sort((a, b) => a.localeCompare(b, 'pl')), 'inna miejscowość w gminie', 'spoza gminy'];
+const PL = (a, b) => a.localeCompare(b, 'pl');
+const MIEJSC = [...['Koszęcin', 'Strzebiń', 'Sadów', 'Rusinowice', 'Wierzbie', 'Rzyce', 'Irki', 'Piłka', 'Łazy', 'Kurzychowe', 'Bukowiec', 'Brusiek', 'Cieszowa', 'Prądy', 'Nowy Dwór'].sort(PL), 'inna miejscowość w gminie'];
+// spoza gminy – przy naszych liniach i w pobliżu; zapisywane jako „spoza gminy: X” (jak wpis ręczny)
+const SPOZA = ['Lubliniec', 'Kalety', 'Boronów', 'Piasek', 'Psary', 'Lisów', 'Chwostek', 'Hadra', 'Mochała', 'Herby', 'Kochanowice', 'Jędrysek', 'Miotek', 'Zielona', 'Woźniki'].sort(PL);
 const SZYBKIE = [['lubpkp', 'Lubliniec'], ['kosr', 'Koszęcin Rynek'], ['kossz', 'Koszęcin Szkoła'], ['st_Częstochowa', 'Częstochowa'], ['st_Tarnowskie Góry', 'Tarnowskie Góry'], ['st_Katowice', 'Katowice']];
 const KOL_TXT = {KŚ: 'Koleje Śląskie', PR: 'POLREGIO', IC: 'PKP Intercity'};
 const PRZES = 2;
@@ -152,10 +155,11 @@ for (const box of document.querySelectorAll('.opt')) {
   const n = box.dataset.name, multi = box.dataset.multi;
   box.innerHTML = OPC[n].map((o, i) => `<label><input type="${multi ? 'checkbox' : 'radio'}" name="${n}" value="${o}">${o}</label>`).join('');
 }
-$('miejsc').innerHTML = '<option value="">– wybierz –</option>' + MIEJSC.map(m => `<option>${m}</option>`).join('');
+$('miejsc').innerHTML = '<option value="">– wybierz –</option><optgroup label="Gmina Koszęcin">' + MIEJSC.map(m => `<option>${m}</option>`).join('') +
+  '</optgroup><optgroup label="Spoza gminy">' + SPOZA.map(m => `<option value="spoza gminy: ${m}">${m}</option>`).join('') + '<option value="spoza gminy">inna spoza gminy (wpisz)</option></optgroup>';
 document.querySelector('input[name=dzien]').checked = true;
-$('miejsc').onchange = () => { const inna = /inna|spoza/.test($('miejsc').value); $('miejscInna').classList.toggle('ukr', !inna); if (inna) $('miejscInna').focus() };
-const miejscowosc = () => /inna|spoza/.test($('miejsc').value) && $('miejscInna').value.trim() ? $('miejsc').value + ': ' + $('miejscInna').value.trim() : $('miejsc').value;
+$('miejsc').onchange = () => { const inna = ['inna miejscowość w gminie', 'spoza gminy'].includes($('miejsc').value); $('miejscInna').classList.toggle('ukr', !inna); if (inna) $('miejscInna').focus() };
+const miejscowosc = () => ['inna miejscowość w gminie', 'spoza gminy'].includes($('miejsc').value) && $('miejscInna').value.trim() ? $('miejsc').value + ': ' + $('miejscInna').value.trim() : $('miejsc').value;
 const val = n => [...document.querySelectorAll(`input[name=${n}]:checked`)].map(x => x.value).join('; ');
 document.querySelectorAll('input[name=ocena]').forEach(r => r.onchange = () => {
   $('powodyTak').classList.toggle('ukr', r.value !== OPC.ocena[1] || !r.checked);
